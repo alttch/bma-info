@@ -1,0 +1,50 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 935
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "aci": {
+            "acl": "admin",
+            "auth": "token",
+            "token_mode": "normal",
+            "u": "admin"
+        },
+        "acl": {
+            "admin": true,
+            "deny": {
+                "items": [],
+                "pvt": [],
+                "rpvt": []
+            },
+            "from": [
+                "admin"
+            ],
+            "id": "admin",
+            "ops": [],
+            "read": {
+                "items": [],
+                "pvt": [],
+                "rpvt": []
+            },
+            "write": {
+                "items": []
+            }
+        },
+        "build": 2022051001,
+        "ok": true,
+        "product_code": "eva4node",
+        "product_name": "EVA ICS node server",
+        "system_name": "mws1",
+        "time": 1652312576.585399,
+        "uptime": 795.01865705,
+        "version": "4.0.0"
+    }
+}
+

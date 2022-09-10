@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 489
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "oid": "sensor:env/temp",
+            "status": 1,
+            "t": 1652387838.5007,
+            "value": 5
+        },
+        {
+            "oid": "sensor:env/temp",
+            "status": 1,
+            "t": 1652387843.5008562,
+            "value": 5
+        },
+        {
+            "oid": "sensor:env/temp",
+            "status": 1,
+            "t": 1652387848.5038078,
+            "value": 5
+        }
+    ]
+}
+

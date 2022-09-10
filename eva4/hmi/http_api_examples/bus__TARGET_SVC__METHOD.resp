@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 394
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "build": 2022051001,
+        "compress": true,
+        "enabled": true,
+        "link_uptime": 1897.710214411,
+        "managed": true,
+        "name": "rtest1",
+        "online": true,
+        "ping_interval": 1.0,
+        "reload_interval": 60.0,
+        "static": true,
+        "timeout": 30.0,
+        "version": "4.0.0"
+    }
+}
+

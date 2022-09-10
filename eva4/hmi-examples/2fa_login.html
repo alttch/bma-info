@@ -1,0 +1,92 @@
+<html>
+  <head><script type="text/javascript" src="eva.min.js"></script>
+  <body>
+    <div id="status"></div>
+    <div id="qr_container" style="width: 200px; height: 200px; display: none">
+      <canvas id="qr"></canvas>
+    </div>
+    <div id="login_form">
+      <form onsubmit="process_login(event)">
+      User: <input type="text" id="login"><br>
+      Password: <input type="password" id="password"><br>
+      <input type="submit" value="Login">
+      </form>
+    </div>
+    <div id="otp_form" style="display: none">
+      <form onsubmit="process_otp(event)">
+      OTP: <input type="text" id="otp_code"><br>
+      <input type="submit" value="Continue">
+      </form>
+    </div>
+    <script type="text/javascript">
+      function process_login(event) {
+        event.preventDefault();
+        set_status("Logging in...");
+        $eva.login = document.getElementById("login").value;
+        $eva.password = document.getElementById("password").value;
+        hide("login_form");
+        $eva.start();
+        return false;
+      }
+      function process_otp(event) {
+        event.preventDefault();
+        set_status("Logging in...");
+        $eva.login_xopts = { otp: document.getElementById("otp_code").value };
+        hide("otp_form");
+        $eva.start();
+        return false;
+      }
+      function hide(id) {
+        document.getElementById(id).style.display = "none";
+      }
+      function show(id) {
+        document.getElementById(id).style.display = "block";
+      }
+      function focus(id) {
+        document.getElementById(id).focus();
+      }
+      function clear(id) {
+        document.getElementById(id).value = "";
+      }
+      function set_status(msg) {
+        document.getElementById("status").innerHTML = msg;
+      }
+
+      focus("login");
+      $eva.api_version = 4;
+      $eva.on("login.success", () => {
+        // hide QR container in case if OTP setup process was going
+        hide("qr_container");
+        set_status("Logged in as " + $eva.server_info.aci.u);
+        // do not forget to clear the password in DOM and framework variables
+        clear("password");
+        $eva.password = "";
+        $eva.login_xopts = null;
+      });
+      $eva.on("login.failed", (err) => {
+        set_status(`Login failed: ${err.message} ${err.code}`);
+        show("login_form");
+        clear("password");
+        focus("password");
+      });
+      $eva.on("login.otp_required", () => {
+        show("otp_form");
+        set_status("OTP code required");
+        focus("otp_code");
+      });
+      $eva.on("login.otp_invalid", () => {
+        show("otp_form");
+        set_status("Invalid OTP code entered");
+        clear("otp_code");
+        focus("otp_code");
+      });
+      $eva.on("login.otp_setup", (msg) => {
+        show("qr_container");
+        show("otp_form");
+        set_status("Scan this code with an authenticator app");
+        $eva.otpQR("qr", msg.value);
+        focus("otp_code");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 575
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "err": null,
+        "exitcode": 0,
+        "finished": true,
+        "node": "mws1",
+        "oid": "unit:tests/door",
+        "out": null,
+        "params": {
+            "status": 1
+        },
+        "priority": 100,
+        "status": "completed",
+        "svc": "eva.controller.virtual",
+        "time": {
+            "accepted": 1652391907.96199,
+            "completed": 1652391907.9621937,
+            "created": 1652391907.9593222
+        },
+        "uuid": "b37f15f0-410c-4ded-93d0-2ce744c68e08"
+    }
+}
+

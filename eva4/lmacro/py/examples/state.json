@@ -1,0 +1,13 @@
+{
+    "act": 0,
+    "connected": true,
+    "ieid": [
+        2225,
+        24731566246084
+    ],
+    "node": "mws1",
+    "oid": "unit:tests/door",
+    "status": 1,
+    "t": 1651971627.58268,
+    "value": null
+}

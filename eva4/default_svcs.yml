@@ -1,0 +1,305 @@
+- nam: eva.aaa.acl
+  exe: svc/eva-aaa-acl
+  des: Default ACL service
+  ins: by default with HMI (*--hmi*)
+  txt: Base authorization service, see :doc:`../aaa` for more details.
+  tpl: svc-tpl-aaa-acl.yml
+  api: svc/aaa-acl/eapi.yml
+- nam: eva.aaa.localauth
+  exe: svc/eva-aaa-localauth
+  des: Local user/key authentication service
+  ins: by default with HMI (*--hmi*)
+  txt: Local user/API key authentication service, see :doc:`../aaa` for more details.
+  tpl: svc-tpl-aaa-localauth.yml
+  api: svc/aaa-localauth/eapi.yml
+- nam: eva.aaa.otp
+  exe: svc/eva-aaa-otp
+  des: OTP 2nd-Factor authentication service
+  txt: Provides OTP 2FA, see :doc:`../2fa` for more details.
+  tpl: svc-tpl-aaa-otp.yml
+  api: svc/aaa-otp/eapi.yml
+- nam: eva.controller.lmN
+  exe: svc/eva-controller-lm
+  des: Logic manager
+  txt: |
+    .. include:: ../svc_doc/lm.rst
+  tpl: svc-tpl-controller-lm.yml
+  api: svc/controller-lm/eapi.yml
+- nam: eva.controller.srN
+  exe: svc/eva-controller-sr
+  des: Script runner controller
+  txt: |
+    .. include:: ../svc_doc/sr.rst
+  tpl: svc-tpl-controller-sr.yml
+  api: svc/controller-sr/eapi.yml
+- nam: eva.controller.trapN
+  exe: svc/eva-controller-trap
+  des: SNMP/UDP trap handler
+  txt: |
+    .. include:: ../svc_doc/trap.rst
+  tpl: svc-tpl-controller-trap.yml
+- nam: eva.controller.enipN
+  exe: svc/eva-controller-enip
+  des: Ethernet/IP PLC controller gateway
+  txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
+  tpl: svc-tpl-controller-enip.yml
+  api: svc/controller-enip/eapi.yml
+- nam: eva.bridge.adsN
+  exe: svc/eva-bridge-ads
+  des: TwinCAT ADS bridge
+  txt: ADS to BUS/RT bridge, required for :doc:`../svc/eva-controller-ads` instances.
+  tpl: svc-tpl-bridge-ads.yml
+  api: svc/bridge-ads/eapi.yml
+- nam: eva.controller.adsN
+  exe: svc/eva-controller-ads
+  des: TwinCAT ADS controller
+  txt: |
+    Allows to communicate with Beckhoff TwinCAT ADS PLCs and other equipment.
+
+    As TwinCAT ADS does not allow to connect more than a single client from a
+    single machine (IP), the service instances require
+    :doc:`../svc/eva-bridge-ads` to be deployed for each TwinCAT system.
+
+    .. figure:: ../schemas/twincat_bridge.png
+        :scale: 50%
+        :alt: TwinCAT ADS bridge
+
+  tpl: svc-tpl-controller-ads.yml
+  api: svc/controller-ads/eapi.yml
+- nam: eva.controller.modbusN
+  exe: svc/eva-controller-modbus
+  des: Modbus master controller
+  txt: Allows to communicate with Modbus-powered PLCs and other equipment.
+  tpl: svc-tpl-controller-modbus.yml
+  api: svc/controller-modbus/eapi.yml
+- nam: eva.controller.w1_N
+  exe: svc/eva-controller-w1
+  des: 1-Wire (OWFS) controller
+  txt: |
+    Allows to communicate with 1-Wire equipment via `OWFS <https://owfs.org>`_
+    (built-in). Supports both OWFS servers and direct 1-Wire bus access.
+  tpl: svc-tpl-controller-w1.yml
+  api: svc/controller-w1/eapi.yml
+- nam: eva.svc.modbusN
+  exe: svc/eva-svc-modbus-slave
+  des: Modbus slave service
+  txt: |
+    Provides Modbus slave context.
+
+    A :doc:`../svc/eva-controller-modbus` can be used later to pull the context
+    and analyze its data (Modbus via the native bus is highly recommended).
+  tpl: svc-tpl-modbus-slave.yml
+  api: svc/svc-modbus-slave/eapi.yml
+- nam: eva.svc.tts.PROVIDER
+  exe: venv/bin/eva4-svc-tts
+  des: Text-to-speech service
+  ins: py:eva4-svc-tts
+  txt: Allows to use text-to-speech functions via the local bus
+  tpl: svc-tpl-tts.yml
+  api: svc/svc-tts/eapi.yml
+- nam: eva.controller.py
+  exe: venv/bin/eva4-svc-controller-py
+  des: Python macros controller
+  ins: py:eva4-controller-py
+  txt: "Executor controller service for Python macros. See :doc:`../lmacro/py/python_macros`."
+  tpl: svc-tpl-controller-py.yml
+  api: svc/controller-py/eapi.yml
+- nam: eva.controller.virtN
+  exe: svc/eva-controller-virtual
+  des: Virtual controller
+  txt: |
+    The virtual controller service allows to define virtual units and sensors,
+    which can be used for automation tests, demos and other related purposes.
+  tpl: svc-tpl-controller-virtual.yml
+  api: svc/controller-virtual/eapi.yml
+- nam: eva.filemgr.main
+  des: File manager service
+  exe: svc/eva-filemgr
+  ins: always by default
+  txt: |
+    The file manager service allows to remotely deploy/undeploy files to/from
+    runtime directory. The service is always installed by default, however can
+    be removed/undeployed for the security purposes without affecting anything
+    but file deployment.
+  tpl: svc-tpl-filemgr.yml
+  api: svc/filemgr/eapi.yml
+- nam: eva.db.iN
+  exe: svc/eva-db-influx
+  des: InfluxDB state history
+  txt: |
+    Allows to store item states history in `InfluxDB
+    <https://www.influxdata.com>`_, v1 and v2 protocols are supported.
+
+    The service provides unified database EAPI.
+  xtr: |
+    Retention policies
+    ==================
+
+    In InfluxDB v1, retention policies can be created as the following:
+
+    .. code:: sql
+
+      CREATE RETENTION POLICY "daily" ON "eva" DURATION 1D REPLICATION 1
+      CREATE CONTINUOUS QUERY "downsampled_env_temp1_30m" ON "eva" BEGIN
+        SELECT mode(status) as "status",mean(value) as value
+        INTO "daily"."sensor:env/temp1"
+        FROM "sensor:env/temp1"
+        GROUP BY time(30m)
+      END
+
+    To process all items with the same downsampled rate, set the continuous
+    query to:
+
+    .. code:: sql
+
+      SELECT mode(status) as status, mean(value) as value
+      INTO "daily".:MEASUREMENT
+      FROM /.*/ WHERE time > now() - 1d
+      GROUP BY time(30m);
+  tpl: svc-tpl-db-influx.yml
+  api: svc/db-influx/eapi.yml
+- nam: eva.db.sN
+  exe: svc/eva-db-sql
+  des: SQL databases state history
+  txt: |
+    Allows to store item states history in SQL databases. Supported:
+
+    * `SQLite <https://www.sqlite.org/>`_ (serverless)
+    * `MySQL <https://www.mysql.com>`_
+    * `PostgreSQL <https://www.postgresql.org>`_
+    * Microsoft SQL Server (alpha)
+
+    Dataframe filling requires tsdb extension (ts_extension configuration
+    parameter) installed and chosen. The following extensions are supported:
+
+    * `Timescale <https://www.timescale.com>`_ (PostgreSQL)
+
+    The service provides unified database EAPI.
+  tpl: svc-tpl-db-sql.yml
+  api: svc/db-sql/eapi.yml
+- nam: eva.svc.expN
+  exe: svc/eva-svc-expiration
+  des: Item state expiration service
+  txt: |
+    Marks items as expired/error.
+
+    Useful to create lvar timers (timers have status -1 when expired) or set
+    error item states (items get status=1 if not updated for a long time, e.g.
+    because of a data puller service crash).
+  tpl: svc-tpl-expiration.yml
+- nam: eva.svc.fwriterN
+  exe: svc/eva-svc-filewriter
+  des: Item state file writer (JSON/CSV)
+  txt: |
+    Allows to write item states into JSON/CSV text files.
+
+    The files can be rotated with any external tool or manually. As soon as the
+    file is rotated, a new one is created automatically.
+  tpl: svc-tpl-filewriter.yml
+  api: svc/svc-filewriter/eapi.yml
+- nam: eva.hmi.default
+  exe: svc/eva-hmi
+  des: HMI service
+  ins: "by default with *--hmi* arg"
+  txt: |
+    .. include:: ../hmi/hmi_svc.rst
+  tpl: svc-tpl-hmi.yml
+  api: svc/hmi/eapi.yml
+  xtr: |
+    .. include:: ../hmi/hmi_xtra.rst
+- nam: eva.svc.lockerN
+  exe: svc/eva-svc-locker
+  des: Shared lock service
+  txt: Allows other services to work with shared locks
+  tpl: svc-tpl-locker.yml
+  api: svc/svc-locker/eapi.yml
+- nam: eva.svc.mailer
+  exe: svc/eva-svc-mailer
+  des: Mailer service
+  txt: Allows other services to send email notifications
+  tpl: svc-tpl-mailer.yml
+  api: svc/svc-mailer/eapi.yml
+- nam: eva.svc.mirror
+  exe: svc/eva-svc-mirror
+  des: Mirror service
+  txt: |
+    Allows to host mirror for the current version of EVA ICS distribution and
+    Python modules if venv is configured.
+
+    Updating mirror files on the source node
+    ========================================
+
+    .. note::
+
+        The files must be updated every time the source node is updated to a
+        new version/build.
+
+    Use either :ref:`eva4_eva-shell`:
+
+    .. code:: shell
+
+      eva mirror update
+
+    or :ref:`eva4_eva-cloud-manager-cli`:
+
+    .. code:: shell
+
+      /opt/eva4/bin/eva-cloud-manager node mirror-update
+
+    Configuring mirror on target nodes
+    ==================================
+
+    Use either :ref:`eva4_eva-shell`:
+
+    .. code:: shell
+
+      eva mirror set <URL>
+
+    or :ref:`eva4_eva-cloud-manager-cli`:
+
+    .. code:: shell
+
+      /opt/eva4/bin/eva-cloud-manager node mirror-set <URL>
+
+  tpl: svc-tpl-mirror.yml
+- nam: eva.repl.N
+  exe: svc/eva-repl
+  des: Replication service
+  txt: |
+  tpl: svc-tpl-replication.yml
+  api: svc/repl/eapi.yml
+  txt: |
+    .. include:: ../repl/repl.rst
+- nam: eva.repl.legacyN
+  exe: venv/bin/eva4-svc-repl-legacy
+  des: Legacy (V3) replication service
+  ins: py:eva4-repl-legacy
+  txt: |
+    .. include:: ../repl/repl_v3legacy.rst
+  tpl: svc-tpl-replication-legacy.yml
+  api: svc/repl-legacy/eapi.yml
+- nam: eva.aaa.msad
+  exe: path/to/eva-aaa-msad
+  des: Active directory auth service
+  txt: Active directory user authentication service, see :doc:`../aaa` for more details.
+  api: eva4-esvc/aaa-msad/eapi.yml
+  ent: true
+  tpl: svc-tpl-aaa-msad.yml
+  xtr: |
+    .. include:: ../svc_doc/msad.rst
+- nam: "eva.zfrepl.N.collector|replicator"
+  exe: path/to/eva-zfrepl
+  des: Zero-failure replication service
+  txt: |
+    .. include:: ../svc_doc/zfrepl.rst
+  api: eva4-esvc/zfrepl/eapi.yml
+  ent: true
+  tpl: svc-tpl-zfrepl.yml
+- nam: eva.kioskman.default
+  exe: path/to/eva-kioskman
+  des: HMI kiosk manager
+  txt: |
+    .. include:: ../svc_doc/kioskman.rst
+  api: eva4-esvc/kiosk-manager/eapi.yml
+  ent: true
+  tpl: svc-tpl-kioskman.yml

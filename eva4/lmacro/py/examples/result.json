@@ -1,0 +1,20 @@
+{
+    "err": null,
+    "exitcode": 0,
+    "finished": true,
+    "node": "mws1",
+    "oid": "unit:tests/door",
+    "out": null,
+    "params": {
+        "status": 1
+    },
+    "priority": 100,
+    "status": "completed",
+    "svc": "eva.controller.virtual",
+    "time": {
+        "accepted": 1651971627.5822825,
+        "completed": 1651971627.5823474,
+        "created": 1651971627.5794573
+    },
+    "uuid": "60202130-8c28-4632-a645-f840849ca144"
+}

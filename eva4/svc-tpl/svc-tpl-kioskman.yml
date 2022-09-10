@@ -1,0 +1,15 @@
+# EVA ICS HMI kiosk manager service
+command: svc/eva-kioskman
+workers: 2
+bus:
+  path: var/bus.ipc
+config:
+  # authentication service (for one-time users)
+  auth_svc: eva.aaa.localauth
+  # kiosk bus
+  broker:
+    path: 0.0.0.0:7791
+    buf_size: 8192 # bus buffer size
+    buf_ttl: 10 # microseconds
+    timeout: 5 # override the default timeout
+user: nobody

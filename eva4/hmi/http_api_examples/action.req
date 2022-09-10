@@ -1,0 +1,16 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "action",
+  "params": {
+    "i": "unit:tests/door",
+    "k": "secretkey",
+    "status": 1,
+    "wait": 1
+  }
+}

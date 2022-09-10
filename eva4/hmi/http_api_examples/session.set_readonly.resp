@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 171
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+        "acl": "admin",
+        "mode": "readonly",
+        "token": "token:6SngcQsYtHSAESOzCuyJebvoAYB3ZBlp"
+    }
+}
+

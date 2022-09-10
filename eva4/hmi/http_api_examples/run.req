@@ -1,0 +1,18 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "run",
+  "params": {
+    "i": "lmacro:tests/m1",
+    "k": "secretkey",
+    "kwargs": {
+      "a": 123
+    },
+    "wait": 2
+  }
+}

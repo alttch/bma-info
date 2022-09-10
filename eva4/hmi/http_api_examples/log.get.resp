@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 677
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "dt": "2022-05-12T23:06:05.965+02:00",
+            "h": "mws1",
+            "l": 20,
+            "lvl": "info",
+            "mod": "eva::svc",
+            "msg": "eva.controller.eip starting puller #2, interval: 1s",
+            "t": 1652389565.965001,
+            "th": null
+        },
+        {
+            "dt": "2022-05-12T23:06:05.965+02:00",
+            "h": "mws1",
+            "l": 20,
+            "lvl": "info",
+            "mod": "eva::svc",
+            "msg": "eva.controller.eip starting puller #1, interval: 1s",
+            "t": 1652389565.96536,
+            "th": null
+        }
+    ]
+}
+

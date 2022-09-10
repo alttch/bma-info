@@ -1,0 +1,25 @@
+{
+    "err": null,
+    "exitcode": 0,
+    "finished": true,
+    "node": "mws1",
+    "oid": "lmacro:tests/test1",
+    "out": "all is fine",
+    "params": {
+      "kwargs": {
+        "v1": "test",
+        "v2": 999
+      }
+    },
+    "priority": 100,
+    "status": "completed",
+    "svc": "eva.controller.py",
+    "time": {
+        "accepted": 1651971891.772146,
+        "completed": 1651971891.772503,
+        "created": 1651971891.7694325,
+        "pending": 1651971891.7723224,
+        "running": 1651971891.7723744
+    },
+    "uuid": "3c291d89-9f25-4a2c-ad88-699867a8ce6b"
+  }

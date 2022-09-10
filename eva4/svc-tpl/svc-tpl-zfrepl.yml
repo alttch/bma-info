@@ -1,0 +1,90 @@
+# EVA ICS zero-failure replication service
+command: svc/eva-zfrepl
+workers: 2
+bus:
+  path: var/bus.ipc
+config:
+  # the service can work in three roles:
+  #
+  # collector - collects data from the local node bus events to mailboxes,
+  # always online. Must have the "collector"
+  #
+  # standalone - allows only to import manually copied blocks from a local dir
+  #
+  # replicator - serves and collects the data from the mailboxes via pub/sub,
+  # MUST be deployed on the same machine as the collector. Must have the
+  # "replicator" section
+  collector:
+    # mailboxes location, relative to EVA_DIR or absolute. if running under a
+    # restricted user account (default: eva), the directory MUST be created
+    # manually and the effective account must have read/write/execute (list)
+    # permissions to it
+    path: runtime/zfrepl/spool
+    mailboxes:
+      node1:
+        # max data block size (uncompressed)
+        max_block_size: 2_000_000
+        # block time-to-live (sec) before creating a new block
+        block_ttl_sec: 600
+        # keep unrequested blocks for (sec)
+        keep: 86400
+        # file ops max queue size, if full, incoming events are dropped
+        queue_size: 512
+        auto_flush: false
+        # oids to watch
+        oids:
+          - "#"
+  #standalone: {}
+  #replicator:
+    #pubsub:
+      ## mqtt or psrt
+      #proto: psrt
+      ## path to CA certificate file. Enables SSL if set
+      #ca_certs: null
+      ## single or multiple hosts
+      #host:
+        #- 127.0.0.1:2873
+      ## if more than a single host is specified, shuffle the list before connecting
+      #cluster_hosts_randomize: false
+      ## user name / password auth
+      #username: null
+      #password: null
+      #ping_interval: 10
+      ## pub/sub queue size
+      #queue_size: 1024
+      ## pub/sub QoS (not required for PSRT)
+      #qos: 1
+    ## the local key service, required both to make and process API calls via PubSub
+    #key_svc: eva.aaa.localauth
+    #client:
+      ## watch the services, if any is down, client operations are suspended
+      #watch_svcs:
+        #- eva.db.i1
+        #- eva.db.i2
+      #mailboxes:
+        ## collect data from the mailbox at node_remote (mailbox name = local system name)
+        #node_remote:
+            ## API key, required to open the mailbox
+            #key_id: default
+            ## a cron-like schedule, when the client is triggered:
+            ## second minute hour day month weekday year
+            ##
+            ## the year field can be omitted
+            ## to run the task every N, use */N
+            #schedule: "* * * * * *"
+            ## block requests interval (sec). it is recommended to set the interval
+            ## lower than block ttl on the remote node collector
+            #interval: 30
+            ## client session duration (sec). after the specified perioid of time the
+            ## client stops, until triggered again manaully or by the scheduler
+            #duration: 3600
+            #timeout: 60 # override the default timeout
+    #server:
+      ## collector service
+      #collector_svc: eva.zfrepl.default.collector
+      #mailboxes:
+        ## mailbox for the node_remote
+        #node_remote:
+          ## API key, required to open the mailbox
+          #key_id: default
+user: eva

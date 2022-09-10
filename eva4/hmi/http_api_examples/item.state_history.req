@@ -1,0 +1,16 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "item.state_history",
+  "params": {
+    "fill": "5T:2",
+    "i": "sensor:env/temp",
+    "k": "secretkey",
+    "t_start": 1652387700
+  }
+}

@@ -1,0 +1,28 @@
+# Active directory authentication service
+command: svc/eva-aaa-msad
+bus:
+  path: var/bus.ipc
+config:
+  ## ACL service
+  acl_svc: eva.aaa.acl
+  ## OTP service
+  #otp_svc: eva.aaa.otp
+  ## domain=ad_host, e.g. mydomain.com: ad.mydomain.com (or IP)
+  #hosts:
+  #  mydomain.com: ad.mydomain.com
+  #  mydonain2.com: 1.2.3.4
+  ## optional default domain, if no domain specified in user name
+  #default_domain: mydomain.com
+  ## optional default domain controller host/ip
+  #default_host: ad.mydomain.com
+  ## organization unit (default is EVA)
+  #ou: EVA
+  ## optional ACL prefix
+  #acl_prefix: "msad_"
+  #tls: true
+  #no_tls_verify: false
+  ## cache entries and use the cache if ad is unavailable
+  #cache_time: 86400
+  ## if cached entry exists - use it before ad authentication
+  #cache_first: false
+user: eva

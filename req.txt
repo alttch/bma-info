@@ -1,0 +1,6 @@
+sphinx==3.0.2
+docutils==0.17.1
+sphinxcontrib-httpdomain
+sphinxcontrib-httpexample==1.1
+sphinxcontrib.yt==0.2.2
+Jinja2<3.1

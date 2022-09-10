@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 653
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "connected": true,
+            "ieid": [
+                1796,
+                509854682016335
+            ],
+            "node": "mws1",
+            "oid": "sensor:env/temp",
+            "status": 1,
+            "t": 1649733900.9208307,
+            "value": 5
+        },
+        {
+            "connected": true,
+            "ieid": [
+                2185,
+                20759006408168
+            ],
+            "node": "mws1",
+            "oid": "sensor:tests/test1",
+            "status": 1,
+            "t": 1652387199.1481013,
+            "value": 91.0
+        }
+    ]
+}
+
