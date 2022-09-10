@@ -41,4 +41,4 @@ SCADA platform for Industry-4.0 automated control systems.
     ui
     auto/index
     sdk/index
-    License <https://github.com/eva-ics/eva4/blob/master/LICENSE>
+    License <license>

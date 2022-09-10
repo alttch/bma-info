@@ -2,6 +2,8 @@ all:
 	@echo "Select target"
 
 prepare:
+	echo "EVA ICS v4 license\n******************\n" > license.rst
+	cat /opt/eva4/LICENSE >> license.rst
 	cd /opt/eva-util/v4/pymacrodata && ./generate.py /opt/bma-info/eva4
 	cd /opt/eva4-enterprise/eva4-esvc/kiosk-manager && make eapi
 	cp /opt/eva4/CHANGELOG.rst changelog.rst
