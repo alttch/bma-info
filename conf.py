@@ -84,7 +84,8 @@ language = None
 # directories to ignore when looking for source files.
 exclude_patterns = [
     '_build', 'pydoc', 'hmi/ws_api.rst', 'hmi/hmi_xtra.rst', 'hmi/http_api.rst',
-    'lmacro/py/python_macros_api.rst', 'core_eapi.rst', 'venv'
+    'lmacro/py/python_macros_api.rst', 'core_eapi.rst', 'venv', 'eva4/include',
+    'eva4/lmacro/py/python_macros_api.rst'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all

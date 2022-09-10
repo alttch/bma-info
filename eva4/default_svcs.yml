@@ -22,21 +22,21 @@
   exe: svc/eva-controller-lm
   des: Logic manager
   txt: |
-    .. include:: ../svc_doc/lm.rst
+    .. include:: ../include/lm.rst
   tpl: svc-tpl-controller-lm.yml
   api: svc/controller-lm/eapi.yml
 - nam: eva.controller.srN
   exe: svc/eva-controller-sr
   des: Script runner controller
   txt: |
-    .. include:: ../svc_doc/sr.rst
+    .. include:: ../include/sr.rst
   tpl: svc-tpl-controller-sr.yml
   api: svc/controller-sr/eapi.yml
 - nam: eva.controller.trapN
   exe: svc/eva-controller-trap
   des: SNMP/UDP trap handler
   txt: |
-    .. include:: ../svc_doc/trap.rst
+    .. include:: ../include/trap.rst
   tpl: svc-tpl-controller-trap.yml
 - nam: eva.controller.enipN
   exe: svc/eva-controller-enip
@@ -202,11 +202,11 @@
   des: HMI service
   ins: "by default with *--hmi* arg"
   txt: |
-    .. include:: ../hmi/hmi_svc.rst
+    .. include:: ../include/hmi_svc.rst
   tpl: svc-tpl-hmi.yml
   api: svc/hmi/eapi.yml
   xtr: |
-    .. include:: ../hmi/hmi_xtra.rst
+    .. include:: ../include/hmi_xtra.rst
 - nam: eva.svc.lockerN
   exe: svc/eva-svc-locker
   des: Shared lock service
@@ -269,13 +269,13 @@
   tpl: svc-tpl-replication.yml
   api: svc/repl/eapi.yml
   txt: |
-    .. include:: ../repl/repl.rst
+    .. include:: ../include/repl.rst
 - nam: eva.repl.legacyN
   exe: venv/bin/eva4-svc-repl-legacy
   des: Legacy (V3) replication service
   ins: py:eva4-repl-legacy
   txt: |
-    .. include:: ../repl/repl_v3legacy.rst
+    .. include:: ../include/repl_v3legacy.rst
   tpl: svc-tpl-replication-legacy.yml
   api: svc/repl-legacy/eapi.yml
 - nam: eva.aaa.msad
@@ -286,12 +286,12 @@
   ent: true
   tpl: svc-tpl-aaa-msad.yml
   xtr: |
-    .. include:: ../svc_doc/msad.rst
+    .. include:: ../include/msad.rst
 - nam: "eva.zfrepl.N.collector|replicator"
   exe: path/to/eva-zfrepl
   des: Zero-failure replication service
   txt: |
-    .. include:: ../svc_doc/zfrepl.rst
+    .. include:: ../include/zfrepl.rst
   api: eva4-esvc/zfrepl/eapi.yml
   ent: true
   tpl: svc-tpl-zfrepl.yml
@@ -299,7 +299,7 @@
   exe: path/to/eva-kioskman
   des: HMI kiosk manager
   txt: |
-    .. include:: ../svc_doc/kioskman.rst
+    .. include:: ../include/kioskman.rst
   api: eva4-esvc/kiosk-manager/eapi.yml
   ent: true
   tpl: svc-tpl-kioskman.yml

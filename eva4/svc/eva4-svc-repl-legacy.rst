@@ -3,7 +3,7 @@ Legacy (V3) replication service
 
 .. contents::
 
-.. include:: ../repl/repl_v3legacy.rst
+.. include:: ../include/repl_v3legacy.rst
 
 
 Installing/updating

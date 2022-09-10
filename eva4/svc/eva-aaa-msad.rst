@@ -72,5 +72,5 @@ auth.user
      - Max operation timeout
      - no
 
-.. include:: ../svc_doc/msad.rst
+.. include:: ../include/msad.rst
 

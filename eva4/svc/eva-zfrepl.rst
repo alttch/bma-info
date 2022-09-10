@@ -5,7 +5,7 @@ Zero-failure replication service
 
 **Requires** :doc:`../enterprise`.
 
-.. include:: ../svc_doc/zfrepl.rst
+.. include:: ../include/zfrepl.rst
 
 
 Setup

@@ -3,7 +3,7 @@ SNMP/UDP trap handler
 
 .. contents::
 
-.. include:: ../svc_doc/trap.rst
+.. include:: ../include/trap.rst
 
 
 Setup

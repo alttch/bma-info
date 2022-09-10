@@ -84,7 +84,7 @@ Commons
 =======
 
 In EVA ICS the node core is responsible only for data brokering with very
-minimal logic, all functionality is provided by :doc:`services <default_svcs>`
+minimal logic, all functionality is provided by :doc:`services <services>`
 (see :doc:`architecture`).
 
 There are two ways configuring the node:

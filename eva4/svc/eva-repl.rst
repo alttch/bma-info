@@ -3,7 +3,7 @@ Replication service
 
 .. contents::
 
-.. include:: ../repl/repl.rst
+.. include:: ../include/repl.rst
 
 
 Setup

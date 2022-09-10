@@ -3,7 +3,7 @@ Script runner controller
 
 .. contents::
 
-.. include:: ../svc_doc/sr.rst
+.. include:: ../include/sr.rst
 
 
 Setup

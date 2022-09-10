@@ -3,7 +3,7 @@ HMI service
 
 .. contents::
 
-.. include:: ../hmi/hmi_svc.rst
+.. include:: ../include/hmi_svc.rst
 
 
 Setup
@@ -237,5 +237,5 @@ ws.stats
       "subscriptions": 1
   }
 
-.. include:: ../hmi/hmi_xtra.rst
+.. include:: ../include/hmi_xtra.rst
 

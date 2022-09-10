@@ -5,7 +5,7 @@ HMI kiosk manager
 
 **Requires** :doc:`../enterprise`.
 
-.. include:: ../svc_doc/kioskman.rst
+.. include:: ../include/kioskman.rst
 
 
 Setup

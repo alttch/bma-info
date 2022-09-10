@@ -31,14 +31,14 @@ jsonschema.validate(svcs, SCHEMA)
 
 svcs = sorted(svcs, key=lambda k: k['des'])
 
-with open('core_svcs_toc.rst', 'w') as tfh:
+with open('include/autogen/core_svcs_toc.rst', 'w') as tfh:
     print('.. toctree::', file=tfh)
     # print('    :caption: The core and services', file=tfh)
     print('    :maxdepth: 1', file=tfh)
     print(file=tfh)
     print('    core', file=tfh)
     print('    services', file=tfh)
-    with open('default_svcs.rst', 'w') as fh:
+    with open('include/autogen/default_svcs.rst', 'w') as fh:
         print('.. list-table::', file=fh)
         print(file=fh)
         print('   * - Suggested name', file=fh)
