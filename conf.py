@@ -37,7 +37,7 @@ import os
 # extensions = []
 extensions = [
     'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample',
-    'sphinxcontrib.youtube', 'myst_parser'
+    'sphinxcontrib.youtube', 'myst_parser', 'sphinx_copybutton'
 ]
 
 myst_enable_extensions = [
