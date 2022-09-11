@@ -4,3 +4,7 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
 .wy-nav-content {
    max-width: none;
 }
+
+.wy-side-nav-search {
+  background-color: #222;
+}
