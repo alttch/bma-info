@@ -21,7 +21,7 @@ For a single node, which is going to host a HMI application, type:
 .. code:: shell
 
     sudo -s # the installer script requires root privileges
-    curl https://pub.bma.ai/eva/install | sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | sh /dev/stdin -a --hmi
 
 If this is a secondary node and no web services / HTTP API are required, omit
 the "--hmi" argument.

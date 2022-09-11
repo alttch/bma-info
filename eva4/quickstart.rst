@@ -51,7 +51,7 @@ dropped to restricted users after being launched.
 .. code:: bash
 
     sudo -s
-    curl https://pub.bma.ai/eva/install | sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | sh /dev/stdin -a --hmi
 
 The above command prepares the system, installs all EVA ICS components (default
 distribution, :ref:`eva4_eva-shell`) on a single machine to "/opt/eva4"
@@ -579,7 +579,7 @@ Make a fresh install and append additional services:
 .. code:: shell
     
     sudo -s
-    curl https://pub.bma.ai/eva/install | sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | sh /dev/stdin -a --hmi
     /opt/eva4/sbin/venvmgr add eva4-controller-py
     # allow deployment for UI files
     ln -sf /opt/eva4/ui /opt/eva4/runtime/ui
