@@ -11,7 +11,7 @@ Prepare EVA ICS
 ===============
 
 For all configured node components (*config/<controller>/main*
-:doc:`registry</registry>` keys).
+:doc:`registry<../registry>` keys).
 
 .. code-block:: yaml
 

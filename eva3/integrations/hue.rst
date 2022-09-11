@@ -17,7 +17,7 @@ Connect LEDs to Hue bridge.
    hexadecimal RGB. For that reason, only unit status (0/1) is updated in case
    if Hue LED is additionally controlled by 3rd party or native Philips app.
 
-Let's connect the bulb to :doc:`/uc/uc`:
+Let's connect the bulb to :doc:`../uc/uc`:
 
 .. code:: shell
 

@@ -14,7 +14,7 @@ Card or faster.
 Installation
 ============
 
-Proceed with :doc:`installation </install>`. Note that as soon as Raspbian
+Proceed with :doc:`installation <../install>`. Note that as soon as Raspbian
 Linux is detected, EVA ICS installer script install *pandas* and *cryptography*
 Python modules with apt (*pandas* installation is very slow, *cryptography* has
 known problems when compiling from source). If your computer uses any Raspbian
@@ -51,12 +51,12 @@ There are 3 primary PHIs for GPIO bus:
 * **gpio_button** handles GPIO inputs
 * **gpio_out** handles GPIO outputs
 * **gpio_power** similar to *gpio_out* but sets GPIO OUT to 1 as soon as
-  :doc:`/uc/uc` is started (e.g. used to give power to other controlled
+  :doc:`../uc/uc` is started (e.g. used to give power to other controlled
   equipment).
 
 Example, let's put a hardware button (or any other input) on GPIO port 20 and
 monitor it (you will probably need to run all commands as root, also you may
-type *eva uc -I* to start interactive :doc:`/uc/uc` shell):
+type *eva uc -I* to start interactive :doc:`../uc/uc` shell):
 
 .. code:: shell
 

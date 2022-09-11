@@ -4,7 +4,8 @@ EVA ICS v3
 .. note::
 
     EVA ICS v3 is the legacy version of EVA ICS, which is not recommended for
-    new setups. We advice to switch to :doc:`EVA ICS v4 </eva4/index>` - a
+    new industrial setups. We advice use EVA ICS v3 for home automation only
+    and switch industrial setups to :doc:`EVA ICS v4 </eva4/index>` - a
     new-generation automation platform, which combines best features from EVA
     ICS v3 with the modern super-fast and robust architecture.
 

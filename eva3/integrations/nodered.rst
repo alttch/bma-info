@@ -2,16 +2,16 @@ Node-Red
 ********
 
 `Node-Red <https://nodered.org>`_ is a popular logic / event management
-software, which can be used in EVA ICS together with :doc:`/lm/lm` or replace
+software, which can be used in EVA ICS together with :doc:`../lm/lm` or replace
 it.
 
 EVA ICS and Node-Red are perfectly compatible. The primary recommended channel
-for data communication is MQTT server, while EVA ICS :ref:`units<unit>` can be
-controlled either via MQTT or with JSON RPC API (third-party Node-Red component
-required: https://flows.nodered.org/node/node-red-contrib-jsonrpc).
+for data communication is MQTT server, while EVA ICS :ref:`units<eva3_unit>`
+can be controlled either via MQTT or with JSON RPC API (third-party Node-Red
+component required: https://flows.nodered.org/node/node-red-contrib-jsonrpc).
 
 This example is considered to be correct for the EVA ICS instance / cloud,
-containing at least one :ref:`MQTT notifier<mqtt_>`.
+containing at least one :ref:`MQTT notifier<eva3_mqtt_>`.
 
 .. youtube:: VT9h1K_D53w
 
@@ -71,7 +71,7 @@ with MQTT input:
 Let us configure the switch to flow the output one if the sensor value is above
 or equal 25 and the output two otherwise.
 
-The serialized sensor MQTT event, sent by :doc:`/uc/uc`, looks like:
+The serialized sensor MQTT event, sent by :doc:`../uc/uc`, looks like:
 
 .. code:: json
 

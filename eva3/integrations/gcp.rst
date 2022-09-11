@@ -7,7 +7,7 @@ Google Cloud IoT Core
 EVA ICS controllers can act as a gateway and send telemetry to GCP IoT core as
 well as receive control commands.
 
-Configuration and examples are specified in :ref:`gcpcoreiot_` notifier
+Configuration and examples are specified in :ref:`eva3_gcpcoreiot_` notifier
 documentation.
 
 Google Cloud TTS

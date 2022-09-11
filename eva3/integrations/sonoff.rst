@@ -18,8 +18,8 @@ All Sonoff equipment is controlled via 2 PHI modules:
 * **sonoff_mch** all Sonoff multi-port equipment
 
 As Sonoff exchange data via MQTT only, you must setup :ref:`MQTT notifier
-<mqtt_>` for :doc:`/uc//uc` first. Note that PHI modules always require full
-MQTT topic despite notifier space is set.
+<eva3_mqtt_>` for :doc:`../uc/uc` first. Note that PHI modules always require
+full MQTT topic despite notifier space is set.
 
 For the initial integrations, we recommend simple MQTT server `mosquitto
 <https://mosquitto.org>`_, which is included in all popular Linux distributions
@@ -42,7 +42,7 @@ We'll use in this example notifier named *eva_1*, which is default notifier in
 EVA ICS controllers. If you use different notifier ID, it should be specified
 in *n* config param of PHI module.
 
-Let's connect the single-port Sonoff to :doc:`/uc/uc`:
+Let's connect the single-port Sonoff to :doc:`../uc/uc`:
 
 .. code:: shell
 

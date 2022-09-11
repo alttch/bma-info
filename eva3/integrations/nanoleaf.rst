@@ -18,7 +18,7 @@ Make sure Nanoleaf is connected to the network.
    Additionally, profile brighness can be specified after comma, e.g.
    "Snowfall,50"
 
-Let's connect Nanoleaf to :doc:`/uc/uc`:
+Let's connect Nanoleaf to :doc:`../uc/uc`:
 
 .. code:: shell
 

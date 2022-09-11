@@ -12,15 +12,15 @@ Data
 ====
 
 * It's recommended to exchange data with Grafana either via
-  :ref:`InfluxDB<influxdb_>` or via :ref:`Prometheus<prometheus_>`.
+  :ref:`InfluxDB<eva3_influxdb_>` or via :ref:`Prometheus<eva3_prometheus_>`.
 
-* After database :doc:`notifier</notifiers>` creation, EVA ICS immediately
+* After database :doc:`notifier<../notifiers>` creation, EVA ICS immediately
   starts sending metrics to the specified database.
 
 * Create data source in Grafana.
 
-* EVA ICS :doc:`item</items>` metrics automatically appear in Grafana and ready
-  to be selected.
+* EVA ICS :doc:`item<../items>` metrics automatically appear in Grafana and
+  ready to be selected.
 
 * To put current item state on Grafana dashboard (e.g. to gauge), use *last*
   value, e.g. for InfluxDB:
@@ -39,7 +39,7 @@ You can develop any custom EVA ICS UI and then put it into iframe on Grafana
 dashboard via `Grafana AJAX
 Plugin <https://grafana.com/grafana/plugins/ryantxu-ajax-panel>`_.
 
-* Install :ref:`js_framework`
+* Install :doc:`/eva-js-framework/index`
 
 * Develop custom web UI and put it into */opt/eva/ui* folder
 
@@ -85,4 +85,4 @@ Custom resources
 ================
 
 To put custom resource on dashboard (e.g. chart from private local network or
-camera image), use AJAX plugin together with :doc:`/sfa/sfa_pvt`.
+camera image), use AJAX plugin together with :doc:`../sfa/sfa_pvt`.

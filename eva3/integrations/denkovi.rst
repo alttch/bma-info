@@ -17,7 +17,7 @@ Relay setup
 
 Connect relay module to local network, make sure SNMP API is enabled.
 
-Let's connect smartDEN-IP-16R 16-port relay to :doc:`/uc/uc`. Consider relay
+Let's connect smartDEN-IP-16R 16-port relay to :doc:`../uc/uc`. Consider relay
 module has IP address 192.168.1.100, SNMP community is default (*private*):
 
 .. code:: shell
@@ -39,10 +39,10 @@ smartDEN IP-32IN setup
 ======================
 
 Connect module to local network, make sure SNMP API is enabled. To let
-:doc:`/uc/uc` receive SNMP traps from digital inputs, open module web admin ->
-*Digital Inputs* and select the ports you want to receive traps from. Make sure
-trap value is 2 (both). Then enter *SNMP traps* section and enter :doc:`/uc/uc`
-IP address and SNMP trap community (default is *eva*).
+:doc:`../uc/uc` receive SNMP traps from digital inputs, open module web admin
+-> *Digital Inputs* and select the ports you want to receive traps from. Make
+sure trap value is 2 (both). Then enter *SNMP traps* section and enter
+:doc:`../uc/uc` IP address and SNMP trap community (default is *eva*).
 
 PHI ports are *1-16* for digital inputs, *a1-a8* for analog inputs and *t1-t8*
 for temperature sensor (B57500M) inputs.

@@ -4,7 +4,7 @@ Amazon Web Services
 AWS IoT as MQTT broker
 ======================
 
-:ref:`MQTT<mqtt_>` broker is used when EVA ICS controllers are located in
+:ref:`MQTT<eva3_mqtt_>` broker is used when EVA ICS controllers are located in
 different networks and can not exchange data with P2P connections.
 
 Instead of setting up dedicated MQTT server, you can use cloud-based service,
@@ -27,7 +27,7 @@ e.g. AWS IoT.
 During installation
 -------------------
 
-Options for EVA ICS :doc:`installation</install>` (*easy-setup*):
+Options for EVA ICS :doc:`installation<../install>` (*easy-setup*):
 
 * MQTT host: AWS IoT endpoint host (XXXXXXXXX.iot.XXXXXXXXX.amazonaws.com)
 * MQTT port: 8883
@@ -54,7 +54,7 @@ If no MQTT broker is set up, just run *easy-setup* again and follow the
 instructions.
 
 If you want to set up additional MQTT broker, let's create new MQTT notifier,
-e.g. for :doc:`/lm/lm`:
+e.g. for :doc:`../lm/lm`:
 
 .. code:: shell
 

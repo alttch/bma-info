@@ -2,7 +2,7 @@ LoRaWAN
 *******
 
 EVA ICS can work as `LoRaWAN <https://en.wikipedia.org/wiki/LoRa>`_ application
-server for private LoRa networks.  :doc:`PHI modules</drivers>` can either
+server for private LoRa networks.  :doc:`PHI modules<../drivers>` can either
 collect metrics from MQTT server or receive direct HTTP push messages with
 state payload.
 
@@ -89,7 +89,7 @@ selected:
     :scale: 75%
 
 Then open *Backends->Connectors* and create connector to :doc:`EVA UC
-</uc/uc>`:
+<../uc/uc>`:
 
 .. figure:: lora-images/connector.png
     :scale: 75%

@@ -8,7 +8,7 @@ Starting from version 3.2.6, controllers can find each other in local network
 via UPnP and automatically connect peer-to-peer without MQTT server.
 
 To perform this, controllers send SSDP broadcast requests to non-standard SSDP
-UDP port *1912* for :doc:`/uc/uc` and *1917* for :doc:`/lm/lm`. Requests are
+UDP port *1912* for :doc:`../uc/uc` and *1917* for :doc:`../lm/lm`. Requests are
 performed on controller start and then repeated with 2-minute interval.
 
 Notes
@@ -18,7 +18,7 @@ Notes
   in *[upnp]* section of controller configuration file (starting from 3.3.0 -
   enabled by default).
 
-* To let controller (LM PLC or :doc:`SFA</sfa/sfa>`) discover others,
+* To let controller (LM PLC or :doc:`SFA<../sfa/sfa>`) discover others,
   *discover_on* option must be set in *[upnp]* section of controller
   configuration file either to "all" (scan all interfaces) or to the list of
   network interfaces (comma separated).
@@ -66,7 +66,7 @@ Response
 3rd-party equipment
 ===================
 
-Some of EVA ICS :doc:`PHI modules</drivers>` support "discover" command, which
+Some EVA ICS :doc:`PHI modules<../drivers>` support "discover" command, which
 allows to automatically find `UPnP
 <https://en.wikipedia.org/wiki/Universal_Plug_and_Play>`_-enabled equipment in
 local network via `SSDP
@@ -74,4 +74,4 @@ local network via `SSDP
 
 Built-in SSDP function **discover**, located in *eva.uc.drivers.tools.ssdp*
 module can be used in custom PHI modules as well. Refer to
-:doc:`/phi_development` for more info.
+:doc:`../phi_development` for more info.

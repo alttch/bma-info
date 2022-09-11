@@ -2,12 +2,12 @@ Roboger
 *******
 
 `Roboger <https://roboger.com/>`_ is a free robots event messaging service,
-which can be easily integrated with EVA ICS :doc:`logic macros </lm/macros>`.
+which can be easily integrated with EVA ICS :doc:`logic macros <../lm/macros>`.
 
 Servers supported
 =================
 
-:doc:`/lm/lm` supports both `roboger.com <https://roboger.com/>`_ and local
+:doc:`../lm/lm` supports both `roboger.com <https://roboger.com/>`_ and local
 **Roboger** server instances.
 
 Setup
@@ -16,8 +16,8 @@ Setup
 Preparing system
 ----------------
 
-:doc:`/lm/lm` has pre-installed Roboger extension called **rpush**, which uses
-local Roboger client configuration settings from
+:doc:`../lm/lm` has pre-installed Roboger extension called **rpush**, which
+uses local Roboger client configuration settings from
 */usr/local/etc/roboger_push.ini*. The easiest way to create Roboger push
 configuration is installing Roboger push CLI:
 
@@ -39,7 +39,7 @@ variable of */opt/eva/etc/venv* and then rebuild EVA ICS venv:
 Loading LM extension
 --------------------
 
-As :doc:`/lm/lm` uses local Roboger push configuration file, no extra
+As :doc:`../lm/lm` uses local Roboger push configuration file, no extra
 configuration is required. Just type:
 
 .. code:: bash
@@ -52,7 +52,7 @@ Using in macros
 ===============
 
 After the extension is loaded, function *roboger_push* becomes available in all
-:doc:`logic macros </lm/macros>`:
+:doc:`logic macros <../lm/macros>`:
 
 .. code:: python
 

@@ -11,12 +11,12 @@ basic support of Ethernet/IP-enabled devices.
 Logic
 =====
 
-EVA ICS :ref:`sensors<sensor>` have "values" and item "status" is used only as
-an error indicator. En/IP tags can be mapped to sensor values as-is with
-*enip_sensor* PHI module.
+EVA ICS :ref:`sensors<eva3_sensor>` have "values" and item "status" is used
+only as an error indicator. En/IP tags can be mapped to sensor values as-is
+with *enip_sensor* PHI module.
 
-EVA ICS :ref:`units<unit>` have both "status" and "value" fields, which form a
-complete item state. So En/IP tag mapping logic is a little bit more
+EVA ICS :ref:`units<eva3_unit>` have both "status" and "value" fields, which
+form a complete item state. So En/IP tag mapping logic is a little bit more
 complicated:
 
 * If En/IP tag (integer) should be mapped to unit status (ON/OFF/other modes),
@@ -70,7 +70,7 @@ poll from/to the En/IP equipment. Tag lists are simple text files, with one tag
 per line. If tag contains an array, element index should be specified.
 
 If bulk updates are not required or performed with :doc:`data
-pullers</datapullers>`, the tag lists are not required.
+pullers<../datapullers>`, the tag lists are not required.
 
 .. code::
 

@@ -2,8 +2,7 @@ Macro extensions
 ****************
 
 As macros are written in Python, you can use any Python module to extend your
-macros. Additionally :doc:`/lm/lm` has ability to extend macros with
-extensions.
+macros. Additionally :doc:`lm` has ability to extend macros with extensions.
 
 Modules are more flexible and are a standard Python way to extend your software.
 However macro extensions are more simple, standardized and easy to configure.
@@ -54,7 +53,7 @@ Extension functions
 ===================
 
 When extension is loaded, its functions become available in all
-:doc:`macros</lm/macros>` automatically with names *<ext_id>_<function>*.
+:doc:`macros<macros>` automatically with names *<ext_id>_<function>*.
 
 E.g. when extension **audio** is loaded with ID **a1**, its function **play**
 is available as **a1_play**. This allows you to load one extension multiple
@@ -62,7 +61,7 @@ times and have different functionality according to specified configuration
 without need to configure module/class params in macros.
 
 If you want to make a short alias for extension function, use
-:ref:`alias<macro_api_alias>` (e.g. in *xc/lm/common.py*):
+:ref:`alias<eva3_macro_api_alias>` (e.g. in *xc/lm/common.py*):
 
 .. code-block:: python
 
@@ -81,7 +80,7 @@ The following extensions are included in EVA ICS distribution by default:
 * **rpush** notifications via Roboger (https://www.roboger.com/,
   https://github.com/alttch/roboger)
 
-* **run_remote** execute macro on any remote :doc:`/lm/lm`
+* **run_remote** execute macro on any remote :doc:`lm`
 
 * **tts** Text-to-speech engine via Altertech TTS Broker
   (https://pypi.org/project/ttsbroker/)

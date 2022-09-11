@@ -14,13 +14,13 @@ features:
 * **cache=N** socket state is cached for N seconds and unit gets cached state
   on updates.
 
-* **update=N** PHI performs :doc:`item </items>` state updates by itself,
+* **update=N** PHI performs :doc:`item <../items>` state updates by itself,
   *update_interval* item parameter is not required.
 
 Additionally, PHI module has parameter *skip_logout*, which can be used to skip
 logout HTTP call and speed up API even more. Note, that if this parameter is
 set, you can not login to switch from another device, except the one
-:doc:`/uc/uc` is installed on.
+:doc:`../uc/uc` is installed on.
 
 Consider EG-PM2-LAN switch is set up with IP 192.168.1.100 and password 123.
 We'll use *update* feature and set *skip_logiut*. Update interval will be set

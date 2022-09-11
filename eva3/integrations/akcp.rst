@@ -1,8 +1,8 @@
 AKCP
 ****
 
-`AKCP <https://www.akcp.com/>`_ sensors can be integrated into :doc:`/uc/uc`
-with either :doc:`SNMP traps </snmp>` or corresponding `PHI modules
+`AKCP <https://www.akcp.com/>`_ sensors can be integrated into :doc:`../uc/uc`
+with either :doc:`SNMP traps <../snmp>` or corresponding `PHI modules
 <https://www.eva-ics.com/phi>`_.
 
 Both ways require sensors to be connected to AKCP SensorProbe or SecurityProbe
@@ -23,7 +23,7 @@ traps on event.
 
 Both ways (using SNMP trap parser or PHIs), require SNMP trap handler to be
 properly configured and set in AKCP SensorProbe/SecurityProbe as a trap handler
-server (field *snmptrap* of :ref:`uc_config`).
+server (field *snmptrap* of :ref:`eva3_uc_config`).
 
 Consider AKCP SensorProbe IP is 192.168.1.100, motion detector is installed on
 port 1, smoke detector - on port 2, temperature/humidity sensor - on port 4.

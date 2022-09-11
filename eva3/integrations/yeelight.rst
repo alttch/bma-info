@@ -22,7 +22,7 @@ After, corresponding EVA ICS PHI module can be loaded and assigned to unit.
    it in default mode and control brightness/temperature only, otherwise color
    mode is set and color LEDs are used.
 
-Let's connect the bulb to :doc:`/uc/uc`:
+Let's connect the bulb to :doc:`../uc/uc`:
 
 .. code:: shell
 

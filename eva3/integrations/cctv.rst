@@ -9,9 +9,9 @@ Uploaded images
 ===============
 
 Consider there's a camera in a local network, which continuously uploads images
-to local folder on the host where :doc:`/sfa/sfa` is installed.
+to local folder on the host where :doc:`../sfa/sfa` is installed.
 
-You can insert newest uploaded image into web interface via :doc:`/sfa/sfa_pvt`:
+You can insert newest uploaded image into web interface via :doc:`../sfa/sfa_pvt`:
 
 **Step 1: Setup source**
 
@@ -39,9 +39,9 @@ will be:
 
     /pvt?k=APIKEY&f=camera1/*.jpg&c=newest&ic=resize:640x400:90:jpeg&nocache=RANDOM
 
-If you use :ref:`js_framework` or ready-made HMI application, parameter
-*k=APIKEY* is not required. Parameter *nocache* should always be present to let
-JavaScript reload image into web browser.
+If you are using :doc:`/eva-js-framework/index` or ready-made HMI application,
+the parameter *k=APIKEY* is not required. Parameter *nocache* should always be
+present to let JavaScript reload image into web browser.
 
 Image in local network
 ======================
@@ -54,7 +54,8 @@ which provides current image at (e.g.):
     http://192.168.1.110/axis-cgi/jpg/image.cgi # old AXIS cameras
     http://192.168.1.110/onvif/snapshot/pic.jpg # modern ONVIF cameras
 
-You can insert image into web interface with :ref:`SFA RPVT<sfa_rpvt>` tool:
+You can insert image into web interface with :ref:`SFA RPVT<eva3_sfa_rpvt>`
+tool:
 
 **Step 1: set API key permissions**
 
@@ -73,19 +74,19 @@ API key is assigned to:
 
     /pvt?k=APIKEY&f=http://192.168.1.110/onvif/snapshot/pic.jpg&ic=resize:640x400:90:jpeg&nocache=RANDOM
 
-As well as for **pvt**, if you use :ref:`js_framework` or ready-made HMI
-application, parameter *k=APIKEY* is not required.
+As well as for **pvt**, if you use :doc:`/eva-js-framework/index` or ready-made
+HMI application, parameter *k=APIKEY* is not required.
 
 Image in 3rd party network
 ==========================
 
-Consider :doc:`/sfa/sfa` is installed in Cloud or in the network **A**, which
+Consider :doc:`../sfa/sfa` is installed in Cloud or in the network **A**, which
 doesn't have direct access to CCTV camera in network **B**.
 
-If :doc:`/uc/uc` or :doc:`/lm/lm` is installed in network **B** and connected
-to :doc:`/sfa/sfa`, we can ask controller in network **B** to be our agent and
-provide camera image (as well as any other resource from network **B**) for
-SFA.
+If :doc:`../uc/uc` or :doc:`../lm/lm` is installed in network **B** and
+connected to :doc:`../sfa/sfa`, we can ask controller in network **B** to be
+our agent and provide camera image (as well as any other resource from network
+**B**) for SFA.
 
 .. figure:: cctv_agent_schema.png
     :scale: 30%
@@ -97,9 +98,9 @@ image from camera without VPN, port-forwarding. But keep resources in network
 
 **Step 1: prepare agent controller**
 
-Put *sysapi/rpvt: yes* field in *config/uc/main* :doc:`registry</registry>` key
-(for UC or *config/lm/main* for LM PLC) to enable rpvt agent feature. Restart
-the controller to activate it:
+Put *sysapi/rpvt: yes* field in *config/uc/main* :doc:`registry<../registry>`
+key (for UC or *config/lm/main* for LM PLC) to enable rpvt agent feature.
+Restart the controller to activate it:
 
 .. code:: bash
 
@@ -148,7 +149,7 @@ Image from password-protected camera
 ====================================
 
 Camera image URL can be password protected, usually with basic authentication.
-As :doc:`/sfa/sfa_pvt` can not obtain resources from password-protected URLs,
+As :doc:`../sfa/sfa_pvt` can not obtain resources from password-protected URLs,
 you need to proxy camera image to SFA or agent controller host.
 
 We recommend to use a tiny tool called `CCTV proxy

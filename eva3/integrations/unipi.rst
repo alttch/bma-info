@@ -34,8 +34,8 @@ no - reconfigure it with
 Remote
 ------
 
-:doc:`/uc/uc` talks with UniPi via :doc:`/modbus`. To let UniPi Modbus daemon
-answer remote requests, change LISTEN_IP in */etc/default/unipitcp*:
+:doc:`../uc/uc` talks with UniPi via :doc:`../modbus`. To let UniPi Modbus
+daemon answer remote requests, change LISTEN_IP in */etc/default/unipitcp*:
 
 .. code:: shell
 
@@ -50,9 +50,10 @@ then restart UniPi Modbus daemon:
 1-Wire
 ======
 
-If installed locally, EVA ICS can use UniPi :doc:`1-Wire </owfs>` bus directly.
+If installed locally, EVA ICS can use UniPi :doc:`1-Wire <../owfs>` bus
+directly.
 
-For Neuron series, owfs virtual bus for :doc:`/uc/uc` must be created as:
+For Neuron series, owfs virtual bus for :doc:`../uc/uc` must be created as:
 
 .. code:: shell
 
@@ -78,11 +79,11 @@ modifications.
 * **unipi_axon_s115_din** digital inputs
 * **unipi_axon_s115_dout** digital outputs
 
-It is also possible to use :ref:`generic Modbus drivers<modbus_generic>` for
-any UniPi model. Refer to UniPi documentation for the register mapping
-and register types.
+It is also possible to use :ref:`generic Modbus drivers<eva3_modbus_generic>`
+for any UniPi model. Refer to UniPi documentation for the register mapping and
+register types.
 
-Consider, UniPi has IP address 192.168.1.100 and EVA ICS :doc:`/uc/uc` is
+Consider, UniPi has IP address 192.168.1.100 and EVA ICS :doc:`../uc/uc` is
 installed on remote host (for local installation use "localhost" or
 "127.0.0.1" for Modbus virtual port configuration). If your UniPi has RS485
 port, you may also connect device via RS485-1 (default).
