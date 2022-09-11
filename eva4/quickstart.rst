@@ -510,7 +510,7 @@ create a new ACL, a new user and use them instead:
     login: op
     password: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
 
-Install `EVA JS Framework <https://github.com/alttch/eva-js-framework>`_:
+Install :doc:`/eva-js-framework/index`:
 
 .. code:: shell
 

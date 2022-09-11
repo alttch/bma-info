@@ -6,4 +6,5 @@ Bohemia Automation Informational System
     :maxdepth: 1
 
     eva4/index
+    eva-js-framework/index
     trademarks

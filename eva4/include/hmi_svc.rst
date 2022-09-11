@@ -8,4 +8,4 @@ See also:
 * :doc:`../hmi/upload`
 * :doc:`../hmi/server_templates`
 * :doc:`../hmi/frontend`
-* `EVA JS Framework <https://github.com/alttch/eva-js-framework>`_
+* :doc:`/eva-js-framework/index`

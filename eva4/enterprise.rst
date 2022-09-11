@@ -69,8 +69,8 @@ See :doc:`svc/eva-kioskman`.
 EVA JS Framework WASM extension
 ===============================
 
-`WASM <https://webassembly.org>`_ extension for `EVA JS Framework
-<https://github.com/alttch/eva-js-framework/>`_ offloads state processing from
+`WASM <https://webassembly.org>`_ extension for :doc:`EVA JS Framework
+</eva-js-framework/index>` offloads state processing from
 the web browser JavaScript engine to the WASM application, allowing SCADA HMI
 to monitor hundreds of items without any client device overhead.
 

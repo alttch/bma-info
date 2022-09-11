@@ -235,9 +235,8 @@ simple.
 EVA JS Framework
 ~~~~~~~~~~~~~~~~
 
-If `EVA JS Framework <https://github.com/alttch/eva-js-framework>`_ is used,
-there is no need to migrate a HMI web application, as the framework does
-everything.
+If :doc:`/eva-js-framework/index` is used, there is no need to migrate a HMI
+web application, as the framework does everything.
 
 The only steps are required:
 

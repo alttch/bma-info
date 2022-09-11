@@ -103,9 +103,8 @@ and other compatible.
 HMI application example
 =======================
 
-OTP is supported out-of-the-box by `EVA JS Framework
-<https://github.com/alttch/eva-js-framework>`_, starting from the version
-0.3.38.
+OTP is supported out-of-the-box by :doc:`EVA JS Framework
+</eva-js-framework/index>`, starting from the version 0.3.38.
 
 Here is an example of two-factor login logic in HMI web application:
 

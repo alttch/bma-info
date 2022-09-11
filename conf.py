@@ -36,8 +36,15 @@ import os
 # ones.
 # extensions = []
 extensions = [
-    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample', 'sphinxcontrib.yt'
+    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample', 'sphinxcontrib.yt',
+    'myst_parser'
 ]
+
+myst_enable_extensions = [
+    "linkify",
+]
+
+myst_linkify_fuzzy_links = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -72,7 +79,7 @@ release = version
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -186,7 +193,7 @@ html_static_path = ['_static']
 # template names.
 #html_additional_pages = {}
 
-html_add_permalinks = ''
+html_permalinks = False
 
 # If false, no module index is generated.
 #html_domain_indices = True

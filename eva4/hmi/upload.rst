@@ -103,8 +103,8 @@ method returns:
 Additional form parameters
 --------------------------
 
-* **k** API key (set automatically by `EVA JS Framework
-  <https://github.com/alttch/eva-js-framework>`_ version 0.3.9 or above)
+* **k** API key (set automatically by :doc:`EVA JS Framework
+  </eva-js-framework/index>` version 0.3.9 or above)
 
 * **wait** (**w**) seconds to wait until macro execution is completed
 

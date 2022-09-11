@@ -41,9 +41,9 @@ as well as *content.js* file in any first-level folder.
 
 .. note::
 
-    If the client is authenticated in advance (auth cookie is set by `EVA JS
-    Framework <https://github.com/alttch/eva-js-framework>`_), requests do not
-    require *k=APIKEY/TOKEN* parameter.
+    If the client is authenticated in advance (auth cookie is set by :doc:`EVA
+    JS Framework </eva-js-framework/index>`), requests do not require
+    *k=APIKEY/TOKEN* parameter.
 
 .. contents::
 

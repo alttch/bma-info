@@ -37,10 +37,10 @@ HTML pages, on the server side.
 
 .. note::
 
-    It is highly recommended to use `EVA JS Framework
-    <https://github.com/alttch/eva-js-framework>`_, a JavaScript framework,
-    which is used to quickly develop EVA ICS HMI web applications and handles
-    authentication, interaction, events and other communication tasks.
+    It is highly recommended to use :doc:`EVA JS Framework
+    </eva-js-framework/index>`, a JavaScript framework, which is used to
+    quickly develop EVA ICS HMI web applications and handles authentication,
+    interaction, events and other communication tasks.
 
 If EVA JS Framework is used, switch API version to V4:
 

@@ -12,4 +12,4 @@ Interface development (HMI apps)
     hmi/frontend
     evahi
     2fa
-    EVA JS Framework <https://github.com/alttch/eva-js-framework>
+    /eva-js-framework/index
