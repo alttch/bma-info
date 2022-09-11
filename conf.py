@@ -61,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'EVA ICS v4'
+project = 'Bohemia Automation Informational System'
 copyright = '2022, Bohemia Automation / Altertech'
 author = 'Bohemia Automation'
 
