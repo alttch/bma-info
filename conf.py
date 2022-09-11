@@ -36,8 +36,8 @@ import os
 # ones.
 # extensions = []
 extensions = [
-    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample', 'sphinxcontrib.yt',
-    'myst_parser'
+    'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample',
+    'sphinxcontrib.youtube', 'myst_parser'
 ]
 
 myst_enable_extensions = [
