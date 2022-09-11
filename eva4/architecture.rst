@@ -52,7 +52,7 @@ Each EVA ICS v4 node has the following architecture:
 * HMI services provide web servers to host user-interface applications and
   HTTP/web socket API.
 
-See also: :doc:`services`.
+See also: :doc:`core_svcs`.
 
 Service types
 =============
@@ -107,7 +107,7 @@ created automatically:
 Additional external services
 ============================
 
-See :doc:`list of all default services<services>`.
+See :doc:`list of all default services<core_svcs>`.
 
 Service management
 ==================

@@ -19,7 +19,7 @@ Why migrate to EVA ICS v4
 * **Node scalability**. V4 node has extremely great multiprocessing support and
   memory management and can utilize as much system resources as there are
   available. Furthermore, for heavy-loaded systems, nodes can be split into
-  multiple "points", by moving :doc:`services <services>` to neighbor
+  multiple "points", by moving :doc:`services <core_svcs>` to neighbor
   computers.
 
 * **Local clusters**. In addition to node-to-cloud formations, heavy-loaded

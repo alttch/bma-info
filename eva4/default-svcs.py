@@ -34,10 +34,11 @@ svcs = sorted(svcs, key=lambda k: k['des'])
 with open('include/autogen/core_svcs_toc.rst', 'w') as tfh:
     print('.. toctree::', file=tfh)
     # print('    :caption: The core and services', file=tfh)
+    print('    :hidden:', file=tfh)
     print('    :maxdepth: 1', file=tfh)
     print(file=tfh)
     print('    core', file=tfh)
-    print('    services', file=tfh)
+    # print('    services', file=tfh)
     with open('include/autogen/default_svcs.rst', 'w') as fh:
         print('.. list-table::', file=fh)
         print(file=fh)

@@ -1,8 +1,8 @@
 .. toctree::
+    :hidden:
     :maxdepth: 1
 
     core
-    services
     svc/eva-controller-w1
     svc/eva-aaa-msad
     svc/eva-aaa-acl
