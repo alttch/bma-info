@@ -99,8 +99,8 @@ use the phrases "powered by", "inside" or "for".
 It is not allowed to certify engineers in EVA ICS without a permission
 from the trademark supervisors or the trademark owner.
 
-Correct examples:
-^^^^^^^^^^^^^^^^^
+Correct examples
+^^^^^^^^^^^^^^^^
 
 -  MyAssemblyLineController powered by EVA ICS®
 -  MyHomeAutomationSystem powered by EVA ICS®
@@ -111,8 +111,8 @@ Correct examples:
 -  MyApp for EVA ICS
 -  MyEquipment Driver for EVA ICS
 
-Incorrect examples:
-^^^^^^^^^^^^^^^^^^^
+Incorrect examples
+^^^^^^^^^^^^^^^^^^
 
 -  EVA ICS Assembly Line Controller
 -  EVA ICS Appliance Box
