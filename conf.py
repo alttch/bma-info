@@ -163,6 +163,10 @@ html_theme_options = {
 # of the sidebar.
 html_logo = 'images/logo.png'
 
+html_css_files = [
+    'css/style.css',
+]
+
 html_context = {"display_github": False}
 
 # The name of an image file (relative to this directory) to use as a favicon of
