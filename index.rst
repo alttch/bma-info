@@ -12,5 +12,6 @@ or educational purposes without any restrictions.
     :maxdepth: 1
 
     eva4/index
+    eva3/index
     eva-js-framework/index
     trademarks
