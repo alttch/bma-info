@@ -13,6 +13,7 @@ items. Enter item OID or mask (MQTT-style wildcard, e.g. sensor:group/#) in the
 filter field and reload the table (or wait for the auto-reload).
 
 .. figure:: ss/items_filter.png
+    :scale: 30%
 
 .. note::
 
