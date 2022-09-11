@@ -7,3 +7,6 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
 .wy-side-nav-search {
   background-color: #272525;
 }
+.wy-nav-top {
+  background-color: #272525;
+}
