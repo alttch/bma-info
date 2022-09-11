@@ -8,6 +8,11 @@ EVA ICS v4
 `EVA ICS® <https://www.eva-ics.com>`_ v4 is a new-generation Industrial-IoT
 SCADA platform for Industry-4.0 automated control systems.
 
+.. warning::
+
+    EVA ICS v4 is currently in closed-beta stage and available for Enterprise
+    customers only. Expected release date: end of September 2022
+
 * The world-first and only Enterprise SCADA platform, written completely in
   Rust: extremely fast, secure and stable.
 
