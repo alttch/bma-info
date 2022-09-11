@@ -9,6 +9,10 @@ EVA ICS v3
     new-generation automation platform, which combines best features from EVA
     ICS v3 with the modern super-fast and robust architecture.
 
+.. image:: images/logo.png
+  :width: 120
+  :align: right
+
 `EVA ICS v3® <https://www.eva-ics.com/>`_ is a platform for automated control
 and monitoring systems development, for any needs, from home/office to
 industrial setups. It is completely free for non-commercial use as well as for
