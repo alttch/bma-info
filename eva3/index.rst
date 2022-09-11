@@ -105,4 +105,5 @@ The latest EVA ICS version is |Version|. :doc:`CHANGELOG<changelog>`
     api
     extending
     advanced_dev
+    PHIs <phi.rst>
     license

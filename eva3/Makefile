@@ -7,6 +7,7 @@ prepare:
 	cp -vf /opt/eva/lib/eva/registry/defaults/config/sfa/main.yml cfg/sfa_main.yml
 	cp -vf /opt/eva/etc/eva_config-dist cfg/
 	cp -vf /opt/eva/CHANGELOG.rst changelog.rst
+	./gen-drivers.py > phi.rst
 
 pydocs:
 	./generate-pydocs.py
