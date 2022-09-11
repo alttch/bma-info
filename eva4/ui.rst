@@ -12,4 +12,3 @@ Interface development (HMI apps)
     hmi/frontend
     evahi
     2fa
-    /eva-js-framework/index
