@@ -6,8 +6,8 @@ r = requests.get('https://pub.bma.ai/eva3/phi/drivers.json')
 drivers = sorted(sorted(r.json(), key=lambda k: k['name']),
               key=lambda k: k['category'])
 
-print("EVA ICS v3 PHIs")
-print("***************")
+print("EVA ICS v3 PHI modules")
+print("**********************")
 print("""
 .. list-table::
 

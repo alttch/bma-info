@@ -1,5 +1,5 @@
-EVA ICS v3 PHIs
-***************
+EVA ICS v3 PHI modules
+**********************
 
 .. list-table::
 
