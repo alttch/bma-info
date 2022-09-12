@@ -64,7 +64,7 @@ type:
 .. code:: bash
 
    # download PHI module
-   eva uc phi download https://get.eva-ics.com/phi/sensors/lora/lora_rak7204.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/sensors/lora/lora_rak7204.py
    # load PHI module into EVA UC. we'll use sensor DevEUI as module id
    eva uc phi load A123456789123456 lora_rak7204
    # PHI provides an access to all ports of RAK7204. In this example we'll use

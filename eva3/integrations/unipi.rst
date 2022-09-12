@@ -95,10 +95,10 @@ port, you may also connect device via RS485-1 (default).
    eva uc modbus test upi1
 
    # download PHIs
-   eva uc phi download https://get.eva-ics.com/phi/unipi/axon/unipi_axon_s115_ain.py
-   eva uc phi download https://get.eva-ics.com/phi/unipi/axon/unipi_axon_s115_aout.py
-   eva uc phi download https://get.eva-ics.com/phi/unipi/axon/unipi_axon_s115_din.py
-   eva uc phi download https://get.eva-ics.com/phi/unipi/axon/unipi_axon_s115_dout.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/unipi/axon/unipi_axon_s115_ain.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/unipi/axon/unipi_axon_s115_aout.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/unipi/axon/unipi_axon_s115_din.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/unipi/axon/unipi_axon_s115_dout.py
 
    # load PHIs
    eva uc phi load upi1_ain unipi_axon_s115_ain -c port=upi1,unit=1 -y

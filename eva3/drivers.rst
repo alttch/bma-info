@@ -35,8 +35,8 @@ Get PHI module information:
     eva uc phi modinfo <phi_module>
 
 If the desired PHI is not listed, download it and put to *xc/drivers/phi*
-folder. Official PHI modules are available at `<https://www.eva-ics.com/phi>`_.
-You may either download the module manually or use
+folder. See the official :doc:`v3 PHI module list<phi>`. You may either
+download a module manually or use
 
 .. code-block:: bash
 
@@ -354,9 +354,9 @@ Physical interfaces (PHI)
 PHIs are modules, which contain no data processing logic but code to work
 directly with hardware equipment.
 
-We provide a basic set of PHIs for the popular automation equipment (at
-`<https://www.eva-ics.com/phi>`_), but if your equipment isn't supported, it's
-not so hard to :doc:`develop your own PHI<phi_development>`.
+We provide a basic set of PHIs for the popular automation equipment (see
+:doc:`phi`), but if your equipment isn't supported, it's not so hard to
+:doc:`develop your own PHI<phi_development>`.
 
 We've already described how to :ref:`get and load PHIs<eva3_driver>`, here is
 some additional important information.

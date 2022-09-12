@@ -21,7 +21,7 @@ Let's connect the bulb to :doc:`../uc/uc`:
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/lights/philips_hue_leds.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/lights/philips_hue_leds.py
    # PHI module for Philips Hue supports "discover" command, so we can discover
    # the bridge in network to obtain its IP
    eva uc phi discover philips_hue_leds

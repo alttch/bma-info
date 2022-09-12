@@ -58,8 +58,8 @@ Downloading PHIs
 
 .. code:: bash
 
-    eva uc phi download https://get.eva-ics.com/phi/enip/enip_sensor.py
-    eva uc phi download https://get.eva-ics.com/phi/enip/enip_xvunit.py
+    eva uc phi download https://pub.bma.ai/eva3/phi/enip/enip_sensor.py
+    eva uc phi download https://pub.bma.ai/eva3/phi/enip/enip_xvunit.py
 
 
 Creating tag lists

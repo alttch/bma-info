@@ -36,9 +36,8 @@ no - reconfigure it with
 GPIO
 ====
 
-Raspberry Pi GPIO can be used with ready-to-use `EVA ICS PHIs
-<https://www.eva-ics.com/phi>`_. All GPIO PHIs require *gpiozero* Python
-module, so instal it first.
+Raspberry Pi GPIO can be used with ready-to-use :doc:`EVA ICS v3 PHIs
+<../phi>`. All GPIO PHIs require *gpiozero* Python module, so instal it first.
 
 Put "gpiozero pigpio RPi.GPIO"  to *EXTRA* var in /opt/eva/etc/venv, then run
 
@@ -60,7 +59,7 @@ type *eva uc -I* to start interactive :doc:`../uc/uc` shell):
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/gpio/gpio_button.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/gpio/gpio_button.py
    # gpio_buttons PHI module requires all ports to be listed in load config.
    eva uc phi load gbuttons gpio_button -c port=20 -y
    # create button sensor

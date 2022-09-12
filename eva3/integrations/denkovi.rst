@@ -22,7 +22,7 @@ module has IP address 192.168.1.100, SNMP community is default (*private*):
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/relays/dae_ip16r.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/relays/dae_ip16r.py
    eva uc phi load relay1 dae_ip16r -c host=192.168.1.100 -y
    # create units
    eva uc create unit:lights/lamp1 -y
@@ -53,7 +53,7 @@ default (*public*):
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/sensors/misc/dae_ip32in.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/sensors/misc/dae_ip32in.py
    eva uc phi load ip32in dae_ip32in -c host=192.168.1.100 -y
    # create sensors
    eva uc create sensor:inputs/din2 -y

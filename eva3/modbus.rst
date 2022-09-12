@@ -158,7 +158,7 @@ port "p1" is already defined.
 .. code-block:: bash
 
     # download PHI module if not downloaded yet
-    eva uc phi download https://get.eva-ics.com/phi/modbus/modbus_sensor.py
+    eva uc phi download https://pub.bma.ai/eva3/phi/modbus/modbus_sensor.py
     # load PHI, if not loaded yet
     # here port = Modbus virtual port
     eva uc phi load ms1 modbus_sensor -c port=p1,unit=1 -y 
@@ -176,7 +176,7 @@ stored as 5th bit of holding register 1000:
 .. code-block:: bash
 
     # download PHI module if not downloaded yet
-    eva uc phi download https://get.eva-ics.com/phi/modbus/modbus_xvunit.py
+    eva uc phi download https://pub.bma.ai/eva3/phi/modbus/modbus_xvunit.py
     # load PHI, if not loaded yet
     # here port = Modbus virtual port
     eva uc phi load m1 modbus_xvunit -c port=p1,unit=1 -y 

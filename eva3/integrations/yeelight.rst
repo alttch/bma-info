@@ -26,7 +26,7 @@ Let's connect the bulb to :doc:`../uc/uc`:
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/lights/yeelight.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/lights/yeelight.py
    # PHI module for Yeelight supports "discover" command, so we can discover
    # the bulb in network to obtain its IP
    eva uc phi discover yeelight

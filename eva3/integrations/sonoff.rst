@@ -46,7 +46,7 @@ Let's connect the single-port Sonoff to :doc:`../uc/uc`:
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/relays/sonoff_basic.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/relays/sonoff_basic.py
    eva uc phi load sonoff1 sonoff_basic -c t=equipment/sonoff1 -y
    # create unit
    eva uc create unit:lights/lamp1 -y

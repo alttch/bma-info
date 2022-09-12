@@ -56,8 +56,8 @@ equipment.
 
 .. code:: shell
 
-    eva uc phi download https://get.eva-ics.com/phi/modbus/modbus_xvunit.py
-    eva uc phi download https://get.eva-ics.com/phi/modbus/modbus_sensor.py 
+    eva uc phi download https://pub.bma.ai/eva3/phi/modbus/modbus_xvunit.py
+    eva uc phi download https://pub.bma.ai/eva3/phi/modbus/modbus_sensor.py 
 
 Define Modbus virtual port. Consider the bus is on /dev/ttyS0 (system RS-232
 port #1):

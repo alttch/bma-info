@@ -2,8 +2,8 @@ AKCP
 ****
 
 `AKCP <https://www.akcp.com/>`_ sensors can be integrated into :doc:`../uc/uc`
-with either :doc:`SNMP traps <../snmp>` or corresponding `PHI modules
-<https://www.eva-ics.com/phi>`_.
+with either :doc:`SNMP traps <../snmp>` or corresponding :doc:`PHI modules
+<../phi>`.
 
 Both ways require sensors to be connected to AKCP SensorProbe or SecurityProbe
 device, which acts as SNMP bridge.
@@ -31,7 +31,7 @@ port 1, smoke detector - on port 2, temperature/humidity sensor - on port 4.
 .. code:: shell
 
    # motion detector
-   eva uc phi download https://get.eva-ics.com/phi/sensors/alarm/akcp_md.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/sensors/alarm/akcp_md.py
    # PHI module is loaded for the particular SensorProbe/port
    eva uc phi load md1 akcp_md -c host=192.168.1.100,sp=1 -y
    # create motion sensor
@@ -40,7 +40,7 @@ port 1, smoke detector - on port 2, temperature/humidity sensor - on port 4.
    eva uc driver assign sensor:security/motion1 md1.default -y
 
    # smoke detector
-   eva uc phi download https://get.eva-ics.com/phi/sensors/alarm/akcp_sk.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/sensors/alarm/akcp_sk.py
    eva uc phi load sk1 akcp_sk -c host=192.168.1.100,sp=2 -y
    # create smoke sensor
    eva uc create sensor:security/smoke1 -y
@@ -48,7 +48,7 @@ port 1, smoke detector - on port 2, temperature/humidity sensor - on port 4.
    eva uc driver assign sensor:security/smoke1 sk1.default -y
 
    # temperature/humidity sensor
-   eva uc phi download https://get.eva-ics.com/phi/sensors/env/akcp_ths.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/sensors/env/akcp_ths.py
    # PHI for AKCP_THSXX provides 2 virtual ports: t and h
    eva uc phi load ths1 akcp_ths -c host=192.168.1.100,sp=4,retries=3 -y
    # create temperature and humidity sensors

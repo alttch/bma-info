@@ -22,7 +22,7 @@ Let's connect Nanoleaf to :doc:`../uc/uc`:
 
 .. code:: shell
 
-   eva uc phi download https://get.eva-ics.com/phi/lights/nanoleaf.py
+   eva uc phi download https://pub.bma.ai/eva3/phi/lights/nanoleaf.py
    # PHI module for Nanoleaf supports "discover" command, so we can discover
    # the equipment in network to obtain its IP
    eva uc phi discover nanoleaf
