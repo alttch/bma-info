@@ -29,13 +29,13 @@ function bma_wait_result() {
     if (el.getElementsByTagName("h2")[0].innerHTML == "Search Results") {
       bma_inject_product();
     } else {
-      setTimeout(bma_wait_result, 200);
+      setTimeout(bma_wait_result, 100);
     }
   } catch (err) {
-    setTimeout(bma_wait_result, 200);
+    setTimeout(bma_wait_result, 100);
   }
 }
 
 if (document.location.pathname.endsWith("/search.html")) {
-  setTimeout(bma_wait_result, 200);
+  setTimeout(bma_wait_result, 100);
 }
