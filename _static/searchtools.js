@@ -86,6 +86,7 @@ const _displayItem = (item, highlightTerms, searchTerms) => {
   params.set("highlight", [...highlightTerms].join(" "));
   if (linkUrl.indexOf('/') > -1) {
     let sp = linkUrl.split('/');
+    console.log(sp);
     let product = BMA_PRODUCTS[sp[0]];
     if (product) {
         listItem.appendChild(document.createElement("span")).innerHTML =
