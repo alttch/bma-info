@@ -34,10 +34,10 @@ function bma_wait_result() {
   ) {
     bma_inject_product();
   } else {
-    setTimeout(bma_wait_result, 100);
+    setTimeout(bma_wait_result, 200);
   }
 }
 
 if (document.location.pathname.endsWith("/search.html")) {
-  setTimeout(bma_wait_result, 100);
+  setTimeout(bma_wait_result, 200);
 }
