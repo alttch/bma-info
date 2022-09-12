@@ -4,36 +4,34 @@ var BMA_PRODUCTS = {
 };
 
 function bma_inject_product() {
-  try {
-    let els = document
-      .getElementsByClassName("search")[0]
-      .getElementsByTagName("li");
-    let result = Array.from(els);
-    result.forEach((el) => {
-      try {
-        let p = el.getElementsByTagName("a")[0].href.split("/")[5];
-        let product = BMA_PRODUCTS[p];
-        if (product) {
-          let product_el = document.createElement("span");
-          product_el.innerHTML = "<b>[" + product + "]</b> ";
-          el.insertBefore(product_el, el.firstChild);
-        }
-      } catch (err) {
-        throw err;
+  let els = document
+    .getElementsByClassName("search")[0]
+    .getElementsByTagName("li");
+  let result = Array.from(els);
+  result.forEach((el) => {
+    try {
+      let p = el.getElementsByTagName("a")[0].href.split("/")[5];
+      let product = BMA_PRODUCTS[p];
+      if (product) {
+        let product_el = document.createElement("span");
+        product_el.innerHTML = "<b>[" + product + "]</b> ";
+        el.insertBefore(product_el, el.firstChild);
       }
-    });
-  } catch (err) {
-    throw err;
-  }
+    } catch (err) {
+      // throw err;
+    }
+  });
 }
 
 function bma_wait_result() {
-  if (
-    document.getElementById("search-results").getElementsByTagName("h2")[0]
-      .innerHTML == "Search Results"
-  ) {
-    bma_inject_product();
-  } else {
+  let el = document.getElementById("search-results");
+  try {
+    if (el.getElementsByTagName("h2")[0].innerHTML == "Search Results") {
+      bma_inject_product();
+    } else {
+      setTimeout(bma_wait_result, 200);
+    }
+  } catch (err) {
     setTimeout(bma_wait_result, 200);
   }
 }
