@@ -1,9 +1,8 @@
-EVA HMI Block UI
-****************
+HMI Block UI
+************
 
-`Block UI <https://github.com/alttch/eva-hmi-block_ui>`_ is a HMI application
-for `EVA ICS <https://www.eva-ics.com/>`_ which provides a simple but flexible
-user web interface for any EVA ICS setup.
+HMI Block UI is a HMI application for `EVA ICS <https://www.eva-ics.com/>`_
+which provides a simple but flexible user web interface for any EVA ICS setup.
 
 Uses `bootstrap <https://getbootstrap.com/>`_ and `jQuery
 <https://jquery.com/>`_. No HTML or JavaScript coding is required: just
