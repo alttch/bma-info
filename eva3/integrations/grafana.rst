@@ -55,7 +55,7 @@ Plugin <https://grafana.com/grafana/plugins/ryantxu-ajax-panel>`_.
 HMI Block UI
 ------------
 
-* Install `EVA HMI Block UI <https://github.com/alttch/eva-hmi-block_ui>`_:
+* Install :doc:`EVA HMI Block UI </hmi-block-ui/index>`:
 
 .. code:: bash
 
