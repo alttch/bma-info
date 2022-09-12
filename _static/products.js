@@ -11,11 +11,11 @@ function bma_inject_product() {
     let result = Array.from(els);
     result.forEach((el) => {
       try {
-        let p = el.getElementsByTagName("a").href.split("/")[5];
+        let p = el.getElementsByTagName("a")[0].href.split("/")[5];
         let product = BMA_PRODUCTS[p];
         if (product) {
           let product_el = document.createElement("span");
-          product_el.innerHTML = "<b>[" + product + "]</b>";
+          product_el.innerHTML = "<b>[" + product + "]</b> ";
           el.insertBefore(product_el, el.firstChild);
         }
       } catch (err) {
