@@ -13,5 +13,4 @@ API
     sfa/sfa_api
     sfa/sfa_api_restful
     api_clients
-    restful
 
