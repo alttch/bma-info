@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-import os
-
-if os.system('cp -prvf /opt/eva-hmi-block_ui/themes .'):
-    raise RuntimeError
-
 css = open('themes/default/icons.css').readlines()
 i = 0
 data_icons = {}
