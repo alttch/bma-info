@@ -43,7 +43,7 @@ Plugin <https://grafana.com/grafana/plugins/ryantxu-ajax-panel>`_.
 
 * Develop custom web UI and put it into */opt/eva/ui* folder
 
-* Install AJAX plugin:
+* Install AJAX plug-in:
 
 .. code:: bash
 
@@ -64,11 +64,10 @@ HMI Block UI
     cd apps
     git clone https://github.com/alttch/eva-hmi-block_ui.git
 
-* Follow `HMI Block UI documentation
-  <https://eva-hmi-block-ui.readthedocs.io>`_ and configure it / create
-  interface pages.
+* Follow :doc:`HMI Block UI documentation </hmi-block-ui/index>` and configure
+  it / create interface pages.
 
-* Install AJAX plugin:
+* Install AJAX plug-in:
 
 .. code:: bash
 
@@ -76,13 +75,11 @@ HMI Block UI
     systemctl restart grafana-server
 
 * Create new visualization in Grafana and embed your custom web UI via iframe.
-  Look `HMI Block UI
-  embedding
-  <https://eva-hmi-block-ui.readthedocs.io/en/latest/overriding.html#embedding>`_
+  See :ref:`HMI Block UI embedding <hmi-block-ui_embedding>`
   documentation section for example.
 
 Custom resources
 ================
 
 To put custom resource on dashboard (e.g. chart from private local network or
-camera image), use AJAX plugin together with :doc:`../sfa/sfa_pvt`.
+camera image), use AJAX plug-in together with :doc:`../sfa/sfa_pvt`.
