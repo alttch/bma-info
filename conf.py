@@ -91,8 +91,8 @@ language = 'en'
 # directories to ignore when looking for source files.
 exclude_patterns = [
     '_build', 'pydoc', 'venv', 'eva4/include',
-    'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc',
-    'eva3/phi_devel.rst' ]
+    'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc', 'eva3/phi_devel.rst'
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -163,6 +163,8 @@ html_title = 'BMA InfoSys'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 html_logo = 'images/logo.png'
+
+html_js_files = ['products.js', 'searchtools.js']
 
 html_css_files = [
     'css/style.css',
