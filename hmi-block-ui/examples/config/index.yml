@@ -1,0 +1,189 @@
+#url: https://my.external.domain:port/
+class: dashboard
+title: Dashboard - Sample interface
+
+default-login: operator
+
+motd: >
+  Default user name: <b>operator</b><br />
+  Default password: <b>123</b><br />
+  Demo source: <b><a href="https://github.com/alttch/eva-demo-smarthome">
+    https://github.com/alttch/eva-demo-smarthome</a></b>
+
+buttons:
+  alarm:
+    icon: attn
+    item: lvar:security/alarm
+    title: Alarm
+  vent:
+    title: Vent.
+    icon: vent
+    item: unit:equipment/vent
+    busy: uuid
+
+  window_room2:
+    icon: window_right
+    item: unit:windows/room2
+    menu: 3
+
+  lights_on:
+    icon: lamps.s_1
+    item: lmacro:control/lights_on
+
+  thermo_room1_off:
+    icon: thermostat.s_0
+    title: Turn off
+    action: unit:thermo/room1
+    action_params:
+      s: 0
+  thermo_room1_15:
+    icon: thermostat.s_1
+    action: unit:thermo/room1
+    title: "Set 15°C"
+    action_params:
+      s: 1
+      v: 15
+  thermo_room1_25:
+    icon: thermostat.s_1
+    action: unit:thermo/room1
+    title: "Set 25°C"
+    action_params:
+      s: 1
+      v: 25
+  thermo_room1:
+    icon: thermostat
+    item: unit:thermo/room1
+    value: "°C"
+    title: profiles
+    menu:
+      - thermo_room1_off
+      - thermo_room1_15
+      - thermo_room1_20
+      - thermo_room1_25
+  thermo_room2:
+    icon: thermostat
+    item: unit:thermo/room2
+    value: "°C"
+    title: slider
+    slider:
+      min: 15
+      max: 25
+      step: 1
+      can_off: true
+
+  enter:
+    title: Entering
+    icon: enter.s_1
+    item: lmacro:control/enter
+  exit:
+    title: Leaving
+    icon: stop.s_1
+    item: lmacro:control/exit
+
+
+data:
+  temp1_int:
+    icon: indoor_temp
+    item: sensor:env/temp1_int
+    units: "°C"
+    decimals: 0
+  hum1_int:
+    icon: indoor_hum
+    item: sensor:env/hum1_int
+    units: "%"
+    decimals: 0
+  pressure:
+    icon: pressure
+    item: sensor:env/air_pressure
+    units: " hPa"
+    decimals: 0
+
+data-blocks:
+  room1:
+    size: medium
+    elements:
+      - temp1_int
+      - hum1_int
+    action: url:sensors.j2
+  room2:
+    elements:
+      - temp2_int
+      - hum2_int
+    action: url:sensors.j2
+  ext:
+    elements:
+      - temp_ext
+      - hum_ext
+      - pressure
+    action: url:sensors.j2
+
+cameras:
+  room1:
+    image: /rpvt?f=127.0.0.1:8118/cam/1?s=400x250&nocache=$NOCACHE
+  room2:
+    image: /rpvt?f=127.0.0.1:8118/cam/2?s=400x250&nocache=$NOCACHE
+  hall:
+    image: /rpvt?f=127.0.0.1:8118/cam/3?s=400x250&nocache=$NOCACHE
+
+ 
+control-blocks:
+  room1-controls:
+    elements:
+      - light_room1
+      - window_room1
+      - thermo_room1
+  room2-controls:
+    elements:
+      - light_room2
+      - window_room2
+      - thermo_room2
+  hall-and-svc:
+    elements:
+      - light_hall
+      - alarm
+      - cctv
+      - vent
+  macros:
+    elements:
+      - lights_on
+      - lights_off
+      - open_windows
+      - close_windows
+  profiles:
+    elements:
+      - day_mode
+      - winterday_mode
+      - night_mode
+  enter-exit:
+    elements:
+      - enter
+      - exit
+layout:
+  bar2:
+    camera:
+      id: room2
+      reload: 1
+    control-blocks:
+      - room2-controls
+      - profiles
+    data-block: room2
+  bar3:
+    camera:
+      id: hall
+      reload: 1
+      action: url:simple.j2
+    control-blocks:
+      - hall-and-svc
+      - enter-exit
+    data-block: ext
+    #sys-block: true
+
+layout-compact:
+  elements:
+    - { type: control-block, id: profiles }
+    - { type: control-block, id: macros }
+    - { type: control-block, id: enter-exit }
+    - { type: camera, id: hall, reload: 2, action: "url:simple.j2" }
+    - { type: data-block, id: ext }
+    - { type: control-block, id: room1-controls }
+    - { type: sys-block }

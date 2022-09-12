@@ -13,5 +13,6 @@ or educational purposes without any restrictions.
 
     eva4/index
     eva3/index
+    hmi-block-ui/index
     eva-js-framework/index
     trademarks

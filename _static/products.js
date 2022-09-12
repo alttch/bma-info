@@ -1,6 +1,7 @@
 var BMA_PRODUCTS = {
   eva3: "EVA ICS v3",
-  eva4: "EVA ICS v4"
+  eva4: "EVA ICS v4",
+  "hmi-block-ui": "EVA HMI Block UI"
 };
 
 function bma_inject_product() {
