@@ -8,7 +8,7 @@ This web site contains technical documentation for engineers.
     :class: no-scaled-link
     :align: right
 
-More info about the products can be found at `Bohemia Automation web
+More information about the products can be found at `Bohemia Automation web
 site <https://www.bohemia-automation.com/>`_.
 
 The provided articles can be used for self-support, development, training or
