@@ -27,6 +27,8 @@ We do not reform automation – we change the approach: taking the classical
 technology as a basis, we simplify everything else to the maximum. Automation
 is simple and available for everyone!
 
+EVA ICS v3 source code is fully available at https://github.com/alttch/eva3
+
 .. note::
 
     This is the main EVA ICS documentation site. For troubleshooting, firstly
@@ -59,8 +61,6 @@ dozens and even hundreds of thousands of devices through processing events via
 separate subsystems and collecting all data to unified databases.
 
 Ready to discover? Welcome and read :doc:`quick start guide<quickstart>`.
-
-The latest EVA ICS version is |Version|. :doc:`CHANGELOG<changelog>`
 
 .. raw:: html
 
