@@ -79,4 +79,4 @@ Community support
 =================
 
 Community support is limited and available at
-`<https://github.com/alttch/eva4/issues>`_ only.
+`<https://github.com/eva-ics/eva4/issues>`_ only.
