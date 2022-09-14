@@ -11,6 +11,7 @@ EVA ICS v3
 
 .. image:: images/logo.png
   :width: 120
+  :class: no-scaled-link
   :align: right
 
 `EVA ICS v3® <https://www.eva-ics.com/>`_ is a platform for automated control
