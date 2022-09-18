@@ -11,8 +11,8 @@ Why migrate to EVA ICS v4
   speeds with no safety costs. According to tests of typical customers' tasks,
   version 4 is about **50x faster** than v3.
 
-* **New micro-kernel model**. With :doc:`the new model <architecture>`, all
-  item logic has been moved to external services, which allows version 4 to
+* **New micro-core model**. With :doc:`the new model <architecture>`, all item
+  logic has been moved to external services, which allows version 4 to
   process dozens of millions items on a single node, about **1000x more** than
   in v3.
 

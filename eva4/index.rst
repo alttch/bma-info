@@ -27,9 +27,9 @@ SCADA platform for Industry-4.0 automated control systems.
 * Provides the real control of objects: actions and various automation
   scenarios can be executed, both locally and remotely.
 
-* The new v4 micro-kernel architecture is completely scalable and allows to
-  build complex setups for any industrial needs: factories, power plants,
-  military sector etc.
+* The new v4 micro-core architecture is completely scalable and allows to build
+  complex setups for any industrial needs: factories, power plants, military
+  sector etc.
 
 * Real-time event :doc:`replication<svc/eva-repl>` and interaction between
   cluster nodes and web HMI applications.
