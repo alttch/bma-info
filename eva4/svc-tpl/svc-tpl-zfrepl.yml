@@ -31,7 +31,7 @@ config:
         # file ops max queue size, if full, incoming events are dropped
         queue_size: 512
         auto_flush: false
-        # period collection interval
+        # periodic collection interval
         interval: null
         # ignore real-time events
         ignore_events: false
