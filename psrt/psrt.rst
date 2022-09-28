@@ -1,5 +1,5 @@
-PSRT documentation
-******************
+PSRT Server and Clients
+***********************
 
 .. contents::
 

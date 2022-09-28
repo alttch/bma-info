@@ -32,7 +32,9 @@ requirements. However, for some it does not satisfy our speed and reliability
 needs and produces additional overhead. That is why we invented PSRT and use it
 as the primary protocol for :doc:`../eva4/index` in large Enterprise setups.
 
-## What is the difference?
+.. raw:: html
+
+    <h2>What is the difference?</h2>
 
 * PSRT is the protocol, optimized for large (65K+) message payloads
 * No QoS - all messages are always delivered to subscribers only once, so
@@ -63,6 +65,7 @@ topic masks etc:
 * path/+/some/+/topic - all topics matching the mask ("+" for any subtopic)
 
 .. toctree::
+    :caption: PSRT documentation
     :maxdepth: 1
 
     psrt
