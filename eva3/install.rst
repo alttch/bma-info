@@ -1,22 +1,14 @@
 Installation
 ************
 
-All you need to install EVA  is to download the latest update from
-https://www.eva-ics.com/, unpack the archive to any folder and everything is
-almost ready to use.
-
-.. note::
-
-    Each EVA ICS installation (**node**) can run multiple components. Despite
-    they share node resources, they still act as independent processes and
-    require inter-connection set up.
-
 .. contents::
+
+.. _eva3_supported_os:
 
 Officially supported platforms
 ==============================
 
-Recommended for enterprise setups
+Recommended for production setups
 ---------------------------------
 
 * `RedHat Enterprise Linux 8 <https://www.redhat.com/en/enterprise-linux-8>`_

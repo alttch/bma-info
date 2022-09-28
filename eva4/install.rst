@@ -3,6 +3,27 @@ Installation
 
 .. contents::
 
+.. _eva4_supported_os:
+
+Supported operating systems
+===========================
+
+The following operating systems are supported out-of-the-box:
+
+Recommended for production setups
+---------------------------------
+
+* `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
+* `Debian GNU/Linux 10+ <https://www.debian.org>`_
+* `Alpine Linux 13.3+ <https://alpinelinux.org>`_
+
+Tested and fully compatible
+---------------------------
+
+* `Raspbian Linux <https://www.raspberrypi.org>`_
+* `RedHat Enterprise Linux 8 <https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/>`_
+* `Fedora Linux <https://getfedora.org>`_
+
 Preparing the system
 ====================
 

@@ -4,8 +4,8 @@ Quick start
 Installation
 ============
 
-Get `any supported Linux distro <https://www.eva-ics.com/download>`_. And
-install EVA ICS with the default settings:
+Get :ref:`any supported Linux distribution <eva3_supported_os>`. And install
+EVA ICS with the default settings:
 
 .. code:: bash
 

@@ -40,9 +40,8 @@ sensors and controlled devices and the bar raises higher and higher every day.
 Installation
 ============
 
-Get `any supported Linux distro <https://www.eva-ics.com/download>`_. And
-:doc:`install <install>` EVA ICS v4 with the default settings plus HMI
-service.
+Get :ref:`any supported Linux distribution <eva4_supported_os>`. And
+:doc:`install <install>` EVA ICS v4 with the default settings plus HMI service.
 
 Execute all commands in this tutorial under the super-user (root). By default,
 EVA ICS starts the node core as root, however privileges of services are
