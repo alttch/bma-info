@@ -20,7 +20,7 @@ Recommended for production setups
 Tested and fully compatible
 ---------------------------
 
-* `Debian Linux 10 and newer <https://www.debian.org/>`_
+* `Debian Linux 11 and newer <https://www.debian.org/>`_
 
 * `Ubuntu Linux 18.10 and newer <https://ubuntu.com/>`_
 

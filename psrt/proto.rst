@@ -1,4 +1,4 @@
-PSRT Protocol Specifications
+PSRT protocol specifications
 ****************************
 
 .. contents::

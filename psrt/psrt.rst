@@ -1,4 +1,4 @@
-PSRT Server and Clients
+PSRT server and clients
 ***********************
 
 .. contents::
@@ -128,6 +128,12 @@ hex sequence, which can be generated, e.g. with:
 
 Enterprise version
 ==================
+
+The following operating systems are recommended for production setups and
+supported out-of-the-box:
+
+* `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
+* `Debian GNU/Linux 11+ <https://www.debian.org>`_
 
 Download packages from https://pub.bma.ai/psrt-enterprise/
 

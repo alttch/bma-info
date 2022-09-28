@@ -14,7 +14,7 @@ Recommended for production setups
 ---------------------------------
 
 * `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
-* `Debian GNU/Linux 10+ <https://www.debian.org>`_
+* `Debian GNU/Linux 11+ <https://www.debian.org>`_
 * `Alpine Linux 13.3+ <https://alpinelinux.org>`_
 
 Tested and fully compatible
