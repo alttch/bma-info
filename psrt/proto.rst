@@ -6,7 +6,7 @@ PSRT protocol specifications
 Common
 ======
 
-Default IANA-specified port: 2873
+Default IANA-standardized port: 2873
 
 All numbers are processed as little-endian.
 
