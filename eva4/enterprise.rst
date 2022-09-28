@@ -10,7 +10,7 @@ The default EVA ICS v4 Enterprise pack includes the following extensions:
 
 * Enterprise services (single node)
 * EVA JS Framework WASM extension (single node)
-* PubSubRT Enterprise (up to two PubSubRT nodes in cluster)
+* PSRT Enterprise (up to two PSRT nodes in cluster)
 
 The default Enterprise pack can be obtained from `EVA ICS representatives
 <https://www.eva-ics.com/contacts>`_.
@@ -158,17 +158,17 @@ Limitations
 
 * OID masks do not support internal wildcards (e.g. "sensor:\*/test")
 
-PubSubRT Enterprise
-===================
+PSRT Enterprise
+===============
 
-PubSubRT Enterprise is the cluster-enabled version of `PubSubRT
+PSRT Enterprise is the cluster-enabled version of `PSRT
 <https://github.com/alttch/psrt/>`_ server, recommended for large
 industrial/enterprise setups.
 
 Packages for Debian, Ubuntu and other deb-compatible Linux distributions can be
 downloaded at https://pub.bma.ai/psrt-enterprise/
 
-PubSubRT Enterprise can be used in "unlimited trial" mode. More info and setup
+PSRT Enterprise can be used in "unlimited trial" mode. More info and setup
 instructions can be found at https://github.com/alttch/psrt/#enterprise-version
 
 Mission-critical projects

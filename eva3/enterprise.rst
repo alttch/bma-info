@@ -100,11 +100,10 @@ Limitations
 
 * OID masks do not support internal wildcards (e.g. *sensor:*/test*)
 
-PubSubRT Enterprise
-===================
+PSRT Enterprise
+===============
 
-PubSubRT Enterprise is the cluster-enabled version of our :ref:`PSRT
-<eva3_psrt_>`
+PSRT Enterprise is the cluster-enabled version of our :ref:`PSRT <eva3_psrt_>`
 server, recommended for big industrial/enterprise setups.
 
 Packages for Debian, Ubuntu and other deb-compatible Linux distributions can be
