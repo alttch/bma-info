@@ -6,7 +6,7 @@ each other.
     There can be only a single replication service instance per pub/sub server
     deployed on each EVA ICS node.
 
-The nodes must be connected via either `PSRT <https://psrt.bma.ai/>`_ or `MQTT
+The nodes must be connected via either :doc:`PSRT </psrt/index>` or `MQTT
 <https://mqtt.org>`_ pub/sub.
 
 * **PSRT** is an in-house pub/sub protocol, designed especially for industrial

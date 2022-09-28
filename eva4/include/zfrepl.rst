@@ -51,11 +51,12 @@ every minute, at night only etc.).
 Automatically collects replication blocks from remote nodes and pushes them to
 the local bus replication archive topic (*ST/RAR/<OID>*).
 
-Requires pub/sub server (`PSRT <psrt.bma.ai/>`_ or `MQTT <https://mqtt.org>`_).
-Both source and target node must share the same :ref:`eva4_api_key`. The API
-key is used to check a particular service configuration-mapped mailbox access
-only and can have an empty ACL. While being usually deployed together with
-:doc:`../svc/eva-repl`, uses a dedicated connection (or a dedicated server).
+Requires a Pub/Sub server (:doc:`PSRT </psrt/index>` or `MQTT
+<https://mqtt.org>`_).  Both source and target node must share the same
+:ref:`eva4_api_key`. The API key is used to check a particular service
+configuration-mapped mailbox access only and can have an empty ACL. While being
+usually deployed together with :doc:`../svc/eva-repl`, uses a dedicated
+connection (or a dedicated server).
 
 Transfers blocks compressed and encrypted.
 

@@ -161,15 +161,11 @@ Limitations
 PSRT Enterprise
 ===============
 
-PSRT Enterprise is the cluster-enabled version of `PSRT
-<https://github.com/alttch/psrt/>`_ server, recommended for large
-industrial/enterprise setups.
+PSRT Enterprise is the cluster-enabled version of :doc:`PSRT </psrt/index>`
+server, recommended for large industrial/enterprise setups.
 
 Packages for Debian, Ubuntu and other deb-compatible Linux distributions can be
 downloaded at https://pub.bma.ai/psrt-enterprise/
-
-PSRT Enterprise can be used in "unlimited trial" mode. More info and setup
-instructions can be found at https://github.com/alttch/psrt/#enterprise-version
 
 Mission-critical projects
 =========================

@@ -108,6 +108,3 @@ server, recommended for big industrial/enterprise setups.
 
 Packages for Debian, Ubuntu and other deb-compatible Linux distributions can be
 downloaded at https://get.eva-ics.com/psrt-enterprise/
-
-PubSub Enterprise can be used in "unlimited trial" mode. More info and setup
-instructions can be found at https://github.com/alttch/psrt/#enterprise-version

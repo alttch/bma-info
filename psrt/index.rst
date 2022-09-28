@@ -10,7 +10,7 @@ PSRT - industrial Pub/Sub for WAN
   :class: no-scaled-link
   :align: right
 
-PSRT is a pub/sub real-time telemetry protocol, optimized for industrial needs:
+PSRT is a Pub/Sub real-time telemetry protocol, optimized for industrial needs:
 providing low latency, dealing with slow channels and large payloads.
 
 PSRT can process 100K+ messages on a single node with very low latencies

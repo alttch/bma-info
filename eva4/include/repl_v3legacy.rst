@@ -12,7 +12,7 @@ Limitations
 Protocol and configuration
 --------------------------
 
-* only `PSRT <https://psrt.bma.ai/>`_ pub/sub servers are supported
+* only :doc:`PSRT </psrt/index>` Pub/Sub servers are supported
 * only v3-to-v4 one-way replication is supported (v4-v3 actions are supported)
 * a single PSRT server per service is supported
 * auto-discovery is not supported

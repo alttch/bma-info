@@ -447,9 +447,9 @@ notifiers.
 PSRT
 ====
 
-`PSRT <https://github.com/alttch/psrt>`_ (PubSub Realtime Telemetry Protocol)
-is the protocol invented to deal with large enterprise setups on slow channels,
-where huge payloads are generated.
+:doc:`PSRT </psrt/index>` (Pub/Sub Realtime Telemetry Protocol) is the protocol
+invented to deal with large enterprise setups on slow channels, where huge
+payloads are generated.
 
 PSRT is almost fully compatible with :ref:`MQTT notifiers<eva3_mqtt_>` and its
 usage in EVA ICS is almost the same, except:
