@@ -366,7 +366,7 @@ Using EVA Shell
 .. note::
 
     EVA ICS repository URL has been changed to https://pub.bma.ai/eva3. If
-    you've got "Update completed" message but update process hasn't even been
+    you've got "Update completed" message but update process has not even been
     started, try executing *update* command specifying EVA ICS repository
     directly:
     
