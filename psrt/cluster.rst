@@ -29,13 +29,21 @@ Node configuration
   having list of neighbors configured in the cluster configuration YAML file.
 
 * Path to the cluster configuration file must be set in "cluster/config"
-  field of the main configuration file (usually "config.yml").
+  field of the main configuration file (usually "config.yml"):
+
+.. code:: yaml
+
+    # the primary server config
+    # .................
+    cluster:
+      config: cluster.yml
 
 * The configuration file contains a list of neighbors, which must have the
   following format:
 
 .. code:: yaml
 
+    # cluster.yml
     - path: node2:2873
       user: repl
       password: "123"

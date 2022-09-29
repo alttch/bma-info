@@ -90,7 +90,7 @@ language = 'en'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = [
-    '_build', 'pydoc', 'venv', 'eva4/include',
+    '_build', 'pydoc', 'venv', 'eva4/include', 'eva4/draft',
     'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc', 'eva3/phi_devel.rst'
 ]
 
