@@ -350,7 +350,7 @@ Updating
 .. warning::
 
     Before updating from the previous version, read `update
-    manifest <https://github.com/alttch/eva3/blob/3.4.2/UPDATE.rst>`_.
+    manifest <https://pub.bma.ai/eva3/3.4.2/stable/UPDATE.rst>`_.
 
 Using EVA Shell
 ---------------
