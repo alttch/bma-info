@@ -47,8 +47,8 @@ The official port numbers, assigned by IANA for PSRT are 2873 TCP/UDP. It is
 recommended to keep these ports on servers to let clients connect / push data
 using defaults.
 
-Problems
---------
+Troubleshooting
+---------------
 
 * If any problems occur, try running **psrtd** with *-v* argument to get
   verbose logging in terminal.
