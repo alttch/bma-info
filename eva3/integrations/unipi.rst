@@ -22,7 +22,7 @@ all commands as root):
 
 .. code:: shell
 
-   curl geteva.cc | sudo sh /dev/stdin -a --force-os raspbian
+   curl https://pub.bma.ai/eva3/install | sudo sh /dev/stdin -a --force-os raspbian
 
 It's also recommended to double-check is UTF-8 locale supported properly and if
 no - reconfigure it with

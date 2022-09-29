@@ -104,7 +104,7 @@ Install required system packages, setup EVA ICS components:
 .. code-block:: bash
 
     sudo -s
-    curl geteva.cc | sh /dev/stdin -a
+    curl https://pub.bma.ai/eva3/install | sh /dev/stdin -a
 
 Customized
 ----------
@@ -114,14 +114,14 @@ Customize API keys:
 .. code-block:: bash
 
     sudo -s
-    curl geteva.cc | env MASTERKEY=123 DEFAULTKEY=qwerty sh /dev/stdin -a
+    curl https://pub.bma.ai/eva3/install | env MASTERKEY=123 DEFAULTKEY=qwerty sh /dev/stdin -a
 
 More options, interactive setup:
 
 .. code-block:: bash
 
     sudo -s
-    curl geteva.cc -o install.sh
+    curl https://pub.bma.ai/eva3/install -o install.sh
     sh install.sh --help
 
 E.g. install required system packages, setup :doc:`uc/uc` only, use external
@@ -130,7 +130,7 @@ MQTT server and predefined API keys:
 .. code-block:: bash
 
     sudo -s
-    curl geteva.cc | \
+    curl https://pub.bma.ai/eva3/install | \
         env MASTERKEY=mykey DEFAULTKEY=mydefaultkey sh /dev/stdin \
             --autostart --logrotate --bash-completion \
             -- --auto -p uc --mqtt eva:password@192.168.1.100 --mqtt-announce --mqtt-discovery
@@ -216,7 +216,7 @@ distribution and unpack it e.g. to */opt/eva*:
 .. code-block:: bash
 
     cd /opt
-    curl https://get.eva-ics.com/3.x.x/stable/eva-3.x.x-xxxxxxxxxx.tgz -o eva.tgz
+    curl https://pub.bma.ai/eva3/3.x.x/stable/eva-3.x.x-xxxxxxxxxx.tgz -o eva.tgz
     tar xzvf eva.tgz
     mv eva-3.x.x eva
     cd eva
@@ -365,12 +365,12 @@ Using EVA Shell
 
 .. note::
 
-    EVA ICS repository URL has been changed to https://get.eva-ics.com. If
+    EVA ICS repository URL has been changed to https://pub.bma.ai/eva3. If
     you've got "Update completed" message but update process hasn't even been
     started, try executing *update* command specifying EVA ICS repository
     directly:
     
-    *update -u https://get.eva-ics.com*
+    *update -u https://pub.bma.ai/eva3*
 
 Using system shell
 ------------------
@@ -382,7 +382,7 @@ Using system shell
 
     curl -s <UPDATE_SCRIPT_URL> | bash /dev/stdin
     #e.g.
-    #curl -s https://get.eva-ics.com/3.4.2/stable/update.sh | bash /dev/stdin
+    #curl -s https://pub.bma.ai/eva3/3.4.2/stable/update.sh | bash /dev/stdin
 
 * If updating from 3.0.2 or below, you may also want to enable controller
   watchdog (copy *etc/watchdog-dist* to *etc/watchdog* and edit the options if
@@ -547,7 +547,7 @@ the same "default" API key. So, secondary node installation should look like:
 .. code-block:: bash
 
     sudo -s
-    curl geteva.cc | env DEFAULTKEY=qwerty sh /dev/stdin -a
+    curl https://pub.bma.ai/eva3/install | env DEFAULTKEY=qwerty sh /dev/stdin -a
 
 Setting the same master key is insecure and not recommended unless all nodes
 are in absolutely trusted environment.

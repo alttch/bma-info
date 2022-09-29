@@ -9,7 +9,7 @@ EVA ICS with the default settings:
 
 .. code:: bash
 
-    curl geteva.cc | sh /dev/stdin -a
+    curl https://pub.bma.ai/eva3/install | sh /dev/stdin -a
 
 The above command prepares the system, installs all EVA ICS components on a
 single machine to "/opt/eva" directory and automatically links them together.

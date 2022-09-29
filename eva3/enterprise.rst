@@ -107,4 +107,4 @@ PSRT Enterprise is the cluster-enabled version of our :ref:`PSRT <eva3_psrt_>`
 server, recommended for big industrial/enterprise setups.
 
 Packages for Debian, Ubuntu and other deb-compatible Linux distributions can be
-downloaded at https://get.eva-ics.com/psrt-enterprise/
+downloaded at https://pub.bma.ai/psrt-enterprise/
