@@ -16,8 +16,8 @@ fast, easy to repair and crash-free.
 Registry service is embedded into the node server and is always started
 automatically.
 
-Registry can be managed with "bin/eva-registry", "eva registry manage" and
-"sbin/eva-registry-cli" :doc:`command-line<cli>` tools.
+Registry can be managed with :ref:`eva4_eva-shell` and "sbin/eva-registry-cli"
+:doc:`command-line<cli>` tools.
 
 Reasons
 =======
@@ -43,8 +43,6 @@ idea to clean it from time to time with "eva-registry purge" or
 
 When key data is changed, the server keeps its 10 backup copies by default,
 which can be also used to restore data if necessary.
-
-To list deleted and backup copies, use "ls -a" command of "eva-registry" tool.
 
 All data is stored in "runtime/registry" directory, which should
 not be accessed directly, unless data loss occur.
@@ -106,8 +104,7 @@ stored in its sub-keys.
 A strict schema ".schema/eva" is created for all data keys, except "user_data"
 and "svc_data", which (as well as their sub-keys) can contain any fields.
 
-Keys can be edited with "eva-registry" and "eva-registry-cli" :doc:`CLI<cli>`
-tools.
+Keys can be edited with :`CLI<cli>` tools.
 
 ===================== ============= ==================================
 Key                   user-editable Description
