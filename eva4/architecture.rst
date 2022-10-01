@@ -16,7 +16,7 @@ Each EVA ICS v4 node has the following architecture:
   launchers.
 
 * The core and all services are connected to the single inter-process
-  communication bus, based on `BUS/RT <https://busrt.bma.ai>`_.
+  communication bus, based on :doc:`BUS/RT </busrt/index>`.
 
 * BUS/RT is a high-speed industrial IPC bus, which can provide 100K+ RPC calls a
   second and 1M+ events a second without significant CPU load. BUS/RT provides

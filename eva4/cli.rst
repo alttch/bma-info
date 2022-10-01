@@ -60,8 +60,8 @@ Always installed by default, location: */opt/eva4/bin/eva-cloud-manager*
 Bus CLI
 =======
 
-Various calls to the EVA ICS core and services can be performed via `BUS/RT
-<https://busrt.bma.ai/>`_ with "sbin/bus" command-line tool.
+Various calls to the EVA ICS core and services can be performed via
+:doc:`BUS/RT </busrt/index>` with "sbin/bus" command-line tool.
 
 .. note::
 

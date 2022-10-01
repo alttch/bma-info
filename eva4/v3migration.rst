@@ -36,7 +36,7 @@ Why migrate to EVA ICS v4
 
 * **Extension unification**. Version 3 had six types of extension. In version 4
   there is the only one type of extension - services. Which communicate with
-  the core and between each other using `BUS/RT <https://busrt.bma.ai/>`_ - an
+  the core and between each other using :doc:`BUS/RT </busrt/index>` - an
   in-house IPC-bus, developed especially for high-loaded industrial
   applications.
 
