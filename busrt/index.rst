@@ -1,5 +1,5 @@
 BUS/RT - IPC bus
-================
+****************
 
 .. image:: images/logo-dark.svg
   :width: 200
