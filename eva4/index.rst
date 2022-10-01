@@ -12,7 +12,7 @@ SCADA platform for Industry-4.0 automated control systems.
 .. warning::
 
     EVA ICS v4 is currently in closed-beta stage and available for Enterprise
-    customers only. Expected release date: end of September 2022
+    customers only. Expected release date: October 2022
 
 .. image:: eva4_face.jpg
     :width: 400
