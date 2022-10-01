@@ -23,4 +23,5 @@ educational purposes without any restrictions.
     hmi-block-ui/index
     eva-js-framework/index
     psrt/index
+    busrt/index
     trademarks

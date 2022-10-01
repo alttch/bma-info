@@ -91,7 +91,8 @@ language = 'en'
 # directories to ignore when looking for source files.
 exclude_patterns = [
     '_build', 'pydoc', 'venv', 'eva4/include', 'eva4/draft',
-    'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc', 'eva3/phi_devel.rst'
+    'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc', 'eva3/phi_devel.rst',
+    'busrt/pydoc', 'busrt/include'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -140,7 +141,7 @@ html_theme_options = {
     'collapse_navigation': False,
     'sticky_navigation': False,
     'navigation_depth': 5,
-    # 'includehidden': True,
+    'includehidden': False,
     # 'titles_only': False
 }
 
