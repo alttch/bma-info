@@ -96,8 +96,8 @@ Rust crate features
 Performance tips
 ================
 
-* Use "Realtime" or "RealtimeProcessed" QoS for the softly-loaded networks to
-  get minimal latencies.
+* Use "Realtime" or "RealtimeProcessed" QoS for softly-loaded networks to get
+  minimal latencies.
 
 * Use high-capacity queues (both client and server) to deal with short
   high-load peaks.
