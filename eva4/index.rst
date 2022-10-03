@@ -55,3 +55,6 @@ automation platform for Industry-4.0 automated control systems.
     auto/index
     sdk/index
     License <license>
+
+Open-source repository: https://github.com/eva-ics/eva4
+
