@@ -1,12 +1,6 @@
 IPC documentation
 *****************
 
-.. toctree::
-   :hidden:
-
-    <python/busrt.rst>
-    <python/busrt_async.rst>
-
 .. contents::
 
 Bindings
