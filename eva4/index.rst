@@ -7,7 +7,7 @@ EVA ICS v4
   :align: right
 
 `EVA ICS® <https://www.eva-ics.com>`_ v4 is a new-generation Industrial-IoT
-SCADA platform for Industry-4.0 automated control systems.
+automation platform for Industry-4.0 automated control systems.
 
 .. warning::
 
@@ -19,8 +19,8 @@ SCADA platform for Industry-4.0 automated control systems.
     :class: no-scaled-link
     :align: right
 
-* The world-first and only Enterprise SCADA platform, written completely in
-  Rust: extremely fast, secure and stable.
+* The world-first and only Enterprise automation platform, written completely
+  in Rust: extremely fast, secure and stable.
 
 * Allows to handle millions of objects on a single node.
 
@@ -30,6 +30,8 @@ SCADA platform for Industry-4.0 automated control systems.
 * The new v4 micro-core architecture is completely scalable and allows to build
   complex setups for any industrial needs: factories, power plants, military
   sector etc.
+
+* Built-in API and servers for web SCADA applications.
 
 * Real-time event :doc:`replication<svc/eva-repl>` and interaction between
   cluster nodes and web HMI applications.
