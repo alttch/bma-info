@@ -22,15 +22,15 @@ Inter-process communication
 
 The following communication patterns are supported out-of-the-box:
 
--  one-to-one messages
--  one-to-many messages
--  pub/sub
+*  one-to-one messages
+*  one-to-many messages
+*  pub/sub
 
 The following channels are supported:
 
--  async channels between threads/futures (Rust only)
--  UNIX sockets (local machine)
--  TCP sockets
+* async channels between threads/futures (Rust only)
+* UNIX sockets (local machine, Linux/BSD)
+* TCP sockets (Linux/BSD/Windows)
 
 Client registration
 --------------------
