@@ -108,3 +108,6 @@ Ready to discover? Welcome and read :doc:`quick start guide<quickstart>`.
     advanced_dev
     PHIs <phi.rst>
     license
+
+Open-source repository: https://github.com/alttch/eva3
+
