@@ -7,7 +7,8 @@ Few words from the authors
 ==========================
 
 Thank you for being interested in EVA ICS! Our goal is to make EVA ICS the
-world-fastest, the most reliable, flexible, modern and easy-to use cloud-SCADA.
+world-fastest, the most reliable, flexible, modern and easy-to use
+SCADA/extended automation platform.
 
 If you are looking for industrial automation solution, we are sure that EVA ICS
 perfectly fits your needs.
