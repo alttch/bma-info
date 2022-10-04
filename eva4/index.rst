@@ -9,13 +9,13 @@ EVA ICS v4
 `EVA ICS® <https://www.eva-ics.com>`_ v4 is a new-generation Industrial-IoT
 automation platform for Industry-4.0 automated control systems.
 
+* The world-first and only Enterprise automation platform, written completely
+  in Rust: extremely fast, secure and stable.
+
 .. image:: eva4_face.jpg
     :width: 400
     :class: no-scaled-link
     :align: right
-
-* The world-first and only Enterprise automation platform, written completely
-  in Rust: extremely fast, secure and stable.
 
 * Allows to handle millions of objects on a single node.
 
