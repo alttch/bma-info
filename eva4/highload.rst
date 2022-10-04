@@ -26,7 +26,7 @@ To use EVA ICS in high-load environments, remember the following:
 
 * For slow channels, always use compressed bulk events in :doc:`svc/eva-repl`.
   Consider using :doc:`PSRT </psrt/index>` instead of MQTT, as it is designed
-  to cope with slow channel.
+  to better deal with slow communications.
 
 * Consider splitting the node and move high-loaded services to other neighbor
   computers.
