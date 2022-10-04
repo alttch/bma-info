@@ -57,7 +57,7 @@ The above command prepares the system, installs all EVA ICS components (default
 distribution, :ref:`eva4_eva-shell`) on a single machine to "/opt/eva4"
 directory and automatically deploys basic services.
 
-Additionally, Python in installed and the virtual environment is created at
+Additionally, Python is installed and the virtual environment is created at
 */opt/eva4/venv*. Python is required for :ref:`eva4_eva-shell` and some other
 services.
 
