@@ -9,11 +9,6 @@ EVA ICS v4
 `EVA ICS® <https://www.eva-ics.com>`_ v4 is a new-generation Industrial-IoT
 automation platform for Industry-4.0 automated control systems.
 
-.. warning::
-
-    EVA ICS v4 is currently in closed-beta stage and available for Enterprise
-    customers only. Expected release date: October 2022
-
 .. image:: eva4_face.jpg
     :width: 400
     :class: no-scaled-link
