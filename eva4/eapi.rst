@@ -469,5 +469,5 @@ A controller can react to "run" rpc call command. the payload contains:
 * params/kwargs: Map<String, Any> - macro keyword arguments, optional
 * config: optional config
 
-The controller reports action states to LMACT/OID topic, where the payload has
+The controller reports action states to ACT/OID topic, where the payload has
 the same format as for unit actions.
