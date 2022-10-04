@@ -152,7 +152,7 @@ having its always = 1 and telemetry written in the value register.
 
 For some setups units may have the same approach: status=1 means OK and
 status=-1 means error, while the value register is used to keep/set unit state
-with actions. This way is recommended if majority of logic is handled by
+with actions. This way is recommended when the majority of logic is handled by
 fieldbus PLCs.
 
 Let us read the item states:
@@ -503,6 +503,8 @@ create a new ACL, a new user and use them instead:
     eva user create op # set the password to 123
     eva user edit op
 
+Set the user's ACL to *op*.
+
 .. code:: yaml
 
     acls:
@@ -515,7 +517,7 @@ Install :doc:`/eva-js-framework/index`:
 .. code:: shell
 
     curl -L \
-        https://github.com/alttch/eva-js-framework/releases/download/v0.3.35/eva.framework.min.js \
+        https://github.com/alttch/eva-js-framework/releases/download/v0.3.39/eva.framework.min.js \
         -o /opt/eva4/ui/eva.framework.min.js
 
 
