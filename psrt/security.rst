@@ -72,6 +72,9 @@ PSRT server can have FIPS-140 mode activated with the following:
 * Make sure the :ref:`distribution package <psrt_distr>` is installed or
   :ref:`compile PSRT to use system OpenSSL libraries <psrt_compile>`.
 
+* Note that PKCS12 can not be used for TLS layer in FIPS-140 mode due to
+  cryptographic functions limitations. Use TLS certificates/keys only instead.
+
 * Enable FIPS-140 mode in the operating system
 
     * Ubuntu Linux 20.04 LTS:
