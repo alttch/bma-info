@@ -6,19 +6,40 @@ Security
 Functionality
 =============
 
-PSRT server uses `OpenSSL <https://www.openssl.org>`_ functions for:
+PSRT server uses `OpenSSL <https://www.openssl.org>`_ cryptographic modules
+functions for:
 
 * Token generation
 * TLS communication layer
 * AES decryption
 
-OpenSSL versions
-================
+.. _psrt_distr:
 
-Default supplied binaries (both free and Enterprise version) use "vendored"
-(built-in) OpenSSL libraries. This allows to use the binaries without external
-dependencies, however may lead to security problems if vulnerabilities are
-found in the actual OpenSSL version.
+Distribution packages
+=====================
+
+Supported distributions
+-----------------------
+
+* `Ubuntu 20.04 LTS <https://releases.ubuntu.com/focal/>`_
+
+OpenSSL versions
+----------------
+
+Distribution packages use system cryptographic modules only. If vulnerabilities
+are found in the actual versions, this can be fixed by applying system updates
+in the regular way.
+
+Universal packages
+==================
+
+OpenSSL versions
+----------------
+
+Default supplied universal binaries (both free and Enterprise version) use
+"vendored" (built-in) OpenSSL libraries. This allows to use the binaries
+without external dependencies, however may lead to security problems if
+vulnerabilities are found in the actual OpenSSL version.
 
 .. _psrt_compile:
 
@@ -39,20 +60,29 @@ Custom :ref:`PSRT Enterprise <psrt_enterprise>` binaries for particular
 OS/distributions can be provided for customers with active contracts by
 request.
 
-Certifications
-==============
+FIPS 140
+========
 
 OpenSSL has a FIPS module, which is `NIST-certified (#4282)
-<https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282>`_.
+<https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4282>`_
+as FIPS 140-2 complaint.
 
 PSRT server can have FIPS-140 mode activated with the following:
 
-* :ref:`compile PSRT to use system OpenSSL libraries <psrt_compile>`
+* Make sure the :ref:`distribution package <psrt_distr>` is installed or
+  :ref:`compile PSRT to use system OpenSSL libraries <psrt_compile>`.
 
-* install FIPS-140 SSL modules (refer to OS/distribution technical
-  documentation for more info)
+* Enable FIPS-140 mode in the operating system
 
-* activate FIPS-140 mode by putting *fips: true* option in the server config:
+    * Ubuntu Linux 20.04 LTS:
+      https://ubuntu.com/security/certifications/docs/fips-enablement
+
+    * Other distributions: refer to OS/distribution technical documentation for
+      more info
+
+* Activate FIPS-140 mode by putting *fips: true* option in the server config,
+  The option tells the server to enable FIPS-140 mode even if it is disabled by
+  OS defaults:
 
 .. code:: yaml
 
@@ -61,5 +91,5 @@ PSRT server can have FIPS-140 mode activated with the following:
         fips: true
     # ..............
 
-* note that if FIPS-140 can not be enabled but the option is set, the server
-  will not go online
+* Note that if FIPS-140 can not be enabled but the option is set, the server
+  will not go online.
