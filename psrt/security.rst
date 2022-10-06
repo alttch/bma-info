@@ -31,6 +31,8 @@ The behaviour can be changed with compiling the server without
 
 .. code:: shell
 
+    git clone https://github.com/alttch/psrt/
+    cd psrt
     cargo build --release --features server,cli
 
 Custom :ref:`PSRT Enterprise <psrt_enterprise>` binaries for particular
