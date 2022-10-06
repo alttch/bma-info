@@ -17,8 +17,8 @@ OpenSSL versions
 
 Default supplied binaries (both free and Enterprise version) use "vendored"
 (built-in) OpenSSL libraries. This allows to use the binaries without external
-dependencies, however may lead to security problems if venerabilities are found
-in the actual OpenSSL version.
+dependencies, however may lead to security problems if vulnerabilities are
+found in the actual OpenSSL version.
 
 .. _psrt_compile:
 
