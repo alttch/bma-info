@@ -126,6 +126,8 @@ hex sequence, which can be generated, e.g. with:
 
     head -c16384 /dev/urandom|sha256sum|awk '{ print $1 }'
 
+.. _psrt_enterprise:
+
 Enterprise version
 ==================
 
