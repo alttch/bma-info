@@ -11,7 +11,7 @@ functions for:
 
 * Token generation
 * TLS communication layer
-* AES decryption
+* AES decryption (UDP)
 
 .. _psrt_distr:
 
