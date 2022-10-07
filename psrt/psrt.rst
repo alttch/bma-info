@@ -21,6 +21,8 @@ Installation (free version)
 Use binaries from https://github.com/alttch/psrt/releases. For Debian/Ubuntu
 and other deb-based distributions, .deb packages can be used.
 
+.. _psrt_compile:
+
 Building from source
 --------------------
 
@@ -144,3 +146,5 @@ download testing `key files
 <https://github.com/alttch/psrt/tree/main/enterprise-keys>`_. Each key file is
 bound to the specific host name, so the system host names in "unlimited trial"
 PSRT Enterprise clusters must be "node1", "node2" and "node3".
+
+PSRT Enterprise is included in :doc:`../eva4/enterprise`.

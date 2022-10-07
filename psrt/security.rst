@@ -41,20 +41,8 @@ Default supplied universal binaries (both free and Enterprise version) use
 without external dependencies, however may lead to security problems if
 vulnerabilities are found in the actual OpenSSL version.
 
-.. _psrt_compile:
-
-The behaviour can be changed with compiling the server without
-"openssl-vendored" feature:
-
-* Install `Rust <https://www.rust-lang.org/tools/install>`_
-
-* Compile the server and CLI:
-
-.. code:: shell
-
-    git clone https://github.com/alttch/psrt/
-    cd psrt
-    cargo build --release --features server,cli
+The behaviour can be changed with :ref:`compiling the server <psrt_compile>`
+without "openssl-vendored" feature.
 
 Custom :ref:`PSRT Enterprise <psrt_enterprise>` binaries for particular
 OS/distributions can be provided for customers with active contracts by
