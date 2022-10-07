@@ -16,3 +16,5 @@ keep_action_history: 86400
 #inventory_db: mysql://USER:PASSWORD@HOST/DB
 # PostgreSQL
 #inventory_db: postgres://USER:PASSWORD@HOST/DB
+# enable FIPS-140 mode if supported by OS
+#fips: true
