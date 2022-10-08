@@ -29,16 +29,37 @@ format:
 
 An alias ".local" can be used for the local node deployment.
 
+.. _eva4_iac_aaa:
+
 AAA
 ---
 
 :doc:`User account, API keys and ACLs <aaa>` can be deployed as well, per
 node. Note that user passwords contain password hashes, not the passwords
-itself. The hash can be get using e.g. Linux shell command:
+itself.
+
+:doc:`svc/eva-aaa-localauth` accepts the following hash types:
+
+* SHA256 and SHA512 hashes (hex). Should be used in test configurations only to
+  avoid possible `rainbow table
+  <https://en.wikipedia.org/wiki/Rainbow_table>`_ attacks if the password hash
+  is compromised. Can be generated in command-line with:
 
 .. code:: shell
 
-    echo -n PASSWORD|sha256sum
+    echo -n password | sha256sum
+    echo -n password | sha512sum
+
+* PBKDF2-HMAC (10k iterations, 16-byte salt), for production use, as:
+  *$1$BASE64(SALT)$BASE64(SHA256-HASH)*. Can be generated with:
+
+.. code:: shell
+
+    # with eva-shell
+    eva svc call eva.aaa.localauth password.hash password=mypassword algo=pbkdf2
+    # or
+    /opt/eva4/sbin/bus -s /opt/eva4/var/bus.ipc \
+        rpc call eva.aaa.localauth password.hash password=mypassword algo=pbkdf2
 
 .. code:: yaml
 
@@ -63,7 +84,7 @@ itself. The hash can be get using e.g. Linux shell command:
             - admin2
       users:
         - login: admin2
-          password: cd2eb0837c9b4c962c22d2ff8b5441b7b45805887f051d39bf133b583baf6860
+          password: "$1$CaqoIL8WXkDnqnwMXLeW5g==$qXQVPbRibRSomjtzKuyOePv59lx3eAQUR3yqAUS4YoE="
           acls:
             - admin2
 
@@ -212,7 +233,7 @@ Extra commands
 
 .. _eva4_iac_bus_calls:
 
-BUS calls
+Bus calls
 ~~~~~~~~~
 
 Node bus calls can be automatically executed before/after the deployment is

@@ -405,6 +405,47 @@ key.undeploy
      - API keys or a list of API key IDs
      - **yes**
 
+.. _eva4_eva.aaa.localauth__passsword.hash:
+
+passsword.hash
+--------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Hashes the passsword with the requested algorithm*
+   * - Parameters
+     - required
+   * - Returns
+     - password hash
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **password**
+     - String
+     - Plain password string string to hash
+     - **yes**
+   * - **algo**
+     - String
+     - sha256, sha512, or pbkdf2
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "hash": "$1$CaqoIL8WXkDnqnwMXLeW5g==$qXQVPbRibRSomjtzKuyOePv59lx3eAQUR3yqAUS4YoE="
+  }
+  
+
 .. _eva4_eva.aaa.localauth__user.create_one_time:
 
 user.create_one_time

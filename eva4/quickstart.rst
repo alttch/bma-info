@@ -510,7 +510,14 @@ Set the user's ACL to *op*.
     acls:
     - op
     login: op
+    # sha256-hashed
+    # to generate: "echo -n 123 | sha256sum"
     password: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
+
+.. warning::
+
+    SHA256-hashes for deployed passwords should be used in test configurations
+    only. See :ref:`AAA Deployment<eva4_iac_aaa>`.
 
 Install :doc:`/eva-js-framework/index`:
 
@@ -692,8 +699,6 @@ include their content directly inside the file:
               - '#'
         users:
           - login: op
-            # sha256-hashed
-            # to generate: "echo -n 123 | sha256sum"
             password: a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3
             acls:
               - op
