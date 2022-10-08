@@ -405,10 +405,10 @@ key.undeploy
      - API keys or a list of API key IDs
      - **yes**
 
-.. _eva4_eva.aaa.localauth__passsword.hash:
+.. _eva4_eva.aaa.localauth__password.hash:
 
-passsword.hash
---------------
+password.hash
+-------------
 
 .. list-table::
    :header-rows: 0
