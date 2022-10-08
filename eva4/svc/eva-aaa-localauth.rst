@@ -414,7 +414,7 @@ password.hash
    :header-rows: 0
 
    * - Description
-     - *Hashes the passsword with the requested algorithm*
+     - *Hashes the password with the requested algorithm*
    * - Parameters
      - required
    * - Returns
