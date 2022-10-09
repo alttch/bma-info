@@ -83,6 +83,7 @@ config:
             ## client stops, until triggered again manaully or by the scheduler
             #duration: 3600
             #timeout: 60 # override the default timeout
+            #trusted: true
     #server:
       ## collector service
       #collector_svc: eva.zfrepl.default.collector

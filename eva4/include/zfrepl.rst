@@ -124,3 +124,18 @@ via pub/sub for external clients. Other methods and tasks are not affected.
 
 To enable the service back, repeat the above command with "enable" method or
 restart it.
+
+.. _eva4_zfrepl_untrusted:
+
+Untrusted nodes and zero-failure replication
+============================================
+
+The approach is similar to :ref:`real-time replication <eva4_repl_untrusted>`:
+by default remote zero-failure replication mailboxes
+are trusted, which means all remotes can provide telemetry data for all
+:doc:`items <../items>`.
+
+To setup zero-failure replication with an untrusted node, mark its mailbox with
+"trusted: false" in the replicator/client section of the service configuration
+and make sure the configured API key has :ref:`ACL <eva4_acl>` with "write"
+permission for the allowed items.

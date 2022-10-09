@@ -53,7 +53,7 @@ Installing
 ~~~~~~~~~~
 
 By default, EVA ICS node is :doc:`installed <install>` installed from an
-universal package. The behaviour can be changed with adding *--force-arch*
+universal package. The behaviour can be changed with adding *\--force-arch*
 option to the installer, e.g.:
 
 .. code:: shell
@@ -160,3 +160,8 @@ Limitations:
 
 * :doc:`svc/eva4-svc-repl-legacy` does not use FIPS-complaint cryptographic
   methods.
+
+Connecting untrusted remote nodes
+=================================
+
+See :ref:`eva4_repl_untrusted` and :ref:`eva4_zfrepl_untrusted`.

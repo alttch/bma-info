@@ -433,7 +433,7 @@ password.hash
      - **yes**
    * - **algo**
      - String
-     - sha256, sha512, or pbkdf2
+     - sha256, sha512 or pbkdf2
      - **yes**
 
 

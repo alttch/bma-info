@@ -65,3 +65,38 @@ in case of the following conditions:
 * bulk telemetry, bulk encryption
 
 All RPC calls in EVA ICS are AES-256-encrypted by default.
+
+.. _eva4_repl_untrusted:
+
+Replicating untrusted nodes
+===========================
+
+By default, all remote nodes are trusted, which means any one can push/provide
+telemetry data for any :doc:`item <../items>`.
+
+If there is an untrusted node connected, it can provide fake telemetry data for
+certain items, also it is not possible to use pub/sub security for bulk topics.
+
+In this case, the node must be marked as untrusted in its configuration, which
+can be done either with :ref:`eva4_eva-shell` command "node append" with
+*\--untrusted* argument, "node edit" for existing nodes or in the node
+deployment configuration.
+
+Untrusted nodes should use dedicated :ref:`API Keys <eva4_api_key>` only. To
+let a remote untrusted node provide telemetry data, the configured API key must
+have :ref:`ACL <eva4_acl>` with "write" permission for the allowed items,
+otherwise the telemetry is ignored in both push and pull.
+
+Untrusted nodes should provide their telemetry via bulk topics only, in
+encrypted way only. Such topics must be configured in the replication service
+as "secure topics":
+
+.. code:: yaml
+
+    bulk:
+      receive:
+        secure_topics:
+          - all
+
+Regular bulk topics does not check senders' ACLs and should be used for trusted
+nodes only.
