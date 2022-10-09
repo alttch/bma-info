@@ -13,10 +13,10 @@ functions for:
 * TLS communication layer
 * AES decryption (UDP)
 
-.. _psrt_distr:
+.. _psrt_native:
 
-Distribution packages
-=====================
+Native packages
+===============
 
 Supported distributions
 -----------------------
@@ -26,8 +26,8 @@ Supported distributions
 OpenSSL versions
 ----------------
 
-Distribution packages use system cryptographic modules only. If vulnerabilities
-are found in the actual versions, this can be fixed by applying system updates
+Native packages use system cryptographic modules only. If vulnerabilities are
+found in the actual versions, this can be fixed by applying system updates
 in the regular way.
 
 Universal packages
@@ -44,7 +44,7 @@ vulnerabilities are found in the actual OpenSSL version.
 The behaviour can be changed with :ref:`compiling the server <psrt_compile>`
 without "openssl-vendored" feature.
 
-Custom :ref:`PSRT Enterprise <psrt_enterprise>` binaries for particular
+Custom :ref:`PSRT Enterprise <psrt_enterprise>` native binaries for particular
 OS/distributions can be provided for customers with active contracts by
 request.
 
@@ -57,7 +57,7 @@ as FIPS 140-2 complaint.
 
 PSRT server can have FIPS-140 mode activated with the following:
 
-* Make sure the :ref:`distribution package <psrt_distr>` is installed or
+* Make sure the :ref:`native package <psrt_native>` is installed or
   :ref:`compile PSRT to use system OpenSSL libraries <psrt_compile>`.
 
 * Note that PKCS12 can not be used for TLS layer in FIPS-140 mode due to
