@@ -50,7 +50,7 @@ itself.
     echo -n password | sha256sum
     echo -n password | sha512sum
 
-* PBKDF2-HMAC (10k iterations, 16-byte salt), for production use, as:
+* PBKDF2-HMAC (100k iterations, 16-byte salt), for production use, as:
   *$1$BASE64(SALT)$BASE64(SHA256-HASH)*. Can be generated with:
 
 .. code:: shell

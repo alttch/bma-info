@@ -13,7 +13,7 @@ functions for:
 * AES encryption/decryption (replication services)
 * Data and password hashing
 
-The passwords are always hashes in PBKDF2-HMAC mode (16-byte salt, 10k
+The passwords are always hashes in PBKDF2-HMAC mode (16-byte salt, 100k
 iterations), unless :ref:`user accounts are deployed <eva4_iac_aaa>` with
 pre-calculated SHA-hashes (not recommended for production systems).
 
