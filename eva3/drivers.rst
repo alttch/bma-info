@@ -293,8 +293,8 @@ Action options (set with *eva uc driver assign*):
   period to the motor to reach the next step. E.g. you have a door with 3
   positions: closed, half-open and completely open. **steps** option will
   contain 2 numbers (e.g. *20|25*) which tells LPI the door state from *0* to
-  *1* is changed by running motor for *20* seconds, the state from *1* to *2*
-  is changed by running motor for *25* seconds, so LPI can automatically
+  *1* is changed with running motor for *20* seconds, the state from *1* to *2*
+  is changed with running motor for *25* seconds, so LPI can automatically
   calculate the full opening/closing cycle is *45* seconds.
 
 * **warmup** float number (seconds). LPI will add this value to the time for
