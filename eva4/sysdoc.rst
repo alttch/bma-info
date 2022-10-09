@@ -19,5 +19,6 @@ System documentation
     iac
     highload
     troubleshooting
+    security
     enterprise
 

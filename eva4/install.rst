@@ -24,6 +24,9 @@ Tested and fully compatible
 * `RedHat Enterprise Linux 8 <https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/>`_
 * `Fedora Linux <https://getfedora.org>`_
 
+By default, an universal (static-linked) EVA ICS distribution package is
+installed. See :ref:`eva4_native` for more info.
+
 Preparing the system
 ====================
 
