@@ -88,8 +88,8 @@ have :ref:`ACL <eva4_acl>` with "write" permission for the allowed items,
 otherwise the telemetry is ignored in both push and pull.
 
 Untrusted nodes should provide their telemetry via bulk topics only, in
-encrypted way only. Such topics must be configured in the replication service
-as "secure topics":
+the encrypted way only. Such topics must be configured in the replication
+service as "secure topics":
 
 .. code:: yaml
 
@@ -98,5 +98,5 @@ as "secure topics":
         secure_topics:
           - all
 
-Regular bulk topics does not check senders' ACLs and should be used for trusted
+Regular bulk topics do not check senders' ACLs and should be used for trusted
 nodes only.
