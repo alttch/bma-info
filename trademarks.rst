@@ -31,6 +31,15 @@ categories of goods and services:
 -  Industrial Cloud computing
 -  Automation Software-As-A-Service
 
+**PSRT™** is the trademark used by the `Altertech Group
+<https://www.altertech.com>`__ companies and their partners for the following
+categories of goods and services:
+
+- Industrial software
+- Data transmitters
+- Data processors
+- Data networks
+
 The Trademark Supervisors
 -------------------------
 
