@@ -52,9 +52,9 @@ Switching to native
 Installing
 ~~~~~~~~~~
 
-By default, EVA ICS node is :doc:`installed <install>` installed from an
-universal package. The behaviour can be changed with adding *\--force-arch*
-option to the installer, e.g.:
+By default, EVA ICS node is :doc:`installed <install>` using an universal
+package. This behaviour can be changed with adding *\--force-arch* option to
+the installer, e.g.:
 
 .. code:: shell
 
