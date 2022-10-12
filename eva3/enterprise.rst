@@ -17,8 +17,8 @@ faster, than in regular mode.
 Installation
 ------------
 
-* Obtain WASM extension from a `EVA ICS representative
-  <https://www.eva-ics.com/contacts>`_.
+* Obtain WASM extension from a `Bohemia Automation representative
+  <https://www.bohemia-automation.com/contacts/>`_.
 
 * The extension requires EVA JS Framework version 0.3.25 or above.
 

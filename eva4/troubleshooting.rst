@@ -6,9 +6,6 @@ Troubleshooting
 Knowledge base
 ==============
 
-Many typical problems can be resolved using articles from `EVA ICS Knowledge
-base <https://kb.eva-ics.com>`_.
-
 .. _eva4_dump:
 
 Creating dumps
@@ -71,7 +68,7 @@ Support requests
 ================
 
 If no support contract is available, a new one can be requested at
-`<https://www.eva-ics.com/contacts>`_ page or from the official partners. After
+`<https://www.bohemia-automation.com/contacts/>`_ page or from the official partners. After
 filling the form you will be contacted by a core-team support engineer. Do not
 forget to prepare a :ref:`system dump <eva4_dump>`.
 

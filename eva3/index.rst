@@ -14,11 +14,12 @@ EVA ICS v3
   :class: no-scaled-link
   :align: right
 
-`EVA ICS v3® <https://www.eva-ics.com/>`_ is a platform for automated control
-and monitoring systems development, for any needs, from home/office to
-industrial setups. It is completely free for non-commercial use as well as for
-commercial, on condition that enterprise integrates it on its own. The product
-is distributed as a free software and is available under Apache License 2.0.
+`EVA ICS® v3 <https://www.bohemia-automation.com/software/eva3/>`_ is a
+platform for automated control and monitoring systems development, for any
+needs, from home/office to industrial setups. It is completely free for
+non-commercial use as well as for commercial, on condition that enterprise
+integrates it on its own. The product is distributed as a free software and is
+available under Apache License 2.0.
 
 Automated control systems are facing a new stage of evolution: IoT-devices
 become interesting for those, who have never dealt with automation, cheap

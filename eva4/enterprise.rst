@@ -12,8 +12,8 @@ The default EVA ICS v4 Enterprise pack includes the following extensions:
 * EVA JS Framework WASM extension (single node)
 * PSRT Enterprise (up to two PSRT nodes in cluster)
 
-The default Enterprise pack can be obtained from `EVA ICS representatives
-<https://www.eva-ics.com/contacts>`_.
+The default Enterprise pack can be obtained from `Bohemia Automation
+representatives <https://www.bohemia-automation.com/contacts/>`_.
 
 * The Enterprise extensions may be provided for free or with a discount for
   customers who regularly spend certain amount of funds on support contracts.
@@ -80,8 +80,8 @@ faster, than in regular mode.
 Installation
 ------------
 
-* Obtain WASM extension from a `EVA ICS representative
-  <https://www.eva-ics.com/contacts>`_.
+* Obtain WASM extension from a `Bohemia Automation representative
+  <https://www.bohemia-automation.com/contacts/>`_.
 
 * The extension requires EVA JS Framework version 0.3.25 or above.
 
@@ -176,5 +176,5 @@ The code of the closed-source EVA ICS Enterprise components can be provided for
 mission-critical projects (such as high-energy, heavy industry, military,
 space, healthcare etc.) under a dedicated NDA agreement.
 
-Please contact `EVA ICS representatives <https://www.eva-ics.com/contacts>`_
-for details.
+Please contact `Bohemia Automation representatives
+<https://www.bohemia-automation.com/contacts/>`_ for details.

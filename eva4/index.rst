@@ -6,8 +6,9 @@ EVA ICS v4
   :class: no-scaled-link
   :align: right
 
-`EVA ICS® <https://www.eva-ics.com>`_ v4 is a new-generation Industrial-IoT
-automation platform for Industry-4.0 automated control systems.
+`EVA ICS® v4 <https://www.bohemia-automation.com/software/eva4/>`_ is a
+new-generation Industrial-IoT automation platform for Industry-4.0 automated
+control systems.
 
 * The world-first and only Enterprise automation platform, written completely
   in Rust: extremely fast, secure and stable.
@@ -32,13 +33,6 @@ automation platform for Industry-4.0 automated control systems.
   cluster nodes and web HMI applications.
 
 * Supported architectures out-of-the-box (Linux only): x86_64, aarch64.
-
-.. note::
-
-    This is the primary EVA ICS v4 documentation site
-
-    * for troubleshooting, firstly check the `EVA ICS Knowledge base
-      <https://kb.eva-ics.com/>`_
 
 .. toctree::
     :caption: EVA ICS v4 documentation

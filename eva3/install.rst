@@ -210,8 +210,8 @@ Cloud service provider as MQTT broker
 Downloading and extracting EVA ICS distribution
 -----------------------------------------------
 
-Go to `EVA ICS website <https://www.eva-ics.com/>`_, download most recent
-distribution and unpack it e.g. to */opt/eva*:
+Go to `Bohemia Automation download center <http://pub.bma.ai/eva3/>`_, download
+most recent distribution and unpack it e.g. to */opt/eva*:
 
 .. code-block:: bash
 

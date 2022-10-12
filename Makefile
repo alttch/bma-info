@@ -59,9 +59,6 @@ prepare-venv:
 
 #pub: html upload
 
-#upload:
-	#cd _build/html && gsutil -m rsync -a public-read -r -d -c . gs://doc4.eva-ics.com/
-
 .PHONY: html
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

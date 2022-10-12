@@ -37,9 +37,6 @@ EVA ICS provides the following tools to simplify UI development:
 
 * Ready-to-use applications for :doc:`evahi`.
 
-Some of ready-to-use HMI applications are available at `EVA ICS download page
-<https://www.eva-ics.com/download>`_.
-
 Custom error pages
 ==================
 

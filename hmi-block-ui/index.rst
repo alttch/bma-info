@@ -1,8 +1,8 @@
 HMI Block UI
 ************
 
-HMI Block UI is a HMI application for `EVA ICS <https://www.eva-ics.com/>`_
-which provides a simple but flexible user web interface for any EVA ICS setup.
+HMI Block UI is a HMI application for :doc:`EVA ICS </eva4/index>`, which
+provides a simple but flexible user web interface for any EVA ICS setup.
 
 Uses `bootstrap <https://getbootstrap.com/>`_ and `jQuery
 <https://jquery.com/>`_. No HTML or JavaScript coding is required: just
