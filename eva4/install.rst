@@ -120,6 +120,11 @@ in other tools.
 To rebuild the virtual environment from scratch, completely delete
 /opt/eva4/venv folder or call the above command with *-S* argument.
 
+.. note::
+
+    Operating system upgrade to a new version usually requires rebuilding venv
+    from scratch after the upgrade process is finished.
+
 .. _eva4_updating:
 
 Updating
