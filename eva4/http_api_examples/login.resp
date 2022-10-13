@@ -1,6 +1,6 @@
 HTTP/1.1 200 OK
 cache-control: no-cache, no-store
-content-length: 194
+content-length: 220
 content-type: application/json
 date: Thu, 13 Aug 2021 00:00:00 GMT
 expires: 0
@@ -11,9 +11,9 @@ pragma: no-cache
     "jsonrpc": "2.0",
     "result": {
         "acl": "admin",
+        "api_version": 4,
         "mode": "normal",
         "token": "token:1oeb5vHbLTTABBg2DfoueSHl9kT3ZPm6",
         "user": "admin"
     }
 }
-
