@@ -240,13 +240,7 @@ web application, as the framework does everything.
 
 The only steps are required:
 
-* update the framework to the version 0.3.35 or above.
-
-* switch the framework to V4 API:
-
-.. code:: javascript
-
-    $eva.api_version = 4;
+* update the framework to the version 0.3.40 or above.
 
 * change names of deprecated HTTP RPC methods to the new ones (open either
   server logs or Web browser development console to see which deprecated

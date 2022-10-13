@@ -42,12 +42,6 @@ HTML pages, on the server side.
     quickly develop EVA ICS HMI web applications and handles authentication,
     interaction, events and other communication tasks.
 
-If EVA JS Framework is used, switch API version to V4:
-
-.. code:: javascript
-
-    $eva.api_version = 4;
-
 Authentication
 ==============
 

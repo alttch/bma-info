@@ -545,7 +545,6 @@ only. There is no login prompt, the credentials are hard-coded directly:
             <input id="fan" type="button"
                 onclick="$eva.call('action.toggle', 'unit:room1/fan')" /></div>
         <script type="text/javascript">
-        $eva.api_version = 4;
         $eva.login = "op";
         $eva.password = "123";
         $eva.watch("unit:room1/fan",
@@ -723,7 +722,6 @@ include their content directly inside the file:
                       <input id="fan" type="button"
                           onclick="$eva.call('action.toggle', 'unit:room1/fan')" /></div>
                   <script type="text/javascript">
-                  $eva.api_version = 4;
                   $eva.login = "op";
                   $eva.password = "123";
                   $eva.watch("unit:room1/fan",
