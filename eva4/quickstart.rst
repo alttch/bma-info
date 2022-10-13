@@ -524,7 +524,7 @@ Install :doc:`/eva-js-framework/index`:
 .. code:: shell
 
     curl -L \
-        https://github.com/alttch/eva-js-framework/releases/download/v0.3.39/eva.framework.min.js \
+        https://github.com/alttch/eva-js-framework/releases/download/v0.3.40/eva.framework.min.js \
         -o /opt/eva4/ui/eva.framework.min.js
 
 
@@ -702,7 +702,7 @@ include their content directly inside the file:
             acls:
               - op
         upload:
-          - src: https://github.com/alttch/eva-js-framework/releases/download/v0.3.35/eva.framework.min.js
+          - src: https://github.com/alttch/eva-js-framework/releases/download/v0.3.40/eva.framework.min.js
             target: ui/
           - text: |
               if _1 == 0:
