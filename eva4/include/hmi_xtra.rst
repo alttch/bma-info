@@ -5,7 +5,7 @@ Basics
 ------
 
 HTTP API requests are performed using `JSON RPC 2.0
-<https://www.jsonrpc.org/specification>`.
+<https://www.jsonrpc.org/specification>`_.
 
 If JSON RPC request is called without ID, it means that the server does not
 need to return a result. In this case, http response with a code *202
