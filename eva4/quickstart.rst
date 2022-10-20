@@ -473,8 +473,8 @@ be provided by the default :doc:`svc/eva-hmi`.
 Creating users and ACLs
 -----------------------
 
-As we launched the installer with "--hmi" argument, the HMI service, as well as
-required :doc:`authentication <aaa>` services were deployed automatically.
+As we launched the installer with "\--hmi" argument, the HMI service, as well
+as required :doc:`authentication <aaa>` services were deployed automatically.
 
 By default, EVA ICS creates "operator" ACL and "operator" user, but let us
 create a new ACL, a new user and use them instead:
