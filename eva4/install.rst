@@ -226,5 +226,6 @@ and put the following to override the user:
 
 .. note::
 
-    When deploying new EVA ICS services, always avoid using "user" field in the
-    service primary params section (remove it if using the default templates).
+    When deploying new services on EVA ICS system, which runs under a
+    restricted user, avoid using "user" field in the service primary params
+    section (remove it if using the default templates).
