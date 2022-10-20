@@ -212,7 +212,7 @@ and put the following to override the user:
     [Service]
     User=useracc
 
-* If *logrotate.d* is automatically configured during the install, edit
+* If *logrotate* is automatically configured during the install, edit
   */etc/logrotate.d/eva4* and replace in the default "create 640 root adm" line
   *root* to *useracc*.
 
