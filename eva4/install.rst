@@ -34,6 +34,8 @@ The EVA ICS installer prepares the system automatically, installing required
 packages. The only necessary pre-installed packages is "curl" to download and
 start the installation.
 
+.. _eva4_install:
+
 Installing
 ==========
 
@@ -161,3 +163,68 @@ nodes and after offers the update plan, which must be additionally confirmed.
 
 Remote nodes are always updated to the same version, which the management node
 has got.
+
+Running under a restricted user
+===============================
+
+By default, the EVA ICS main process is started as root, while secondary
+services drop their privileges to system restricted users.
+
+Sometimes the whole platform must run under a restricted user. To make it work,
+perform the following:
+
+* :ref:`Install <eva4_install>` EVA ICS v4 in the regular way. The commands
+  below require :ref:`eva4_eva-shell` to be installed, so run the installer
+  with *-a* option or install eva-shell later manually.
+
+* Execute the following command to remove "props/user" option in the existing
+  deployed services:
+
+.. code:: shell
+
+    eva svc export \*|grep -v '^    user: '|eva svc deploy
+
+* Stop the server completely
+
+.. code:: shell
+
+    systemctl stop eva4
+    # if not using systemd to start/stop EVA ICS automatically
+    eva server stop
+
+* Create a desired user, change ownership of /opt/eva4 directory, where
+  *useracc* is user's login:
+
+.. code:: shell
+
+    chown -R useracc /opt/eva4
+
+* If using *systemd*, create a systemd service configuration override:
+
+.. code:: shell
+
+    systemctl edit eva4
+
+and put the following to override the user:
+
+.. code:: ini
+
+    [Service]
+    User=useracc
+
+* If *logrotate.d* is automatically configured during the install, edit
+  */etc/logrotate.d/eva4* and replace in the default "create 640 root adm" line
+  *root* to *useracc*.
+
+* Start the server back
+
+.. code:: shell
+
+    systemctl start eva4
+    # if not using systemd to start/stop EVA ICS automatically
+    su - useracc -c "/opt/eva4/bin/eva server start"
+
+.. note::
+
+    When deploying new EVA ICS services, always avoid using "user" field in the
+    service primary params section (remove it if using the default templates).
