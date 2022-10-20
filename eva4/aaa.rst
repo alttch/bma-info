@@ -76,7 +76,8 @@ Fields:
 * **write** grants both read and write access to items
 
 * **deny** denies access to certain items/pvt/rpvt, e.g. if read/write masks
-  are used
+  are used. For items: the ACL still has read-only access if allowed with other
+  ACL properties.
 
 * **ops** list of special operations ("allow" in v3). supported values: *log*,
   *supervisor*
