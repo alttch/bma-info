@@ -50,9 +50,9 @@ The keys can be edited with:
 
 .. code:: shell
 
-    /opt/eva4/sbin/eva-registry-cli edit eva/config/X
+    /opt/eva4/sbin/eva-registry-cli edit eva/config/KEY
     # or using eva-shell
-    eva edit config/X
+    eva edit config/KEY
 
 .. _eva4_config_core:
 

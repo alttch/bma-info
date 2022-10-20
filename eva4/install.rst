@@ -67,9 +67,9 @@ Installer arguments
 By adding "-h" or "--help" argument, the full list of the installer arguments
 can be obtained. Let us review the primary ones:
 
-* **--hmi** automatically setups authentication and web HMI services.
+* **\--hmi** automatically setups authentication and web HMI services.
 
-* **--mode** prepares the system, by installing additional packages:
+* **\--mode** prepares the system, installs additional packages:
 
     * **0** installs the minimal list of required packages
     
@@ -77,12 +77,13 @@ can be obtained. Let us review the primary ones:
 
     * **2** all of the above, plus C and C++ compilers, plus development headers
 
-    * **3** all of the above, plus Rust compiler and additional development headers
+    * **3** all of the above, plus Rust compiler and additional development
+            headers
 
 The compilers and the development headers can be used to add custom Python
 modules into venv.
 
-* **--prepare-only** allows to install additional compilers / headers, without
+* **\--prepare-only** allows to install additional compilers / headers, without
   installing EVA ICS. Can be executed after the installation at any time.
 
 Post-install configuration
