@@ -52,6 +52,10 @@ help:
 clean:
 	rm -rf $(BUILDDIR)
 
+prepare:
+	cd eva4 && make prepare
+	cd eva3 && make prepare
+
 prepare-venv:
 	python3 -m venv ./venv
 	./venv/bin/pip install -r req.txt
