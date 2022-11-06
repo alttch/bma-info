@@ -72,5 +72,47 @@ auth.user
      - Max operation timeout
      - no
 
+.. _eva4_eva.aaa.msad__cache.delete:
+
+cache.delete
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Delete cache entry for a user*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Account login
+     - **yes**
+
+.. _eva4_eva.aaa.msad__cache.purge:
+
+cache.purge
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Purge cache*
+   * - Parameters
+     - *none*
+   * - Returns
+     - *nothing*
+
 .. include:: ../include/msad.rst
 

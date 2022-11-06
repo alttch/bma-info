@@ -47,9 +47,49 @@ api_log.get
    * - Description
      - *Gets log of recent API calls*
    * - Parameters
-     - *none*
+     - required
    * - Returns
      - List of recent API calls
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **t_start**
+     - String/i64
+     - Start time
+     - no
+   * - **t_end**
+     - String/i64
+     - End time
+     - no
+   * - **user**
+     - String
+     - Filter by user
+     - no
+   * - **acl**
+     - String
+     - Filter by ACL ID
+     - no
+   * - **method**
+     - String
+     - Filter by method
+     - no
+   * - **source**
+     - String
+     - Filter by source
+     - no
+   * - **code**
+     - i64
+     - Filter by code
+     - no
+   * - **success**
+     - bool
+     - Filter by success/failed
+     - no
 
 
 *Return payload example:*
