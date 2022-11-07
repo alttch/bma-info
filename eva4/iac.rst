@@ -166,7 +166,7 @@ The following field values are supported: tar, tgz, txz, tbz2, zip.
 Uploading single/multiple files from HTTP URLs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-HTTP/HTTPS-hosted files can be fetched by the target's EVA_DIR/runtime
+HTTP/HTTPS-hosted files can be fetched by the target node into EVA_DIR/runtime
 directory with the following block:
 
 .. code:: yaml
