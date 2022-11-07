@@ -122,4 +122,4 @@ Module variables:
    e.g. to manipulate keys without auto-prefixing.
 
 It is also possible to work with registry server using the official API and
-clients. See https://www.yedb.org/ for more details.
+clients. See https://yedb.bma.ai/ for more details.
