@@ -130,6 +130,10 @@ file.put
      - String
      - Extract as: no|tar|txz|tgz|tbz2|zip
      - no
+   * - **download**
+     - bool
+     - Download content from HTTP URI, sent in the content field
+     - no
 
 .. _eva4_eva.filemgr.main__file.unlink:
 

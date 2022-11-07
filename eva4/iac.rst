@@ -119,7 +119,14 @@ following block:
     If a file content is defined directly in the deployment (field *text*), the
     target MUST contain the full destination path, including the file name.
 
-The upload source field accepts both local files and HTTP URLs.
+The upload source field accepts both local files and HTTP URLs. If an URL is
+specified in "src", it is downloaded first to the local host where the
+deployment process is started and after pushed to the target node via pub/sub.
+
+.. note::
+
+    The specified way is not recommended to deploy large (>1MB) files as they
+    may block pub/sub replication pipes.
 
 Uploading files in bulk
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,6 +162,33 @@ The following field values are supported: tar, tgz, txz, tbz2, zip.
 
     :doc:`svc/eva-filemgr` allows archiver processes to run for the limited
     period of time. In case of timeout errors, increase the service timeout.
+
+Uploading single/multiple files from HTTP URLs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HTTP/HTTPS-hosted files can be fetched by the target's EVA_DIR/runtime
+directory with the following block:
+
+.. code:: yaml
+
+    - node: .local
+      upload:
+        - url: http://some.host/deploy.info
+          target: data/
+          # optional file permissions
+          permissions: 0o400
+
+In this case, only file URL is pushed to the remote node, the content is
+downloaded by the remote node. The parameter "extract" is supported for
+archives as well.
+
+Make sure the remote node has got access to the specified HTTP resource.
+
+.. note::
+
+    The specified way is the most recommended way to deploy large (>1MB) files
+    as they do not block pub/sub replication pipes.
+
 
 Uploading UI/PVT files
 ~~~~~~~~~~~~~~~~~~~~~~
