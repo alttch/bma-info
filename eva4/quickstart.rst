@@ -524,7 +524,7 @@ Install :doc:`/eva-js-framework/index`:
 .. code:: shell
 
     curl -L \
-        https://pub.bma.ai/eva-js-framework/0.3.41/eva.framework.min.js \
+        https://pub.bma.ai/eva-js-framework/0.3.44/eva.framework.min.js \
         -o /opt/eva4/ui/eva.framework.min.js
 
 
@@ -702,7 +702,7 @@ include their content directly inside the file:
             acls:
               - op
         upload:
-          - src: https://pub.bma.ai/eva-js-framework/0.3.41/eva.framework.min.js
+          - src: https://pub.bma.ai/eva-js-framework/0.3.44/eva.framework.min.js
             target: ui/
           - text: |
               if _1 == 0:
