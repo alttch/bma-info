@@ -39,7 +39,7 @@ the further analysis.
 Adding a resource/item
 ======================
 
-Certain tables, such as items and services, allow adding resources.
+Certain tables, such as items and services, allow to add resources.
 
 .. figure:: ss/add.png
     :scale: 30%
@@ -49,7 +49,7 @@ The newly added resource may not appear in the monitoring table until reloaded.
 Editing resources/items
 =======================
 
-Certain tables, such as items and services, allow editing resources.
+Certain tables, such as items and services, allow to edit resources.
 
 .. figure:: ss/edit.png
     :scale: 30%
@@ -59,7 +59,7 @@ The new resource data may not appear in the monitoring table until reloaded.
 Deleting resources/items
 ========================
 
-Certain tables, such as items and services, allow destroying resources.
+Certain tables, such as items and services, allow to destroy resources.
 
 .. figure:: ss/delete.png
     :scale: 30%
