@@ -11,6 +11,7 @@ config:
     host: localhost
     port: 25
     tls: false
+    ssl: false
     #username: user
     #password: secret
     pool_size: 5
