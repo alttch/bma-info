@@ -44,7 +44,7 @@ send
    :header-rows: 0
 
    * - Description
-     - *Sends an e-mail letter*
+     - *Sends a e-mail letter*
    * - Parameters
      - required
    * - Returns
