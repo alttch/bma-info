@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 998
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+        {
+            "acl": "admin",
+            "auth": "token",
+            "code": 0,
+            "dt": "2022-05-10T03:43:26+02:00",
+            "elapsed": 0.023,
+            "id": "41770402-8154-4d3f-ae49-55fa9b9840b6",
+            "method": "action.toggle",
+            "msg": null,
+            "params": {
+              "i": "unit:tests/door1"
+            },
+            "source": "127.0.0.1",
+            "t": 1652147006,
+            "user": "admin"
+        },
+        {
+            "acl": "admin",
+            "auth": "token",
+            "code": 0,
+            "dt": "2022-05-10T03:43:32+02:00",
+            "elapsed": 0.019,
+            "id": "6d12a29e-ba5f-4757-a2d3-770641393dd3",
+            "method": "action.toggle",
+            "msg": null,
+            "params": {
+              "i": "unit:tests/door2"
+            },
+            "source": "127.0.0.1",
+            "t": 1652147012,
+            "user": "admin"
+        }
+    ]
+}
