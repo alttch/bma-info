@@ -202,6 +202,70 @@ action.toggle
     :response: ../../http_api_examples/action.toggle.resp
 
 
+.. _eva4_hmi_http__api_log.get:
+
+api_log.get
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets log of recent API calls*
+   * - Parameters
+     - required
+   * - Returns
+     - List of recent API calls
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **t_start**
+     - String/i64
+     - Start time
+     - no
+   * - **t_end**
+     - String/i64
+     - End time
+     - no
+   * - **user**
+     - String
+     - Filter by user (requires admin access)
+     - no
+   * - **acl**
+     - String
+     - Filter by ACL ID
+     - no
+   * - **method**
+     - String
+     - Filter by method
+     - no
+   * - **source**
+     - String
+     - Filter by source
+     - no
+   * - **code**
+     - i64
+     - Filter by code
+     - no
+   * - **success**
+     - bool
+     - Filter by success/failed
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/api_log.get.req
+    :response: ../../http_api_examples/api_log.get.resp
+
+
 .. _eva4_hmi_http__bus__TARGET_SVC__METHOD:
 
 bus::<TARGET_SVC>::<METHOD>
