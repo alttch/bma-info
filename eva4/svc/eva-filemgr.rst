@@ -161,3 +161,49 @@ file.unlink
      - String
      - Relative file path
      - **yes**
+
+.. _eva4_eva.filemgr.main__sh:
+
+sh
+--
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Executes a shell command*
+   * - Parameters
+     - required
+   * - Returns
+     - Command execution info
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **c**
+     - String
+     - Command to execute
+     - **yes**
+   * - **timeout**
+     - f64
+     - Max command timeout
+     - no
+   * - **stdin**
+     - String
+     - STDIN data
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "err": "STDERR OUTPUT",
+      "exitcode": 0,
+      "out": "STDOUT OUTPUT"
+  }
