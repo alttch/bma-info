@@ -10,7 +10,7 @@
      - 
    * - :doc:`Active directory auth service<svc/eva-aaa-msad>`
      - :doc:`eva.aaa.msad<svc/eva-aaa-msad>`
-     - path/to/eva-aaa-msad
+     - svc/eva-aaa-msad
      - requires :doc:`enterprise`
    * - :doc:`Default ACL service<svc/eva-aaa-acl>`
      - :doc:`eva.aaa.acl<svc/eva-aaa-acl>`
@@ -26,7 +26,7 @@
      - always by default
    * - :doc:`HMI kiosk manager<svc/eva-kioskman>`
      - :doc:`eva.kioskman.default<svc/eva-kioskman>`
-     - path/to/eva-kioskman
+     - svc/eva-kioskman
      - requires :doc:`enterprise`
    * - :doc:`HMI service<svc/eva-hmi>`
      - :doc:`eva.hmi.default<svc/eva-hmi>`
@@ -118,5 +118,5 @@
      - 
    * - :doc:`Zero-failure replication service<svc/eva-zfrepl>`
      - :doc:`eva.zfrepl.N.collector|replicator<svc/eva-zfrepl>`
-     - path/to/eva-zfrepl
+     - svc/eva-zfrepl
      - requires :doc:`enterprise`

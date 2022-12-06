@@ -279,7 +279,7 @@
   tpl: svc-tpl-replication-legacy.yml
   api: svc/repl-legacy/eapi.yml
 - nam: eva.aaa.msad
-  exe: path/to/eva-aaa-msad
+  exe: svc/eva-aaa-msad
   des: Active directory auth service
   txt: Active directory user authentication service, see :doc:`../aaa` for more details.
   api: eva4-esvc/aaa-msad/eapi.yml
@@ -288,7 +288,7 @@
   xtr: |
     .. include:: ../include/msad.rst
 - nam: "eva.zfrepl.N.collector|replicator"
-  exe: path/to/eva-zfrepl
+  exe: svc/eva-zfrepl
   des: Zero-failure replication service
   txt: |
     .. include:: ../include/zfrepl.rst
@@ -296,7 +296,7 @@
   ent: true
   tpl: svc-tpl-zfrepl.yml
 - nam: eva.kioskman.default
-  exe: path/to/eva-kioskman
+  exe: svc/eva-kioskman
   des: HMI kiosk manager
   txt: |
     .. include:: ../include/kioskman.rst
