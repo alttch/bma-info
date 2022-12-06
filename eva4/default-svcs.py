@@ -42,9 +42,9 @@ with open('include/autogen/core_svcs_toc.rst', 'w') as tfh:
     with open('include/autogen/default_svcs.rst', 'w') as fh:
         print('.. list-table::', file=fh)
         print(file=fh)
-        print('   * - Suggested name', file=fh)
+        print('   * - Description', file=fh)
+        print('     - Suggested name', file=fh)
         print('     - Executable', file=fh)
-        print('     - Description', file=fh)
         print('     - Deployed', file=fh)
         for svc in svcs:
             enterprise = svc.get('ent', False)
@@ -65,9 +65,9 @@ with open('include/autogen/core_svcs_toc.rst', 'w') as tfh:
                     'Python module')
             else:
                 pymod = None
-            print(f'   * - {nam}', file=fh)
+            print(f'   * - {des}', file=fh)
+            print(f'     - {nam}', file=fh)
             print(f'     - {exe}', file=fh)
-            print(f'     - {des}', file=fh)
             print(f'     - {ins}', file=fh)
             print(f'    {exe_link}', file=tfh)
             with open(f'./{exe_link}.rst', 'w') as sfh:
