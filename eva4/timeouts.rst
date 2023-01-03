@@ -63,26 +63,6 @@ configuration and set the default timeout to a higher value:
         default: 30
     # ...
 
-Note that increasing a pub/sub client timeout may require to increase the max
-allowed pub/sub server timeout as well. If :doc:`PSRT <../psrt/index>` is used,
-edit its :ref:`configuration file <psrt_config>` (default:
-*/etc/psrtd/config.yml*) and set the server timeout
-equal to the max expected client timeout:
-
-.. code:: yaml
-
-    # ...
-    proto:
-        # ....
-        timeout: 30
-    # ...
-
-Do not forget to restart the server after the config is modified:
-
-.. code:: shell
-
-    systemctl restart psrtd
-
 Bus call timeout
 ----------------
 
