@@ -3,9 +3,6 @@ Troubleshooting
 
 .. contents::
 
-Knowledge base
-==============
-
 .. _eva4_dump:
 
 Creating dumps

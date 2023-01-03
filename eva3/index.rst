@@ -103,7 +103,7 @@ Ready to discover? Welcome and read :doc:`quick start guide<quickstart>`.
     extending
     advanced_dev
     PHIs <phi.rst>
-    troubleshoot
+    troubleshooting
     license
 
 Open-source repository: https://github.com/alttch/eva3
