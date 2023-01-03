@@ -371,6 +371,8 @@ with command-line argument *-T*:
 
 The deployment file can be a local one or HTTP URL.
 
+.. _eva4_iac_auto_flush_off:
+
 If :doc:`registry` auto-flush is enabled on the target and multiple items are
 deployed, the deployment may take long time to complete. The registry
 auto-flush can be automatically switched off and back on with the following

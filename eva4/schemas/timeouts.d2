@@ -1,0 +1,13 @@
+ecm: Cloud Manager CLI
+repl1: Local replication service
+pubsub: Pub/Sub server { shape: cloud }
+
+repl2: Remote replication service
+rcore: Remote node core
+
+ecm -> repl1: client timeout
+repl1 -> pubsub: local replication pub/sub timeout
+repl2 <- pubsub
+repl2 -> rcore: bus call timeout
+
+repl1 -> repl2

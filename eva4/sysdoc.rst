@@ -18,6 +18,7 @@ System documentation
     cli
     iac
     highload
+    timeouts
     troubleshooting
     security
     enterprise

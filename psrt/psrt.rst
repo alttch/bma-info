@@ -35,6 +35,8 @@ Building from source
     cd psrt
     cargo build --features server,cli --release
 
+.. _psrt_config:
+
 Configuration files
 -------------------
 
