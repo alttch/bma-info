@@ -20,7 +20,7 @@ timeout and the further deployment process is stopped.
 The schema
 ==========
 
-To understand the problem, let us review the schema for the above call:
+To understand the problem, let us review the full path of the above call:
 
 .. figure:: schemas/timeouts.svg
     :scale: 70%
