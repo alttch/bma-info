@@ -1,0 +1,20 @@
+Last Updated on 2020-12-25
+
+KB00006: Install fails on Fedora 33
+***********************************
+
+.. index:: fedora, python3.9, installation, setup
+
+EVA ICS versions: <= **3.3.1**
+
+Problem
+=======
+
+EVA ICS installation fails, controllers can not be started.
+
+Solution
+========
+
+Fedora 33 has Python version 3.9 included by default, which is not supported by
+EVA ICS prior to 3.3.2.  Consider either downgrading the system Python or
+installing EVA ICS 3.3.2 or newer.

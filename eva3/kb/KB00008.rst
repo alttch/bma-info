@@ -1,0 +1,62 @@
+Last Updated on 2022-09-29
+
+KB00008: Customizing EVA ICS updates
+************************************
+
+.. index:: setup, update
+
+EVA ICS versions: **3.3.2**  and 3.x above
+
+Problem
+=======
+
+The command "eva update" always updates EVA ICS to the latest version.
+However, sometimes it may be required to install the particular intermediate
+version e.g. for better backward compatibility or stability.
+
+Solution
+========
+
+The problem can be solved in several ways:
+
+Customizing the mirror
+----------------------
+
+The local `EVA ICS mirror <{DOC_URL}/install.html#serving-local-mirror>`_ can
+host any version required. To modify the default update version for secondary
+nodes, after running "eva mirror update" command, manually modify
+"/opt/eva/mirror/eva/update_info.json" file and specify the version required.
+Also, make sure the required version files are present in
+"/opt/eva/mirror/eva", download missing files manually from
+https://pub.bma.ai/eva3/.
+
+EVA ICS repository URL can be set either manually with "eva update -u <URL>"
+param, or by editing "/opt/eva/etc/eva_shell.ini" configuration file, or by
+specifying *EVA_REPOSITORY_URL* environment variable.
+
+Forcing "eva update" to download and install specified version
+--------------------------------------------------------------
+
+The command "eva update" can download and install any EVA ICS version
+available. To specify the particular version, use
+*EVA_UPDATE_FORCE_VERSION=<VER>:<BUILD>* environment variable, e.g. the command
+
+.. code:: shell
+
+    EVA_UPDATE_FORCE_VERSION=3.3.2:2021011501 eva update --YES
+
+will try updating the local node to EVA ICS v3.3.2 build 2021011501.
+
+Manually applying the update
+----------------------------
+
+Download the update script for the particular version/build from
+https://pub.bma.ai/eva3/ and run it in "/opt/eva" directory with bash, e.g.:
+
+.. code:: shell
+
+    curl https://pub.bma.ai/eva3/3.3.2/nightly/update-2021011501.sh | bash
+
+Note that update scripts don't bring EVA ICS node up automatically. If the
+update has been failed, carefully investigate the problem and try either
+re-applying it or start previous EVA ICS version manually.

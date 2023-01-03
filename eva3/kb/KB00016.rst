@@ -1,0 +1,28 @@
+Last Updated on 2022-05-17
+
+KB00016: Active directory feature setup fails on Debian 11
+**********************************************************
+
+.. index:: setup, msad, debian
+
+EVA ICS versions: **3.4.2**  and 3.x above
+
+Problem
+=======
+
+Active directory setup fails on Debian 11 with an error:
+
+.. code::
+
+    AttributeError: install_layout
+
+Solution
+========
+
+Some Debian 11 installs have **setuptools** broken. To fix the issue, do the
+following:
+
+.. code:: shell
+
+    apt -y install python3-pip
+    pip3 install -U setuptools

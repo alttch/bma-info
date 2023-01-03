@@ -1,0 +1,30 @@
+Last Updated on 2022-05-17
+
+KB00005: Timeouts during long API calls, API calls are repeated multiple times
+******************************************************************************
+
+.. index:: timeout, api
+
+EVA ICS versions: **3.0.0**  and 3.x above
+
+Problem
+=======
+
+* A client receives timeout error when performing a long-running API request.
+
+* The API call is repeated multiple times, while requested once.
+
+Solution
+========
+
+* Long API calls should be avoided at any cost.
+
+* All critical action and command methods have an option to obtain action ID
+  and check the result later.
+
+If there is no way to avoid long API calls, and they are performed between
+controllers (e.g.  action methods with *w(wait)* param), the remote controller
+timeout should be always greater than max. expected "wait" timeout in the API
+request. Otherwise, the primary controller will repeat the API requests to the
+target continuously, up to the value of **retries** property, set for the
+secondary controller.

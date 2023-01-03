@@ -1,0 +1,80 @@
+Last Updated on 2022-05-17
+
+KB00012: Running EVA ICS under restricted users
+***********************************************
+
+.. index:: install, permissions, setup
+
+EVA ICS versions: **3.3.2**  and 3.x above
+
+Problem
+=======
+
+EVA ICS has built-in mechanism to run components under restricted users, which
+can be configured with the included "easy-setup" script.
+
+However, sometimes superuser is not available at all and eva-control/"eva
+server" commands should be run under a restricted user, without decreasing
+permissions after startup.
+
+Solution
+========
+
+Detailed step-by-step guide
+---------------------------
+
+* stop EVA ICS ("eva server stop"). If EVA ICS is configured to be started with
+  systemd (default), use "systemctl stop eva-ics" instead. If supervisord is
+  used, stop EVA ICS with supervisorctl.
+
+* Change EVA ICS directory ownership to the desired user (e.g. "chown eva
+  /opt/eva")
+
+* For systemd, edit */etc/systemd/system/eva-ics.service* file and change
+  "User=" variable value to the desired user account. After, execute "systemctl
+  daemon-reload". If supervisord is used, edit /etc/supervisor/conf.d/eva-*
+  files and change "user" variables as well.
+
+* start EVA ICS ("eva server start") **under the restricted user**. If EVA ICS
+  is configured to be started with systemd (default), use "systemctl start
+  eva-ics" instead (under root). If supervisord is used, start EVA ICS with
+  supervisorctl. For EVA ICS 3.4.0 and above, do the same for eva-ics-registry
+  service or supervisord program.
+
+Automated solution
+------------------
+
+The above process can be automated with the script, which is available at
+
+    https://raw.githubusercontent.com/alttch/eva3/VERSION/install/switch-eva-superuser
+
+    (e.g.
+    https://raw.githubusercontent.com/alttch/eva3/3.4.2/install/switch-eva-superuser
+    for EVA ICS 3.4.2)
+
+Download the script and run it as root:
+
+.. code:: bash
+
+    #./switch-eva-superuser <user>
+    # e.g.
+    ./switch-eva-superuser eva
+    # if EVA ICS is installed in the director other than default /opt/eva:
+    EVA_DIR=/path/to/eva ./switch-eva-superuser eva
+
+Or run the script directly from the web, e.g. with curl:
+
+.. code:: bash
+
+    curl https://raw.githubusercontent.com/alttch/eva3/3.4.2/install/switch-eva-superuser | sh /dev/stdin eva
+
+Starting EVA ICS during the system startup
+------------------------------------------
+
+To start EVA ICS during the system startup, use either systemd, or the shell
+command:
+
+.. code:: bash
+
+    su - eva -c "/opt/eva/sbin/registry-control start"
+    su - eva -c "/opt/eva/bin/eva server start"

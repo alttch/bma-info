@@ -1,0 +1,50 @@
+Last Updated on 2022-05-17
+
+KB00010: Item states are not synchronized in real-time via MQTT
+***************************************************************
+
+.. index:: item, sync, realtime, cloud
+
+EVA ICS versions: **3.0.0**  and 3.x above
+
+Problem
+=======
+
+Item states are not synchronized in real-time between controllers via MQTT.
+
+Solution
+========
+
+Step 1
+------
+
+Check `MQTT notifier <https://eva-ics.readthedocs.io/en/3.4.2/notifiers.html#mqtt>`_ configuration on
+both sides.
+
+Step 2
+------
+
+Use *mosquitto_sub* or another MQTT client to make sure MQTT packets are sent
+correctly:
+
+.. code:: bash
+
+    mosquitto_sub -d -h localhost -u eva -P test -t 'sensor/#'
+
+Step 3
+------
+
+Make sure both nodes have time synchronized. If the target system has the
+system time set later than the source, the packets from source will be ignored.
+
+Starting from EVA ICS 3.3.2 there is an option for MQTT notifier to send
+event packets from the source node without timestamps:
+
+.. code:: bash
+
+    eva ns uc set eva_1 timestamp_enabled 0
+    eva uc server restart
+
+Event timestamps play the very important role in data synchronization and this
+option should be used **only** if there is no way to correct time difference
+between EVA ICS nodes.

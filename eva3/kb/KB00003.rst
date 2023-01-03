@@ -1,0 +1,47 @@
+Last Updated on 2021-06-25
+
+KB00003: OWFS feature setup fails on RedHat Enterprise Linux 8/Centos 8
+***********************************************************************
+
+.. index:: rhel, redhat, rhel8, feature, owfs, 1-wire, setup
+
+EVA ICS versions: **3.3.2**
+
+Problem
+=======
+
+The 1-Wire feature setup *eva feature setup owfs* fails with the error:
+
+.. error::
+
+   Unsupported OS or distribution
+   Error: Operation failed
+
+Solution
+========
+
+Unfortunately, neither RHEL/CentOS 8 nor EPEL provide the required
+*libow-devel* package. The package from Fedora also can not be installed with
+rpm.
+
+The solution is to install *libow* from source:
+
+.. code:: bash
+
+  yum install -y libtool make
+  curl -sL https://github.com/owfs/owfs/archive/v3.2p4.tar.gz |tar xzf -
+  cd owfs-3.2p4
+  ./bootstrap
+  ./configure --prefix=/usr --disable-owtcl --disable-owphp \
+    --disable-owpython --disable-zero --disable-owshell --disable-owhttpd \
+    --disable-owftpd --disable-owserver --disable-owperl --disable-owtcl \
+    --disable-owtap --disable-owmon --disable-owexternal --disable-dependency-tracking
+  make
+  make install
+  ldconfig
+
+After, install EVA ICS feature again with *python_lib_only=1* option:
+
+.. code:: bash
+
+  eva feature setup owfs python_lib_only=1

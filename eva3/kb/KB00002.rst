@@ -1,0 +1,53 @@
+Last Updated on 2022-05-17
+
+KB00002: Install / venv rebuild fails on Ubuntu 18.04 LTS / Debian 10 / RHEL 8
+******************************************************************************
+
+.. index:: ubuntu, debian, installation, venv, python, ubuntu-18.04, debian-10, ldap, msad, setup
+
+EVA ICS versions: **3.3.0**  and 3.x above
+
+Problem
+=======
+
+The installation process or venv rebuild fails with the error:
+
+.. error::
+
+    Requested cairocffi from
+    https://files.pythonhosted.org/packages/84/ca/........
+    (from cairosvg==2.1.1->-r /tmp/eva-venv.KrjvXu (line 3)) has different
+    version in metadata: 'file-.cairocffi-VERSION'
+
+or similar, related to **setuptools**.
+
+The bug also happens with **python-ldap** module, when MSAD feature is being
+setup.
+
+Solution
+========
+
+Ubuntu 18.04 and other legacy systems have Python package *setuptools*
+outdated. Consider upgrading either the system one:
+
+.. code:: bash
+
+    apt install -y python3-pip
+    pip3 install -U setuptools
+
+or the package in EVA ICS venv:
+
+.. code:: bash
+
+    /opt/eva/venv/bin/pip install -U setuptools
+
+If the error was happened during the installation, remove */opt/eva* directory
+and start the installation process from scratch.
+
+If no Internet connection is available or everything of the above fail, try
+adding "--no-use-pep517" to "pip-extra-options" field of **config/venv**
+registry key ("eva edit venv"):
+
+.. code:: yaml
+
+    pip-extra-options: --no-use-pep517 # extra options may follow

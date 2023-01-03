@@ -1,0 +1,88 @@
+Last Updated on 2022-05-17
+
+KB00004: Wrong items deployed on a secondary UC or LM PLC node
+**************************************************************
+
+.. index:: uc, lm, cloud, undeploy, deploy
+
+EVA ICS versions: **3.0.0**  and 3.x above
+
+Problem
+=======
+
+Wrong items were accidentally deployed on the secondary node.
+
+Solution
+========
+
+The best solution is to undeploy all the items with the same configuration
+they were deployed:
+
+.. code:: bash
+
+  eva sfa cloud undeploy -y deploy.yml
+
+however sometimes the deployment file may be unavailable or the undeployment
+process could take a long time.
+
+The solution is to manually delete items from controllers.
+
+Items can be filtered by group
+------------------------------
+
+On the secondary controllers, execute:
+
+.. code:: bash
+
+  eva uc destroy -g GROUP # delete BOTH units and sensors
+  eva lm destroy -g GROUP # delete lvars only
+
+Item can not be filtered by group
+---------------------------------
+
+If items can not be filtered by group or there are special items, like LM PLC
+macros, cycles etc., stop the controller and use the system shell to manually
+delete item configuration files / keys using a preferred way.
+
+On the secondary controllers, execute.
+
+For EVA ICS 3.3.2 and below:
+
+.. code:: bash
+
+  eva uc server stop
+  cd /opt/eva/runtime
+
+  # uc_unit.d - the directory with unit configuration files
+  # uc_sensor.d - sensors
+
+  eva uc server start
+
+.. code:: bash
+
+  eva lm server stop
+  cd /opt/eva/runtime
+
+  # lm_lvar.d - lvars
+  # lm_dmatrix_rule.d - decision rules
+  # lm_job.d - scheduled jobs
+  # lm_lcycle.d - cycles
+  # lm_lmacro.d - macros
+
+  eva lm server start
+
+For EVA ICS 3.4.0 and above:
+
+.. code:: bash
+
+  eva lm server stop
+  eva uc server stop
+
+  eva registry manage
+
+  # delete all items
+  # individual items / group keys can be also deleted as well
+  delete -r eva3/<hostname>/inventory
+
+  eva uc server start
+  eva lm server start

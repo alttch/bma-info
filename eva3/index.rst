@@ -31,11 +31,6 @@ is simple and available for everyone!
 
 EVA ICS v3 source code is fully available at https://github.com/alttch/eva3
 
-.. note::
-
-    This is the main EVA ICS documentation site. For troubleshooting, firstly
-    check the `EVA ICS Knowledge base <https://kb.eva-ics.com/>`_.
-
 .. raw:: html
 
     <h2>What is EVA ICS v3</h2>
@@ -108,6 +103,7 @@ Ready to discover? Welcome and read :doc:`quick start guide<quickstart>`.
     extending
     advanced_dev
     PHIs <phi.rst>
+    troubleshoot
     license
 
 Open-source repository: https://github.com/alttch/eva3

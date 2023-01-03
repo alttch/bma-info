@@ -1,0 +1,34 @@
+Last Updated on 2022-10-21
+
+KB00017: Dealing with startup timeouts on high-loaded nodes
+***********************************************************
+
+.. index:: eva, startup, timeout, crash
+
+EVA ICS versions: **3.4.0**  and 3.x above
+
+Problem
+=======
+
+The default component startup timeout is 60 seconds. It may be not enough for
+high-loaded nodes or nodes which run on a slow hardware.
+
+Solution
+========
+
+Increase startup timeouts:
+
+* The main startup timeout is located in */opt/eva/etc/eva-config*. Put there
+  e.g. *STARTUP_TIMEOUT=180* to raise timeout to 180 seconds.
+
+* If using *systemd*, edit */etc/systemd/system/eva-ics.service* and increase
+  *TimeoutStartSec*. The value must be higher than the max expected timeout for
+  all local controllers.
+
+* If the startup timeout is set for more than 60 seconds, modify the watchdog
+  interval and make it equal or higher:
+
+.. code:: shell
+
+    AUTO_PREFIX=1 /opt/eva/sbin/eva-registry-cli set-field config/watchdog
+    interval 180 -p number

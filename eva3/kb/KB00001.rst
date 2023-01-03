@@ -1,0 +1,27 @@
+Last Updated on 2022-05-17
+
+KB00001: SFA or LM PLC with secondaries connected keeps restarting
+******************************************************************
+
+.. index:: mqtt, lm, sfa, critical, cloud
+
+EVA ICS versions: **3.0.0**  and 3.x above
+
+Problem
+=======
+
+The most common problem is critical timeout exception, when the primary node
+tries to reload multiple secondaries at the same time via MQTT, but they are
+unavailable. Check for critical exceptions in controllers' logs.
+
+Solution
+========
+
+The default controller timeout should be larger than secondary node timeout
+(can be obtained with "controller props" command), multiplied by (retries + 1).
+
+* Increase the default controller timeout
+
+OR
+
+* Decrease secondary controllers' timeouts and retries

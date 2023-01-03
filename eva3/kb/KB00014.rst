@@ -1,0 +1,19 @@
+Last Updated on 2022-05-17
+
+KB00014: Unable to start update after a one failed
+**************************************************
+
+.. index:: locked, update
+
+EVA ICS versions: **3.3.2**  and 3.x above
+
+Problem
+=======
+
+After failed update, "eva update" command responds "update is already running",
+however there is no active update process.
+
+Solution
+========
+
+Remove EVA_DIR/var/update.lock file and run update again.

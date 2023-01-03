@@ -1,0 +1,23 @@
+Last Updated on 2022-05-17
+
+KB00013: Stop EVA ICS when Registry DB is not accessible
+********************************************************
+
+.. index:: eva, controllers, shutdown, registry, maintenance
+
+EVA ICS versions: **3.4.0**  and 3.x above
+
+Problem
+=======
+
+EVA ICS registry is not accessible but local EVA ICS controllers are up and
+need to be stopped.
+
+Solution
+========
+
+To forcibly stop all components, use the command:
+
+.. code:: shell
+
+    FORCE_ALL=1 /opt/eva/sbin/eva-control stop

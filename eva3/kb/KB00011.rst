@@ -1,0 +1,94 @@
+Last Updated on 2022-05-17
+
+KB00011: Renaming EVA ICS nodes
+*******************************
+
+.. index:: hostname, node, rename, setup
+
+EVA ICS versions: **3.0.0**  and 3.x above
+
+Problem
+=======
+
+A EVA ICS node need to be renamed (host name, or "name" param in controller
+configuration files)
+
+Solution
+========
+
+EVA ICS 3.4.0 and above
+-----------------------
+
+Execute:
+
+.. code:: bash
+
+    eva feature setup node_name name=NEW_NAME
+
+EVA ICS 3.3.2 and below
+-----------------------
+
+Removing links between controllers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Remove links everywhere the node is connected, including local controller
+inter-connection:
+
+.. code:: bash
+
+    eva sfa controller remove uc/OLD_NAME
+    eva sfa controller remove lm/OLD_NAME
+    eva sfa save
+
+    eva lm controller remove uc/OLD_NAME
+    eva lm save
+
+If the old controller is still present in LM/SFA after restart, remove
+connection configuration files manually:
+
+.. code:: bash
+
+    eva server stop
+    rm -f /opt/eva/runtime/lm_remote_uc.d/OLD_NAME.json
+    rm -f /opt/eva/runtime/sfa_remote_uc.d/OLD_NAME.json
+    rm -f /opt/eva/runtime/sfa_remote_lm.d/OLD_NAME.json
+    eva server start
+
+.. note::
+
+    Removing links to the old node is not required if the controllers are
+    connected via MQTT server. In this case, the secondary controllers will be
+    automatically connected using new names, obsolete connections can be
+    removed anytime later.
+
+Setting new node name
+~~~~~~~~~~~~~~~~~~~~~
+
+Set new node name either by changing its host name or by editing "server/name"
+parameter in the controller configuration files.
+
+Then restart the node controllers:
+
+.. code:: bash
+
+    eva server restart
+
+Restoring local inter-connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code:: bash
+
+    eva sfa controller append -a \$default http://localhost:8812
+    eva sfa controller append -a \$default http://localhost:8817
+    eva sfa save
+
+    eva lm controller append -a \$default http://localhost:8812
+    eva lm save
+
+If the local SFA is configured as cloud manager, set the master key back:
+
+.. code:: bash
+
+    eva sfa controller set uc/NEW_NAME masterkey KEY_VALUE
+    eva sfa controller set lm/NEW_NAME masterkey KEY_VALUE
+    eva sfa save

@@ -1,0 +1,24 @@
+Last Updated on 2021-11-26
+
+KB00015: A component fails to start after crash / unsuccessful upgrade etc.
+***************************************************************************
+
+.. index:: eva, startup, crash, failed, registry, uc, lm, sfa
+
+EVA ICS versions: **3.0.0**, **3.0.1**, **3.0.2**, **3.1.0**, **3.1.1**, **3.1.2**, **3.2.0**, **3.2.1**, **3.2.2**, **3.2.3**, **3.2.4**, **3.2.5**, **3.3.0**, **3.3.1**, **3.3.2**, **3.4.0**, **3.4.1**
+
+Problem
+=======
+
+A component (the Registry, UC, LM PLC or SFA) fails to start after an
+unsuccessful shutdown (caused by a server crash, a process crash or
+unsuccessful update).
+
+Solution
+========
+
+Manually remove */opt/eva/var/<COMPONENT>.pid* file and try to start that
+component once again.
+
+This behavior is fixed in EVA ICS 3.4.2 and further versions should not be
+affected.

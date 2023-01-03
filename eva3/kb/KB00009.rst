@@ -1,0 +1,41 @@
+Last Updated on 2022-05-17
+
+KB00009: Difference between "-s" and "-u" Cloud deploy options
+**************************************************************
+
+.. index:: cloud, sfa, deploy
+
+EVA ICS versions: **3.3.2**  and 3.x above
+
+Problem
+=======
+
+Both "-s" and "-u" options for "eva sfa cloud deploy" command allow deploying
+items, which already exist. What is the difference?
+
+Solution
+========
+
+* When "-u" option is used, items are firstly completely undeployed from the
+  cloud and then redeployed back.
+
+* When "-s" option is used, existing cloud items are skipped, but their
+  configurations are altered according to the deployment file.
+
+Let us review an example of the deployment file:
+
+.. code:: yaml
+
+    sensor:
+        tests/s1:
+            controller: uc/uc1
+            update_interval: 5
+
+* If the above file is deployed with "-u" command, the item *sensor:tests/s1*
+  will be re-created from scratch (including the driver assignment). Only
+  "update_interval" option is changed from the default (no interval) to 5
+  seconds.
+
+* If the above file is deployed with "-s" command, the item *sensor:tests/s1*
+  will keep its configuration, except "update_interval" option will be set to 5
+  seconds. If the sensor item is missing, it will be created.
