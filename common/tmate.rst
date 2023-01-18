@@ -22,7 +22,8 @@ Setup
 Automatic
 ---------
 
-As root, type
+Open a terminal session and login to a target Linux machine. As root, execute
+on the target machine:
 
 .. code:: shell
 
