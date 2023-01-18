@@ -82,5 +82,5 @@ Security
 Issues
 ======
 
-Make sure the target machine has access to the host **tmsrv.bma.ai**, port
+Make sure the target machine has access to the host **tms.bma.ai**, port
 **443**.
