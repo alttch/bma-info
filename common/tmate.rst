@@ -1,6 +1,8 @@
 Sharing terminal sessions
 *************************
 
+.. contents::
+
 Our software products have detailed logging and crash dumps. However, in some
 cases it is quite hard or even impossible to solve the issue without having
 access to the real system.
@@ -82,5 +84,5 @@ Security
 Issues
 ======
 
-Make sure the target machine has access to the host **tms.bma.ai**, port
-**443**.
+* If *tmate* client is unable to start a session, make sure the target machine
+  has access to the host **tms.bma.ai**, port **443**.
