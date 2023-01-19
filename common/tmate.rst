@@ -4,7 +4,7 @@ Sharing terminal sessions
 .. contents::
 
 Our software products have detailed logging and crash dumps. However, in some
-cases it is quite hard or even impossible to solve the issue without having
+cases it is quite hard or even impossible to solve an issue without having
 access to the real system.
 
 In this case we recommend to use SSH terminal sharing with `tmate
