@@ -12,7 +12,7 @@ In this case we recommend to use SSH terminal sharing with `tmate
 
 .. note::
 
-    Terminal sharing works for Linux target machines only
+    Terminal sharing works for Linux/FreeBSD target machines only.
 
 Setup
 =====
@@ -32,7 +32,7 @@ on the target machine:
 .. note::
 
     The above command overrides *tmate* configuration. If you are already using
-    tmate, make a backup copy of *~/.tmate.conf* file.
+    *tmate*, make a backup copy of *~/.tmate.conf* file.
 
 Manual
 ------
