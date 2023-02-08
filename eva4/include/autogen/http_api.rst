@@ -992,7 +992,7 @@ set_password
    * - Parameters
      - required
    * - Returns
-     - *nothing*
+     - if the password has been changed, the session is dropped and the user must re-login
 
 .. list-table:: Parameters
    :align: left
