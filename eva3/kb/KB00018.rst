@@ -10,7 +10,8 @@ EVA ICS versions: **3.4.2**  and 3.x above
 Problem
 =======
 
-Sometimes EVA ICS processes be shut down by accident or due to system failure.
+Sometimes EVA ICS processes might be shut down by accident or due to a failure
+of the OS startup system.
 
 Solution
 ========
