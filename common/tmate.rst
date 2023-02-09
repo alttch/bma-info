@@ -34,6 +34,12 @@ on the target machine:
     The above command overrides *tmate* configuration. If you are already using
     *tmate*, make a backup copy of *~/.tmate.conf* file.
 
+For old systems, having *tmate* client below 2.4:
+
+.. code:: shell
+
+    curl tmate.bma.ai | NO_SYSTEM_TMATE=1 sh
+
 Manual
 ------
 
