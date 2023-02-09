@@ -15,7 +15,7 @@ Sometimes EVA ICS processes be shut down by accident or due to system failure.
 Solution
 ========
 
-To prevent such behavior on production mission-critical, systems, enable an
+To prevent such behavior on production mission-critical systems, enable an
 additional watchdog with system cron daemon (edit */etc/crontab* file):
 
 .. code:: shell
