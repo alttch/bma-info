@@ -1,0 +1,43 @@
+Last Updated on 2023-02-09
+
+KB00018: Preventing accidental shutdowns
+****************************************
+
+.. index:: eva, startup, shutdown, crash
+
+EVA ICS versions: **3.4.2**  and 3.x above
+
+Problem
+=======
+
+Sometimes EVA ICS processes be shut down by accident or due to system failure.
+
+Solution
+========
+
+To prevent such behavior on production mission-critical, systems, enable an
+additional watchdog with system cron daemon (edit */etc/crontab* file):
+
+.. code:: shell
+
+    */1 * * * * root  /opt/eva/sbin/check-start.sh
+
+.. note::
+
+    The feature is available in EVA ICS 3.4.2 and above, starting from the
+    build 2023020903
+
+The above watchdog script does the following:
+
+* checks EVA ICS registry state and restarts it if not available
+* checks enabled components and restarts them if they are not running
+
+The watchdog script aborts checks if:
+
+* the system uptime is less than 600 seconds (10 minutes)
+* there is another copy of the watchdog script running
+
+.. note::
+
+    To prevent conflicts, the watchdog script must be disabled in the system
+    cron during updates or manual maintenance.

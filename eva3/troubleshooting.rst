@@ -21,3 +21,4 @@ EVA ICS v3 Troubleshooting Knowledge Base
     kb/KB00015
     kb/KB00016
     kb/KB00017
+    kb/KB00018
