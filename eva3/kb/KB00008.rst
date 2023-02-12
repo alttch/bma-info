@@ -22,7 +22,8 @@ The problem can be solved in several ways:
 Customizing the mirror
 ----------------------
 
-The local `EVA ICS mirror <{DOC_URL}/install.html#serving-local-mirror>`_ can
+The local `EVA ICS mirror
+<https://info.bma.ai/en/actual/eva3/install.html#serving-local-mirror>`_ can
 host any version required. To modify the default update version for secondary
 nodes, after running "eva mirror update" command, manually modify
 "/opt/eva/mirror/eva/update_info.json" file and specify the version required.
