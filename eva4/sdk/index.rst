@@ -6,5 +6,5 @@ Software Development Kit (SDK)
 
     bindings
     ../eapi
-    service_example
+    rust/index
     ../repl/proto

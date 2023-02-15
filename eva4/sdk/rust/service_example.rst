@@ -1,12 +1,7 @@
-SDK tutorial - a simple service
-*******************************
+A simple service in Rust
+************************
 
 .. contents::
-
-EVA ICS has bindings for the following languages:
-
-* Rust: https://crates.io/crates/eva-sdk
-* Python: https://pypi.org/project/evaics/
 
 As EVA ICS itself is written in Rust, the primary and recommended SDK is the
 Rust one.
@@ -36,7 +31,7 @@ The service requires two EVA ICS crates:
 
 and few additional:
 
-.. literalinclude:: ../sdk-examples/svc-example-temp/Cargo.toml
+.. literalinclude:: ../../sdk-examples/rust/svc-example-temp/Cargo.toml
    :language: toml
 
 Open *src/main.rs* and let us continue.
@@ -44,7 +39,7 @@ Open *src/main.rs* and let us continue.
 Preparing the system
 ====================
 
-* Deploy an instance of :doc:`../svc/eva-svc-mailer`
+* Deploy an instance of :doc:`../../svc/eva-svc-mailer`
 * Create a couple of sensors with :ref:`eva4_eva-shell`:
 
 .. code:: shell
@@ -64,7 +59,7 @@ Service code
 
 Here is the service code, guided with comments:
 
-.. literalinclude:: ../sdk-examples/svc-example-temp/src/main.rs
+.. literalinclude:: ../../sdk-examples/rust/svc-example-temp/src/main.rs
    :language: rust
 
 Service template
@@ -77,5 +72,5 @@ The following template can be used to quickly create a service instance with
 
     eva svc create my.svc.alarm_temp svc-tpl.yml
 
-.. literalinclude:: ../sdk-examples/svc-example-temp/svc-tpl.yml
+.. literalinclude:: ../../sdk-examples/rust/svc-example-temp/svc-tpl.yml
    :language: yaml
