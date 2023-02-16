@@ -8,6 +8,7 @@ prepare:
 	rm -rf registry_config
 	cp -r /opt/eva4/svc/svc-example-temp ./sdk-examples/rust/
 	cp -r /opt/eva4/svc/svc-example-sensor-set ./sdk-examples/rust/
+	cp -r /opt/eva4/bindings/python/examples/svc-example-temp ./sdk-examples/python/
 	cp -r /opt/eva4/share/registry/defaults/config registry_config
 	rm -rf svc-tpl
 	cp -r /opt/eva4/share/svc-tpl .

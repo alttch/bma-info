@@ -7,4 +7,5 @@ Software Development Kit (SDK)
     bindings
     ../eapi
     rust/index
+    python/index
     ../repl/proto
