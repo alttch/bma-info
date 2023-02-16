@@ -1,5 +1,5 @@
-Extending HMI with X calls in Rust
-**********************************
+Extending HMI with X calls in Python
+************************************
 
 .. contents::
 
@@ -18,7 +18,7 @@ Create a virtual sensor, not assigned to real equipment:
     eva item create sensor:tests/sensor1
 
 Here is the service code, guided with comments in "X" call processing section.
-For the general information about services structure in Rust, read
+For the general information about services structure in Python, read
 :doc:`service_example`:
 
 .. literalinclude:: ../../sdk-examples/python/svc-example-sensor-set/eva-svc-example-sensor-set.py
