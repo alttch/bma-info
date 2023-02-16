@@ -5,3 +5,4 @@ Python SDK examples
     :maxdepth: 1
 
     service_example
+    hmi_x_call_example

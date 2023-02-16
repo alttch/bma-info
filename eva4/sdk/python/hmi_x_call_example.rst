@@ -17,17 +17,12 @@ Create a virtual sensor, not assigned to real equipment:
 
     eva item create sensor:tests/sensor1
 
-*Cargo.toml* file:
-
-.. literalinclude:: ../../sdk-examples/rust/svc-example-sensor-set/Cargo.toml
-   :language: toml
-
 Here is the service code, guided with comments in "X" call processing section.
 For the general information about services structure in Rust, read
 :doc:`service_example`:
 
-.. literalinclude:: ../../sdk-examples/rust/svc-example-sensor-set/src/main.rs
-   :language: rust
+.. literalinclude:: ../../sdk-examples/python/svc-example-sensor-set/eva-svc-example-sensor-set.py
+   :language: python
 
 Service template
 ================
