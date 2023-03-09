@@ -43,9 +43,9 @@ Technical background
   either one-by-one or in bulks. There is no mandatory naming for the RPC
   methods as well.
 
-* The cursor should be automatically dropped if there are no data records or if
-  the client is unable to process all records during the specified amount of
-  time (cursor time-to-live).
+* The cursor should be automatically dropped if there are no more data records
+  in the source or if the client is unable to process all records during the
+  specified amount of time (cursor time-to-live).
 
 Server example
 ==============
