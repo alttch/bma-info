@@ -21,4 +21,5 @@ Code repository: https://github.com/alttch/busrt
     broker
     protocol
     rpc_protocol
+    rpc_cursors
     rpc_blocking
