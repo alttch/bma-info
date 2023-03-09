@@ -1,5 +1,5 @@
-Cursors
-*******
+RPC Cursors
+***********
 
 .. contents::
 
@@ -23,7 +23,7 @@ It is recommended to use cursors when there is expected to deal with 10-100k
 data records or more. It is recommended to use bulk-only requests unless
 working with huge data rows.
 
-If less amount of records is usually expected, cursors may provide additional
+If less amount of records is typically expected, cursors may provide additional
 overhead and there is usually no significant RAM advantages in typical tasks.
 
 Besides RAM advantages, cursors may provide slightly better overall performance
