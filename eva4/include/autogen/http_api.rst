@@ -420,6 +420,10 @@ item.state_history
      - u32
      - Limit records to
      - no
+   * - **prop**
+     - String
+     - Fetch the state property status or value only
+     - no
    * - **xopts**
      - Map<String, String>
      - Extra options, depending on database type
