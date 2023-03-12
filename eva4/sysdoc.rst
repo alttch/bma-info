@@ -6,6 +6,7 @@ System documentation
 
     quickstart
     install
+    replication
     v3migration
     ecmui/index
     What is new <changelog>
@@ -22,4 +23,3 @@ System documentation
     troubleshooting
     security
     enterprise
-

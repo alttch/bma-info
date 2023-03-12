@@ -38,6 +38,8 @@ config:
         # oids to watch
         oids:
           - "#"
+        # DANGEROUS, enable for multi-level clusters only
+        #replicate_remote: true
   #standalone: {}
   #replicator:
     #pubsub:

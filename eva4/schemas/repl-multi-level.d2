@@ -1,0 +1,38 @@
+top: Top-level nodes {
+  top1: Top node
+  top2: Top node
+  repl1: Replication service
+  repl2: Replication service
+  top1 -- repl1
+  top2 -- repl2
+}
+pstop: Top-level Pub/Sub server
+middle: Middle-level nodes {
+  m1: Primary node
+  m2: Primary node
+  repl1: Replication service
+  repl2: Replication service
+  repl1u: Uplink replication service
+  repl2u: Uplunk replication service
+  m1 -- repl1
+  m1 -- repl1u
+  m2 -- repl2
+  m2 -- repl2u
+}
+bottom: Bottom-level nodes {
+  b1: Secondary node
+  b2: Secondary node
+  repl1: Replication service
+  repl2: Replication service
+  b1 -- repl1
+  b2 -- repl2
+}
+ps: Pub/Sub server
+top.repl1 -- pstop
+top.repl2 -- pstop
+pstop -- middle.repl1u
+pstop -- middle.repl2u
+middle.repl1 -- ps
+middle.repl2 -- ps
+ps -- bottom.repl1
+ps -- bottom.repl2
