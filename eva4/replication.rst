@@ -1,9 +1,10 @@
 Node replication
 ****************
 
-EVA ICS allows to replicate node items using :doc:`svc/eva-repl`. The service
-requires a Pub/Sub server, either `MQTT <https://mqtt.org>`_ or
-:doc:`PSRT <../psrt/index>`. In the provided examples PSRT server is used.
+EVA ICS allows to replicate node items using :doc:`replication
+service<svc/eva-repl>`. The service requires a Pub/Sub server, either `MQTT
+<https://mqtt.org>`_ or :doc:`PSRT <../psrt/index>`. In the provided examples
+PSRT server is used.
 
 The replication service allows to make both equal and primary-secondary (e.g.
 the operation centre - plants) clusters, depending on the service settings and

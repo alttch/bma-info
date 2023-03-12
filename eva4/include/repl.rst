@@ -53,7 +53,7 @@ One node can have multiple replication services deployed. However all of the
 must replicate with the own set of remote nodes. Having same remote nodes
 replicated by different services leads to abnormal system behavior.
 
-See also: :doc:`../repl/proto`.
+See also: :doc:`../replication`, :doc:`../repl/proto`.
 
 Pub/sub security
 ================
