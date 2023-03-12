@@ -43,7 +43,7 @@ name "central". The "-a" option is used to automatically deploy both HMI and
 
 .. code:: shell
 
-    curl https://pub.bma.ai/eva4/install|sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | sh /dev/stdin -a --hmi
 
 Installing PSRT
 ~~~~~~~~~~~~~~~
@@ -124,14 +124,14 @@ removed after the installation or AAA services can be deployed manually.
 
 .. code:: shell
 
-    curl https://pub.bma.ai/eva4/install|sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | sh /dev/stdin -a --hmi
 
 If there is no dedicated replication key created, run the installation command
 as:
 
 .. code:: shell
 
-    curl https://pub.bma.ai/eva4/install|env DEFAULTKEY=SECRET sh /dev/stdin -a --hmi
+    curl https://pub.bma.ai/eva4/install | env DEFAULTKEY=SECRET sh /dev/stdin -a --hmi
 
 replace "SECRET" with the default key value from the primary node.
 
