@@ -80,6 +80,7 @@ Rust crate features
 
 * **ipc** - enable IPC client
 * **rpc** - enable optional RPC layer
+* **cursors** - enable RPC cursors
 * **broker** - enable broker
 * **full** - IPC+RPC+broker
 * **server** - build stand-alone broker server
