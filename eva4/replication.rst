@@ -239,7 +239,7 @@ Multi-level clusters
 ====================
 
 .. figure:: schemas/repl-multi-level.png
-    :scale: 40%
+    :scale: 90%
     :alt: v4 multi-level replication
 
 In rare cases it may be required to build upper replication levels, e.g. to
