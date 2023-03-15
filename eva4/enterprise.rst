@@ -1,6 +1,11 @@
 EVA ICS Enterprise
 ******************
 
+.. image:: images/enterprise.png
+    :width: 620
+    :class: no-scaled-link
+    :align: right
+
 .. contents::
 
 General terms and conditions
