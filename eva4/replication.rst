@@ -74,7 +74,7 @@ Create a replication service from a template:
 
     eva svc create eva.repl.default /opt/eva4/share/svc-tpl/svc-tpl-replication.yml
 
-the above command automatically crates the service configuration and opens it
+the above command automatically creates the service configuration and opens it
 in the default system editor. Modify "host" field and point it to the PSRT
 server IP address or multiple addresses if Pub/Sub server is in
 high-availability mode:
@@ -228,7 +228,7 @@ Execute:
     # and/or
     eva item summary
 
-The sensor "sensor:tests/s1" must be visible on the primary.
+The sensor "sensor:tests/s1" is now visible on the primary.
 
 * All remote item states are replicated in the real-time.
 
@@ -330,7 +330,7 @@ nodes ("central" in our example).
 * :ref:`Unit <eva4_unit>` and :ref:`lmacro <eva4_lmacro>` actions work through
   multiple clustering levels as well.
 
-* :doc:`svc/eva-zfrepl` service supports multi-level clusters in the similar
+* :doc:`svc/eva-zfrepl` supports multi-level clusters in the similar
   way:
 
    * middle nodes must have two replicator instances, up- and downlink.
