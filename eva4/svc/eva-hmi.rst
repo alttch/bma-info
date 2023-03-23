@@ -132,6 +132,75 @@ api_log.get
   ]
   
 
+.. _eva4_eva.hmi.default__authenticate:
+
+authenticate
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Allows other services to directly authenticate users*
+   * - Parameters
+     - required
+   * - Returns
+     - Serialized ACL
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **key**
+     - String
+     - API key or a token
+     - **yes**
+   * - **ip**
+     - String
+     - IP Address of the client
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "admin": true,
+      "deny_read": {
+          "items": [],
+          "pvt": [],
+          "rpvt": []
+      },
+      "deny_write": {
+          "items": [],
+          "pvt": [],
+          "rpvt": []
+      },
+      "from": [
+          "admin"
+      ],
+      "id": "admin",
+      "meta": {
+          "admin": [
+              "any"
+          ]
+      },
+      "ops": [],
+      "read": {
+          "items": [],
+          "pvt": [],
+          "rpvt": []
+      },
+      "write": {
+          "items": []
+      }
+  }
+  
+
 .. _eva4_eva.hmi.default__i18n.cache_purge:
 
 i18n.cache_purge

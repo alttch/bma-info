@@ -54,10 +54,12 @@ The default ACL has the following structure:
         rpvt: ['uris']
     write:
         items: ['oids']
-    deny:
+    deny_read:
         items: ['oids']
         pvt: ['paths']
         rpvt: ['uris']
+    deny_write:
+        items: ['oids']
     ops:
         - log
         - supervisor
@@ -75,9 +77,10 @@ Fields:
 
 * **write** grants both read and write access to items
 
-* **deny** denies access to certain items/pvt/rpvt, e.g. if read/write masks
-  are used. For items: the ACL still has read-only access if allowed with other
-  ACL properties.
+* **deny_read** denies access to certain items/pvt/rpvt
+
+* **deny_write** denies write access to certain items (e.g. :ref:`unit
+  <eva4_unit>` actions, setting :ref:`lvar <eva4_lvar>` values etc.)
 
 * **ops** list of special operations ("allow" in v3). supported values: *log*,
   *supervisor*
