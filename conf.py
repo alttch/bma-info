@@ -92,7 +92,7 @@ language = 'en'
 exclude_patterns = [
     '_build', 'pydoc', 'venv', 'eva4/include', 'eva4/draft',
     'eva4/lmacro/py/python_macros_api.rst', 'eva3/pydoc', 'eva3/phi_devel.rst',
-    'busrt/pydoc', 'busrt/include'
+    'busrt/pydoc', 'busrt/include', 'eva-mlkit/include'
 ]
 
 # The reST default role (used for this markup: `text`) to use for all

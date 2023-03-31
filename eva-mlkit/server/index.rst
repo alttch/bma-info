@@ -29,3 +29,4 @@ Key benefits:
     :maxdepth: 1
 
     install
+    eapi
