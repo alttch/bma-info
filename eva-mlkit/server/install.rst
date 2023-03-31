@@ -44,7 +44,7 @@ license key can be deployed with the following command:
     /opt/eva4/sbin/eva-registry-cli set eva/user_data/mlkit/license - --type json < license-file.json
 
 when there is less than 30 days before the expiration date left, deployed
-Enterprise services start sending warning messages in logs every hour.
+instances start sending warning messages in logs every hour.
 
 A new license can be imported on-the-flow, no service/node restart is required.
 
