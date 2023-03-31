@@ -7,6 +7,8 @@ config:
     - eva.db.default
   # dedicated HTTP API host/port
   listen: 0.0.0.0:8811
+  ## if a front-end server or TLS terminator is used
+  #real_ip_header: X-Real-IP
   # HMI service, used for authentication, required
   hmi_svc: eva.hmi.default
   # data map

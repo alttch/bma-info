@@ -10,6 +10,8 @@ dedicated node if possible.
     ML kit server requires EVA ICS 4.0.1. It is also recommended to update the
     system to the build 2023032901 or newer.
 
+.. contents::
+
 Downloading/updating
 ====================
 
@@ -54,8 +56,8 @@ The license expiration UNIX timestamp can be obtained with a command:
 
     /opt/eva4/sbin/eva-registry-cli get-field eva/user_data/mlkit/license expires
 
-Creating/deploying
-==================
+Creating/deploying service instances
+====================================
 
 The ML kit server is a standard EVA ICS v4 service and can be created as:
 
@@ -76,3 +78,44 @@ via database services. The default services which are currently supported:
 * :doc:`../../../eva4/svc/eva-db-sql` (`PostgreSQL
   <https://www.postgresql.org>`_ with `TimescaleDB
   <https://www.timescale.com>`_ extensions.
+
+.. _mlsrv_frontend:
+
+Using front-end web server
+==========================
+
+With a front-end web server both :doc:`../../../eva4/svc/eva-hmi` and ML kit
+server can be mapped on the same URL port.
+
+See :doc:`../../../eva4/hmi/frontend` about the general info how to use `NGINX
+<https://www.nginx.com>`_ as the front-end web server.
+
+To include ML kit server, add the following lines to the NGINX web site
+configuration:
+
+.. code:: nginx
+
+    upstream eva-mlkit {
+        server 127.0.0.1:8811;
+    }
+
+    server {
+    # ...
+    location /ml/ {
+            gzip                on;
+            gzip_min_length     8192;
+            gzip_proxied no-cache no-store private expired auth;
+            gzip_types          text/plain text/css text/csv;
+            gzip_vary on;
+            proxy_buffers 16 16k;
+            proxy_buffer_size 16k;
+            proxy_busy_buffers_size 240k;
+            proxy_pass http://eva-mlkit;
+            # a few variables for backend, in fact HMI requires X-Real-IP only
+            proxy_set_header X-Host $host;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Frontend "nginx";
+        }
+    }
