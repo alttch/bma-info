@@ -91,8 +91,8 @@ Installation
 * The extension requires EVA JS Framework version 0.3.25 or above.
 
 * Unpack *evajw-XXXX.tgz* archive into the directory where EVA JS Framework is
-  installed. E.g. if the framework is installed in */opt/eva/ui*, the module
-  should be placed in */opt/eva/ui/evajw*.
+  installed. E.g. if the framework is installed in */opt/eva4/ui*, the module
+  should be placed in */opt/eva4/ui/evajw*.
 
 * (Recommended) Make sure the *wasm* MIME type is set to "application/wasm" in
   EVA ICS HMI service.
