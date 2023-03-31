@@ -8,7 +8,7 @@ dedicated node if possible.
 .. note::
 
     ML kit server requires EVA ICS 4.0.1. It is also recommended to update the
-    system to a build 2023032901 or newer.
+    system to the build 2023032901 or newer.
 
 Downloading/updating
 ====================
@@ -31,6 +31,28 @@ customize the target path, execute installer as the following:
 The script also can update an existing installation with the same command as
 above. Disable deployed services or stop EVA ICS server completely, execute the
 command to re-install the server and enable/start everything back.
+
+Installing server license key
+=============================
+
+EVA ICS Machine Learning kit server is not included into
+:doc:`../../../eva4/enterprise` and must have own product key deployed. The
+license key can be deployed with the following command:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli set eva/user_data/mlkit/license - --type json < license-file.json
+
+when there is less than 30 days before the expiration date left, deployed
+Enterprise services start sending warning messages in logs every hour.
+
+A new license can be imported on-the-flow, no service/node restart is required.
+
+The license expiration UNIX timestamp can be obtained with a command:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli get-field eva/user_data/mlkit/license expires
 
 Creating/deploying
 ==================

@@ -25,5 +25,7 @@ Key benefits:
     :alt: ML server
 
 .. toctree::
+    :caption: ML kit server documentation
+    :maxdepth: 1
 
     install
