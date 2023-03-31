@@ -18,4 +18,4 @@ EVA ICS ML kit works with :doc:`../eva4/index` only.
     :caption: EVA ICS ML kit documentation
     :maxdepth: 1
 
-    server
+    server/index

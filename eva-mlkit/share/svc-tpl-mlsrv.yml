@@ -1,0 +1,21 @@
+command: /opt/eva4/mlkit/eva-mlsrv
+bus:
+  path: var/bus.ipc
+config:
+  # allow push via the following services
+  allow_push_svcs:
+    - eva.db.default
+  # dedicated HTTP API host/port
+  listen: 0.0.0.0:8811
+  # HMI service, used for authentication, required
+  hmi_svc: eva.hmi.default
+  # data map
+  data_map:
+    - oids:
+      - '#'
+      svc: eva.db.default
+      # max clients to the database service
+      clients: 10
+timeout:
+  default: 120
+user: eva
