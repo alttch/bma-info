@@ -14,7 +14,7 @@ Downloading/updating
 ====================
 
 The server binaries can be manually downloaded from
-https://pub.bma.ai/eva-mlkit/server/. There is also an installer script, which
+https://pub.bma.ai/eva-mlkit/server/. There is also an installer script which
 automatically downloads and extracts the latest stable server tar-ball:
 
 .. code:: shell
@@ -68,7 +68,7 @@ where the service configuration template is:
 .. literalinclude:: ../share/svc-tpl-mlsrv.yml
     :language: yaml
 
-The server can work with databases, which are connected to the local node bus
+The server can work with databases which are connected to the local node bus
 via database services. The default services which are currently supported:
 
 * :doc:`../../../eva4/svc/eva-db-influx`
