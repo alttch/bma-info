@@ -1,6 +1,7 @@
 var BMA_PRODUCTS = {
   eva3: "EVA ICS v3",
   eva4: "EVA ICS v4",
+  "eva-mlkit": "EVA ICS Machine Learning kit",
   psrt: "PSRT",
   busrt: "BUS/RT",
   "hmi-block-ui": "HMI Block UI"

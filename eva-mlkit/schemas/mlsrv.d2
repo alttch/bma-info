@@ -1,0 +1,15 @@
+tsdb1: Time-series database
+tsdb2: Time-series database
+tsdb3: Time-series database
+mlsrv: EVA ICS ML kit server
+tsdb1 -> mlsrv
+tsdb2 -> mlsrv
+tsdb3 -> mlsrv
+c1: Custom services
+c2: JupyterLab
+c3: R-Studio
+c4: Other client apps
+mlsrv -> c1: BUS/RT
+mlsrv -> c2: HTTP
+mlsrv -> c3: HTTP
+mlsrv -> c4: HTTP
