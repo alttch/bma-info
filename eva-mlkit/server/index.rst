@@ -12,7 +12,7 @@ Key benefits:
 * Data can be collected from multiple databases at once and in parallel
 
 * The server provides a dedicated :doc:`EAPI <../../eva4/eapi>` (via
-  :doc:`BUS/RT <../../busrt/index>`) and HTTP API for CSV streams, which can be
+  :doc:`BUS/RT <../../busrt/index>`) and HTTP API for CSV streams which can be
   used on client side to form huge data frames with low costs of resources
 
 * Data is pre-processed and prepared on the server side
