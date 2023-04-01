@@ -317,6 +317,18 @@ Raises:
 * **ResourceNotFound** macro not found
 
 
+.. _eva4_py_macro_api_service:
+
+service - get the service object for the direct access
+------------------------------------------------------
+
+e.g. service.bus: direct access to BUS/RT service.rpc: direct access to BUS/RT RPC
+
+Returns:
+
+the service object
+
+
 .. _eva4_py_macro_api_set_shared:
 
 set_shared - sets value of the shared variable
@@ -410,6 +422,25 @@ Alias for os.system
 Returns:
 
 shell exit code (0 - no error)
+
+
+.. _eva4_py_macro_api_system_name:
+
+system_name - get the system name
+---------------------------------
+
+
+
+.. code-block:: python
+
+    r = system_name()
+    print(r)
+
+    myhost
+
+Returns:
+
+system name
 
 
 .. _eva4_py_macro_api_time:
