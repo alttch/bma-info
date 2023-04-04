@@ -7,7 +7,7 @@ Citem.state_history
    :header-rows: 0
 
    * - Description
-     - *Get item state history (cursor), prepares data as a stream of CSV strings*
+     - *Get item state history (cursor), prepares data as Apache Arrow IPC stream*
    * - Parameters
      - required
    * - Returns

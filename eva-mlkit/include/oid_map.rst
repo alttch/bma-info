@@ -10,7 +10,7 @@ The map is used to process EVA ICS item OIDs on the server side:
      - Type
      - Description
      - Required
-   * - **status**
+   * - **oid**
      - String
      - Item OID
      - yes
