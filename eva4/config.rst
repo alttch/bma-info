@@ -120,7 +120,7 @@ In this case, launch the node server in verbose mode with the console output:
 
 .. code:: shell
 
-    /opt/eva/sbin/eva-control launch
+    /opt/eva4/sbin/eva-control launch
 
 Or using :ref:`eva4_eva-shell`:
 

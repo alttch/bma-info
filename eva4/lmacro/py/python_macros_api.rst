@@ -431,6 +431,13 @@ system_name - get the system name
 
 
 
+.. code-block:: python
+
+    r = system_name()
+    print(r)
+
+    myhost
+
 Returns:
 
 system name

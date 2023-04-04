@@ -271,7 +271,7 @@ Check the service status:
 
     eva svc list
 
-If any problems occur, check the logs in /opt/eva/log or execute:
+If any problems occur, check the logs in /opt/eva4/log or execute:
 
 .. code::
 
