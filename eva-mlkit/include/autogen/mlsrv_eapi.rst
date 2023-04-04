@@ -21,8 +21,8 @@ Citem.state_history
      - Description
      - Required
    * - **oid_map**
-     - OID processing map
-     - Map for server-side OID processing
+     - OID processing maps (list)
+     - Maps for server-side OID processing
      - **yes**
    * - **fill**
      - String

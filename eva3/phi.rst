@@ -12,13 +12,13 @@ EVA ICS v3 PHI modules
 
   * - enip
     - `enip_sensor <https://pub.bma.ai/eva3/phi/enip/enip_sensor.py>`_
-    - 1.2.6
+    - 1.2.7
     - Ethernet/IP sensors generic
     - Ethernet/IP
     - 9 (3.3.1)
   * - enip
     - `enip_xvunit <https://pub.bma.ai/eva3/phi/enip/enip_xvunit.py>`_
-    - 1.2.6
+    - 1.2.7
     - Ethernet/IP units generic
     - Ethernet/IP
     - 9 (3.3.1)

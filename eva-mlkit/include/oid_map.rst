@@ -11,6 +11,10 @@ The map is used to process EVA ICS item OIDs on the server side:
      - Description
      - Required
    * - **status**
+     - String
+     - Item OID
+     - yes
+   * - **status**
      - bool/String
      - Include (and assign a name) item status
      - no
