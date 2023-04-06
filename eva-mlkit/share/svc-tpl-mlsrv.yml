@@ -13,8 +13,6 @@ config:
   listen: 0.0.0.0:8811
   # max response data size, per request
   response_max_size: 1_000_000_000
-  # max rows in a response
-  response_max_rows: 100_000_000
   ## if a front-end server or TLS terminator is used
   #real_ip_header: X-Real-IP
   # HMI service, used for authentication, required
