@@ -51,7 +51,7 @@ Lazy initialize a request (HTTP)
                              user='operator', password='xxx')
     # If Machine learning kit server is used with a front-end and API methods
     # are mapped to the same port, the variable can be just set to True.
-    # If the Machine learning kit server is not installed, do not set this
+    # If Machine learning kit server is not installed, do not set this
     # variable or set it to None
     client.mlkit = 'http://127.0.0.1:8811'
 
