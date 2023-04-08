@@ -38,5 +38,6 @@ Supported data formats:
     :maxdepth: 1
 
     install
+    data_processing
     http_api
     eapi

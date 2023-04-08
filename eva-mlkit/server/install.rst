@@ -56,6 +56,8 @@ The license expiration UNIX timestamp can be obtained with a command:
 
     /opt/eva4/sbin/eva-registry-cli get-field eva/user_data/mlkit/license expires
 
+.. _eva_mlkit_config:
+
 Creating/deploying service instances
 ====================================
 
@@ -79,7 +81,7 @@ via database services. The default services which are currently supported:
   <https://www.postgresql.org>`_ with `TimescaleDB
   <https://www.timescale.com>`_ extensions.
 
-.. _mlsrv_frontend:
+.. _eva_mlkit_frontend:
 
 Using front-end web server
 ==========================
