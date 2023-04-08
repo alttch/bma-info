@@ -83,7 +83,39 @@ Initialize a request (any supported client)
 OID mapping
 ~~~~~~~~~~~
 
+    with "oid" method item state can fields can be mapped to specific data
+    frame columns. Set True to map field with the default column name (e.g.
+    *sensor:tests/temp1/value*), a string to specify a custom column name:
 
+.. code:: python
+
+    req = req.oid('sensor:tests/temp1', status='temp1st', value='temp1')
+
+If a state field is not required, it can be omitted.
 
 OID mapping from CSV file
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A client can read mapping from a CSV file with fields "oid", "status", "value"
+and "database". This can be done either with specifying "params_csv" argument
+in the request constructor or calling "read_params_csv" request method:
+
+.. code:: python
+
+    req = client.history_df(params_csv='params_csv')
+    # or
+    req = HistoryDF(client, params_csv='params.csv')
+    # or
+    req = req.read_params_csv('params.csv')
+
+Usage example
+~~~~~~~~~~~~~
+
+All the methods can be called as chained:
+
+.. code:: python
+
+    result = client.history_df(
+        params_csv='params.csv').t_start(
+            '2023-02-22 23:23:34').t_end(
+            '2023-02-23 03:33:19').fill('10T').fetch(t_col='keep')
