@@ -57,7 +57,7 @@ BUS/RT access requires ML kit server to be deployed.
     # initialize BUS/RT if not connected. Not required for EVA ICS Python
     # services and Python macros 
 
-	bus = busrt.client.Client('/opt/eva4/var/bus.ipc', 'test-py')
+    bus = busrt.client.Client('/opt/eva4/var/bus.ipc', 'test-py')
     bus.connect()
 
     client = busrt.rpc.Rpc(bus)
