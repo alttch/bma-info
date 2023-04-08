@@ -17,9 +17,18 @@ Workstation/standalone
 
     pip3 install evaics.ml
 
+The above command must be typed in the system terminal. If using Anaconda
+Navigator, open a terminal window for an environment:
+
+.. figure:: ./ss/anaconda_install.png
+    :scale: 20%
+    :alt: Anaconda terminal
 
 EVA ICS venv
 ------------
+
+If the module is installed on :doc:`EVA ICS v4 <../../../eva4/index>` node, use
+the following command to add ML kit Python client into EVA ICS venv:
 
 .. code:: shell
 
