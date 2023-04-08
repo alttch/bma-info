@@ -19,3 +19,4 @@ EVA ICS ML kit works with :doc:`../eva4/index` only.
     :maxdepth: 1
 
     server/index
+    client/py/index
