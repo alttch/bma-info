@@ -37,8 +37,8 @@ the following command to add ML kit Python client into EVA ICS venv:
 Querying data
 =============
 
-Lazy initialize a request (HTTP)
---------------------------------
+HTTP Lazy initialization
+------------------------
 
 .. code:: python
 
@@ -58,8 +58,8 @@ Lazy initialize a request (HTTP)
     # initialize an empty request
     req = client.history_df()
 
-Lazy initialize a request (BUS/RT)
-----------------------------------
+BUS/RT Lazy initialization
+--------------------------
 
 BUS/RT access requires ML kit server to be deployed.
 
@@ -78,8 +78,8 @@ BUS/RT access requires ML kit server to be deployed.
     # initialize an empty request
     req = client.history_df()
 
-Initialize a request (any supported client)
--------------------------------------------
+Standard initialization
+-----------------------
 
 .. code:: python
 
@@ -89,6 +89,7 @@ Initialize a request (any supported client)
     client = HttpClient('http://127.0.0.1',
                              user='operator', password='xxx')
 
+    # both HTTP and BUS/RT RPC client can be used
     req = HistoryDF(client).with_mlkit(True)
 
 OID mapping
