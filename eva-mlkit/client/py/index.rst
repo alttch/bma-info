@@ -5,6 +5,8 @@ EVA ICS machine learning kit Python library can work both with and with no
 server installed. If there is no server installed, data is processed on the
 client side.
 
+.. contents::
+
 Installation
 ============
 
@@ -24,10 +26,10 @@ EVA ICS venv
     eva venv add evaics.ml
 
 Querying data
--------------
+=============
 
 Lazy initialize a request (HTTP)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 .. code:: python
 
@@ -48,7 +50,7 @@ Lazy initialize a request (HTTP)
     req = client.history_df()
 
 Lazy initialize a request (BUS/RT)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
 BUS/RT access requires ML kit server to be deployed.
 
@@ -68,7 +70,7 @@ BUS/RT access requires ML kit server to be deployed.
     req = client.history_df()
 
 Initialize a request (any supported client)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 .. code:: python
 
@@ -81,7 +83,7 @@ Initialize a request (any supported client)
     req = HistoryDF(client).with_mlkit(True)
 
 OID mapping
-~~~~~~~~~~~
+-----------
 
     with "oid" method item state can fields can be mapped to specific data
     frame columns. Set True to map field with the default column name (e.g.
@@ -89,16 +91,17 @@ OID mapping
 
 .. code:: python
 
-    req = req.oid('sensor:tests/temp1', status='temp1st', value='temp1')
+    req.oid('sensor:tests/temp1', status='temp1st', value='temp1')
 
 If a state field is not required, it can be omitted.
 
 OID mapping from CSV file
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 A client can read mapping from a CSV file with fields "oid", "status", "value"
-and "database". This can be done either with specifying "params_csv" argument
-in the request constructor or calling "read_params_csv" request method:
+and "database" (can be omitted if ML kit server is used). This can be done
+either with specifying "params_csv" argument in the request constructor or
+calling "read_params_csv" request method:
 
 .. code:: python
 
@@ -109,7 +112,7 @@ in the request constructor or calling "read_params_csv" request method:
     req = req.read_params_csv('params.csv')
 
 Usage example
-~~~~~~~~~~~~~
+-------------
 
 All the methods can be called as chained:
 
@@ -119,3 +122,26 @@ All the methods can be called as chained:
         params_csv='params.csv').t_start(
             '2023-02-22 23:23:34').t_end(
             '2023-02-23 03:33:19').fill('10T').fetch(t_col='keep')
+
+Uploading data
+==============
+
+Prepare a request the same way as querying (database parameter for OIDs is
+ignored). Then use "push" method to push a file. The file extension must match:
+
+* *.arrows* for Arrow streams
+* *.arrow* for Arrow files
+* *.csv* for CSV files
+
+Instead of a file, a pyarrow table can be submitted. The database service can
+be specified in a short manner (e.g. "id" for "eva.db.id") or in full. Example:
+
+.. code:: python
+
+    result = client.history_df(params_csv='params.csv').push(
+        'path/to/file.csv', database='mydb')
+
+Module API
+==========
+
+.. include:: ./pydoc/pydoc_ml.rst
