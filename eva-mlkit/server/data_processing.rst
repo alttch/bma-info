@@ -17,7 +17,7 @@ from a EVA ICS database service. Depending on max response size, columns can be
 returned in bulk or one-by-one.
 
 The max column size (number of rows) is limited by the formula:
-*response_max_size \* 2*
+*response_max_size \* 8*
 
 CSV streams
 -----------
