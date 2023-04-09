@@ -66,7 +66,7 @@ Querying data
 If Machine learning kit server is used with a front-end and API methods are
 mapped to the same port, the argument "mlkit" of *eva.session* function can be
 just set to TRUE. If Machine learning kit server is not installed, do not set
-this argument or set it to *NULL*.
+this argument or set it to *FALSE*.
 
 A client can read mapping from a CSV file with fields "oid", "status", "value"
 and "database" (can be omitted if ML kit server is used):

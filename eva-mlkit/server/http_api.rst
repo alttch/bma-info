@@ -76,7 +76,7 @@ and prototype modelling. The method can push data to a single database only. If
 the data need to be pushed to different databases, call the method for each one
 separately.
 
-URI: **/ml/api/query.item.state_history**
+URI: **/ml/api/upload.item.state_history**
 
 Required HTTP request headers:
 
