@@ -30,3 +30,4 @@ EVA ICS ML kit works with :doc:`../eva4/index` only.
     server/index
     client/py/index
     client/R/index
+    learning/regression/index
