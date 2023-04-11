@@ -27,7 +27,7 @@ and test data loading. We are going to use data from the last 5 days:
         '1T').fetch(output='pandas')
     print(data)
 
-The result should be a table with "time" and 3 additional columns
+As the result there is a table with "time" and 3 additional columns:
 
 .. code::
 
