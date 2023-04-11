@@ -1,6 +1,8 @@
 System preparation
 ******************
 
+.. contents::
+
 Install Python modules
 ======================
 

@@ -1,6 +1,8 @@
 Training the model
 ******************
 
+.. contents::
+
 Testing data fetch
 ==================
 
