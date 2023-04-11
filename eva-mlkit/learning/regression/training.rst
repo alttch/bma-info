@@ -81,8 +81,7 @@ functions:
         # scaler (scikit MinMaxScaler), training data where scalar response is
         # "alarms" col and the column data is shifted for 60 minutes
         reg = Regression(window_size=40).with_standard_scaler().with_training_data(
-            data, y_cols='alarm',
-            y_shift=60).with_standard_model().prepare_data()
+            data, y_cols='alarm', y_shift=60).with_standard_model().prepare_data()
         # fit the model with 30 epochs
         reg.fit_model(epochs=30)
         # print the model summary
