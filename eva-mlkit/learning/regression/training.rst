@@ -75,6 +75,8 @@ functions:
 
 .. code:: python
 
+    from evaics.ml.learning import Regression
+
     # this function is used to create a machine learning model
     def train(data):
         # create a regression model with window size for 40 minutes, a standard
