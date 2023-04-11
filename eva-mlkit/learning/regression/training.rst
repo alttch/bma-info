@@ -22,7 +22,7 @@ and test data loading. We are going to use data from the last 5 days:
 
     req = client.history_df(params_csv='params_alarm.csv')
     data = req.t_start(datetime.now() - timedelta(days=5)).fill(
-        '1T').fetch(output='pandas', strict_col_order=True)
+        '1T').fetch(output='pandas')
     print(data)
 
 The result should be a table with "time" and 3 additional columns
@@ -60,8 +60,6 @@ TensorFlow there are some other requirements:
 * time column is not required for machine learning. It can be either dropped
   after the data frame is loaded or we can ask ML kit to return a data frame
   without time column
-
-* strict column ordering is usually non-mandatory
 
 .. code:: python
 
