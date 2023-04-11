@@ -13,6 +13,8 @@ config:
   listen: 0.0.0.0:8811
   # max response data size, per request
   response_max_size: 1_000_000_000
+  # default RPC clients pool for requests to a particular db svc
+  default_rpc_clients: 4
   ## if a front-end server or TLS terminator is used
   #real_ip_header: X-Real-IP
   # HMI service, used for authentication, required

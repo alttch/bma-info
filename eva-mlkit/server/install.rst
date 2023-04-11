@@ -107,7 +107,7 @@ configuration:
             gzip                on;
             gzip_min_length     8192;
             gzip_proxied no-cache no-store private expired auth;
-            gzip_types          text/plain text/css text/csv;
+            gzip_types          application/vnd.apache.arrow.stream text/csv;
             gzip_vary on;
             proxy_buffers 16 16k;
             proxy_buffer_size 16k;

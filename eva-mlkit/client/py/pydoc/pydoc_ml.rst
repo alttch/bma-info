@@ -2,7 +2,7 @@
 .. py:module:: evaics.ml
 
 
-.. py:class:: HistoryDF(client, params_csv: ~typing.Optional[str] = None)
+.. py:class:: HistoryDF(client, params_csv: Optional[str] = None)
    :module: evaics.ml
 
    Fetches data from EVA ICS v4 history databases
@@ -28,7 +28,7 @@
       :param database: database name (db service without eva.db. prefix)
       
    
-   .. py:method:: HistoryDF.fetch(t_col: str = 'keep', tz: str = 'local', output='arrow', strict_col_order=False)
+   .. py:method:: HistoryDF.fetch(t_col: str = 'keep', tz: str = 'local', output='arrow', strict_col_order=True)
       :module: evaics.ml
    
       Fetch data
@@ -39,7 +39,7 @@
           drop the time column
           tz: time zone (local, custom or None to keep time column as UNIX
           timestamp), the default is "local"
-          strict_col_order: force strict column ordering
+          strict_col_order: force strict column ordering (default: True)
       
       
       :returns: a prepared Pandas DataFrame object
@@ -65,7 +65,7 @@
       :param limit: max number of rows
       
    
-   .. py:method:: HistoryDF.oid(oid: ~typing.Union[~evaics.sdk.OID, str], status=False, value=False, database=None, xopts=None)
+   .. py:method:: HistoryDF.oid(oid: Union[evaics.sdk.OID, str], status=False, value=False, database=None, xopts=None)
       :module: evaics.ml
    
       Append OID for processing
@@ -102,7 +102,7 @@
       :param f: file path or buffer
       
    
-   .. py:method:: HistoryDF.t_end(t_end: ~typing.Union[float, str])
+   .. py:method:: HistoryDF.t_end(t_end: Union[float, str])
       :module: evaics.ml
    
       Specify the data frame end time
@@ -110,7 +110,7 @@
       :param t_start: a float (timestamp), a string or a datetime object
       
    
-   .. py:method:: HistoryDF.t_start(t_start: ~typing.Union[float, str, ~datetime.datetime])
+   .. py:method:: HistoryDF.t_start(t_start: Union[float, str, datetime.datetime])
       :module: evaics.ml
    
       Specify the data frame start time
@@ -118,7 +118,7 @@
       :param t_start: a float (timestamp), a string or a datetime object
       
    
-   .. py:method:: HistoryDF.with_mlkit(mlkit: ~typing.Union[bool, str])
+   .. py:method:: HistoryDF.with_mlkit(mlkit: Union[bool, str])
       :module: evaics.ml
    
       Set ML kit url/svc name
