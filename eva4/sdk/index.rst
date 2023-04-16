@@ -5,7 +5,7 @@ Software Development Kit (SDK)
     :maxdepth: 1
 
     bindings
-    ../eapi
     rust/index
     python/index
+    ../eapi
     ../repl/proto

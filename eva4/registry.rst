@@ -104,7 +104,7 @@ stored in its sub-keys.
 A strict schema ".schema/eva" is created for all data keys, except "user_data"
 and "svc_data", which (as well as their sub-keys) can contain any fields.
 
-Keys can be edited with :`CLI<cli>` tools.
+Keys can be edited with :doc:`CLI<cli>` tools.
 
 ===================== ============= ==================================
 Key                   user-editable Description

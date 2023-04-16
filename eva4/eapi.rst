@@ -306,7 +306,7 @@ action.toggle
 ~~~~~~~~~~~~~
 
 The toggle method is always transformed to a regular action at the node where
-it was called.
+it is called.
 
 Logs
 ----
