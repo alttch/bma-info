@@ -2,7 +2,7 @@ Keeping service data between reloads
 ************************************
 
 Services can keep data between reloads in several ways. Note than if a service
-is purged, its data is deleted (both from data directory and the registry).
+is purged, its data is deleted (both from the data directory and the registry).
 
 .. contents::
 
