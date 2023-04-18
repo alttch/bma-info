@@ -5,6 +5,9 @@ EVA ICS Machine Learning kit data frames can be used for various data analysis.
 In this example linear regression with ML kit and TensorFlow is explained as it
 can be applied to a real IoT case.
 
+Predicted events can be used in various scenarios, such as automatic or
+operator-assisted accident prevention, predictive maintenance and others.
+
 .. note::
 
     Linear regression is a linear approach for modelling the relationship
@@ -40,4 +43,4 @@ Sensor mapping:
 
     prepare
     training
-
+    predicting
