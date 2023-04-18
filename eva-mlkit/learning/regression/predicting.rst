@@ -3,8 +3,8 @@ Predicting events
 
 .. contents::
 
-Testing data fetch
-==================
+Fetching data
+=============
 
 Let us verify the model which has been trained.
 
