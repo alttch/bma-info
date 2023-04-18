@@ -92,5 +92,5 @@ model, the prediction will be pretty accurate. Otherwise the results may
 differ.
 
 To increase the model accuracy, continue training it with various production
-data. The more plant state the model has experience with, the more accuracy
+data. The more plant state the model has experience with, the more accurate
 predictions it can output. 
