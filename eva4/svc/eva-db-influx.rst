@@ -191,6 +191,22 @@ state_log
           "value": 15
       }
   ]
+  
+
+.. _eva4_eva.db.i__state_push:
+
+state_push
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *push item states into db, (payload: single item state or list)*
+   * - Parameters
+     - *none*
+   * - Returns
+     - *nothing*
 
 Retention policies
 ==================
