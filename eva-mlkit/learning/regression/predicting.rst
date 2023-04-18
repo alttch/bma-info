@@ -32,7 +32,7 @@ and load the data.
         datetime.now() - timedelta(days=5)).fill(
         '1T').fetch(output='pandas')
 
-    # pop alarm and time column as they are required for a compassion chart
+    # pop alarm and time column as they are required for a comparison chart
     # only
     alarms = data.pop('alarm')
     times = data.pop('time')
