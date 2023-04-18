@@ -59,8 +59,8 @@ Here is the data frame which is used by the model to predict alarm events:
     [7140 rows x 2 columns]
 
 
-Performing the prediction
-=========================
+Performing a prediction
+=======================
 
 Let us load the model and predict alarm events:
 
