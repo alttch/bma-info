@@ -426,7 +426,7 @@ one.
 Dealing with timeouts
 =====================
 
-During deployments the following timeouts may appear:
+During deployment the following timeouts may appear:
 
 General timeout
 ---------------
