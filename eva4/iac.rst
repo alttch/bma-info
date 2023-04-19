@@ -422,3 +422,52 @@ Advanced configuration
 on the local machine. If the target deployment (e.g. a service configuration)
 must contain these directives, use "^^" directive prefix instead of a single
 one.
+
+Dealing with timeouts
+=====================
+
+During deployments the following timeouts may appear:
+
+General timeout
+---------------
+
+Caused by the cloud manager CLI which waits 5 seconds as max by default for
+each RPC response. To increase the general timeout, use "-T" option of
+:ref:`eva4_eva-shell` or "-t" option if the cloud manger CLI is used directly:
+
+.. code:: shell
+
+    eva -T 60 could deploy file.yml
+
+Remote node timeout
+-------------------
+
+When deploying to remote nodes, RPC calls go thru an instance of
+:doc:`svc/eva-repl`. The service has got own timeouts for RPC calls to
+particular nodes which can be changed with adding "timeout" field to the remote
+node configuration:
+
+.. code:: shell
+
+    eva node edit remote-node-name
+
+to modify the default timeout for all nodes, set the value of "timeout/default"
+field of the replication service:
+
+.. code:: shell
+
+    eva svc edit eva.repl.default
+
+Downloading files on remote nodes
+---------------------------------
+
+When HTTP URL is pushed to a remote node with a download request, it is
+processed by an instance of :doc:`svc/eva-filemgr` on the remote. The default
+download timeout is 5 seconds.
+
+To raise the timeout, set "timeout/default" field of the file manager service
+instance on the **remote** node:
+
+.. code:: shell
+
+    eva svc edit eva.filemgr.main
