@@ -13,8 +13,9 @@ The kit contains client modules for Python and R, which can be used without any
 restrictions and a server part which must be purchased separately.
 
 .. figure:: ./images/dataconv.png
-    :scale: 50%
+    :scale: 40%
     :alt: Data frame conversions
+    :align: right
 
 If there is no ML kit server installed, client modules can work via
 :doc:`../eva4/svc/eva-hmi`, providing the very similar functionality, except
