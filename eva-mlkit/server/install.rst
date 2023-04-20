@@ -10,6 +10,8 @@ dedicated node if possible.
     ML kit server requires EVA ICS 4.0.1. It is also recommended to update the
     system to the build 2023032901 or newer.
 
+    ML kit server works on x86-64 Linux only.
+
 .. contents::
 
 Downloading/updating
