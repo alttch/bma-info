@@ -33,8 +33,14 @@ customize the target path, execute installer as the following:
     curl https://pub.bma.ai/eva-mlkit/server/install | TARGET_DIR=/path/to/folder sh
 
 The script also can update an existing installation with the same command as
-above. Disable deployed services or stop EVA ICS server completely, execute the
-command to re-install the server and enable/start everything back.
+above.
+
+After the server is updated, it is necessary to manually restart all ML kit
+service instances, e.g. with :ref:`eva4_eva-shell`:
+
+.. code:: shell
+
+    eva svc restart <SVC_ID>
 
 Installing server license key
 =============================
