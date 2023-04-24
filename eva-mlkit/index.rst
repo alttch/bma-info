@@ -6,8 +6,10 @@ EVA ICS Machine Learning kit
   :class: no-scaled-link
   :align: right
 
-EVA ICS® Machine Learning kit is a set of tools for data engineers to easily
-collect and process data from :doc:`EVA ICS <../eva4/index>` instances.
+`EVA ICS® Machine Learning kit
+<https://www.bohemia-automation.com/software/mlkit/>`_ is a set of tools for
+data engineers to easily collect and process data from :doc:`EVA ICS
+<../eva4/index>` instances.
 
 The kit contains client modules for Python and R, which can be used without any
 restrictions and a server part which must be purchased separately.
