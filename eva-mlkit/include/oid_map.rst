@@ -1,4 +1,4 @@
-OID Processing map
+OID processing map
 ------------------
 
 The map is used to process EVA ICS item OIDs on the server side:
