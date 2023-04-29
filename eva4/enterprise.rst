@@ -76,8 +76,8 @@ EVA JS Framework WASM extension
 
 `WASM <https://webassembly.org>`_ extension for :doc:`EVA JS Framework
 </eva-js-framework/index>` offloads state processing from
-the web browser JavaScript engine to the WASM application, allowing SCADA HMI
-to monitor hundreds of items without any client device overhead.
+the web browser JavaScript engine to the WebAssembly application, allowing
+SCADA HMI to monitor hundreds of items without any client device overhead.
 
 According to tests, EVA JS Framework with WASM extension is about 20x times
 faster, than in regular mode.
