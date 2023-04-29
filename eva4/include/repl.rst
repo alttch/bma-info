@@ -79,8 +79,8 @@ certain items, also it is not possible to use pub/sub security for bulk topics.
 
 In this case, the node must be marked as untrusted in its configuration, which
 can be done either with :ref:`eva4_eva-shell` command "node append" with
-*\--untrusted* argument, "node edit" for existing nodes or in the node
-deployment configuration.
+*\--untrusted* argument, "node edit" for existing nodes (config field:
+*trusted*) or in the node deployment configuration.
 
 Untrusted nodes should use dedicated :ref:`API Keys <eva4_api_key>` only. To
 let a remote untrusted node provide telemetry data, the configured API key must
