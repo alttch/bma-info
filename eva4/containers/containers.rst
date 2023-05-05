@@ -23,7 +23,7 @@ What is included
 
 * internal watchdog is disabled
 
-* the container system time is set to UTC
+* the container time zone is set to UTC
 
 * the container bus has got an open TCP port 7778 for external connections
 
