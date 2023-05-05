@@ -18,6 +18,8 @@ System documentation
     items
     cli
     iac
+    containers/containers
+    containers/k8s
     highload
     timeouts
     troubleshooting

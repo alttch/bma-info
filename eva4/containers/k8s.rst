@@ -1,11 +1,11 @@
-Using EVA ICS with Kubernetes (Draft)
-*************************************
+Using with Kubernetes
+*********************
 
 .. contents::
 
 EVA ICS has got a :doc:`built-in node-scaling mechanism for heavy-loaded setups
-<../../local_cluster>`. The built-in launchers start services, perform
-health-check and allow service :doc:`deployment <../../iac>`.
+<../local_cluster>`. The built-in launchers start services, perform
+health-check and allow service :doc:`deployment <../iac>`.
 
 However, in certain circumstances it may be useful to use
 `<https://kubernetes.io>`_ as an additional platform for local service
@@ -16,8 +16,8 @@ Basics
 ======
 
 EVA ICS node primary point is usually the only node, which hosts persistent
-data (:doc:`../../registry`). Others are deployed as micro-services, using
-either built-in or an external orchestra management tools.
+data (:doc:`../registry`). Others are deployed as micro-services, using either
+built-in or an external orchestra management tools.
 
 EVA ICS primary node point can be installed on the same physical or virtual
 machine with the orchestra management master node or use a dedicated one. Both
@@ -64,6 +64,11 @@ Cons of native management:
   multiple ways, including internal bus calls. Kubernetes does the health-check
   by using either external command-line tools or monitoring open ports, which
   are usually not provided by automation workers.
+
+Configuring containers
+======================
+
+See :doc:`containers`.
 
 Conclusion
 ==========

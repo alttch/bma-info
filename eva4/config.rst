@@ -34,6 +34,8 @@ node server in case of failures.
 .. literalinclude:: ./etc-config/watchdog-dist
     :language: shell
 
+.. _eva4_eva_config_registry_keys:
+
 Configuration registry keys
 ===========================
 
