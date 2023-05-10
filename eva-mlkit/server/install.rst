@@ -87,7 +87,7 @@ via database services. The default services which are currently supported:
 
 * :doc:`../../../eva4/svc/eva-db-sql` (`PostgreSQL
   <https://www.postgresql.org>`_ with `TimescaleDB
-  <https://www.timescale.com>`_ extensions.
+  <https://www.timescale.com>`_ extensions).
 
 .. _eva_mlkit_frontend:
 
