@@ -57,6 +57,8 @@ prepare:
 	cd eva3 && make prepare
 	cd eva-mlkit && make prepare
 	cd eva-js-framework && make prepare
+	cd rplc && make prepare
+	cd busrt && make prepare
 
 prepare-venv:
 	python3 -m venv ./venv

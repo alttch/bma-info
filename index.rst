@@ -23,6 +23,7 @@ educational purposes without any restrictions.
     eva-mlkit/index
     hmi-block-ui/index
     eva-js-framework/index
+    rplc/index
     psrt/index
     busrt/index
     common/index
