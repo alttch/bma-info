@@ -9,7 +9,7 @@ and use API to accept actions and synchronize variables with EVA ICS
 
 .. note::
 
-   The described functionality requires **eapi** crate feature.
+   The described functionality requires **eva** crate feature.
 
 Action pool size
 ================
