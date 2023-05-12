@@ -191,3 +191,8 @@ This can be verified by calling
 
 The output should show all the threads assigned to CPU #7 and their priority
 (50).
+
+More samples
+============
+
+See https://github.com/eva-ics/rplc/tree/main/samples
