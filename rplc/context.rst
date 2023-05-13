@@ -149,7 +149,7 @@ With macros
         let mut var1 = {
             let ctx = plc_context!(); // context is read-locked
             ctx.var1
-        } // context is freed
+        }; // context is freed
         // perform some heavy calculations
         {
             let mut ctx = plc_context_mut!(); // context is read-write-locked
@@ -175,7 +175,7 @@ The context can be accessed directly as:
         let var1 = { // context is read-locked
             let ctx = CONTEXT.read();
             ctx.var1
-        } // context is freed
+        }; // context is freed
         // ....
     }
 
