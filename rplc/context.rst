@@ -118,7 +118,7 @@ the context.
     pub use std::time::Duration; // external data type re-export
 
     #[derive(Default)]
-    struct MyStruct {
+    pub(crate) struct MyStruct {
         var1: bool,
         var2: f32
     }
