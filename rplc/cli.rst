@@ -32,16 +32,16 @@ The command
 
 registers a PLC instance in systemd. Additional arguments:
 
-* **--force** re-register an instance even if its already registered (stops PLC
-  process if running)
+* **\-\-force** re-register an instance even if its already registered (stops
+  PLC process if running)
 
-* **--eapi** specify :doc:`EAPI <io/eapi>` path
+* **\-\-eapi** specify :doc:`EAPI <io/eapi>` path
 
 * **-a** specify :doc:`PLC thread affinity <realtime>`, as NAME=CPU_ID,PRIORITY
 
-* **--var** specify a custom system environment variable
+* **\-\-var** specify a custom system environment variable
 
-* **--start** start the PLC instance after registering
+* **\-\-start** start the PLC instance after registering
 
 Unregistering PLC instance
 ==========================
