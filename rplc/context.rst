@@ -78,6 +78,19 @@ structure:
           var1: BOOL
           var2: UINT
 
+Arrays of structures
+--------------------
+
+Arrays of structures can be defined as:
+
+.. code:: yaml
+
+    context:
+      fields:
+        "struct1[10]":
+          var1: BOOL
+          var2: UINT
+
 Custom types
 ------------
 
