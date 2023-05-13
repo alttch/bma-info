@@ -14,7 +14,7 @@ and use API to accept actions and synchronize variables with EVA ICS
 Action pool size
 ================
 
-The default action pool size is 1, mean there can be only a single action
+The default action pool size is 1, meaning there can be only a single action
 running. Despite context actions are atomic (they only set context variables to
 specified values), the pool can be increased with the top-level field in PLC
 YAML configuration:
