@@ -63,6 +63,30 @@ configuration and set the default timeout to a higher value:
         default: 30
     # ...
 
+This affects the default timeout of all newly added remote nodes.
+
+Individual remote node timeouts
+-------------------------------
+
+The remote node timeout for RPC calls can be seen with the command:
+
+.. code:: shell
+
+   eva node list -s
+
+and modified with the command:
+
+.. code:: shell
+
+   eva node edit NODENAME
+
+The timeout can be edited for static nodes only. If the node is not a static
+one, it should be appended first:
+
+.. code:: shell
+
+   eva node append NODENAME
+
 Bus call timeout
 ----------------
 
