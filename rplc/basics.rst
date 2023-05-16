@@ -74,6 +74,17 @@ terminates itself. This timeout can be modified in PLC build config (e.g.)
     core:
       stop_timeout: 60 # prolong the timeout to 60 seconds
 
+Stack size
+----------
+
+By default threads use the default system stack size. This can be changed with:
+
+.. code:: yaml
+
+    version: 1
+    core:
+      stack_size: 32000 # in kilobytes, 32000=32MB
+
 Custom shutdown function
 ------------------------
 

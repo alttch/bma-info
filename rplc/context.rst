@@ -91,6 +91,23 @@ Arrays of structures can be defined as:
           var1: BOOL
           var2: UINT
 
+Boxed arrays
+------------
+
+By default arrays are defined in stack memory which provides faster access to
+variables but may lead to stack overflow for large ones.
+
+If an array is specified with "!" symbol after its size:
+
+.. code:: yaml
+
+    context:
+      fields:
+        vars: REAL[4000!]
+
+it is created as boxed (heap-allocated). The same option can be applied for
+arrays of structures.
+
 Custom types
 ------------
 
