@@ -1,0 +1,50 @@
+Last Updated on 2023-05-20
+
+KB00019: Python segmentation fault on Ubuntu 22.04
+**************************************************
+
+.. index:: eva, startup, shutdown, crash
+
+EVA ICS versions: 3.x and above
+
+Problem
+=======
+
+EVA ICS processes crash with "segmentation fault message" on Ubuntu 22.04 with
+the system Python.
+
+Solution
+========
+
+Ubuntu 22.04 built-in Python 3.10 has got memory leaks which may lead to
+unpredicted behavior. Consider installing an alternative Python package.
+
+.. code:: shell
+
+   add-apt-repository ppa:deadsnakes/ppa
+   apt update
+   apt install python3.8 python3.8-dev
+
+Edit EVA ICS venv:
+
+.. code:: shell
+
+   eva edit venv
+   # or if even eva-shell is unable to start
+   AUTO_PREFIX=1 ./sbin/eva-registry-cli edit config/venv
+
+Make sure "system-site-packages" and *use_system_pip* both are set to *false*.
+Set *python* field to *python3.8*.
+
+Rebuild EVA ICS venv:
+
+.. code:: shell
+
+   rm -rf /opt/eva/venv
+   /opt/eva/install/build-venv
+
+Restart EVA ICS:
+
+.. code:: shell
+
+   eva server restart

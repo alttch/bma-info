@@ -1,0 +1,23 @@
+Last Updated on 2023-05-20
+
+KB00020: Problems with Python 3.11
+**********************************
+
+.. index:: eva, startup, shutdown, crash
+
+EVA ICS versions: 3.x and above
+
+Problem
+=======
+
+EVA ICS or eva-shell do not work properly with Python 3.11.
+
+Solution
+========
+
+EVA ICS v3 is coming to EOL. Starting from Jan 1st 2023 we provide only
+commercial support for Enterprise customers.
+
+Currently there are no plans to port EVA ICS v3 to Python 3.11. Consider either
+installing earlier Python version (3.8 is recommended) or switching to
+:doc:`EVA ICS v4 <../../eva4/index>`.
