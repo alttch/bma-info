@@ -1,5 +1,5 @@
 - name: 1-Wire
-  status: supported
+  status: Supported
   devices:
     - Analog Devices DS1825
     - Analog Devices DS1820/DS18X20/DS19XX
