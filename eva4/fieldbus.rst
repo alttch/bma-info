@@ -19,5 +19,5 @@ manufacturers.
 * 1-Wire is a registered trademark of Analog Devices Inc.
 * Ethernet/IP is a registered trademark of ODVA, Inc.
 * Modbus is a registered trademark of Schneider Electric Inc.
-* TwinCAT is a registered trademark of Beckhoff Automation GmbH.
 * OPC UA is a registered trademark of OPC Foundation.
+* TwinCAT is a registered trademark of Beckhoff Automation GmbH.
