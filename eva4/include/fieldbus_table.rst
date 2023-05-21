@@ -1,19 +1,3 @@
-1-Wire
-Ethernet/IP
-Modbus TCP
-Modbus UDP
-Modbus RTU
-Modbus ASCII
-Modbus Binary
-
-OPC-UA (client)
-Anonymous
-Credentials auth
-X509 auth
-
-SNMP v1/v2c
-TwinCAT/ADS
-
 +------------------+-------------------------------------------------------------+-------------------+
 | Protocol         | Devices supported                                           | Status            | 
 +==================+=============================================================+===================+

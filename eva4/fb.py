@@ -13,7 +13,6 @@ f_data = []
 for d in data:
     fd = OrderedDict()
     name = d['name']
-    print(name)
     if '\n' in name:
         n = name.split('\n')
         name = '\n\n'.join(n)
