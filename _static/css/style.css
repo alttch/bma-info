@@ -10,3 +10,4 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
 .wy-nav-top {
   background-color: #272525;
 }
+.rst-content table.docutils td, .wy-table-bordered-all td { vertical-align: top; }

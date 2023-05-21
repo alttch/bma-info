@@ -331,6 +331,37 @@ action.toggle
   }
   
 
+.. _eva4_eva.core__bus.publish:
+
+bus.publish
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Publish a bus event via RPC (useful for bus calls via HMI)*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **topic**
+     - String
+     - Event topic
+     - **yes**
+   * - **message**
+     - Any
+     - Event message
+     - **yes**
+
 .. _eva4_eva.core__core.shutdown:
 
 core.shutdown

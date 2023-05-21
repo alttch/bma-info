@@ -24,3 +24,4 @@ prepare:
 	/opt/eva4/sbin/eapigen hmi_http /opt/eva4/svc/hmi/http_api.yml \
 		--http-api ../../http_api_examples > include/autogen/http_api.rst
 	./default-svcs.py
+	./fb.py > ./include/fieldbus_table.rst

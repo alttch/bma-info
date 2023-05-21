@@ -43,6 +43,7 @@ control systems.
     ui
     auto/index
     sdk/index
+    fieldbus
     License <license>
 
 Open-source repository: https://github.com/eva-ics/eva4
