@@ -140,7 +140,7 @@ What automation is all about? What are automation components?
 The automation components mostly look like relay block, "smart" sockets,
 "smart" switches - however, there is still some kind of relay inside. Usually,
 there are 3 ports in the relay: input, two outputs, and two states: open and
-closed. In the first state, the signal passes through the first output, in the
+closed. At the first state, the signal passes through the first output, in the
 second one - through the second. This is the main principle automation is based
 on.
 

@@ -97,7 +97,7 @@ See more at :ref:`eva4_eva_config_registry_keys`.
 Initialization
 --------------
 
-On the first run, after the node process is successfully started, the container
+At the first run, after the node process is successfully started, the container
 executes a script (if exists):
 
 .. code:: shell
@@ -112,7 +112,7 @@ If the script has no execution permissions, it is started with bash.
 Deployment
 ----------
 
-On the first run, if the container locates files named */mnt/init/init\*.yml*
+At the first run, if the container locates files named */mnt/init/init\*.yml*
 (e.g. */mnt/init/init0.yml*), they are automatically used for the node
 :doc:`deployment <../iac>`.
 
