@@ -71,7 +71,7 @@ Watching states and performing API calls
     }
 
     document.getElementById("u").addEventListener("click",
-        () => { handle_click() });
+        () => { handle_click(); });
 
     // action example, low-level API
     document.getElementById("u").addEventListener("click", function() {
