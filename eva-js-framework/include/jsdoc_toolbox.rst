@@ -83,4 +83,5 @@
     :type params: object
     :return: Promise object. Resolve and reject functions are called with
                         "true" parameter if button is pressed by user.
+    :async: Async function/Promise
 

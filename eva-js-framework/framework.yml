@@ -1,35 +1,51 @@
 - name: EVA_ACTION#start
   alias: $eva.action.start
+  async: true
 - name: EVA_ACTION#stop
   alias: $eva.action.stop
+  async: true
 - name: EVA_ACTION#toggle
   alias: $eva.action.toggle
+  async: true
 - name: EVA_ACTION#exec
   alias: $eva.action.exec
+  async: true
 - name: EVA_ACTION#kill
   alias: $eva.action.kill
+  async: true
 - name: EVA_ACTION#terminate
   alias: $eva.action.terminate
+  async: true
 - name: EVA_ACTION#run
   alias: $eva.action.run
+  async: true
 - name: EVA_LVAR#set
   alias: $eva.lvar.set
+  async: true
 - name: EVA_LVAR#set_status
   alias: $eva.lvar.set_status
+  async: true
 - name: EVA_LVAR#set_value
   alias: $eva.lvar.set_value
+  async: true
 - name: EVA_LVAR#expires
   alias: $eva.lvar.expires
+  async: true
 - name: EVA_LVAR#reset
   alias: $eva.lvar.reset
+  async: true
 - name: EVA_LVAR#clear
   alias: $eva.lvar.clear
+  async: true
 - name: EVA_LVAR#toggle
   alias: $eva.lvar.toggle
+  async: true
 - name: EVA_LVAR#incr
   alias: $eva.lvar.incr
+  async: true
 - name: EVA_LVAR#decr
   alias: $eva.lvar.decr
+  async: true
 - name: EVA#get_mode
   alias: $eva.get_mode
 - name: EVA#start
@@ -38,6 +54,7 @@
   alias: $eva.system_name
 - name: EVA#sleep
   alias: $eva.sleep
+  async: true
 - name: EVA#log_start
   alias: $eva.log_start
 - name: EVA#log_level
@@ -48,10 +65,13 @@
   alias: $eva.erase_token_cookie
 - name: EVA#call
   alias: $eva.call
+  async: true
 - name: EVA#set_readonly
   alias: $eva.set_readonly
+  async: true
 - name: EVA#set_normal
   alias: $eva.set_normal
+  async: true
 - name: EVA#on
   alias: $eva.on
 - name: EVA#interval
@@ -70,3 +90,4 @@
   alias: $eva.state
 - name: EVA#stop
   alias: $eva.stop
+  async: true

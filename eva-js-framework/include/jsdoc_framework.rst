@@ -8,6 +8,7 @@
     :type params: object
     :param wait: wait until the action is completed (default: true)
     :type wait: boolean
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.kill(oid)
 
@@ -15,6 +16,7 @@
 
     :param oid: unit OID
     :type oid: string
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.run(oid, params, wait)
 
@@ -26,6 +28,7 @@
     :type params: object
     :param wait: wait until completed (default: true)
     :type wait: boolean
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.start(oid, wait)
 
@@ -35,6 +38,7 @@
     :type oid: string
     :param wait: wait until the action is completed (default: true)
     :type wait: boolean
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.stop(oid, wait)
 
@@ -44,6 +48,7 @@
     :type oid: string
     :param wait: wait until the action is completed (default: true)
     :type wait: boolean
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.terminate(uuid)
 
@@ -51,6 +56,7 @@
 
     :param uuid: action uuid
     :type uuid: string
+    :async: Async function/Promise
 
 .. js:function:: $eva.action.toggle(oid, wait)
 
@@ -60,6 +66,7 @@
     :type oid: string
     :param wait: wait until the action is completed (default: true)
     :type wait: boolean
+    :async: Async function/Promise
 
 .. js:function:: $eva.call(func, p1, p2)
 
@@ -69,6 +76,7 @@
 
     :param arguments: item OID (if required), API call params
     :return: Promise object
+    :async: Async function/Promise
 
 .. js:function:: $eva.erase_token_cookie()
 
@@ -116,6 +124,7 @@
 
     :param oid: lvar oid
     :type oid: string
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.decr(oid)
 
@@ -124,6 +133,7 @@
     :param oid: lvar oid
     :type oid: string
     :return: the new value
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.expires(lvar_oid)
 
@@ -132,6 +142,7 @@
     :param lvar_oid: lvar OID
     :type lvar_oid: string
     :return: seconds to expiration, -1 if expired, -2 if stopped
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.incr(oid)
 
@@ -140,6 +151,7 @@
     :param oid: lvar oid
     :type oid: string
     :return: the new value
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.reset(oid)
 
@@ -147,6 +159,7 @@
 
     :param oid: lvar oid
     :type oid: string
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.set(oid, status, value)
 
@@ -157,6 +170,7 @@
     :param status: lvar status
     :type status: numberr
     :param value: lvar value
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.set_status(oid, status)
 
@@ -166,6 +180,7 @@
     :type oid: string
     :param status: lvar status
     :type status: number
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.set_value(oid, value)
 
@@ -174,6 +189,7 @@
     :param oid: lvar oid
     :type oid: string
     :param value: lvar value
+    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.toggle(oid)
 
@@ -181,6 +197,7 @@
 
     :param oid: lvar oid
     :type oid: string
+    :async: Async function/Promise
 
 .. js:function:: $eva.on(event, func)
 
@@ -216,6 +233,7 @@
     :type p: string
     :param xopts: extra options (e.g. OTP)
     :type xopts: object
+    :async: Async function/Promise
 
 .. js:function:: $eva.set_readonly()
 
@@ -225,6 +243,7 @@
     
     the current mode can be obtained from $eva.server_info.aci.token_mode
 
+    :async: Async function/Promise
 
 .. js:function:: $eva.sleep(sec)
 
@@ -232,6 +251,7 @@
 
     :param sec: seconds to sleep
     :type sec: number
+    :async: Async function/Promise
 
 .. js:function:: $eva.start()
 
@@ -267,6 +287,7 @@
     :param keep_auth: keep authentication cookies and token
     :type keep_auth: boolean
     :return: Promise object
+    :async: Async function/Promise
 
 .. js:function:: $eva.system_name()
 

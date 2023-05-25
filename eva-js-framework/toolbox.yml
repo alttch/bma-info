@@ -4,3 +4,4 @@
   alias: "$eva.toolbox.chart"
 - name: "<anonymous>~eva_toolbox_popup"
   alias: "$eva.toolbox.popup"
+  async: true
