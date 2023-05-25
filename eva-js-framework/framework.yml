@@ -30,7 +30,6 @@
   async: true
 - name: EVA_LVAR#expires
   alias: $eva.lvar.expires
-  async: true
 - name: EVA_LVAR#reset
   alias: $eva.lvar.reset
   async: true

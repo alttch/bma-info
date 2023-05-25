@@ -142,7 +142,6 @@
     :param lvar_oid: lvar OID
     :type lvar_oid: string
     :return: seconds to expiration, -1 if expired, -2 if stopped
-    :async: Async function/Promise
 
 .. js:function:: $eva.lvar.incr(oid)
 
