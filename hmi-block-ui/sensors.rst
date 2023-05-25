@@ -237,3 +237,8 @@ and look like:
     :language: javascript
 
 Chart options can be either variable or function (preferred).
+
+.. note::
+
+   HMI block UI is based on :doc:`../eva-js-framework/index` which includes
+   ChartJS version 4.
