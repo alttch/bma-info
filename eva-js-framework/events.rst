@@ -41,3 +41,5 @@ Example:
    $eva.on("login.success", () => {
      // hide the login window and display UI page
    });
+
+For OTP examples, see :doc:`../eva4/2fa`.
