@@ -1,0 +1,6 @@
+- name: "<anonymous>~eva_toolbox_animate"
+  alias: "$eva.toolbox.animate"
+- name: "<anonymous>~eva_toolbox_chart"
+  alias: "$eva.toolbox.chart"
+- name: "<anonymous>~eva_toolbox_popup"
+  alias: "$eva.toolbox.popup"
