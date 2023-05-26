@@ -1,6 +1,8 @@
 Configuring
 ************
 
+.. contents::
+
 The primary class variables are get and set directly, e.g.:
 
 .. code:: javascript

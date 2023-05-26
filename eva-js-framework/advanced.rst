@@ -1,6 +1,8 @@
 Advanced usage
 **************
 
+.. contents::
+
 Multi-page interfaces, external authentication
 ==============================================
 
