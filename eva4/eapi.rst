@@ -219,6 +219,20 @@ where
 * REM - remote replicated state
 * RAR - remote replicated archive state
 
+with the following payload fields:
+
+* status: I16 - item status (-1 = generic error for units/sensors, other -
+  custom)
+
+* value (optional): any serializable
+
+* t: f64 - state modification timestamp
+
+* ieid: [u64, u64] - incremental event ID (replication marker)
+
+The OID of the item is not present in the payload and should be obtained from
+the event topic.
+
 Raw events
 ----------
 
