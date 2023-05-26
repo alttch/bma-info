@@ -12,6 +12,8 @@ browsers and Node.js applications.
   <https://www.npmjs.com/package/@eva-ics/framework>`_, `Toolbox
   <https://www.npmjs.com/package/@eva-ics/toolbox>`_.
 
+* General documentation about HMI client apps: see :doc:`../eva4/ui`.
+
 .. toctree::
    :caption: EVA ICS JavaScript Framework documentation
    :maxdepth: 1
