@@ -8,7 +8,6 @@ System documentation
     install
     replication
     v3migration
-    ecmui/index
     What is new <changelog>
     architecture
     local_cluster
@@ -24,4 +23,3 @@ System documentation
     timeouts
     troubleshooting
     security
-    enterprise

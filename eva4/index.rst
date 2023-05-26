@@ -40,6 +40,8 @@ control systems.
 
     sysdoc
     core_svcs
+    ecmui/index
+    enterprise
     ui
     auto/index
     sdk/index
