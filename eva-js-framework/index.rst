@@ -1,8 +1,8 @@
-EVA ICS JavaScript Framework
-****************************
+EVA ICS JS Framework
+********************
 
-EVA ICS JavaScript Framework is a JavaScript set of libraries for both web
-browsers and Node.js applications.
+EVA ICS JS Framework is a JavaScript set of libraries for both web browsers and
+Node.js applications.
 
 * Download: https://pub.bma.ai/eva-js-framework/
 
@@ -15,7 +15,7 @@ browsers and Node.js applications.
 * General documentation about HMI client apps: see :doc:`../eva4/ui`.
 
 .. toctree::
-   :caption: EVA ICS JavaScript Framework documentation
+   :caption: EVA ICS JS Framework documentation
    :maxdepth: 1
 
    install
