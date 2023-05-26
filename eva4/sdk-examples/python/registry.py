@@ -19,11 +19,7 @@ def run():
                            description='Registry example',
                            version=__version__)
     service = sdk.Service()
-    service.init_bus()
-    logger = service.init_logs()
-    service.drop_privileges()
-    service.init_rpc(info)
-    service.register_signals()
+    service.init(info)
 
     # get registry "setup" key
     payload = dict(key=f'eva/svc_data/{service.id}/setup')
@@ -48,11 +44,8 @@ def run():
                          busrt.rpc.Request(
                              'key_increment',
                              pack(payload))).wait_completed().get_payload())
-    logger.info(f'The service has been started {counter} time(s)')
-
-    service.mark_ready()
+    service.logger.info(f'The service has been started {counter} time(s)')
     service.block()
-    service.mark_terminating()
 
 
 run()
