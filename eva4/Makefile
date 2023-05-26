@@ -25,4 +25,5 @@ prepare:
 		--http-api ../../http_api_examples > include/autogen/http_api.rst
 	./default-svcs.py
 	./fb.py > ./include/fieldbus_table.rst
-	pydoc2rst ./sdk/python/pydoc/tpl.rst ./sdk/python/pydoc/api.rst /opt/eva4/bindings/python/eva-ics-sdk
+	pydoc2rst ./sdk/python/pydoc/tpl_api.rst ./sdk/python/pydoc/api.rst /opt/eva4/bindings/python/eva-ics-sdk
+	pydoc2rst ./sdk/python/pydoc/tpl_client.rst ./sdk/python/pydoc/client.rst /opt/eva4/bindings/python/eva-ics-sdk

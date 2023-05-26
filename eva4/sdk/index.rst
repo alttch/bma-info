@@ -14,7 +14,6 @@ application development, see: :doc:`../ui` and
     :caption: EVA ICS v4 SDK
     :maxdepth: 1
 
-    bindings
     rust/index
     python/index
     ../eapi
