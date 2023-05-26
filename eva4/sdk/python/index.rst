@@ -7,3 +7,4 @@ Python SDK examples
     service_example
     hmi_x_call_example
     data
+    api
