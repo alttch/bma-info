@@ -18,4 +18,4 @@ For Node.js
 
 .. code:: shell
 
-  npm i "@eva-ics/framework"
+  npm add @eva-ics/framework
