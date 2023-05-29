@@ -1,6 +1,11 @@
 Interface development (HMI apps)
 ********************************
 
+.. image:: images/interface_development.png
+    :width: 450
+    :class: no-scaled-link
+    :align: right
+
 .. toctree::
     :maxdepth: 1
 
