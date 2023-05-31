@@ -1,6 +1,11 @@
 Software Development Kit (SDK)
 ******************************
 
+.. image:: ../images/sdk.png
+    :width: 450
+    :class: no-scaled-link
+    :align: right
+
 The section contains EVA ICS v4 SDK documentation and examples of custom
 services.
 
