@@ -109,7 +109,7 @@
     - Any equipment with SNMP v1/v2c trap signals
 - name: |
     TwinCAT/ADS
-  status: Coming Jun 2023
+  status: Supported
   devices:
     - Beckhoff C6015
     - Beckhoff C6017

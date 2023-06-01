@@ -72,6 +72,10 @@
      - :doc:`eva.svc.modbusN<svc/eva-svc-modbus-slave>`
      - svc/eva-svc-modbus-slave
      - 
+   * - :doc:`OPC-UA controller gateway<svc/eva-controller-opcua>`
+     - :doc:`eva.controller.opcuaN<svc/eva-controller-opcua>`
+     - svc/eva-controller-opcua
+     - 
    * - :doc:`OTP 2nd-Factor authentication service<svc/eva-aaa-otp>`
      - :doc:`eva.aaa.otp<svc/eva-aaa-otp>`
      - svc/eva-aaa-otp

@@ -61,8 +61,11 @@ Volume path   Used as            Notes
 Preparation
 -----------
 
-At the first run, before the node process is started, the container executes a
-script (if exists):
+First start
+~~~~~~~~~~~
+
+At the first start, before the node process is started, the container executes
+a script (if exists):
 
 .. code:: shell
 
@@ -70,6 +73,18 @@ script (if exists):
 
 The script may contain custom preparation commands as well as apply a custom
 :doc:`registry <../registry>` setup.
+
+If the script has no execution permissions, it is started with bash.
+
+Each start
+~~~~~~~~~~
+
+At every start, before the node process is started, the container executes a
+script (if exists):
+
+.. code:: shell
+
+   /mnt/init/rc.local
 
 If the script has no execution permissions, it is started with bash.
 
@@ -97,8 +112,8 @@ See more at :ref:`eva4_eva_config_registry_keys`.
 Initialization
 --------------
 
-At the first run, after the node process is successfully started, the container
-executes a script (if exists):
+At the first start, after the node process is successfully started, the
+container executes a script (if exists):
 
 .. code:: shell
 
@@ -112,7 +127,7 @@ If the script has no execution permissions, it is started with bash.
 Deployment
 ----------
 
-At the first run, if the container locates files named */mnt/init/init\*.yml*
+At the first start, if the container locates files named */mnt/init/init\*.yml*
 (e.g. */mnt/init/init0.yml*), they are automatically used for the node
 :doc:`deployment <../iac>`.
 
