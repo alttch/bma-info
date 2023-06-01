@@ -67,7 +67,7 @@
     Anonymous
     Credentials auth
     X509 auth
-  status: Coming Q2 2023
+  status: Supported
   devices:
     - Beckhoff C6015
     - Beckhoff C6017
@@ -86,7 +86,7 @@
     - Beckhoff C6250
     - "" 
     - Any equipment with OPC-UA server access
-    - Any 3rd party server compatible with OPC Foundation specs
+    - Any 3rd party servers compatible with OPC Foundation specs
 - name: SNMP v1/v2c
   status: Supported (traps)
   devices:

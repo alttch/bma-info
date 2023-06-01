@@ -44,6 +44,12 @@
   txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
   tpl: svc-tpl-controller-enip.yml
   api: svc/controller-enip/eapi.yml
+- nam: eva.controller.opcuaN
+  exe: svc/eva-controller-opcua
+  des: OPC-UA controller gateway
+  txt: Allows to communicate with OPC-UA servers.
+  tpl: svc-tpl-controller-opcua.yml
+  api: svc/controller-opcua/eapi.yml
 - nam: eva.bridge.adsN
   exe: svc/eva-bridge-ads
   des: TwinCAT ADS bridge

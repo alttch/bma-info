@@ -101,7 +101,7 @@
 |                  |                                                             |                   | 
 |                  | Any Modbus-generic equipment                                |                   | 
 +------------------+-------------------------------------------------------------+-------------------+
-| OPC-UA (client)  | Beckhoff C6015                                              | Coming Q2 2023    | 
+| OPC-UA (client)  | Beckhoff C6015                                              | Supported         | 
 |                  |                                                             |                   | 
 | Anonymous        | Beckhoff C6017                                              |                   | 
 |                  |                                                             |                   | 
@@ -135,7 +135,7 @@
 |                  |                                                             |                   | 
 |                  | Any equipment with OPC-UA server access                     |                   | 
 |                  |                                                             |                   | 
-|                  | Any 3rd party server compatible with OPC Foundation specs   |                   | 
+|                  | Any 3rd party servers compatible with OPC Foundation specs  |                   | 
 +------------------+-------------------------------------------------------------+-------------------+
 | SNMP v1/v2c      | AKCP SensorProbe2                                           | Supported (traps) | 
 |                  |                                                             |                   | 
