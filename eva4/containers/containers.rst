@@ -61,8 +61,8 @@ Volume path   Used as            Notes
 Preparation
 -----------
 
-At the first run, after the node process is successfully started, the container
-executes a script (if exists):
+At the first run, before the node process is started, the container executes a
+script (if exists):
 
 .. code:: shell
 
