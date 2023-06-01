@@ -20,7 +20,6 @@
     svc/eva-svc-mirror
     svc/eva-controller-modbus
     svc/eva-svc-modbus-slave
-    svc/eva-controller-opcua
     svc/eva-aaa-otp
     svc/eva4-svc-controller-py
     svc/eva-repl
