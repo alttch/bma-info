@@ -76,8 +76,8 @@ The script may contain custom preparation commands as well as apply a custom
 
 If the script has no execution permissions, it is started with bash.
 
-Each start
-~~~~~~~~~~
+Every start
+~~~~~~~~~~~
 
 At every start, before the node process is started, the container executes a
 script (if exists):
