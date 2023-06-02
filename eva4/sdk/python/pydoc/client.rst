@@ -10,9 +10,9 @@
 .. py:class:: Client(url: str = 'http://localhost:7727', user: ~typing.Optional[str] = None, password: ~typing.Optional[str] = None, key: ~typing.Optional[str] = None, timeout: float = 120)
    :module: evaics.client.http
 
-   HTTP client for EVA ICS (HMI HTPT API)
+   HTTP client for EVA ICS (HMI HTTP API)
    
-   Requires "requests" module to be manually installed
+   Requires "requests" Python module to be manually installed
    
    Create a new HTTP client instance
    
