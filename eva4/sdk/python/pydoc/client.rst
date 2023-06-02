@@ -12,6 +12,8 @@
 
    HTTP client for EVA ICS (HMI HTPT API)
    
+   Requires "requests" module to be manually installed
+   
    Create a new HTTP client instance
    
    :param url: HMI URL (proto://host:port)
