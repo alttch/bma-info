@@ -157,6 +157,10 @@ var.set
      - String
      - array range
      - no
+   * - **dimensions**
+     - Vec<u32>
+     - array dimensions
+     - no
    * - **timeout**
      - f64
      - Max operation timeout
@@ -203,6 +207,10 @@ var.set_bulk
    * - **ranges**
      - Vec<Option<String>>
      - array ranges
+     - no
+   * - **dimensions**
+     - Vec<Option<u32>>
+     - array dimensions
      - no
    * - **timeout**
      - f64
