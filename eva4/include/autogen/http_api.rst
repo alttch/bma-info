@@ -298,6 +298,57 @@ bus::<TARGET_SVC>::<METHOD>
     :response: ../../http_api_examples/bus__TARGET_SVC__METHOD.resp
 
 
+.. _eva4_hmi_http__call:
+
+call
+----
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Call any HMI method using a string query*
+   * - Parameters
+     - required
+   * - Returns
+     - The result of the target method
+
+Allows to call any HTTP method using a string query
+
+E.g.
+
+.. code::
+
+  item.state_history sensor:tests/temp fill=10T xopts.retention=daily
+
+The first unnamed parameter goes to "i". If an array is required, a value
+must be comma-separated, e.g. key=1,2,3 (for 1-item array key=1,). Keys
+with dots are formatted as maps (max one level allowed).
+
+The method should be used in human-interactive environments only.
+
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **q**
+     - String
+     - Call query
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/call.req
+    :response: ../../http_api_examples/call.resp
+
+
 .. _eva4_hmi_http__item.check_access:
 
 item.check_access
@@ -414,7 +465,7 @@ item.state_history
      - no
    * - **fill**
      - String
-     - Fill (nS/T/H/D/W e.g. 10T for 10-minute) + optional [:precision]
+     - Fill (nS/T/H/D/W e.g. 10T for 10-minute or nA for n records) + optional [:precision]
      - no
    * - **limit**
      - u32
@@ -566,7 +617,11 @@ login
      - Token information payload
 
 * if no params are given, the method attempts to login user using basic
-  auth
+  auth or x-auth-key header
+
+* if k parameter is given, the method attempts to authenticate API key and
+  create a temporary token for it. In ACI and API call logs requests are
+  marked as user=.key_id
 
 * if user and password are set, the method attempts to login user
   using the provided credentials
@@ -595,6 +650,10 @@ login
    * - **token**
      - String
      - User token
+     - no
+   * - **k**
+     - String
+     - API key
      - no
    * - **xopts**
      - Map<String, Any>

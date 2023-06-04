@@ -58,3 +58,18 @@ subscribe.state
    * - Returns
      - *nothing*
 
+.. _eva4_hmi_ws__subscribe.state_initial:
+
+subscribe.state_initial
+-----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Subscribes to item state events and request initial states*
+   * - Parameters
+     - Vec<OID/OIDMask(String)>
+   * - Returns
+     - *nothing*
+

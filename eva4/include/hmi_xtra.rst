@@ -26,6 +26,12 @@ extended with :ref:`x calls <eva4_hmi_http__x__TARGET_SVC__METHOD>`.
 Administration methods can be called directly via :ref:`bus calls
 <eva4_hmi_http__bus__TARGET_SVC__METHOD>`.
 
+JSON RPC POST requests can alternatively accept API keys/tokens, specified in
+*X-Auth-Key* header. It is recommended to avoid such requests as this approach
+is not compatible with JSON RPC 2.0 standard. Use the header only if there is
+no option to put the key/token into payload. If the header is set, the
+parameter "k" in request can be omitted.
+
 JSON RPC payload encoding
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -87,13 +93,20 @@ Web socket methods
 
 Web socket method can be executed using a web socket, connected to:
 
-    **ws://<IP/DOMAIN>[:SVC_LISTEN_PORT]/ws?k=TOKEN**
+    **ws://<IP/DOMAIN>[:SVC_LISTEN_PORT]/ws?PARAMS**
 
-where *TOKEN* is a :ref:`session token <eva4_session_token>`.
+Query string parameters:
 
-An extra parameter **buf_ttl=N** can be used to ask the server to group
-:doc:`item <../items>` state events and send them in bulk. E.g. *buf_ttl=0.1*
-can be used to receive events every 100ms.
+=======  ====================================================================  ========
+Name     Value                                                                 Required
+=======  ====================================================================  ========
+k        :ref:`A session token <eva4_session_token>` or :ref:`eva4_api_key`    **yes**
+buf_ttl  seconds (float), group send state events and send them in bulk        no
+state    OID masks, comma separated (automatically subscribe to state events)  no
+initial  1/true. Send initial states of subscribed items                       no
+=======  ====================================================================  ========
+
+The API key/session token can be optionally sent in "X-Auth-Key" HTTP header.
 
 Web socket methods provide one-way RPC calls with no returns. If a method
 returns a value, it means that the value is "ordered" and can be returned any
