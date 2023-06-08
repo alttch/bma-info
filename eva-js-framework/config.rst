@@ -34,6 +34,9 @@ filled by framework automatically.
 * **set_auth_cookies** if true (default), *auth* cookie is used to store API
   token.
 
+* **api_token** current API token, filled automatically after login. Can be
+  filled manually if obtained e.g. for an embedded JS HMI application.
+
 Item processing, special
 ========================
 
@@ -62,8 +65,6 @@ Read-only informational variables
 
 * **version** Framework version (also available as *eva_framework_version* in
   browsers)
-
-* **api_token** current API token
 
 * **api_version** current API version
 
