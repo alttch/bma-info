@@ -377,6 +377,35 @@ core.shutdown
    * - Returns
      - *nothing*
 
+.. _eva4_eva.core__core.sysinfo:
+
+core.sysinfo
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get machine system info*
+   * - Parameters
+     - *none*
+   * - Returns
+     - System info payload (la = load averages, disk usage = for EVA ICS dir)
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "disk_usage": 22.581110721748498,
+      "la1": 3.15,
+      "la15": 2.54,
+      "la5": 3.21,
+      "ram_usage": 65.57377548639009
+  }
+  
+
 .. _eva4_eva.core__item.announce:
 
 item.announce
