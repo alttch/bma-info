@@ -47,9 +47,21 @@ bus::<SVC_ID>::<METHOD>
    * - Description
      - *Calls any remote method (requires management access)*
    * - Parameters
-     - Always required (provide empty Map if the target method has no ones)
+     - required
    * - Returns
      - RPC result as-is
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **node**
+     - String
+     - Remote node ID
+     - **yes**
 
 .. _eva4_eva.repl.__node.append:
 
