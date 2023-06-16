@@ -5,6 +5,7 @@ var BMA_PRODUCTS = {
   "eva-js-framework": "EVA ICS JS Framework",
   rplc: "rPLC",
   psrt: "PSRT",
+  "evaics-app-grafana": "EVA ICS App for Grafana",
   busrt: "BUS/RT",
   "hmi-block-ui": "HMI Block UI"
 };

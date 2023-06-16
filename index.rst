@@ -21,6 +21,7 @@ educational purposes without any restrictions.
     eva4/index
     eva3/index
     eva-mlkit/index
+    evaics-app-grafana/index
     hmi-block-ui/index
     eva-js-framework/index
     rplc/index
