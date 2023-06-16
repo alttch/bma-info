@@ -20,7 +20,7 @@ Manual
   */var/lib/grafana/plugins*)
 
 * edit Grafana configuration (on Linux: */etc/grafana/grafana.ini*) to allow
-  loading the unsigned application plugins
+  loading the unsigned application plugins:
 
 .. code:: ini
 
