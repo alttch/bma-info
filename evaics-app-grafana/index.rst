@@ -15,6 +15,9 @@ The general purpose of the application is to build:
 
 * EVA ICS monitoring dashboards to monitor states of EVA ICS nodes
 
+The application provides the default "Overview" dashboard for EVA ICS node
+monitoring.
+
 EVA ICS Application for Grafana works with :doc:`EVA ICS v4 <../eva4/index>`
 only.
 
@@ -24,6 +27,8 @@ only.
 
     install
     datasources
+    queries
+    controls
 
 .. figure:: ss/overview.png
     :scale: 10%
