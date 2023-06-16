@@ -96,6 +96,12 @@ field name misspelling), as they can be used by different HMI/replication
 services. In case of an unsupported ACL, HMI/replication service may return an
 error when applied.
 
+ACLs can be managed with :ref:`eva4_eva-shell`:
+
+.. code:: shell
+
+   eva acl -h
+
 .. _eva4_api_key:
 
 API key
@@ -111,6 +117,12 @@ users".
 
 By default, API key management and authentication are provided by
 :doc:`svc/eva-aaa-localauth` service.
+
+API keys can be managed with :ref:`eva4_eva-shell`:
+
+.. code:: shell
+
+   eva key -h
 
 .. _eva4_user_account:
 
@@ -128,6 +140,12 @@ By default, API key management and authentication are provided by
 Additional user authentication services available:
 
 * :doc:`svc/eva-aaa-msad` - included in :doc:`enterprise`.
+
+Local users can be managed with :ref:`eva4_eva-shell`:
+
+.. code:: shell
+
+   eva user -h
 
 .. _eva4_session_token:
 

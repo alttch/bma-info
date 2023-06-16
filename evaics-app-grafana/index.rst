@@ -23,6 +23,7 @@ only.
     :maxdepth: 1
 
     install
+    datasources
 
 .. figure:: ss/overview.png
     :scale: 10%
