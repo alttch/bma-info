@@ -73,3 +73,18 @@ subscribe.state_initial
    * - Returns
      - *nothing*
 
+.. _eva4_hmi_ws__unsubscribe.state:
+
+unsubscribe.state
+-----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Unsubscribe from all item state events*
+   * - Parameters
+     - *none*
+   * - Returns
+     - *nothing*
+
