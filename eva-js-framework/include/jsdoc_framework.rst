@@ -32,7 +32,7 @@
 
 .. js:function:: $eva.action.start(oid, wait)
 
-    Call unit action with status=1
+    Call unit action with value=1
 
     :param oid: unit OID
     :type oid: string
@@ -42,7 +42,7 @@
 
 .. js:function:: $eva.action.stop(oid, wait)
 
-    Call unit action with status=0
+    Call unit action with value=0
 
     :param oid: unit OID
     :type oid: string
