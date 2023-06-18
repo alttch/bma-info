@@ -78,16 +78,22 @@ Action commands have the following format:
 
 .. code::
 
-    a[action] <OID> <status> [value]
+    action <OID> exec <value>
+    # or in short
+    a <OID> x <value>
 
 Example:
 
 .. code::
 
-    a unit:tests/motor1 1 34.22
+    a unit:tests/motor1 x 34.22
 
-If a toggle-action is required to be executed, use "t" (or "toggle") as the
-status.
+If a toggle-action is required to be executed, use "t" (or "toggle") with no
+value:
+
+.. code::
+
+    action unit:tests/fan toggle
 
 Encrypted/compressed traps
 --------------------------
