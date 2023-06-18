@@ -28,14 +28,10 @@ action
      - String
      - Unit OID
      - **yes**
-   * - **status**
-     - i16
-     - Desired unit status
-     - **yes**
    * - **value**
      - Any
      - Desired unit value
-     - no
+     - **yes**
    * - **priority**
      - u8
      - Action priority

@@ -49,8 +49,8 @@ The buttons accept additional parameters, separated with semicolons (*;*):
 
 * **label** Sets the button label
 
-* **kind** Sets the button kind. Valid values are *toggle.value*,
-  *toggle.status* and *value*. For logic macros the kind option is ignored
+* **kind** Sets the button kind. Valid values are *toggle* and *value*. For
+  logic macros the kind option is ignored
 
 * **input_width** if *value* kind is used, customizes the input width
 

@@ -55,9 +55,8 @@ Input blocks (actions) should be defined as:
       input:
         - action_map:
           - oid: unit:tests/u1
-            status: st1 # a 16-bit integer variable
+            value: u1_val
           - oid: unit:tests/u2
-            status: st2 # a 16-bit integer variable
             value: u2_val
       output:
         # ....
@@ -93,9 +92,8 @@ Output blocks should be defined as:
           sync: 500ms
         - oid_map:
           - oid: unit:tests/u1
-            status: st1
+            value: u1_val
           - oid: unit:tests/u2
-            status: st2
             value: u2_val
           sync: 1s
           cache: 30s

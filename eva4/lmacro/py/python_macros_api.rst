@@ -746,16 +746,15 @@ action - executes unit control action
 
 .. code-block:: python
 
-    r = action('unit:tests/door', status=1, wait=5)
+    r = action('unit:tests/door', value=1, wait=5)
 
 Parameters:
 
 * **oid** unit OID
-* **status** desired unit status
+* **value** desired unit value
 
 Optionally:
 
-* **value** desired unit value
 * **wait** wait for the completion for the specified number of seconds
 * **priority** queue priority (default is 100, lower is better)
 
@@ -951,7 +950,7 @@ Raises:
 start - executes an action to a unit
 ------------------------------------
 
-Creates unit control action to set its status to 1
+Creates unit control action to set its value to 1
 
 .. code-block:: python
 
@@ -963,7 +962,6 @@ Parameters:
 
 Optionally:
 
-* **value** desired unit value
 * **wait** wait for the completion for the specified number of seconds
 * **priority** queue priority (default is 100, lower is better)
 
@@ -981,7 +979,7 @@ Raises:
 stop - executes an action to stop a unit
 ----------------------------------------
 
-Creates unit control action to set its status to 0
+Creates unit control action to set its value to 0
 
 .. code-block:: python
 
@@ -993,7 +991,6 @@ Parameters:
 
 Optionally:
 
-* **value** desired unit value
 * **wait** wait for the completion for the specified number of seconds
 * **priority** queue priority (default is 100, lower is better)
 

@@ -143,29 +143,14 @@ action is mapped to the service *eva.controller.modbus1*.
 EVA ICS :doc:`items <items>` have two state registers: status (i16) and value
 (Any). The status -1 means that the item is in error-state.
 
-Units use the status register for basic states (ON=1/OFF=0, OPEN=1/CLOSED=0
-etc.) having the value register either unused or mapped to advanced properties
-(e.g. for a motor = speed).
-
-Sensors usually do not use status register (unless they are in error-state)
-having its always = 1 and telemetry written in the value register.
-
-For some setups units may have the same approach: status=1 means OK and
-status=-1 means error, while the value register is used to keep/set unit state
-with actions. This way is recommended when the majority of logic is handled by
-fieldbus PLCs.
-
 Let us read the item states:
 
 .. code:: shell
 
     eva item state \*
 
-*unit:room1/fan* has status=0 (OFF), *sensor:room1/temp* has status=1 (OK),
-both have null in the value register.
-
-In our example, we are using *unit:room1/fan* status register only (fan is on -
-status=1, off - status=0).
+*unit:room1/fan* and *sensor:room1/temp* have status=1 (OK), both have null in
+the value register.
 
 Fieldbus connection
 -------------------
@@ -213,10 +198,9 @@ comments:
             reg: c0
             unit: 1
             map:
-            # block mapping: coil at the offset 0 is mapped to unit:room1/fan status
+            # block mapping: coil at the offset 0 is mapped to unit:room1/fan value
             - offset: 0
               oid: unit:room1/fan
-              prop: status
           # the second block: modbus unit 2, register H0, pulling 2 registers
           - count: 2
             reg: h0
@@ -232,16 +216,14 @@ comments:
           # pull both Modbus units every 200ms
           pull_interval: 0.2
           # action mapping: when there is an action on unit:room1/fan called,
-          # set C0 at Modbus unit 1 to the requested status, the value register
-          # is ignored
+          # set C0 at Modbus unit 1 to the requested value
           #
-          # if the action is completed, the item unit:room1/fan gets its new status during
+          # if the action is completed, the item unit:room1/fan gets its new value during
           # the next pull cycle
           action_map:
             unit:room1/fan:
-              status:
-                reg: c0
-                unit: 1
+              reg: c0
+              unit: 1
           # queue size for unit actions
           action_queue_size: 32
           # verify (read back) the Modbus register after it was modified during the action
@@ -297,7 +279,7 @@ finish, otherwise obtain its uuid and keep running in the background:
     
     eva action toggle unit:room1/fan -w 5
 
-Check the fan (visually and the unit status)
+Check the fan (visually and the unit state)
 
 .. code:: shell
 

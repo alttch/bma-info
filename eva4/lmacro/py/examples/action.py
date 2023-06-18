@@ -1,1 +1,1 @@
-r = action('unit:tests/door', status=1, wait=5)
+r = action('unit:tests/door', value=1, wait=5)

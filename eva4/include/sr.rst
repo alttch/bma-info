@@ -45,9 +45,7 @@ Action scripts are executed with the following parameters:
 
 .. code:: shell
 
-    path/to/script <STATUS> [VALUE]
-
-where status/value is the desired action state.
+    path/to/script <VALUE>
 
 The action is considered as failed if the script exits with a non-zero code.
 

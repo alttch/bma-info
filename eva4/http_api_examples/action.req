@@ -10,7 +10,7 @@ host: localhost:7727
   "params": {
     "i": "unit:tests/door",
     "k": "secretkey",
-    "status": 1,
+    "value": 1,
     "wait": 1
   }
 }
