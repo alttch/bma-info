@@ -112,6 +112,10 @@ Item states
   EVA JS framework handle lvar timers correctly, BOTH an expiration service
   must be setup plus "meta.expires" lvar field set.
 
+* Starting from the version 4.0.2 units do not use status register for logic
+  use the value register only. Actions do not accept "status", the value
+  register for actions is mandatory.
+
 AAA
 ---
 
