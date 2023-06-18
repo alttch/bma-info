@@ -530,7 +530,7 @@ only. There is no login prompt, the credentials are hard-coded directly:
         $eva.login = "op";
         $eva.password = "123";
         $eva.watch("unit:room1/fan",
-            (state) => document.getElementById("fan").value = state.status?"ON":"OFF");
+            (state) => document.getElementById("fan").value = state.value?"ON":"OFF");
         $eva.watch("sensor:room1/temp",
             (state) => document.getElementById("temp").innerHTML = state.value);
         $eva.start();
@@ -707,7 +707,7 @@ include their content directly inside the file:
                   $eva.login = "op";
                   $eva.password = "123";
                   $eva.watch("unit:room1/fan",
-                      (state) => document.getElementById("fan").value = state.status?"ON":"OFF");
+                      (state) => document.getElementById("fan").value = state.value?"ON":"OFF");
                   $eva.watch("sensor:room1/temp",
                       (state) => document.getElementById("temp").innerHTML = state.value);
                   $eva.start();
