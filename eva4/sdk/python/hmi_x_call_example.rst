@@ -61,11 +61,11 @@ call example):
     EOF
     ) | http :7727
 
-If using :doc:`../../../eva-js-framework/index`, the call can be made as:
+If using :doc:`../../../eva-webengine/index`, the call can be made as:
 
 .. code:: javascript
 
-    $eva.call(
+    eva.call(
         'x::my.svc.sensor_set::set',
         'sensor:tests/sensor1',
         { status: 1, value: 25 }

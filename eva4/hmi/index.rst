@@ -37,10 +37,12 @@ HTML pages, on the server side.
 
 .. note::
 
-    It is highly recommended to use :doc:`EVA JS Framework
-    </eva-js-framework/index>`, a JavaScript framework, which is used to
-    quickly develop EVA ICS HMI web applications and handles authentication,
-    interaction, events and other communication tasks.
+    It is highly recommended to use :doc:`../../eva-webengine/index`, a
+    JavaScript/TypeScript framework, which is used to quickly develop EVA ICS
+    HMI web applications and handles authentication, interaction, events and
+    other communication tasks.
+
+See also: :ref:`eva4_quickstart_webhmi`.
 
 Authentication
 ==============

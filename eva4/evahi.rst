@@ -22,8 +22,8 @@ The client is evaHI-based application, so it can be `configured in the same way
 URI. If a front-end server is used, URI should be accessible without user
 authentication to let all application features work properly.
 
-:doc:`EVA JS Framework </eva-js-framework/index>` function *$eva.hiQR* can be
-used to generate configuration QR code for the current authenticated user.
+:doc:`EVA WebEngine <../eva-webengine/index>` function *eva.hiQR* can be used
+to generate configuration QR code for the current authenticated user.
 
 .. youtube:: 1yU3oEUMQpQ
 
@@ -43,12 +43,12 @@ header) and ask it to provide authentication credentials.
 
 If there is no front-end with basic authentication set up for all clients, HMI
 can display login form for everyone, but let evaHI-based clients to try logging
-in automatically via :doc:`EVA JS Framework </eva-js-framework/index>`:
+in automatically via :doc:`../eva-webengine/index`:
 
 .. code-block:: javascript
 
-    if ($eva.in_evaHI) {
-        $eva.start();
+    if (eva.in_evaHI) {
+        eva.start();
     } else {
         // show login form
     }

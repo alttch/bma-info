@@ -74,10 +74,10 @@ See :doc:`svc/eva-kioskman`.
 EVA JS Framework WASM extension
 ===============================
 
-`WASM <https://webassembly.org>`_ extension for :doc:`EVA JS Framework
-</eva-js-framework/index>` offloads state processing from
-the web browser JavaScript engine to the WebAssembly application, allowing
-SCADA HMI to monitor hundreds of items without any client device overhead.
+`WASM <https://webassembly.org>`_ extension for :doc:`/eva-webengine/index`
+offloads state processing from the web browser JavaScript engine to the
+WebAssembly application, allowing SCADA HMI to monitor hundreds of items
+without any client device overhead.
 
 According to tests, EVA JS Framework with WASM extension is about 20x times
 faster, than in regular mode.
@@ -102,7 +102,7 @@ Installation
 
 .. code:: javascript
 
-    $eva.wasm = true;
+    eva.wasm = true;
 
 * The WASM module will be automatically loaded at framework start.
 
@@ -119,7 +119,7 @@ Installation
 
 .. code:: javascript
 
-    $eva.debug = true;
+    eva.debug = true;
 
 * When debug mode is enabled, events processed by the WASM extension are
   prefixed with "W" (e.g. *EVA::Wws state* instead of a regular *EVA::ws
@@ -129,7 +129,7 @@ Installation
 
 .. code:: javascript
 
-    $eva.get_mode(); // "js" for regular, "wasm" for WASM extension
+    eva.get_mode(); // "js" for regular, "wasm" for WASM extension
 
 Licensing
 ---------
@@ -148,7 +148,7 @@ Licensing
 
 .. code:: javascript
 
-    evajw.get_license_expiration(); // returns either null or the license
+    eva.evajw.get_license_expiration(); // returns either null or the license
                                     // expiration timestamp
 
 * The list of domains/IP addresses is encrypted and can not be read.

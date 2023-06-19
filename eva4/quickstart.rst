@@ -501,51 +501,83 @@ Set the user's ACL to *op*.
     SHA256-hashes for deployed passwords should be used in test configurations
     only. See :ref:`AAA Deployment<eva4_iac_aaa>`.
 
-Install :doc:`/eva-js-framework/index`:
+.. _eva4_quickstart_webhmi:
+
+Creating a web-HMI application
+------------------------------
+
+While developing, turn on :doc:`svc/eva-hmi` development mode to allow CORS:
+
+.. code::
+
+    eva svc edit eva.hmi.default
+    # set config/development field to true
+
+Let us use `Vite <https://vitejs.dev>`_, Vanilla JS (TypeScript) and
+:doc:`../eva-webengine/index`:
 
 .. code:: shell
 
-    curl -L \
-        https://pub.bma.ai/eva-js-framework/0.3.44/eva.framework.min.js \
-        -o /opt/eva4/ui/eva.framework.min.js
+   npx --yes create-vite myhmi --template vanilla-ts
+   cd myhmi
+   npm install
+   npm install --save @eva-ics/webengine
 
+Put the application config into *public/config.json* to switch EVA ICS
+WebEngine between development environment and production (consider EVA ICS is
+running on the local host, otherwise correct the API URI):
 
-Put the following HTML into */opt/eva4/ui/index.html*. Any JavaScript front-end
-interface library can be used, but in this example we are using pure vanilla JS
-only. There is no login prompt, the credentials are hard-coded directly:
+.. code:: json
 
-.. code:: html
+   {
+     "api_uri": "http://localhost:7727",
+     "debug": true
+   }
 
-    <html>
-    <head>
-        <title>My first cool EVA ICS HMI</title>
-        <script type="text/javascript" src="eva.framework.min.js"></script>
-    </head>
-    <body>
-        <div>Temperature: <span id="temp"></span></div>
-        <div>Fan:
-            <input id="fan" type="button"
-                onclick="$eva.call('action.toggle', 'unit:room1/fan')" /></div>
-        <script type="text/javascript">
-        $eva.login = "op";
-        $eva.password = "123";
-        $eva.watch("unit:room1/fan",
-            (state) => document.getElementById("fan").value = state.value?"ON":"OFF");
-        $eva.watch("sensor:room1/temp",
-            (state) => document.getElementById("temp").innerHTML = state.value);
-        $eva.start();
-        </script>
-    </body>
-    </html>
+As :doc:`svc/eva-hmi` hosts applications at */ui* URI, put the following
+into *vite.config.js* in the top folder of the project:
+
+.. code:: javascript
+
+    import { defineConfig } from 'vite'
+
+    export default defineConfig({
+        base: '',
+    })
+
+Create a slider button (example:
+https://www.w3schools.com/howto/howto_css_switch.asp) by creating
+*src/slider.css*:
+
+.. literalinclude:: ./include/quickstart/slider.css
+   :language: css
+
+Modify *src/main.ts* as the following:
+
+.. literalinclude:: ./include/quickstart/main.ts
+   :language: typescript
 
 Note that after calling fan actions, the HMI app does not need to update the
-button value. The value is updated in real-time by "$eva.watch" as soon as the
+button value. The value is updated in real-time by "eva.watch" as soon as the
 server reports a new state.
 
-Open http://localhost:7727 (or IP of your system) and HMI application is ready
-to go:
+Run the test server and check your application:
+
+.. code::
+
+   vite --open
 
 .. image:: screenshots/quickstart.png
+
+Put the application into :doc:`svc/eva-hmi`:
+
+.. code:: shell
+
+   vite build
+   echo "{}" > dist/config.json
+   cp -rvf dist/* /opt/eva4/ui/
+
+Open HMI and test: http://localhost:7727
 
 That is all. After understanding this simple example, read other sections of
 EVA ICS documentation to discover the real power of this mighty open-source
@@ -574,8 +606,14 @@ Make a fresh install and append additional services:
     # allow deployment for UI files
     ln -sf /opt/eva4/ui /opt/eva4/runtime/ui
 
-Create a deployment file. As both lmacro code and HMI app are text-only, let us
-include their content directly inside the file:
+Create a tarball of your :ref:`eva4_quickstart_webhmi`:
+
+.. code:: shell
+
+   cd dist
+   tar czf hmi-app.tgz *
+
+Create a deployment file (correct the path to web-HMI application tarball):
 
 .. code:: yaml
 
@@ -684,37 +722,10 @@ include their content directly inside the file:
             acls:
               - op
         upload:
-          - src: https://pub.bma.ai/eva-js-framework/0.3.44/eva.framework.min.js
+            # correct the path to tarball
+          - src: path/to/hmi-app.tgz
             target: ui/
-          - text: |
-              if _1 == 0:
-                stop('unit:room1/fan')
-              elif _1 == 1:
-                start('unit:room1/fan')
-            target: xc/py/room1.fan_control.py
-          - text: |
-              <html>
-              <head>
-                  <title>My first cool EVA ICS HMI</title>
-                  <script type="text/javascript" src="eva.framework.min.js"></script>
-              </head>
-              <body>
-                  <div>Temperature: <span id="temp"></span></div>
-                  <div>Fan:
-                      <input id="fan" type="button"
-                          onclick="$eva.call('action.toggle', 'unit:room1/fan')" /></div>
-                  <script type="text/javascript">
-                  $eva.login = "op";
-                  $eva.password = "123";
-                  $eva.watch("unit:room1/fan",
-                      (state) => document.getElementById("fan").value = state.value?"ON":"OFF");
-                  $eva.watch("sensor:room1/temp",
-                      (state) => document.getElementById("temp").innerHTML = state.value);
-                  $eva.start();
-                  </script>
-              </body>
-              </html>
-            target: ui/index.html
+            extract: true
 
 and deploy it:
 

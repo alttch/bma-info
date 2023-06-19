@@ -19,13 +19,12 @@ educational purposes without any restrictions.
     :maxdepth: 1
 
     eva4/index
-    eva3/index
     eva-mlkit/index
     evaics-app-grafana/index
-    hmi-block-ui/index
-    eva-js-framework/index
+    eva-webengine/index
     rplc/index
     psrt/index
     busrt/index
     common/index
+    legacy
     trademarks

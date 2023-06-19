@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jsdoc3-parser": "^3.0.0"
+  }
+}

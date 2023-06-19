@@ -94,8 +94,11 @@ exclude_patterns = [
     'eva4/lmacro/py/python_macros_api.rst', 'eva4/sdk/python/pydoc',
     'eva3/pydoc', 'eva3/phi_devel.rst', 'busrt/pydoc', 'busrt/include',
     'eva-mlkit/include', 'eva-mlkit/client/py/pydoc',
-    'eva-mlkit/client/R/man.rst', 'eva-js-framework/include',
-    'eva-js-framework/node_modules'
+    'eva-mlkit/client/R/man.rst',
+    'eva-js-framework/include',
+    'eva-js-framework/node_modules',
+    'eva-webengine/include',
+    'eva-webengine/node_modules',
 ]
 
 # The reST default role (used for this markup: `text`) to use for all

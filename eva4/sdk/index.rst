@@ -13,7 +13,7 @@ More examples can be found at https://github.com/eva-ics/eva4/tree/main/contrib
 
 This section contains SDK for back-end services only. For client HMI
 application development, see: :doc:`../ui` and
-:doc:`../../eva-js-framework/index`.
+:doc:`../../eva-webengine/index`.
 
 .. toctree::
     :caption: EVA ICS v4 SDK

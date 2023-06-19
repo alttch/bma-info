@@ -250,8 +250,11 @@ The only steps are required:
   server logs or Web browser development console to see which deprecated
   methods are called)
 
-EVA JS Framework WASM extension
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* it is recommended to switch to :doc:`../eva-webengine/index` which is a
+  successor of EVA JS Framework.
+
+EVA WebEngine/JS Framework WASM extension
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The old framework WASM extension builds are not compatible with EVA ICS v4. Ask
 your Enterprise pack vendor to provide a new extension tar-ball.

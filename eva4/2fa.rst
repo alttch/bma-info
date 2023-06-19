@@ -103,10 +103,19 @@ and other compatible.
 HMI application example
 =======================
 
-OTP is supported out-of-the-box by :doc:`EVA JS Framework
-</eva-js-framework/index>`, starting from the version 0.3.38.
+OTP is supported out-of-the-box by :doc:`../eva-webengine/index`.
 
-Here is an example of two-factor login logic in HMI web application:
+Here is a Vanilla JS (TypeScript) example of two-factor login logic in HMI web
+application.
 
-.. literalinclude:: hmi-examples/2fa_login.html
-   :language: html
+The example requires `qrious <https://www.npmjs.com/package/qrious>`_ module
+installed:
+
+.. code:: shell
+
+   npm install --save https://www.npmjs.com/package/qrious
+
+.. literalinclude:: hmi-examples/2fa_login.ts
+   :language: typescript
+
+See also: :ref:`eva4_quickstart_webhmi`.
