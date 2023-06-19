@@ -1,8 +1,8 @@
 Migration from EVA ICS JS Framework
 ***********************************
 
-EVA ICS WebEngine is fully compatible with EVA ICS JS Framework except the
-following:
+EVA ICS WebEngine is fully compatible with :doc:`../eva-js-framework/index`
+except the following:
 
 * WebEngine is distributed as a ES/UMD modules only (with TypeScript
   definitions)
