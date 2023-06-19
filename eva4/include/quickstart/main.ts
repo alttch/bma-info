@@ -19,8 +19,8 @@ eva.watch("sensor:room1/temp", (state) => {
 
 eva.watch("unit:room1/fan", (state) => {
   const fan = document.getElementById("fan") as HTMLInputElement;
-  fan!.disabled = (state.act as number) > 0; // disable when action is running
-  fan!.checked = state.value > 0;
+  fan.disabled = (state.act as number) > 0; // disable when action is running
+  fan.checked = state.value > 0;
 });
 
 const log = eva.log;
