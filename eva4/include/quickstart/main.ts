@@ -10,8 +10,8 @@ interface Config {
 
 const eva = new Eva();
 
-eva.login = "admin";
-eva.password = "xxx";
+eva.login = "operator";
+eva.password = "secret";
 
 eva.watch("sensor:room1/temp", (state) => {
   document.getElementById("temp")!.innerHTML = state.value;
