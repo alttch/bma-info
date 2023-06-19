@@ -539,10 +539,10 @@ into *vite.config.js* in the top folder of the project:
 
 .. code:: javascript
 
-    import { defineConfig } from 'vite'
+    import { defineConfig } from "vite"
 
     export default defineConfig({
-        base: '',
+        base: "",
     })
 
 Create a slider button (example:
