@@ -78,12 +78,12 @@ Watching states and performing API calls
     // action example, low-level API
     document.getElementById("u").addEventListener("click", () => {
       eva.call("action_toggle", "unit:tests/unit1").then((data) => {
-          log.info("action sent to server, uuid: " + data.uuid)
+          log.info(`action sent to server, uuid: ${data.uuid}`)
           // watch action result
           eva.watch_action(data.uuid, (action) => {
             if (action.uuid) {
                 if (action.finished) {
-                    log.info("action is finished, status: " + action.status);
+                    log.info(`action is finished, status: ${action.status}`);
                 }
             } else {
                 log.error("server error");
@@ -91,7 +91,7 @@ Watching states and performing API calls
           });
         }
       }).catch((err) => {
-        log.error("action failed, code: " + err.code + ", " + err.message);
+        log.error(`action failed: ${err.message} (${err.code})`);
       });
 
 Any EVA ICS API method can be called. The methods are called using :doc:`EVA
