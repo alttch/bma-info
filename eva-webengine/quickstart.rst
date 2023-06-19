@@ -64,11 +64,11 @@ Watching states and performing API calls
     // watch example. Items can have multiple watchers, masks '*' are allowed.
 
     eva.watch("unit:tests/unit1", (state) => {
-          document.getElementById("u").innerHTML = state.status?"ON":"OFF";
+        document.getElementById("u").innerHTML = state.value?"ON":"OFF";
         });
 
     // action example, high-level API
-    async function handle_click() {
+    const handle_click = async() => {
         await eva.action.toggle("unit:tests/unit");
     }
 
@@ -76,11 +76,11 @@ Watching states and performing API calls
         () => { handle_click(); });
 
     // action example, low-level API
-    document.getElementById("u").addEventListener("click", function() {
-      eva.call("action_toggle", "unit:tests/unit1").then(function(data) {
+    document.getElementById("u").addEventListener("click", () => {
+      eva.call("action_toggle", "unit:tests/unit1").then((data) => {
           log.info("action sent to server, uuid: " + data.uuid)
           // watch action result
-          eva.watch_action(data.uuid, function(action) {
+          eva.watch_action(data.uuid, (action) => {
             if (action.uuid) {
                 if (action.finished) {
                     log.info("action is finished, status: " + action.status);
@@ -89,9 +89,10 @@ Watching states and performing API calls
                 log.error("server error");
             }
           });
-        }).catch(function(err) {
-          log.error("action failed, code: " + err.code + ", " + err.message);
-        });
+        }
+      }).catch((err) => {
+        log.error("action failed, code: " + err.code + ", " + err.message);
+      });
 
 Any EVA ICS API method can be called. The methods are called using :doc:`EVA
 ICS HMI JSON RPC API <../eva4/svc/eva-hmi>`.
