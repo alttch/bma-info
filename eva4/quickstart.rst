@@ -574,8 +574,8 @@ Put the application into :doc:`svc/eva-hmi`:
 .. code:: shell
 
    vite build
-   echo "{}" > dist/config.json
-   cp -rvf dist/* /opt/eva4/ui/
+   echo "{}" > ./dist/config.json
+   cp -rvf ./dist/* /opt/eva4/ui/
 
 Open HMI and test: http://localhost:7727
 
