@@ -58,14 +58,12 @@ Item processing, special
 * **clear_unavailable** if true, item state is set to null, if the one is no
   longer available on the back-end (default: false).
 
-* **log_praams** log processing params
+* **log_params** log processing params
 
 Read-only informational variables
 =================================
 
 * **version** engine version
-
-* **api_version** current API version
 
 * **authorized_user** current authorized user
 
