@@ -101,7 +101,7 @@ The config has the following format:
       "engine": {
         "api_uri": "API_URI",
         "api_key": "SECRET",
-        "debug": true,
+        "debug": false,
         "login": "user",
         "password": "secret",
         "set_auth_cookies": true,
