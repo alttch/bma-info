@@ -46,13 +46,8 @@ eva.on(EventKind.LoginOTPSetup, (msg) => {
   focus("otp_code");
 });
 
-fetch("config.json")
-  .then((res) => res.json())
-  .then((config: Config) => {
-    if (config.api_uri) eva.api_uri = config.api_uri;
-    eva.debug = config.debug || false;
-    show_hmi();
-  });
+// if config.json is used
+eva.load_config().then(() => show_hmi());
 
 const show_hmi = () => {
   document.querySelector<HTMLDivElement>("#app")!.innerHTML = `

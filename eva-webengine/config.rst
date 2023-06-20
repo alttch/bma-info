@@ -80,3 +80,48 @@ Read-only informational variables
 * **server_info** contains actual server info (output of API *test* method)
 
 * **tsdiff** time difference between client and server
+
+Loading configuration
+=====================
+
+The engine has got a built-in method to load configuration JSON:
+
+.. code:: typescript
+
+   eva.load_config("path/to/config.json").then((_config) => start_your_hmi());
+
+If the path is not specified, the engine tries to load *config.json* file from
+the path where the compiled JS is located.
+
+The config has the following format:
+
+.. code:: json
+
+    {
+      "engine": {
+        "api_uri": "API_URI",
+        "api_key": "SECRET",
+        "debug": true,
+        "login": "user",
+        "password": "secret",
+        "set_auth_cookies": true,
+        "state_updates": true,
+        "wasm": false,
+        "ws_mode": true,
+        "log_params": {
+          "level": 20,
+          "records": 200
+        }
+        "interval": {
+          "ajax_reload": 2,
+          "log_reload": 2,
+          "action_watch": 0.5,
+          "heartbeat": 5,
+          "reload": 5,
+          "restart": 1,
+          "ws_buf_ttl": 0
+        }
+      }
+    }
+
+All the configuration fields are optional.

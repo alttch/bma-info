@@ -71,15 +71,15 @@ HMI Kiosk manager
 
 See :doc:`svc/eva-kioskman`.
 
-EVA JS Framework WASM extension
-===============================
+EVA ICS WebEngine WASM extension
+================================
 
 `WASM <https://webassembly.org>`_ extension for :doc:`/eva-webengine/index`
 offloads state processing from the web browser JavaScript engine to the
 WebAssembly application, allowing SCADA HMI to monitor hundreds of items
 without any client device overhead.
 
-According to tests, EVA JS Framework with WASM extension is about 20x times
+According to tests, EVA ICS WebEngine with WASM extension is about 20x times
 faster, than in regular mode.
 
 Installation
@@ -103,6 +103,8 @@ Installation
 .. code:: javascript
 
     eva.wasm = true;
+    // or for eva-webengine >= 0.5.10
+    eva.wasm = "path/to/evajw.js";
 
 * The WASM module will be automatically loaded at framework start.
 

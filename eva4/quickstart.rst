@@ -611,6 +611,7 @@ Create a tarball of your :ref:`eva4_quickstart_webhmi`:
 .. code:: shell
 
    cd dist
+   echo "{}" > ./config.json
    tar czf hmi-app.tgz *
 
 Create a deployment file (correct the path to web-HMI application tarball):

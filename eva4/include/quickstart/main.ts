@@ -25,14 +25,10 @@ eva.watch("unit:room1/fan", (state) => {
 
 const log = eva.log;
 
-fetch("config.json")
-  .then((res) => res.json())
-  .then((config: Config) => {
-    if (config.api_uri) eva.api_uri = config.api_uri;
-    eva.debug = config.debug || false;
-    eva.start();
-    show_hmi();
-  });
+eva.load_config().then(() => {
+  eva.start();
+  show_hmi();
+});
 
 const show_hmi = () => {
   document.querySelector<HTMLDivElement>("#app")!.innerHTML = `

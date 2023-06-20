@@ -47,6 +47,9 @@
   async: true
 - name: Eva#get_mode
   alias: Eva.get_mode
+- name: Eva#load_config
+  alias: Eva.load_config
+  async: true
 - name: Eva#start
   alias: Eva.start
 - name: Eva#system_name

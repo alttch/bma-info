@@ -26,3 +26,7 @@ Types exported
 * **StateProp** Item state property
 
 * **SvcMessage** Service messages (OTP etc.)
+
+* **EvaConfig** Configuration payload
+
+* **EvaEngineConfig** Engine configuration payload

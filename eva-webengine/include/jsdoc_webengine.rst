@@ -97,6 +97,15 @@
 
     :return: "js" or "wasm"
 
+.. js:function:: Eva.load_config(config_path)
+
+    Load JSON configuration
+
+    :param config_path: config path (default: config.json)
+    :type config_path: string
+    :return: Promise object
+    :async: Async function/Promise
+
 .. js:function:: Eva.log_start(log_level)
 
     Start log processing
