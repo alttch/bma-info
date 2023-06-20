@@ -539,11 +539,11 @@ into *vite.config.js* in the top folder of the project:
 
 .. code:: javascript
 
-    import { defineConfig } from "vite"
+    import { defineConfig } from "vite";
 
     export default defineConfig({
         base: "",
-    })
+    });
 
 Create a slider button (example:
 https://www.w3schools.com/howto/howto_css_switch.asp) by creating
