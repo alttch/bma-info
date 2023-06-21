@@ -52,7 +52,7 @@ The buttons accept additional parameters, separated with semicolons (*;*):
 * **kind** Sets the button kind. Valid values are *toggle* and *value*. For
   logic macros the kind option is ignored
 
-* **input_width** if *value* kind is used, customizes the input width
+* **input_size** if *value* kind is used, customizes the input size
 
 * **busy** allows to choose another EVA ICS item to use as the action busy
   indicator. Useful for logic macros buttons. If a sensor is used, busy status
