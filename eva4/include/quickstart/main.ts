@@ -3,11 +3,6 @@ import "./slider.css";
 
 import { Eva } from "@eva-ics/webengine";
 
-interface Config {
-  api_uri?: string;
-  debug?: boolean;
-}
-
 const eva = new Eva();
 
 eva.login = "operator";
