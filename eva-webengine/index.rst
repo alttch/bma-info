@@ -1,6 +1,11 @@
 EVA ICS WebEngine
 *****************
 
+.. image:: webengine.png
+    :width: 450
+    :class: no-scaled-link
+    :align: right
+
 EVA ICS WebEngine is a JavaScript set of libraries for both web browsers and
 Node.js applications. It is a successor of :doc:`../eva-js-framework/index`.
 
