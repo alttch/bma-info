@@ -39,7 +39,7 @@ To allow external connections to EVA ICS node, open BUS/RT port by editing
 Add "- 0.0.0.0:7777" line to sockets array (as there is no strong
 authentication in BUS/RT, in production it is highly recommended to use an
 external IP of a private dedicated network only). Do not forget to restart EVA
-ICS node after the port is modified.
+ICS node after the bus configuration is modified.
 
 Source code
 ===========
