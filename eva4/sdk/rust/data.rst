@@ -16,7 +16,7 @@ To connect to the registry, use "init_registry" method of the initial payload:
 
 .. code:: rust
 
-    let registry = initial.init_registry();
+    let registry = initial.init_registry(&rpc);
 
 Service registry methods automatically operate under a key path
 *eva/svc_data/<SVC_ID>* and it is not necessary to set key prefixes.
