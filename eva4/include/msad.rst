@@ -34,6 +34,12 @@ and Computers* and create an organizational unit (default - *EVA*)
     :scale: 70%
     :alt: create AD OU
 
+or with Powershell:
+
+.. code:: shell
+
+   New-ADOrganizationalUnit -Name "EVA"
+
 Create security groups inside the organizational unit. Group names must match
 IDs of EVA ICS ACLs:
 
@@ -41,10 +47,22 @@ IDs of EVA ICS ACLs:
     :scale: 70%
     :alt: create AD group
 
+or with Powershell:
+
+.. code:: shell
+
+   New-ADGroup -Name "operator" -Path "OU=EVA,DC=your,DC=domain,DC=com"
+
 Assign a security group to a domain user. If multiple security groups are
 assigned, a combined ACL is created. If the required ACL ID does not exist,
 authentications attempts are considered as failed, despite the user may have
 additional existing ACLs assigned.
+
+or with Powershell:
+
+.. code:: shell
+
+   Add-ADGroupMember -Identity "user" -Members "operator"
 
 Usage
 =====
