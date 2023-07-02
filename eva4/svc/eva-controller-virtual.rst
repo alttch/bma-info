@@ -164,3 +164,176 @@ set
      - Any
      - Item state value
      - no
+
+.. _eva4_eva.controller.virt__var.destroy:
+
+var.destroy
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Destroy virtual variable*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Variable ID
+     - **yes**
+
+.. _eva4_eva.controller.virt__var.get:
+
+var.get
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get virtual variable value*
+   * - Parameters
+     - required
+   * - Returns
+     - value, single or list
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Variable ID
+     - **yes**
+
+.. _eva4_eva.controller.virt__var.list:
+
+var.list
+--------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List virtual variables*
+   * - Parameters
+     - required
+   * - Returns
+     - Virtual variables and their values
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **full**
+     - bool
+     - Full output (id/value)
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+      {
+          "id": "some.var1"
+      },
+      {
+          "id": "some.var2"
+      },
+      {
+          "id": "some.var3"
+      }
+  ]
+  
+
+.. _eva4_eva.controller.virt__var.set:
+
+var.set
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set virtual variable value*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Variable ID
+     - **yes**
+   * - **value**
+     - Any
+     - value to set
+     - **yes**
+
+.. _eva4_eva.controller.virt__var.set_bulk:
+
+var.set_bulk
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set virtual variable values in bulk*
+   * - Parameters
+     - required
+   * - Returns
+     - Operation status: failed-to-set vars list or an empty dict
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - Vec<String>
+     - variable IDs
+     - **yes**
+   * - **values**
+     - Vec<Any>
+     - values to set
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+    "failed": [ "var1" ]
+  }
+
+.. include:: ../include/controller_virtual.rst
+

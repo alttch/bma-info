@@ -118,6 +118,8 @@
     which can be used for automation tests, demos and other related purposes.
   tpl: svc-tpl-controller-virtual.yml
   api: svc/controller-virtual/eapi.yml
+  xtr: |
+    .. include:: ../include/controller_virtual.rst
 - nam: eva.filemgr.main
   des: File manager service
   exe: svc/eva-filemgr

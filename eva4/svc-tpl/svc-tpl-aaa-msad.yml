@@ -10,7 +10,7 @@ config:
   ## domain=ad_host, e.g. mydomain.com: ad.mydomain.com (or IP)
   #hosts:
   #  mydomain.com: ad.mydomain.com
-  #  mydonain2.com: 1.2.3.4
+  #  mydomain2.com: 1.2.3.4
   ## optional default domain, if no domain specified in user name
   #default_domain: mydomain.com
   ## optional default domain controller host/ip
