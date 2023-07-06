@@ -20,7 +20,7 @@ Arrow stream.
   the result table must be created with splitting all received tables in
   columns (arrays) and joining them back into a single one.
 
-URI: **/ml/api/query.item.state_history**
+**POST /ml/api/query.item.state_history**
 
 Required HTTP request headers:
 
@@ -76,7 +76,7 @@ and prototype modelling. The method can push data to a single database only. If
 the data need to be pushed to different databases, call the method for each one
 separately.
 
-URI: **/ml/api/upload.item.state_history**
+**POST /ml/api/upload.item.state_history**
 
 Required HTTP request headers:
 
