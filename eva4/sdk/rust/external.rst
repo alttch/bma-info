@@ -61,7 +61,7 @@ Registering the service in Windows
 
 .. code:: shell
 
-    SC create EVA.my.external.svc1 binPath=path\to\file.exe
+    SC.exe create EVA.my.external.svc1 binPath=path\to\file.exe
 
 Start/stop/manage the service using CLI or Windows service manager.
 
@@ -78,3 +78,10 @@ The service handles the following RPC methods:
 
     # external svc methods can be still called with "svc call"
     eva svc call my.external.svc1 hello
+
+External BUS/RT programs are not listed in EVA ICS services ("eva svc list"),
+however they can be listed in BUS/RT broker:
+
+.. code:: shell
+
+   eva broker client.list
