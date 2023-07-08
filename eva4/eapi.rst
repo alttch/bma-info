@@ -359,6 +359,14 @@ API keys modification events are sent to AAA/KEY/KEY_ID
 Key managers must also respond to "key.get" method, providing id/key fields for
 replication and other services.
 
+Service topics
+--------------
+
+Services may use own topics e.g. to communicate with related services on the
+same bus. The topics MUST start with
+
+SVE/<SVC_ID>
+
 Security model and call ACLs
 ============================
 
