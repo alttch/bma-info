@@ -168,6 +168,6 @@ called *SwapModbusEndianess*, which can be used in PLC programs:
     use rplc::io::modbus::SwapModbusEndianess;
 
     // for input data
-    let reg_in = ctx.reg_in.to_swapped_modbus_endianess();
+    let reg_in = ctx.reg_in.to_swapped_modbus_endianness();
     // for output data
-    ctx.reg_out = value.to_swapped_modbus_endianess();
+    ctx.reg_out = value.to_swapped_modbus_endianness();
