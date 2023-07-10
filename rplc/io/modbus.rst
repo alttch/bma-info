@@ -148,3 +148,26 @@ Coils and discrete inputs can be synchronized with boolean variables only.
 Float numbers can be directly synchronized if IEEE754 encoding is used on the
 target device. Otherwise it is necessary to define a temporary context variable
 and prepare it in PLC programs.
+
+IEEE-754 endianness
+===================
+
+Modbus is generally a big-endian protocol, however there is no strict standard
+how to store IEEE-754 float numbers.
+
+Historically Bohemia Automation products have little-endian IEEE-754 by
+default, as this representation is widely popular in Europe. However
+synchronized equipment may provide data packed in IEEE-754 big-endian or
+require big-endian registers to be set.
+
+To solve this problem, rPLC provides a special trait for both f32 and f64,
+called *SwapModbusEndianess*, which can be used in PLC programs:
+
+.. code:: rust
+
+    use rplc::io::modbus::SwapModbusEndianess;
+
+    // for input data
+    let reg_in = ctx.reg_in.to_swapped_modbus_endianess();
+    // for output data
+    ctx.reg_out = value.to_swapped_modbus_endianess();
