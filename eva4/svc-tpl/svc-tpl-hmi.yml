@@ -1,6 +1,6 @@
 # The default HMI service
 command: svc/eva-hmi
-workers: 4
+workers: 1
 bus:
   path: var/bus.ipc
 config:
@@ -35,4 +35,4 @@ config:
 user: eva
 timeout:
   default: 10
-  startup: 15
+  startup: 45
