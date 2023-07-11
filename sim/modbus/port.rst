@@ -26,7 +26,7 @@ where the service configuration template is:
 
 If binding to serial ports, ensure the service user has access to devices.
 
-A single port listens on multiple TCP/serial ports if required.
+A single port service can listen on multiple TCP/serial ports if required.
 
 EAPI
 ====
