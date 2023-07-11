@@ -1,17 +1,31 @@
-port: Virtual Modbus port (TCP or RTU)
+real {
+  scada: SCADA
+  plc1: PLC
+  plc2: PLC
+}
 
-sensor1: Sensor 1
-sensor2: Sensor 2
-sensor3: Sensor 3
+real.scada -- virtual
+real.plc1 -- virtual
+real.plc2 -- virtual
 
-relay1: Relay 1
-relay2: Relay 2
-relay3: Relay 3
+virtual {
 
-port -- sensor1
-port -- sensor2
-port -- sensor3
+  port: Virtual Modbus port (TCP or RTU)
 
-port -- relay1
-port -- relay2
-port -- relay3
+  sensor1: Sensor 1
+  sensor2: Sensor 2
+  sensor3: Sensor 3
+
+  relay1: Relay 1
+  relay2: Relay 2
+  relay3: Relay 3
+
+  port -- sensor1
+  port -- sensor2
+  port -- sensor3
+
+  port -- relay1
+  port -- relay2
+  port -- relay3
+}
+
