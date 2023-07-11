@@ -18,7 +18,7 @@ Deployment
 
 .. code:: shell
 
-   eva svc create eva.svc.ml /opt/eva4/sim/svc-tpl-sim-modbus-relay.yml
+   eva svc create sim.modbus1.relay1 /opt/eva4/sim/svc-tpl-sim-modbus-relay.yml
 
 where the service configuration template is:
 

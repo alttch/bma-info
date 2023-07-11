@@ -36,7 +36,7 @@ Deployment
 
 .. code:: shell
 
-   eva svc create eva.svc.ml /opt/eva4/sim/svc-tpl-sim-modbus-generic.yml
+   eva svc create sim.modbus1.sensor1 /opt/eva4/sim/svc-tpl-sim-modbus-sensor.yml
 
 where the service configuration template is:
 
