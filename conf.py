@@ -95,6 +95,7 @@ exclude_patterns = [
     'eva3/pydoc', 'eva3/phi_devel.rst', 'busrt/pydoc', 'busrt/include',
     'eva-mlkit/include', 'eva-mlkit/client/py/pydoc',
     'eva-mlkit/client/R/man.rst',
+    'sim/include/autogen',
     'eva-js-framework/include',
     'eva-js-framework/node_modules',
     'eva-webengine/include',

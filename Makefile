@@ -55,6 +55,7 @@ clean:
 prepare:
 	cd eva4 && make prepare
 	cd eva3 && make prepare
+	cd sim && make prepare
 	cd eva-mlkit && make prepare
 	cd eva-js-framework && make prepare
 	cd rplc && make prepare

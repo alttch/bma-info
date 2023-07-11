@@ -1,0 +1,8 @@
+command: sim/sim-modbus-generic
+bus:
+  path: var/bus.ipc
+config:
+  port_svc: sim.modbus1.port
+  unit: 1
+  persistent: true
+user: eva
