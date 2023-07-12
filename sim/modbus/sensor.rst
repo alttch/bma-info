@@ -15,13 +15,13 @@ holding or input register (*h@0* or *i@0*).
 Using the *source/kind* field in the configuration, the service can modify the
 register in the following way:
 
-* **none** no modifications. The register(s) can accept external write commands
+* **none** no modification. The register(s) can accept external write commands
 
 * **random** a random value, changed once a second
 
 * **timestamp** server timestamp, changed once a second
 
-* **udp** get value from UDP port (the value must be sent as raw bytes)
+* **udp** gets values from UDP port (the value must be sent as raw bytes)
 
 With *udp* source the sensor can read data from any external generator e.g.
 from `Matlab Simulink <https://www.mathworks.com/products/simulink.html>`_. The

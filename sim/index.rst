@@ -14,8 +14,8 @@ The source code is available at https://github.com/eva-ics/sim
 Currently Virtual Fieldbus Simulator supports Modbus simulation only.
 
 EVA ICS can combine both Virtual Fieldbus Simulator and SCADA services on the
-same machine, however there are no internal bus method for SCADA services to
-synchronize data with the virtual fieldbus.
+same machine, however there are no internal bus methods for SCADA services to
+directly synchronize data with the virtual fieldbus.
 
 To connect to a virtual fieldbus, the standard services must be used (e.g. 
 Modbus: :doc:`../eva4/svc/eva-controller-modbus`) as any software/hardware acts
