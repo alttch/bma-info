@@ -5,7 +5,7 @@ Virtual Fieldbus Simulator can simulate Modbus ports and devices. In virtual
 Modbus the port (entry point) and all connected devices are simulated by
 independent EVA ICS deployed services.
 
-.. figure:: ../schemas/modbus.svg
+.. figure:: ../schemas/modbus.png
     :scale: 60%
     :alt: Virtual Modbus
 

@@ -4,7 +4,7 @@ Virtual Fieldbus Simulator
 EVA ICS Virtual Fieldbus Simulator is a pack of services which can simulate a
 virtual fieldbus on any :doc:`EVA ICS v4<../eva4/index>` node.
 
-.. figure:: ./schemas/common.svg
+.. figure:: ./schemas/common.png
     :scale: 60%
     :alt: Virtual Fieldbus
     :align: right
