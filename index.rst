@@ -1,5 +1,5 @@
-Bohemia Automation Informational System
-***************************************
+Bohemia Automation Information System
+*************************************
 
 This web site contains technical documentation for engineers.
 

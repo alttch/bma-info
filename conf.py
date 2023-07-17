@@ -275,7 +275,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'BMAIS.tex', 'Bohemia Automation Informational System', 'BMA',
+    (master_doc, 'BMAIS.tex', 'Bohemia Automation Information System', 'BMA',
      'manual'),
 ]
 
@@ -303,7 +303,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'bma', 'Bohemia Automation Informational System',
+man_pages = [(master_doc, 'bma', 'Bohemia Automation Information System',
               [author], 1)]
 
 # If true, show URL addresses after external links.
@@ -315,7 +315,7 @@ man_pages = [(master_doc, 'bma', 'Bohemia Automation Informational System',
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'BMA', 'Bohemia Automation Informational System', author,
+    (master_doc, 'BMA', 'Bohemia Automation Information System', author,
      'BMA', 'World-leadning industrial IoT technologies', 'Industrial IoT'),
 ]
 
