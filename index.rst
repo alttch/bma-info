@@ -22,6 +22,7 @@ educational purposes without any restrictions.
     eva-mlkit/index
     evaics-app-grafana/index
     eva-webengine/index
+    eva-webengine-react/index
     rplc/index
     sim/index
     psrt/index

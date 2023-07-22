@@ -4,6 +4,7 @@ var BMA_PRODUCTS = {
   "eva-mlkit": "EVA ICS Machine Learning kit",
   sim: "Virtual Fieldbus Simulator",
   "eva-webengine": "EVA ICS WebEngine",
+  "eva-webengine-react": "EVA ICS WebEngine React",
   "eva-js-framework": "EVA ICS JS Framework",
   rplc: "rPLC",
   psrt: "PSRT",

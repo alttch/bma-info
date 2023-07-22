@@ -15,6 +15,8 @@ Node.js applications. It is a successor of :doc:`../eva-js-framework/index`.
 
 * General documentation about HMI client apps: see :doc:`../eva4/ui`.
 
+* :doc:`../eva-webengine-react/index`
+
 EVA ICS WebEngine is written in TypeScript. It is highly recommended to use
 TypeScript instead of JavaScript to get all engine benefits (types,
 auto-completion etc.).

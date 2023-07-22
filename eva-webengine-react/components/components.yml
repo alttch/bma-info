@@ -1,0 +1,283 @@
+- name: HMIApp
+  preview_width: 300
+  description: |
+    Base application class. Handles user authorization, displays the
+    application dashboard if successful.
+  parameters:
+    - name: Dashboard
+      type: JSX.Element
+      description: |
+        displayed with parameters *engine* and *logout* (contains logout function)
+      required: true
+    - name: login_props
+      type: LoginProps (object)
+      description: Login form properties
+      required: true
+    - &ENGINE
+      name: engine
+      type: Eva
+      description: WebEngine object (if no default set)
+  types:
+    - name: FunctionLogout
+  interfaces:
+    - name: LoginProps
+  css:
+    - name: div.eva.login.container
+      description: the primary container
+    - name: div.eva.login.logo
+      description: application logo
+    - name: div.eva.login.header
+      description: application name / company name
+    - name: div.eva.login.form-container
+      description: the primary login form container
+    - name: form.eva.login
+      description: login forms
+    - name: div.eva.login.error
+      description: error messages
+    - name: div.eva.login.row.text
+      description: short texts
+    - name: input.eva.login
+      description: text inputs
+    - name: button.eva.login
+      description: action buttons
+    - name: div.eva.login.progress
+      description: login progress message
+    - name: div.eva.login.widerow
+      description: long texts (OTP)
+    - name: div.eva.login.qr
+      description: QR code container (OTP)
+    - name: div.eva.login.row.remember
+      description: remember credentials container
+    - name: input.eva.login.checkbox
+      description: remember credentials checkbox
+- name: ItemValue
+  preview_width: 100
+  description: Outputs a single item value. Updated in real-time.
+  parameters:
+    - name: oid
+      type: string
+      description: item OID
+      required: true
+    - name: digits
+      type: number
+      description: round digits after comma
+    - name: units
+      type: string
+      description: value units
+    - name: threshold
+      type: Array<ItemValueThreshold>
+      description: alters value CSS classes according to threshold rules
+    - name: format_with
+      type: "(value: any) => any"
+      description: a custom function to format value
+    - *ENGINE
+  interfaces:
+    - name: ItemValueThreshold
+  css:
+    - name: span.eva.state
+      description: base class
+    - name: ok
+      description: "item status = 1 (ok)"
+    - name: error
+      description: "item status = -1 (error)"
+    - name: disconnected
+      description: the source node is disconnected
+- name: ItemValueTable
+  preview_width: 300
+  description: Outputs a table of item values
+  parameters:
+    - name: items
+      type: Array<ItemValueDisplay>
+      description: items to display
+      required: true
+    - name: title
+      type: string
+      description: table title
+    - *ENGINE
+  interfaces:
+    - name: ItemValueDisplay
+    - name: ItemValueThreshold
+  css:
+    - name: table.eva.state.valuetable
+      description: base table class
+    - name: tbody.eva.state.valuetable
+      description: base table body class
+    - name: tr.eva.state.valuetable
+      description: base table row
+    - name: tr.eva.state.valuetable.header
+      description: table title row
+    - name: td.eva.state.valuetable.label
+      description: label columns
+    - name: td.eva.state.valuetable.value
+      description: value columns
+- name: ControlButtonToggle
+  preview_width: 150
+  description: "Unit toggle control button (see :ref:`eva4_hmi_http__action.toggle`)"
+  parameters:
+    - name: oid
+      type: string
+      description: Unit OID
+      required: true
+    - name: label
+      type: string
+      description: Button label
+    - name: css_class
+      type: string
+      description: custom button css class
+    - &ACTION_ON_SUCCESS
+      name: on_success
+      type: "(result: ActionResult) => void"
+      description: called on action success
+    - &ACTION_ON_FAIL
+      name: on_fail
+      type: "(err: EvaError) => void"
+      description: called on action fail
+    - *ENGINE
+  css:
+    - name: div.eva.button.container.toggle.CSS_CLASS
+      description: primary button container
+    - name: label.eva.button.switch
+      description: button label container
+    - name: span.eva.button.slider.CSS_CLASS
+      description: button slider
+    - name: div.eva.button.label.slider.CSS_CLASS
+      description: button label
+- name: ControlButtonValue
+  preview_width: 220
+  description: "Unit action value input and apply button (see :ref:`eva4_hmi_http__action`)"
+  parameters:
+    - name: oid
+      type: string
+      description: Unit OID
+      required: true
+    - name: label
+      type: string
+      description: Button label
+    - name: css_class
+      type: string
+      description: custom button css class
+    - name: input_size
+      type: number
+      description: value input size
+    - *ACTION_ON_SUCCESS
+    - *ACTION_ON_FAIL
+    - *ENGINE
+  css:
+    - name: div.eva.button.container.value.CSS_CLASS
+      description: primary button container
+    - name: input.eva.button.value.CSS_CLASS
+      description: value input
+    - name: div.eva.button.input.label.CSS_CLASS
+      description: text label
+    - name: button.eva.button.input.apply.CSS_CLASS
+      description: apply button
+- name: ControlButtonRun
+  preview_width: 100
+  description: "Executes a logical macro (see :ref:`eva4_hmi_http__run`)"
+  parameters:
+    - name: oid
+      type: string
+      description: Lmacro OID
+      required: true
+    - name: params
+      type: object
+      description: additional call parameters (lmacro arguments)
+    - name: label
+      type: string
+      description: Button label
+    - name: busy
+      type: string
+      description: Item OID to get busy status from
+    - name: css_class
+      type: string
+      description: custom button css class
+    - *ACTION_ON_SUCCESS
+    - *ACTION_ON_FAIL
+    - *ENGINE
+  css:
+    - name: div.eva.button.container.run.CSS_CLASS
+      description: primary button container
+    - name: button.eva.button.run.CSS_CLASS
+      description: run button
+- name: ControlBlock
+  preview_width: 400
+  description: "Contains multiple control buttons"
+  parameters:
+    - name: buttons
+      type: Array<ControlButtonDisplay>
+      description: buttons to display
+      required: true
+    - name: title
+      type: string
+      description: block title
+    - *ACTION_ON_SUCCESS
+    - *ACTION_ON_FAIL
+    - *ENGINE
+  css:
+    - name: div.eva.button.block
+      description: primary block container
+    - name: div.eva.button.block_container
+      description: internal block container
+  types:
+    - name: ControlButtonKind
+  interfaces:
+    - name: ControlButtonDisplay
+- name: LineChart
+  preview_width: 450
+  description: "Displays a line chart (based on Chart.js v4)"
+  required:
+    - "chart.js"
+    - "chartjs-adapter-date-fns"
+  parameters_include: "See :ref:`useEvaStateHistory <eva_webengine_react_use_evastatehistory>` hook."
+  parameters:
+    - name: colors
+      type: Array<string>
+      description: line colors
+    - name: labels
+      type: Array<string>
+      description: line labels
+    - name: title
+      type: string
+      description: chart title
+    - name: options
+      type: any
+      description: custom Chart.js options
+    - *ENGINE
+  css:
+    - name: div.eva.chart.container
+      description: primary chart container
+    - name: div.eva.chart.error
+      description: chart error messages
+    - name: div.eva.chart.loading
+      description: chart loading progress messages
+- name: Canvas
+  preview_width: 400
+  description: |
+    Displays a classical HMI canvas with values and control elements on it.
+    Element positions are specified either in CSS or in their display properties.
+  parameters:
+    - name: image
+      type: string
+      description: background image
+    - name: css_class
+      type: string
+      description: custom css class
+    - name: items
+      type: Array<ItemValueDisplay>
+      description: items to display
+    - name: buttons
+      type: Array<ControlButtonDisplay>
+      description: buttons to display
+    - *ACTION_ON_SUCCESS
+    - *ACTION_ON_FAIL
+    - *ENGINE
+  css:
+    - name: div.eva.canvas.container.CSS_CLASS
+      description: primary container
+    - name: div.eva.canvas.area.CSS_CLASS
+      description: working area (secondary container)
+    - name: div.eva.canvas.element.CSS_CLASS
+      description: value and control containers
+  interfaces:
+    - name: ControlButtonDisplay
+    - name: ItemValueDisplay

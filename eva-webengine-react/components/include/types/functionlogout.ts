@@ -1,0 +1,1 @@
+type FunctionLogout = () => void;

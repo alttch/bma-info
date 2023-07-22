@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -W
+SPHINXOPTS    = 
 SPHINXBUILD   = ./venv/bin/sphinx-build
 PAPER         =
 BUILDDIR      = _build
@@ -57,6 +57,7 @@ prepare:
 	cd eva3 && make prepare
 	cd sim && make prepare
 	cd eva-mlkit && make prepare
+	cd eva-webengine-react && make prepare
 	cd eva-js-framework && make prepare
 	cd rplc && make prepare
 	cd busrt && make prepare
