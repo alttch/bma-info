@@ -61,6 +61,12 @@ Parameters
 Interfaces
 ===========
 
+CanvasPosition
+--------------
+
+.. literalinclude:: include/interfaces/canvasposition.ts
+   :language: typescript
+
 ControlButtonDisplay
 --------------------
 

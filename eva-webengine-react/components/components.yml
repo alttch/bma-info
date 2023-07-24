@@ -279,5 +279,6 @@
     - name: div.eva.canvas.element.CSS_CLASS
       description: value and control containers
   interfaces:
+    - name: CanvasPosition
     - name: ControlButtonDisplay
     - name: ItemValueDisplay
