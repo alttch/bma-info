@@ -1,7 +1,7 @@
 EVA ICS WebEngine React
 ***********************
 
-EVA ICS WebEngine is a pack of low-code components to use with `React
+EVA ICS WebEngine React is a pack of low-code components to use with `React
 <https://react.dev>`_ framework. The library uses
 :doc:`../eva-webengine/index` for client-server communication.
 
