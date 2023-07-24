@@ -46,8 +46,8 @@ useEvaStateHistory
 React hook, which contains historical state of EVA ICS item. The state is
 automatically updated in real time.
 
-The hook is used in Chart component. It also can be used to output various
-analytics tables and custom charts.
+The hook is used in :doc:`components/linechart` component. It also can be used
+to output various analytics tables and custom charts.
 
 Parameters
 ----------

@@ -11,11 +11,13 @@ const on_fail = (err: EvaError) => {
 
 const MyBlock = () => {
   return (
-    <ControlButtonToggle
-      oid="unit:tests/gate1"
-      label="Gate1"
-      on_success={on_success}
-      on_fail={on_fail}
-    />
+    <>
+      <ControlButtonToggle
+        oid="unit:tests/gate1"
+        label="Gate1"
+        on_success={on_success}
+        on_fail={on_fail}
+      />
+    </>
   );
 };

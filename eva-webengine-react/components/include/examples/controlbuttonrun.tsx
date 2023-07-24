@@ -11,11 +11,13 @@ const on_fail = (err: EvaError) => {
 
 const MyBlock = () => {
   return (
-    <ControlButtonRun
-      oid="lmacro:tests/open_all"
-      label="Open"
-      on_success={on_success}
-      on_fail={on_fail}
-    />
+    <>
+      <ControlButtonRun
+        oid="lmacro:tests/open_all"
+        label="Open"
+        on_success={on_success}
+        on_fail={on_fail}
+      />
+    </>
   );
 };
