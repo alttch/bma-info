@@ -23,7 +23,7 @@ The arguments can be omitted if the default web engine object is set:
 Creating a new project
 ======================
 
-Let us create a new web project with `Vite <https://vitejs.dev/>`:
+Let us create a new web project with `Vite <https://vitejs.dev/>`_:
 
 .. code:: shell
 
