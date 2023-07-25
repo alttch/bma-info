@@ -5,8 +5,9 @@ EVA ICS WebEngine React is a pack of low-code components to use with `React
 <https://react.dev>`_ framework. The library uses
 :doc:`../eva-webengine/index` for client-server communication.
 
-.. figure:: wer.png
-    :width: 400
+.. image:: wer_logo.png
+    :width: 450
+    :class: no-scaled-link
     :align: right
 
 All the provided components are highly customizable with parameters and CSS
@@ -47,3 +48,9 @@ template):
    commons
    components/index
    hooks
+
+.. figure:: wer_dark.png
+    :width: 400
+
+.. figure:: wer_light.png
+    :width: 400
