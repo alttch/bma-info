@@ -32,6 +32,27 @@ microseconds.
 
    PLC program name (function name) can not be longer than 14 symbols.
 
+Shifting
+========
+
+If PLC programs interfere each other, their loops can be shifted:
+
+.. code:: rust
+
+    use rplc::prelude::*;
+
+    #[plc_program(loop = "500ms")]
+    fn p1() {
+        // do something
+    }
+
+    #[plc_program(loop = "500ms", shift = "200ms")]
+    fn p2() {
+        // do something
+    }
+
+In the above example, program *p2* loop is spawned after 200ms delay.
+
 Spawning
 ========
 

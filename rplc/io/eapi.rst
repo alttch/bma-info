@@ -96,6 +96,8 @@ Output blocks should be defined as:
           - oid: unit:tests/u2
             value: u2_val
           sync: 1s
+          # shift I/O loop if required
+          #shift: 100ms
           cache: 30s
 
 

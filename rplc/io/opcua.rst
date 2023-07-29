@@ -69,6 +69,8 @@ Input blocks should be defined as:
             - id: "ns=2;g=dcff8e02-4706-49ea-979c-fc1ec6cff8ef"
               map: temp
           sync: 2s
+          # shift I/O loop if required
+          #shift: 100ms
       output:
         # ....
 
@@ -103,6 +105,8 @@ Output blocks should be defined as:
           - id: "ns=2;s=somevar4"
             map: outvar4
           sync: 500ms
+          # shift I/O loop if required
+          #shift: 100ms
           cache: 20s
 
 

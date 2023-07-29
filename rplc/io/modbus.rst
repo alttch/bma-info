@@ -27,6 +27,9 @@ Modbus I/O should be defined in PLC config YAML as:
         #path: /dev/ttyS0:9600:8:N:1
         # the port reconnects if there are no operations within the timeout
         timeout: 5 
+        # frame delay, for serial port only, in seconds
+        # the default is 0.1 (100ms)
+        #frame_delay: 0.1
       input:
         # input block configurations (array)
       output:
@@ -67,6 +70,8 @@ Input blocks should be defined as:
         - offset: 2
           target: var2 # another variable
         sync: 500ms
+        # shift I/O loop if required
+        #shift: 100ms
       - reg: c0-1
         unit: 0x01
         map:
@@ -74,6 +79,8 @@ Input blocks should be defined as:
         - offset: 1
           target: flag2
         sync: 1s
+        # shift I/O loop if required
+        #shift: 100ms
       output:
         # ....
 
@@ -125,6 +132,8 @@ Output blocks should be defined as:
         - offset: 2
           target: var4 # another variable to put
         sync: 500ms
+        # shift I/O loop if required
+        #shift: 100ms
       - reg: c0-1
         unit: 0x01
         map:
@@ -132,6 +141,8 @@ Output blocks should be defined as:
         - offset: 1
           target: out2
         sync: 1s
+        # shift I/O loop if required
+        #shift: 100ms
 
 Another way to specify the number of registers to write:
 
