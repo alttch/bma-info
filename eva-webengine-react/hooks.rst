@@ -44,7 +44,7 @@ useEvaStateHistory
 ==================
 
 React hook, which contains historical state of EVA ICS item. The state is
-automatically updated in real time.
+automatically updated with the specified interval.
 
 The hook is used in :doc:`components/linechart` component. It also can be used
 to output various analytics tables and custom charts.
@@ -108,3 +108,57 @@ The *state.data* variable contains :ref:`item.state_history
 the specified interval.
 
 In case of API call error, *state.error* is filled with error information.
+
+.. _eva_webengine_react_use_evaapicall:
+
+useEvaAPICall
+=============
+
+React hook, which contains :doc:`../eva4/svc/eva-hmi` API call result. The
+result payload is automatically updated with the specified interval.
+
+Parameters
+----------
+
+.. code:: typescript
+
+    interface EvaAPICallParams {
+      method: string;
+      params?: object;
+      update?: number;
+      engine?: Eva;
+    }
+
+* **update** update interval in seconds (default: 1 sec)
+
+Output
+------
+
+.. code:: typescript
+
+    interface APICallData {
+      data: any;
+      error?: EvaError;
+    }
+
+Usage example
+-------------
+
+.. code:: jsx
+
+   import { useEvaAPICall } from "@eva-ics/webengine-react";
+
+   const MyComponent = () => {
+     const result = useEvaAPICall({
+       method: "bus::sim.modbus.sensor1::get",
+       update: 1
+     });
+
+     let value = result.data?.value;
+     return <span>{value}</span>;
+   }
+
+The *result.data* variable contains API call result, which is updated with the
+specified interval.
+
+In case of API call error, *result.error* is filled with error information.
