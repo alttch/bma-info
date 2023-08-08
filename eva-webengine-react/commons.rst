@@ -13,7 +13,7 @@ The arguments can be omitted if the default web engine object is set:
 
 .. code:: typescript
 
-   import { Eva, ActionResult, EvaError } from "@eva-ics/webengine";
+   import { Eva } from "@eva-ics/webengine";
    import { set_engine } from "@eva-ics/webengine-react";
 
    const eva = new Eva();
