@@ -32,3 +32,11 @@ applications/services or via :doc:`../eva4/svc/eva-hmi` as
 
     install
     modbus/index
+
+.. warning::
+
+   Virtual Fieldbus Simulator is not designed to work with productional data
+   and can not be used as a real fieldbus replacement.
+
+   Use the provided software at your own risk, for educational, testing and
+   development purposes only.
