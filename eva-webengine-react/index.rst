@@ -13,7 +13,7 @@ EVA ICS WebEngine React is a pack of low-code components to use with `React
 All the provided components are highly customizable with parameters and CSS
 styles.
 
-* Source code: https://github.com/eva-ics/eva-webengine
+* Source code: https://github.com/eva-ics/eva-webengine-react
 
 * NPM package: https://www.npmjs.com/package/@eva-ics/webengine-react
 
