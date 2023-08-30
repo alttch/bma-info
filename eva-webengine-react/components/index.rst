@@ -12,5 +12,6 @@ UI Components
    controlbuttonvalue
    controlbuttonrun
    controlblock
+   gauge
    linechart
    canvas

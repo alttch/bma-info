@@ -282,3 +282,105 @@
     - name: CanvasPosition
     - name: ControlButtonDisplay
     - name: ItemValueDisplay
+- name: Gauge
+  preview_width: 300
+  description: |
+    Provides a classical gauge visualization component.
+
+    If showValue parameter is used, the component additionally accepts all
+    parameters of :doc:`itemvalue`.
+  parameters:
+    - name: oid
+      type: string
+      description: item OID
+      required: true
+    - name: label
+      type: string
+      description: Bottom label
+    - name: showValue
+      type: boolean
+      description: Display item value
+    - name: minValue
+      type: number
+      description: Minimum value
+    - name: maxValue
+      type: number
+      description: Maximum value
+    - name: type
+      type: GaugeType
+      description: Gauge type
+    - name: diameter
+      type: number
+      description: Gauge total size
+    - name: warnValue
+      type: number
+      description: Gauge warning threshold
+    - name: critValue
+      type: number
+      description: Gauge critical threshold
+    - name: startAngle
+      type: number
+      description: Starting angle
+    - name: endAngle
+      type: number
+      description: Ending angle
+    - name: numTicks
+      type: number
+      description: Number of ticks
+    - name: offset
+      type: number
+      description: Gauge progress offset
+    - name: arcStrokeWidth
+      type: number
+      description: Arc width
+    - name: strokeLineCap
+      type: GaugeStrokeLineCap
+      description: Arc stroke ending
+    - name: tickLength
+      type: number
+      description: Length of ticks
+    - name: baseRadius
+      type: number
+      description: Base radius
+    - name: tipRadius
+      type: number
+      description: Tip radius
+    - name: middleRadius
+      type: number
+      description: Middle radius
+    - name: needleOffset
+      type: number
+      description: Needle offset
+    - *ENGINE
+  types:
+    - name: GaugeType
+    - name: GaugeStrokeLineCap
+  css:
+    - name: .gauge-container
+      description: the primary container
+    - name: .gauge-wrapper
+      description: gauge wrapper layer
+    - name: .gauge-preview
+      description: gauge svg layer
+    - name: .gauge-value
+      description: gauge value (if displayed)
+    - name: .gauge-label
+      description: gauge label (if set)
+    - name: .gauge-progress-background-color
+      description: the default arc background color
+    - name: .gauge-text-default-color
+      description: the default text color
+    - name: .gauge-middle-base-color
+      description: middle base color
+    - name: .gauge-midpoint-color
+      description: middle point color
+    - name: .gauge-tick-color
+      description: tick color
+    - name: .gauge-needle-color
+      description: needle color
+    - name: .gauge-progress-color
+      description: the default arc color
+    - name: .gauge-warning-progress-color
+      description: warning color
+    - name: .gauge-critical-progress-color
+      description: critical color
