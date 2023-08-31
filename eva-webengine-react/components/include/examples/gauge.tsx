@@ -13,7 +13,7 @@ const MyComponent = () => {
         diameter={250}
         units="&#8451;"
         showValue
-        label="Angle"
+        label="Temp"
       />
     </>
   );
