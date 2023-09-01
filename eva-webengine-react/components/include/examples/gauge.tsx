@@ -5,7 +5,7 @@ const MyComponent = () => {
     <>
       <Gauge
         type={GaugeType.Light}
-        oid="sensor:tests/angle"
+        oid="sensor:tests/temp"
         minValue={0}
         maxValue={100}
         critValue={70}
