@@ -315,6 +315,6 @@
   exe: svc/eva-svc-generator
   des: Data generator
   txt: |
-
+    .. include:: ../include/generator.rst
   api: svc/generator/eapi.yml
   tpl: svc-tpl-generator.yml

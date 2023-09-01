@@ -3,6 +3,9 @@ Data generator
 
 .. contents::
 
+.. include:: ../include/generator.rst
+
+
 Setup
 =====
 
