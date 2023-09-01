@@ -20,9 +20,9 @@ educational purposes without any restrictions.
 
     eva4/index
     eva-mlkit/index
-    evaics-app-grafana/index
     eva-webengine/index
     eva-webengine-react/index
+    evaics-app-grafana/index
     rplc/index
     sim/index
     psrt/index

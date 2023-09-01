@@ -12,6 +12,10 @@
      - :doc:`eva.aaa.msad<svc/eva-aaa-msad>`
      - svc/eva-aaa-msad
      - requires :doc:`enterprise`
+   * - :doc:`Data generator<svc/eva-svc-generator>`
+     - :doc:`eva.generator.default<svc/eva-svc-generator>`
+     - svc/eva-svc-generator
+     - 
    * - :doc:`Default ACL service<svc/eva-aaa-acl>`
      - :doc:`eva.aaa.acl<svc/eva-aaa-acl>`
      - svc/eva-aaa-acl

@@ -311,3 +311,10 @@
   api: eva4-esvc/kiosk-manager/eapi.yml
   ent: true
   tpl: svc-tpl-kioskman.yml
+- nam: eva.generator.default
+  exe: svc/eva-svc-generator
+  des: Data generator
+  txt: |
+
+  api: svc/generator/eapi.yml
+  tpl: svc-tpl-generator.yml

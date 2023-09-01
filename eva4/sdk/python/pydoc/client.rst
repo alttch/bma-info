@@ -2,12 +2,12 @@
 .. py:attribute:: HttpClient
    :module: evaics.client
 
-   alias of :py:class:`~evaics.client.http.Client`
+   alias of :class:`evaics.client.http.Client`
 
 .. py:module:: evaics.client.http
 
 
-.. py:class:: Client(url: str = 'http://localhost:7727', user: ~typing.Optional[str] = None, password: ~typing.Optional[str] = None, key: ~typing.Optional[str] = None, timeout: float = 120)
+.. py:class:: Client(url: str = 'http://localhost:7727', user: Optional[str] = None, password: Optional[str] = None, key: Optional[str] = None, timeout: float = 120)
    :module: evaics.client.http
 
    HTTP client for EVA ICS (HMI HTTP API)
@@ -36,7 +36,7 @@
       method may be called manually but is not mandatory to use
       
    
-   .. py:method:: Client.call(method: str, params: ~typing.Optional[dict] = None)
+   .. py:method:: Client.call(method: str, params: Optional[dict] = None)
       :module: evaics.client.http
    
       Call server API method
