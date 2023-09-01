@@ -179,8 +179,8 @@ Sample source payload:
 Limitations:
 
 * *sampling* parameter is ignored
-* the source does not support plan command
-* the source does not support apply command
+* the source does not support *plan* command
+* the source does not support *apply* command
 
 Wave
 ----
