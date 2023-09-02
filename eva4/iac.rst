@@ -261,7 +261,33 @@ before continue.
                 - lock3
             workers: 1
             user: nobody
- 
+
+Generator sources
+-----------------
+
+:doc:`Data generator <svc/eva-svc-generator>` sources can be deployed as the
+following:
+
+.. code:: yaml
+
+    version: 4
+    content:
+      - node: .local
+        generator_sources:
+        - kind: random_float
+          name: v1
+          params:
+            max: 5
+            min: -5
+          sampling: 10
+          targets:
+          - sensor:tests/voltage
+
+.. note::
+
+    There is no generator service deployed by default. Make sure the service is
+    already either deployed or included into the deployment payload.
+
 Extra commands
 --------------
 
@@ -414,6 +440,22 @@ Undeploying
 Deployment configuration can be removed with *eva cloud undeploy*
 (*eva-cloud-manager cloud undeploy*) command.  Custom variable values can be
 set in the same way as during deployment.
+
+Node parameters
+===============
+
+Node deployment parameters can be used to override the default services the
+deployment process is applied for:
+
+.. code:: yaml
+
+   - node: .local
+     params:
+       acl_svc: eva.aaa.acl
+       key_svc: eva.aaa.localauth
+       user_svc: eva.aaa.localauth
+       filemgr_svc: eva.filemgr.main
+       generator_svc: eva.generator.default
 
 Advanced configuration
 ======================
