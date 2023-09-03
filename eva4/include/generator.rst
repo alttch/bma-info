@@ -160,7 +160,7 @@ Sample source payload:
 UDP float
 ---------
 
-The source provides a UDP port which accepts raw little-endian encoded IEE-754
+The source provides a UDP port which accepts raw little-endian encoded IEEE-754
 float numbers. This type is useful to accept data from 3rd party software e.g.
 from `MATLAB Simulink <https://www.mathworks.com/products/simulink.html>`_
 default UDP sinks.
