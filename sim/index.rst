@@ -43,3 +43,5 @@ applications/services or via :doc:`../eva4/svc/eva-hmi` as
 
    Use the provided software at your own risk, for educational, testing and
    development purposes only.
+
+.. include:: ./include/CHANGELOG.rst
