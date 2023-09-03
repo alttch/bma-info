@@ -1,7 +1,7 @@
-.. _eva4_sim.modbus.sensor__get:
+.. _eva4_sim.modbus.sensor__var.get:
 
-get
----
+var.get
+-------
 
 .. list-table::
    :header-rows: 0
@@ -22,4 +22,31 @@ get
       "value": 25
   }
   
+
+.. _eva4_sim.modbus.sensor__var.set:
+
+var.set
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set the sensor value*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **value**
+     - Any
+     - Sensor value
+     - **yes**
 

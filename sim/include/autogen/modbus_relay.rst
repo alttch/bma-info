@@ -1,7 +1,7 @@
-.. _eva4_sim.modbus.relay__get:
+.. _eva4_sim.modbus.relay__var.get:
 
-get
----
+var.get
+-------
 
 .. list-table::
    :header-rows: 0

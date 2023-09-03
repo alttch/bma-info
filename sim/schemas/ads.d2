@@ -1,0 +1,17 @@
+real: {
+  scada: SCADA
+  plc1: PLC
+  plc2: PLC
+}
+
+real.scada -- virtual
+real.plc1 -- virtual
+real.plc2 -- virtual
+
+virtual: {
+  port: Virtual ADS port (TCP)
+
+  port -- Virtual ADS PLC 1
+  port -- Virtual ADS PLC 2
+  port -- Virtual ADS custom service
+}

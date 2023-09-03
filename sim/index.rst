@@ -11,7 +11,8 @@ virtual fieldbus on any :doc:`EVA ICS v4<../eva4/index>` node.
 
 The source code is available at https://github.com/eva-ics/sim
 
-Currently Virtual Fieldbus Simulator supports Modbus simulation only.
+Currently Virtual Fieldbus Simulator supports simulation of Modbus and
+TwinCAT/ADS.
 
 EVA ICS can combine both Virtual Fieldbus Simulator and SCADA services on the
 same machine, however there are no internal bus methods for SCADA services to
@@ -32,6 +33,8 @@ applications/services or via :doc:`../eva4/svc/eva-hmi` as
 
     install
     modbus/index
+    ads/index
+    generators
 
 .. warning::
 
