@@ -57,7 +57,7 @@ call to :ref:`eva4_eva.generator.default__source.plan` or with
 
 .. code:: shell
 
-   eva generator source plan wave "formula=sin(x/2)*10+10" --sampling 1 --duration 5 --output line
+   eva generator source plan wave "formula=sin(x/2)*10+10" --sampling 1 --duration 60 --output line
 
 :ref:`eva4_eva-shell` supports the following output formats:
 
