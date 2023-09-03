@@ -20,7 +20,7 @@ Item targets
 
 Must be specified as OIDs, e.g.
 
-.. code:::
+.. code::
 
    sensor:tests/voltage
 
