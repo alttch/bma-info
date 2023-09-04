@@ -237,6 +237,10 @@ source.plan
      - f64
      - planning duration
      - no
+   * - **fill**
+     - String
+     - Fill (nS/T/H/D/W e.g. 10T for 10-minute)
+     - no
 
 
 *Return payload example:*
