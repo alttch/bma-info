@@ -7,11 +7,14 @@ Android
 EVA ICS Control Center client
 -----------------------------
 
-EVA ICS has got the official `EVA ICS Control Center client
-<https://play.google.com/store/apps/details?id=com.altertech.evacc>`_ to access
+EVA ICS has got the official EVA ICS Control Center client to access
 :doc:`HMI<svc/eva-hmi>` from Android-based mobile phones.
 
-Alternative download URL (APK): https://pub.bma.ai/evacc/
+F-Droid repository (recommended): https://pub.bma.ai/fdroid/repo
+
+Google Play: https://play.google.com/store/apps/details?id=com.altertech.evacc
+
+Direct APK download URL: https://pub.bma.ai/evacc/
 
 .. figure:: evacc.png
     :scale: 50%
