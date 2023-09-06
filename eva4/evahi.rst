@@ -16,10 +16,6 @@ Google Play: https://play.google.com/store/apps/details?id=com.altertech.evacc
 
 Direct APK download URL: https://pub.bma.ai/evacc/
 
-.. figure:: evacc.png
-    :scale: 50%
-    :align: right
-
 The client is evaHI-based application, so it can be `configured in the same way
 <https://github.com/alttch/evaHI#create-configuration-file-on-your-web-server>`_.
 
