@@ -108,6 +108,17 @@ variables.
 Built-in functions are included for quick access to the most frequently used
 EVA ICS functions.
 
+Built-in exceptions
+===================
+
+The following additional exceptions are available:
+
+* **FunctionFailed**
+* **ResourceAlreadyExists** (alias: **ResourceBusy**)
+* **ResourceNotFound**
+* **AccessDenied**
+* **InvalidParameter**
+
 Variables
 =========
 
