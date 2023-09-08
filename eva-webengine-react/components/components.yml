@@ -52,12 +52,15 @@
       description: remember credentials checkbox
 - name: ItemValue
   preview_width: 100
-  description: Outputs a single item value. Updated in real-time.
+  description: Outputs a single item value. If OID is specified, updated
+    automatically in real-time.
   parameters:
     - name: oid
       type: string
       description: item OID
-      required: true
+    - name: state
+      type: ItemState
+      description: item state
     - name: digits
       type: number
       description: round digits after comma

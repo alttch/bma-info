@@ -6,7 +6,7 @@ ItemValue
 
 .. contents::
 
-React component. Outputs a single item value. Updated in real-time.
+React component. Outputs a single item value. If OID is specified, updated automatically in real-time.
 
 Example
 =======
@@ -29,8 +29,12 @@ Parameters
      - description
    * - oid
      - string
-     - **yes**
+     - no
      - item OID
+   * - state
+     - ItemState
+     - no
+     - item state
    * - digits
      - number
      - no

@@ -1,5 +1,6 @@
 interface ItemValueDisplay {
-  oid: string;
+  oid?: string;
+  state?: ItemState,
   label?: string;
   units?: string;
   format_with?: (value: any) => any;
