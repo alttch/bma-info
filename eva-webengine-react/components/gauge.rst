@@ -31,10 +31,22 @@ Parameters
      - type
      - required
      - description
+   * - minValue
+     - number
+     - **yes**
+     - Minimum value
+   * - maxValue
+     - number
+     - **yes**
+     - Maximum value
    * - oid
      - string
-     - **yes**
+     - no
      - item OID
+   * - state
+     - ItemState
+     - no
+     - item state
    * - label
      - string
      - no
@@ -43,14 +55,6 @@ Parameters
      - boolean
      - no
      - Display item value
-   * - minValue
-     - number
-     - no
-     - Minimum value
-   * - maxValue
-     - number
-     - no
-     - Maximum value
    * - type
      - GaugeType
      - no

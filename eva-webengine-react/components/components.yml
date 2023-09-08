@@ -293,22 +293,26 @@
     If showValue parameter is used, the component additionally accepts all
     parameters of :doc:`itemvalue`.
   parameters:
+    - name: minValue
+      type: number
+      description: Minimum value
+      required: true
+    - name: maxValue
+      type: number
+      description: Maximum value
+      required: true
     - name: oid
       type: string
       description: item OID
-      required: true
+    - name: state
+      type: ItemState
+      description: item state
     - name: label
       type: string
       description: Bottom label
     - name: showValue
       type: boolean
       description: Display item value
-    - name: minValue
-      type: number
-      description: Minimum value
-    - name: maxValue
-      type: number
-      description: Maximum value
     - name: type
       type: GaugeType
       description: Gauge type
