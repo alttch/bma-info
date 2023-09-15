@@ -63,6 +63,14 @@ deploy.yml
 		- src: ./ingress.tgz
 		  target: dapp/ingress/
 		  extract: true
+		svcs:
+		- id: dapp.ingress
+		  params:
+			bus:
+			  path: var/bus.ipc
+			command: svc/eva-dapp
+			config:
+			  path: ingress
 
 The source files must be either compressed into a single archive or uploaded
 one-by-one.
