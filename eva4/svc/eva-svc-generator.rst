@@ -97,7 +97,7 @@ source.deploy
      - Type
      - Description
      - Required
-   * - **sources**
+   * - **generator_sources**
      - Vec<struct>
      - Sources
      - **yes**
@@ -162,18 +162,14 @@ source.get_config
 .. code:: json
 
   {
-      "sources": [
-          {
-              "kind": "wave",
-              "name": "v1",
-              "params": {
-                  "formula": "sin(x/2)*10+10"
-              },
-              "sampling": 1,
-              "targets": [
-                  "sensor:tests/voltage"
-              ]
-          }
+      "kind": "wave",
+      "name": "v1",
+      "params": {
+          "formula": "sin(x/2)*10+10"
+      },
+      "sampling": 1,
+      "targets": [
+          "sensor:tests/voltage"
       ]
   }
   
@@ -297,7 +293,7 @@ source.undeploy
      - Type
      - Description
      - Required
-   * - **sources**
+   * - **generator_sources**
      - Vec<struct/String>
      - Sources or a list of source names
      - **yes**
