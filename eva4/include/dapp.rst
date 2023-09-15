@@ -66,11 +66,11 @@ deploy.yml
       svcs:
       - id: dapp.ingress
         params:
-        bus:
-          path: var/bus.ipc
-        command: svc/eva-dapp
-        config:
-          path: ingress
+          bus:
+            path: var/bus.ipc
+          command: svc/eva-dapp
+          config:
+            path: ingress
 
 The source files must be either compressed into a single archive or uploaded
 one-by-one.
@@ -91,6 +91,10 @@ docker-compose.yml
             type: bind
         ports:
          - "80:80"
+    networks:
+      eva:
+        external: true
+
 
 nginx.conf
 ----------
