@@ -65,7 +65,7 @@ deploy.yml
 		  extract: true
 
 The source files must be either compressed into a single archive or uploaded
-one-bu-one.
+one-by-one.
 
 docker-compose.yml
 ------------------
@@ -99,8 +99,6 @@ container is attached to. See also :doc:`../hmi/frontend`.
     events {
         worker_connections  1024;
     }
-
-
     http {
         include       /etc/nginx/mime.types;
         default_type  application/octet-stream;
@@ -111,18 +109,13 @@ container is attached to. See also :doc:`../hmi/frontend`.
         sendfile        on;
         keepalive_timeout  65;
         gzip  on;
-
         upstream eva-hmi-default {
                 server 10.20.0.1:7727;
         }
-
         server {
             listen 0.0.0.0;
             client_max_body_size 1M;
-
             server_name  eva;
-
-            # proxy for HTTP
             location / {
                 proxy_buffers 16 16k;
                 proxy_buffer_size 16k;
@@ -134,7 +127,6 @@ container is attached to. See also :doc:`../hmi/frontend`.
                 proxy_set_header X-Forwarded-Proto https;
                 proxy_set_header X-Frontend "nginx";
             }
-            # proxy for WebSocket
             location /ws {
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
