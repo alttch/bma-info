@@ -22,6 +22,8 @@ Example with NGINX
 Here is an example configuration for `NGINX <https://www.nginx.com>`_ with SSL
 enabled and uploads limited to 1Mb.
 
+See also :doc:`../svc/eva-dapp`.
+
 .. code-block:: nginx
 
     upstream eva-hmi {

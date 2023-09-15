@@ -318,3 +318,10 @@
     .. include:: ../include/generator.rst
   api: svc/generator/eapi.yml
   tpl: svc-tpl-generator.yml
+- nam: "dapp.NAME"
+  exe: svc/eva-dapp
+  des: Docker Application launcher
+  txt: |
+    .. include:: ../include/dapp.rst
+  api: svc/dapp/eapi.yml
+  tpl: svc-tpl-dapp.yml

@@ -20,6 +20,10 @@
      - :doc:`eva.aaa.acl<svc/eva-aaa-acl>`
      - svc/eva-aaa-acl
      - by default with HMI (*--hmi*)
+   * - :doc:`Docker Application launcher<svc/eva-dapp>`
+     - :doc:`dapp.NAME<svc/eva-dapp>`
+     - svc/eva-dapp
+     - 
    * - :doc:`Ethernet/IP PLC controller gateway<svc/eva-controller-enip>`
      - :doc:`eva.controller.enipN<svc/eva-controller-enip>`
      - svc/eva-controller-enip

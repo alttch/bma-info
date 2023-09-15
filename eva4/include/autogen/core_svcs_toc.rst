@@ -7,6 +7,7 @@
     svc/eva-aaa-msad
     svc/eva-svc-generator
     svc/eva-aaa-acl
+    svc/eva-dapp
     svc/eva-controller-enip
     svc/eva-filemgr
     svc/eva-kioskman
