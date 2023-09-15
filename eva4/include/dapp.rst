@@ -56,21 +56,21 @@ deploy.yml
 
 .. code:: yaml
 
-	version: 4
-	content:
-	  - node: .local
-		upload:
-		- src: ./ingress.tgz
-		  target: dapp/ingress/
-		  extract: true
-		svcs:
-		- id: dapp.ingress
-		  params:
-			bus:
-			  path: var/bus.ipc
-			command: svc/eva-dapp
-			config:
-			  path: ingress
+  version: 4
+  content:
+    - node: .local
+      upload:
+      - src: ./ingress.tgz
+        target: dapp/ingress/
+        extract: true
+      svcs:
+      - id: dapp.ingress
+        params:
+        bus:
+          path: var/bus.ipc
+        command: svc/eva-dapp
+        config:
+          path: ingress
 
 The source files must be either compressed into a single archive or uploaded
 one-by-one.
