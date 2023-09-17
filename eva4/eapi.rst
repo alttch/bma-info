@@ -205,6 +205,8 @@ When ACL is created/modified/deleted, the service sends message to
 AAA/ACL/ACL_ID (empty payload for the deleted key). This allows e.g. HMI and
 replication services to drop login tokens and cached ACLs.
 
+.. _eva4_eapi_core_events:
+
 Core events
 -----------
 

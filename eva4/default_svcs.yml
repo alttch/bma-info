@@ -103,6 +103,14 @@
   txt: Allows to use text-to-speech functions via the local bus
   tpl: svc-tpl-tts.yml
   api: svc/svc-tts/eapi.yml
+- nam: eva.bridge.udpN
+  exe: venv/bin/eva4-svc-bridge-udp
+  des: Bus UDP bridge
+  ins: py:eva4-bridge-udp
+  txt: |
+    .. include:: ../include/bridge_udp.rst
+  tpl: svc-tpl-bridge-udp.yml
+  api: svc/bridge-udp/eapi.yml
 - nam: eva.controller.py
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller

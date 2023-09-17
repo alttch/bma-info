@@ -12,6 +12,10 @@
      - :doc:`eva.aaa.msad<svc/eva-aaa-msad>`
      - svc/eva-aaa-msad
      - requires :doc:`enterprise`
+   * - :doc:`Bus UDP bridge<svc/eva4-svc-bridge-udp>`
+     - :doc:`eva.bridge.udpN<svc/eva4-svc-bridge-udp>`
+     - venv/bin/eva4-svc-bridge-udp
+     - requires `eva4-bridge-udp <https://pypi.org/project/eva4-bridge-udp/>`_ Python module
    * - :doc:`Data generator<svc/eva-svc-generator>`
      - :doc:`eva.generator.default<svc/eva-svc-generator>`
      - svc/eva-svc-generator

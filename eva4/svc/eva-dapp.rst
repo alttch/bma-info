@@ -35,3 +35,18 @@ EAPI methods
 ============
 
 See :doc:`../eapi` for the common information about the bus, types, errors and RPC calls.
+
+.. _eva4_dapp.NAME__app.get_config:
+
+app.get_config
+--------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get app config (docker-compose.yml)*
+   * - Parameters
+     - *none*
+   * - Returns
+     - Compose payload

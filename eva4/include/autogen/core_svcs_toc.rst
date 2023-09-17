@@ -5,6 +5,7 @@
     core
     svc/eva-controller-w1
     svc/eva-aaa-msad
+    svc/eva4-svc-bridge-udp
     svc/eva-svc-generator
     svc/eva-aaa-acl
     svc/eva-dapp
