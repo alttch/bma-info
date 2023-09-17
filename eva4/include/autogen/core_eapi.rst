@@ -798,7 +798,7 @@ item.undeploy
      - Required
    * - **items**
      - Vec<struct/String>
-     - item configuration or a list of OIDS
+     - item configuration or a list of OIDs
      - no
 
 .. _eva4_eva.core__log.get:

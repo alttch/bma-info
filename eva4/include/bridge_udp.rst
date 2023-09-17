@@ -3,11 +3,15 @@ applications.
 
 The payload format can be chosen between JSON (default) and MessagePack.
 
+.. _eva4_bridge_udp_out:
+
 Outgoing payload
 ================
 
 Bus events are sent via UDP packets as-is (see :ref:`EAPI Core events
 <eva4_eapi_core_events>`) with an additional "oid" field.
+
+.. _eva4_bridge_udp_in:
 
 Incoming payload
 ================

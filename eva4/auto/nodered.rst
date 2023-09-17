@@ -113,6 +113,9 @@ UDP input
     unit state. Node-RED flows usually require only the last one, so filter the
     incoming bus events, making sure "act" field in the event payload is 0.
 
+Incoming payload format: see :ref:`Bus UDP bridge outgoing payload
+<eva4_bridge_udp_out>`.
+
 UDP output
 ----------
 
@@ -122,3 +125,6 @@ UDP output
     Node-RED UDP output configuration
 
 Make sure data to UDP output is sent as plain text (never as JSON objects).
+
+Outgoing payload format: see :ref:`Bus UDP bridge incoming payload
+<eva4_bridge_udp_in>`.
