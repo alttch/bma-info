@@ -145,6 +145,7 @@
       description: button slider
     - name: div.eva.button.label.slider.CSS_CLASS
       description: button label
+  css_example: true
 - name: ControlButtonValue
   preview_width: 220
   description: "Unit action value input and apply button (see :ref:`eva4_hmi_http__action`)"

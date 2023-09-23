@@ -72,5 +72,9 @@ for component in data:
             doc += f'   * - {c["name"]}\n'
             doc += f'     - {c["description"]}\n'
         doc += '\n'
+    if component.get('css_example'):
+        doc += 'CSS Example\n' + '=' * 11 + '\n\n'
+        doc += f'.. literalinclude:: include/examples/{lname}.css\n'
+        doc += '   :language: css\n\n'
     with open(f'{lname}.rst', 'w') as fh:
         fh.write(doc)
