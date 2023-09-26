@@ -171,4 +171,14 @@ CSS classes
      - warning color
    * - .gauge-critical-progress-color
      - critical color
+   * - gauge-label-circle
+     - label in "modern" gauge
+   * - gauge-value-result
+     - value in "modern" gauge
+
+CSS Example
+===========
+
+.. literalinclude:: include/examples/gauge.css
+   :language: css
 

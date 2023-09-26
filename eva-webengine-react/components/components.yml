@@ -392,3 +392,8 @@
       description: warning color
     - name: .gauge-critical-progress-color
       description: critical color
+    - name: gauge-label-circle
+      description: label in "modern" gauge
+    - name: gauge-value-result
+      description: value in "modern" gauge
+  css_example: true
