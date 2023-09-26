@@ -322,10 +322,16 @@
       description: Gauge total size
     - name: warnValue
       type: number
-      description: Gauge warning threshold
+      description: Gauge warning upper threshold
     - name: critValue
       type: number
-      description: Gauge critical threshold
+      description: Gauge critical upper threshold
+    - name: lowWarnValue
+      type: number
+      description: Gauge warning lower threshold
+    - name: lowCritValue
+      type: number
+      description: Gauge critical lower threshold
     - name: startAngle
       type: number
       description: Starting angle

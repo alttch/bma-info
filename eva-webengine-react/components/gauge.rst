@@ -66,11 +66,19 @@ Parameters
    * - warnValue
      - number
      - no
-     - Gauge warning threshold
+     - Gauge warning upper threshold
    * - critValue
      - number
      - no
-     - Gauge critical threshold
+     - Gauge critical upper threshold
+   * - lowWarnValue
+     - number
+     - no
+     - Gauge warning lower threshold
+   * - lowCritValue
+     - number
+     - no
+     - Gauge critical lower threshold
    * - startAngle
      - number
      - no
