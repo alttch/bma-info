@@ -203,7 +203,5 @@
 |                  |                                                             |                   | 
 |                  |                                                             |                   | 
 |                  |                                                             |                   | 
-|                  | Any equipment with OPC-UA server access                     |                   | 
-|                  |                                                             |                   | 
-|                  | Any 3rd party server compatible with OPC Foundation specs   |                   | 
+|                  | Any other equipment with ADS/AMS support                    |                   | 
 +------------------+-------------------------------------------------------------+-------------------+
