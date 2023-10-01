@@ -258,12 +258,14 @@
 
     :async: Async function/Promise
 
-.. js:function:: Eva.set_state_updates(state_updates)
+.. js:function:: Eva.set_state_updates(state_updates, clear_existing)
 
     Set state updates without restart required
 
     :param state_updates: true/false or a string array
     :type state_updates: boolean
+    :param clear_existing: clear existing states
+    :type clear_existing: boolean
     :async: Async function/Promise
 
 .. js:function:: Eva.sleep(sec)
