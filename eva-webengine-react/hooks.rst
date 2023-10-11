@@ -3,6 +3,74 @@ Low-level hooks
 
 .. contents::
 
+useEvaStateUpdates
+==================
+
+React hook, which automatically switches EVA ICS WebEngine state updates.
+
+It is highly recommended to set WebEngine state updates to *false* by default,
+especially for large setups, (see :doc:`../eva-webengine/config`) and subscribe
+only to states of items which are currently displayed.
+
+Parameters
+----------
+
+.. code:: typescript
+
+    interface EvaStateUpdatesParams {
+      engine?: Eva;
+      state_updates: Array<string> | boolean;
+      // do not keep WebEngine states for non-subscribed
+      clear_existing?: boolean;
+      // return previous subscription when the component is unmounted
+      // if not set to true, the hook unsubscribes the engine from all events
+      keep?: boolean;
+      // append subscription to the existing one
+      append?: boolean;
+    }
+
+Usage example
+-------------
+
+.. code:: jsx
+
+    import {
+        useEvaStateUpdates,
+        useEvaState,
+        EvaSubscriptionState, // optional, used by the following example
+        ItemValue // optional, used by this example
+    } from "@eva-ics/webengine-react";
+
+    const PageSensors = ({plant}:{plant: string}) => {
+      const sub_state = useEvaStateUpdates({
+        state_updates: [`sensor:${plant}/#`],
+      }, [plant]);
+
+      return (
+          <div>Sensors dashboard ({plant})</div>
+          <div>Temperature:
+              <ItemValue oid={`sensor:${plant}/temp`} digits="2" units="C" />
+          </div>
+          <div>Humidity:
+              <ItemValue oid={`sensor:${plant}/hum`} digits="2" units="%" />
+          </div>
+      );
+    }
+
+The current subscription operation state can be optionally parsed and used to
+e.g. display a loading progress message:
+
+.. code:: jsx
+
+      switch (sub_state) {
+        case EvaSubscriptionState.Active: // the engine subscription is switched
+          return <div>Dashboard</div>;
+        case EvaSubscriptionState.Working: // switching in progress
+          return <div>Loading...</div>;
+        case EvaSubscriptionState.Failed: // switching failed
+          return <div>Failed...</div>;
+      }
+
 .. _eva_webengine_react_use_evastate:
 
 useEvaState
@@ -34,8 +102,7 @@ Usage example
    const MyComponent = () => {
      const state = useEvaState({ oid: "sensor:env/temp" });
 
-     let value = state.value;
-     return <span>{value}</span>;
+     return <span>{state?.value}</span>;
    }
 
 .. _eva_webengine_react_use_evastatehistory:
