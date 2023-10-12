@@ -198,8 +198,11 @@ enabled with:
 
 .. code:: shell
 
-    ln -sf /opt/eva4/ui/ /opt/eva4/runtime/ui
-    ln -sf /opt/eva4/pvt/ /opt/eva4/runtime/pvt
+   cd /opt/eva4
+   # make sure no symlinks in runtime are present
+   rm -f runtime/ui runtime/pvt
+   # move ui and pvt into runtime and create symlinks
+   mv ui pvt runtime/ && ln -s runtime/ui && ln -s runtime/pvt
 
 Items
 -----
