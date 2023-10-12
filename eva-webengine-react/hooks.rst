@@ -68,7 +68,7 @@ e.g. display a loading progress message:
         case EvaSubscriptionState.Working: // switching in progress
           return <div>Loading...</div>;
         case EvaSubscriptionState.Failed: // switching failed
-          return <div>Failed...</div>;
+          return <div>Failed!</div>;
       }
 
 .. _eva_webengine_react_use_evastate:
