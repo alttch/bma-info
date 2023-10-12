@@ -120,6 +120,10 @@
      - :doc:`eva.svc.tts.PROVIDER<svc/eva4-svc-tts>`
      - venv/bin/eva4-svc-tts
      - requires `eva4-svc-tts <https://pypi.org/project/eva4-svc-tts/>`_ Python module
+   * - :doc:`TimescaleDB databases state history<svc/eva-db-timescale>`
+     - :doc:`eva.db.timescaleN<svc/eva-db-timescale>`
+     - svc/eva-db-timescale
+     - 
    * - :doc:`TwinCAT ADS bridge<svc/eva-bridge-ads>`
      - :doc:`eva.bridge.adsN<svc/eva-bridge-ads>`
      - svc/eva-bridge-ads

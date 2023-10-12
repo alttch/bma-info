@@ -162,6 +162,45 @@ file.unlink
      - Relative file path
      - **yes**
 
+.. _eva4_eva.filemgr.main__list:
+
+list
+----
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List files/directories in runtime directory*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **path**
+     - String
+     - Relative path
+     - no
+   * - **masks**
+     - String/Vec<String>
+     - file masks
+     - no
+   * - **kind**
+     - String
+     - file, dir or any
+     - no
+   * - **recursive**
+     - bool
+     - recursive listing
+     - no
+
 .. _eva4_eva.filemgr.main__sh:
 
 sh

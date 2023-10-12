@@ -191,8 +191,23 @@
     * `Timescale <https://www.timescale.com>`_ (PostgreSQL)
 
     The service provides unified database EAPI.
+
+    For a dedicated TimescaleDB connector, see :doc:`eva-db-timescale`.
   tpl: svc-tpl-db-sql.yml
   api: svc/db-sql/eapi.yml
+- nam: eva.db.timescaleN
+  exe: svc/eva-db-timescale
+  des: TimescaleDB databases state history
+  txt: |
+    Allows to store item states history in Timescale/PosgreSQL database. Unlike
+    :doc:`eva-db-sql` this service provides a dedicated connector, optimized
+    for speed and database size.
+
+    Note that the service can store numeric item state values only.
+
+    The service provides unified database EAPI.
+  tpl: svc-tpl-db-timescale.yml
+  api: svc/db-timescale/eapi.yml
 - nam: eva.svc.expN
   exe: svc/eva-svc-expiration
   des: Item state expiration service

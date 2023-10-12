@@ -17,6 +17,8 @@ parameter) installed and chosen. The following extensions are supported:
 
 The service provides unified database EAPI.
 
+For a dedicated TimescaleDB connector, see :doc:`eva-db-timescale`.
+
 
 Setup
 =====
