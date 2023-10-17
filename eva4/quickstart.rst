@@ -64,6 +64,11 @@ services.
 "eva" command is automatically added into the system path with the symbolic
 link in */usr/local/bin*.
 
+Node system dashboard and other vendored UI applications are available at the
+URL:
+
+     \http://localhost:7727/va/
+
 The task
 ========
 

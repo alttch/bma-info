@@ -40,6 +40,7 @@ control systems.
 
     sysdoc
     core_svcs
+    va
     ecmui/index
     enterprise
     ui
