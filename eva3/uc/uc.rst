@@ -9,7 +9,7 @@ console application.  Additionally, it can be integrated into other subsystems
 and third-party programs using :doc:`uc_api`.
 
 .. figure:: uc.png
-    :scale: 75%
+    :width: 725px
     :alt: Universal Controller subsystem
     
     You may use Universal Controller independently or integrate it with

@@ -2,7 +2,7 @@ HMI kiosk is a touch-panel display, which is either connected to embedded
 UI-computer or has an embedded computer built-in.
 
 .. figure:: ../screenshots/kiosk.png
-    :scale: 50%
+    :width: 350px
     :alt: EvaPanel
 
 HMI Kiosk Manager service allows to orchestrate HMI kiosks and provides the
@@ -23,7 +23,7 @@ following functions:
   reload the kiosk software, reboot the physical kiosk machine
 
 .. figure:: ../schemas/kioskman.png
-    :scale: 100%
+    :width: 745px
     :alt: Kiosk management
 
 To have the above functionality, the remote must run either `EvaPanel

@@ -50,7 +50,7 @@ If Jupyter or other graphical environment is used, let us plot the data or its
 part:
 
 .. figure:: ../ss/plot1.png
-    :scale: 60%
+    :width: 630px
     :alt: Data chart
 
 Perform the training

@@ -13,7 +13,7 @@ is either :doc:`installed <install>` automatically or can be added later, by
 including "eva-shell" Python module in the Python virtual environment.
 
 .. figure:: screenshots/eva-shell.png
-    :scale: 50%
+    :width: 405px
     :alt: eva-shell
 
     with eva-shell IoT management is a joy

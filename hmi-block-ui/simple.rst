@@ -2,7 +2,7 @@ Simple page
 ***********
 
 .. figure:: images/simple.jpg
-    :scale: 50%
+    :width: 505px
     :alt: simple page
 
 Simple page configuration looks like

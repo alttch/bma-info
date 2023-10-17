@@ -21,7 +21,7 @@ The above command must be typed in the system terminal. If using Anaconda
 Navigator, open a terminal window for an environment:
 
 .. figure:: ./ss/anaconda_install.png
-    :scale: 20%
+    :width: 475px
     :alt: Anaconda terminal
 
 EVA ICS venv

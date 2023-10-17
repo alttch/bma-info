@@ -97,7 +97,7 @@ at the *max* one. The counter is increased every second with *step* value (1 by
 default).
 
 .. figure:: ../gen-charts/counter.png
-    :scale: 80%
+    :width: 440px
 
 Sample source payload:
 
@@ -120,7 +120,7 @@ The source provides a random generator which generates an *integer* value
 between *min* and *max*.
 
 .. figure:: ../gen-charts/random.png
-    :scale: 80%
+    :width: 440px
 
 Sample source payload:
 
@@ -139,7 +139,7 @@ Random float
 ------------
 
 .. figure:: ../gen-charts/random_float.png
-    :scale: 80%
+    :width: 435px
 
 The source provides a random generator which generates a *float* value between
 *min* and *max*.
@@ -189,7 +189,7 @@ The source provides a generator which generates a custom wave using the given
 formula:
 
 .. figure:: ../gen-charts/wave.png
-    :scale: 80%
+    :width: 435px
 
 Sample source payload:
 

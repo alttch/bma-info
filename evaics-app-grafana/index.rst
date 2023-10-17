@@ -31,9 +31,9 @@ only.
     controls
 
 .. figure:: ss/overview.png
-    :scale: 10%
+    :width: 275px
     :alt: Overview Dashboard
 
 .. figure:: ss/custom1.png
-    :scale: 10%
+    :width: 260px
     :alt: HMI dashboard

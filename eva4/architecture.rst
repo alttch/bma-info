@@ -9,7 +9,7 @@ Basics
 Each EVA ICS v4 node has the following architecture:
 
 .. figure:: schemas/v4arch.png
-    :scale: 100%
+    :width: 745px
     :alt: v4 architecture
 
 * Services are launched by the core (if deployed and setup) or by external

@@ -6,7 +6,7 @@ installed. If there is no server installed, data is processed on the client
 side.
 
 .. figure:: ./ss/r.png
-    :scale: 20%
+    :width: 765px
     :alt: EVA ICS ML kit R client inside R-studio
 
     EVA ICS ML kit R client inside R-studio

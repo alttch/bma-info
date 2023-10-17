@@ -14,7 +14,7 @@ port is 8812), enter API key and press Enter to log in or **Remember API key**
 to log in and make your browser remember the key.
 
 .. figure:: ../ei-login.png
-    :scale: 70%
+    :width: 345px
     :alt: Login page
 
 Navigation
@@ -23,7 +23,7 @@ Navigation
 The navigation menu is at the top of the interface.
 
 .. figure:: uc-ei.menu.png
-    :scale: 70%
+    :width: 290px
     :alt: Navigation menu
 
 Use **Save** button to immediately store the runtime data base/configuration to
@@ -33,7 +33,7 @@ System information
 ==================
 
 .. figure:: uc-ei.sysinfo.png
-    :scale: 70%
+    :width: 305px
     :alt: Controller info
 
 System information is at the bottom of the interface. Clicking on the **Debug
@@ -51,7 +51,7 @@ Important: when you create/delete units, the interface does not automatically
 display the changes made. Use reload button or refresh the page in browser.
 
 .. figure:: uc-ei.units.png
-    :scale: 70%
+    :width: 680px
     :alt: Units page
 
 On the page, you can:
@@ -69,7 +69,7 @@ On the :ref:`sensors<eva3_sensor>` page you can review the current value of
 each sensor, make it enabled or disabled.
 
 .. figure:: uc-ei.sensors.png
-    :scale: 70%
+    :width: 685px
     :alt: Sensors page
 
 Log viewer
@@ -80,7 +80,7 @@ If you set the report level to *DEBUG*, interface automatically prompts you to
 switch the controller to debugging mode.
 
 .. figure:: uc-ei.log.png
-    :scale: 70%
+    :width: 685px
     :alt: Log viewer
 
 Disabling the interface

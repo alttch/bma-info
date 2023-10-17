@@ -30,7 +30,7 @@ Supported data formats:
 * CSV (comma-separated values only)
 
 .. figure:: ../schemas/mlsrv.png
-    :scale: 80%
+    :width: 710px
     :alt: ML server
 
 .. toctree::

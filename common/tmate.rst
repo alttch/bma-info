@@ -62,7 +62,7 @@ Usage
 * Copy the access token (full or read-only)
 
 .. figure:: images/tmate_token.png
-    :scale: 40%
+    :width: 515px
     :alt: tmate tokens
 
 * Press *q* or *Ctrl+C* to start the shared session

@@ -9,7 +9,7 @@ monitor and manage a remotely connected EVA ICS v4 node, as well as all other
 only).
 
 .. figure:: ss/ecmui.png
-    :scale: 20%
+    :width: 530px
 
 The application's goal is to provide an interactive cloud dashboard with
 certain management functions. For complete management, refer to :doc:`../cli`.

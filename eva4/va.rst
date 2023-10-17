@@ -26,7 +26,7 @@ Short URL:
     \http://HOST:PORT/va/sdash/
 
 .. figure:: screenshots/va_sdash.png
-    :scale: 20%
+    :width: 505px
     :alt: Node system dashboard
 
 Single sign-on and session sharing

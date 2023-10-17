@@ -5,7 +5,7 @@ Basics
 ======
 
 .. figure:: ../schemas/ui.png
-    :scale: 100%
+    :width: 700px
     :alt: UI connection
 
 * To interact with EVA ICS node, use :doc:`../svc/eva-hmi`, which provides HTTP
@@ -57,7 +57,7 @@ The model
 =========
 
 .. figure:: ../schemas/ui_model.png
-    :scale: 100%
+    :width: 745px
     :alt: UI model
 
 * An application gets a :ref:`session token <eva4_session_token>` using

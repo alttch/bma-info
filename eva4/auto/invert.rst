@@ -8,7 +8,7 @@ required to collect and send states in inverted way, physically sending "1" for
 "0" and vice-versa.
 
 .. figure:: ../schemas/nc-relay.png
-    :scale: 100%
+    :width: 440px
     :alt: NC-relay
 
     NC-relay. Light turns OFF when relay turns ON

@@ -100,7 +100,7 @@ to the property with *|driver_id* value, e.g. *|v1.default*.
     logic-specific options as global or for the particular item group.
 
 .. figure:: drivers-action.png
-    :scale: 75%
+    :width: 740px
     :alt: Drivers and actions
 
     How the driver handles action commands
@@ -111,7 +111,7 @@ developed as "universal") without a need to load different drivers for each
 item.
 
 .. figure:: drivers-update.png
-    :scale: 75%
+    :width: 740px
     :alt: Drivers and updates
 
     How the driver handles update commands
@@ -259,7 +259,7 @@ you must connect your equipment to 2 relay ports: one will give power to
 motors, the second will set the direction.
 
 .. figure:: schemas/ac_motor.png
-    :scale: 75%
+    :width: 535px
     :alt: AC motor circiut
 
     AC motor circuit
@@ -276,7 +276,7 @@ Configuration options (set with *eva uc driver load*):
   *dport = 1* for "closing".
 
 .. figure:: schemas/rdc_motor.png
-    :scale: 75%
+    :width: 535px
     :alt: reversible DC motor circuit
 
     Reversible DC motor circiut
@@ -397,7 +397,7 @@ hardware events e.g. react to the alarm sensors or update item state when an
 external event is received.
 
 .. figure:: drivers-event.png
-    :scale: 75%
+    :width: 740px
     :alt: Drivers and events
 
     How the driver handles physical events

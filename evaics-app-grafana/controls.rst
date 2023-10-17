@@ -7,7 +7,7 @@ EVA ICS HMI allows to embed control panels into 3rd party dashboards using
 embedded HMI extensions.
 
 .. figure:: ss/controls.png
-    :scale: 50%
+    :width: 505px
 
 Installing
 ==========

@@ -4,7 +4,7 @@ Sensors page
 Sensor page class is used to display a charts.
 
 .. figure:: images/sensors.png
-    :scale: 50%
+    :width: 835px
     :alt: sensors page
 
 Configuration looks like
@@ -81,7 +81,7 @@ chart items.
 Example:
 
 .. figure:: images/sensor-multiple.png
-    :scale: 100%
+    :width: 325px
     :alt: Multiple items on a single chart
 
 .. code-block:: yaml

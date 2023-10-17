@@ -25,7 +25,7 @@ In a single-level clusters all nodes are connected via the single Pub/Sub
 server.
 
 .. figure:: schemas/repl.png
-    :scale: 80%
+    :width: 595px
     :alt: v4 replication
 
 Let us review an example of primary-secondary replication, which is the most
@@ -239,7 +239,7 @@ Multi-level clusters
 ====================
 
 .. figure:: schemas/repl-multi-level.png
-    :scale: 90%
+    :width: 810px
     :alt: v4 multi-level replication
 
 In rare cases it may be required to build upper replication levels, e.g. to

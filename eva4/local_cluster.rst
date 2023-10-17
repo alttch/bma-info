@@ -9,7 +9,7 @@ Basics
 A EVA ICS node can be split into the primary and secondary points.
 
 .. figure:: schemas/spoints.png
-    :scale: 100%
+    :width: 745px
     :alt: Local clustering and secondary points
 
 The secondary points contain service launchers, which allow moving heavy-loaded

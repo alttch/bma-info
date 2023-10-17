@@ -115,7 +115,7 @@ Embedding
 =========
 
 .. figure:: images/grafana-hmi.jpg
-    :scale: 30%
+    :width: 570px
     :alt: Grafana dashboard
 
     Grafana dashboard with EVA HMI Block UI controls

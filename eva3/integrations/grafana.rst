@@ -5,7 +5,7 @@ Grafana
 analytics and monitoring.
 
 .. figure:: grafana_hmi.jpg
-    :scale: 30%
+    :width: 550px
     :alt: Grafana dashboard
 
 Data

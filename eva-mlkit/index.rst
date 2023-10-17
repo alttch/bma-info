@@ -16,7 +16,7 @@ The kit contains client modules for Python and R, which can be used without any
 restrictions and a server part which must be purchased separately.
 
 .. figure:: ./images/dataconv.png
-    :scale: 40%
+    :width: 405px
     :alt: Data frame conversions
     :align: right
 

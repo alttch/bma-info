@@ -25,7 +25,7 @@ everything, command repeating, batch commands and is the recommended way to
 configure, manage and monitor EVA ICS nodes from command line.
 
 .. figure:: eva-shell.png
-    :scale: 100%
+    :width: 850px
     :alt: EVA shell
 
     with EVA shell, IoT management is a joy

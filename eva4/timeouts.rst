@@ -23,7 +23,7 @@ The schema
 To understand the problem, let us review the full path of the above call:
 
 .. figure:: schemas/timeouts.svg
-    :scale: 70%
+    :width: 370px
     :alt: timeouts schema
 
 Configuring the timeouts

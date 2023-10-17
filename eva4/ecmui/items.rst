@@ -13,7 +13,7 @@ items. Enter item OID or mask (MQTT-style wildcard, e.g. sensor:group/#) in the
 filter field and reload the table (or wait for the auto-reload).
 
 .. figure:: ss/items_filter.png
-    :scale: 30%
+    :width: 575px
 
 .. note::
 
@@ -27,7 +27,7 @@ To start a :ref:`eva4_unit` action, right-click a unit in the monitoring table
 and select "Action" or "Action toggle".
 
 .. figure:: ss/action.png
-    :scale: 30%
+    :width: 240px
 
 If the value check-box is not checked, the action is executed with status
 parameter only.
@@ -39,13 +39,13 @@ To run a :ref:`eva4_lmacro`, right click a lmacro in the monitoring table and
 select "Run".
 
 .. figure:: ss/run.png
-    :scale: 30%
+    :width: 215px
 
 Lvar operations
 ===============
 
 .. figure:: ss/lvar_ops.png
-    :scale: 20%
+    :width: 455px
 
 Lvar set
 --------
@@ -54,7 +54,7 @@ To set a :ref:`eva4_lvar` value, right-click lvar in the monitoring table and
 select "Lvar ops -> Set"
 
 .. figure:: ss/lvar_set.png
-    :scale: 30%
+    :width: 240px
 
 Other lvar operations
 ---------------------
@@ -69,7 +69,7 @@ Right-click on an item with state (:ref:`eva4_unit`, :ref:`eva4_sensor` or
 :ref:`eva4_lvar`) and select "Watch".
 
 .. figure:: ss/item_watch.png
-    :scale: 30%
+    :width: 420px
 
 An item watch dialog will be opened. The application can watch multiple items
 at once as well.

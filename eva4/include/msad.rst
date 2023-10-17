@@ -31,7 +31,7 @@ Log into the Active Directory domain controller, open *Active Directory Users
 and Computers* and create an organizational unit (default - *EVA*)
 
 .. figure:: ../screenshots/msad_ou.png
-    :scale: 70%
+    :width: 330px
     :alt: create AD OU
 
 or with Powershell:
@@ -44,7 +44,7 @@ Create security groups inside the organizational unit. Group names must match
 IDs of EVA ICS ACLs:
 
 .. figure:: ../screenshots/msad_group.png
-    :scale: 70%
+    :width: 550px
     :alt: create AD group
 
 or with Powershell:

@@ -7,7 +7,7 @@ Actions
 page.
 
 .. figure:: ss/actions.png
-    :scale: 20%
+    :width: 535px
 
 New actions can be launched from the :doc:`items` page.
 
@@ -17,4 +17,4 @@ Watching an action
 Right-click an action in the monitoring table and select "Watch" menu item.
 
 .. figure:: ss/action_watch.png
-    :scale: 30%
+    :width: 265px

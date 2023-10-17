@@ -94,7 +94,7 @@ A Node-RED flow can accept payloads from EVA ICS local bus via a standard
 *network/udp in* node and send RPC calls back to the bus via *network/udp out*.
 
 .. figure:: ./ss/nodered.png
-    :scale: 50%
+    :width: 380px
 
     Node-RED I/O flow
 
@@ -102,7 +102,7 @@ UDP input
 ---------
 
 .. figure:: ./ss/nodered_in.png
-    :scale: 50%
+    :width: 500px
 
     Node-RED UDP input configuration
 
@@ -120,7 +120,7 @@ UDP output
 ----------
 
 .. figure:: ./ss/nodered_out.png
-    :scale: 50%
+    :width: 505px
 
     Node-RED UDP output configuration
 

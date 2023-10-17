@@ -79,7 +79,7 @@ Users with admin rights can obtain statistical data using a web browser (by
 default, at http://localhost:8880).
 
 .. figure:: ss/web_status.png
-    :scale: 40%
+    :width: 465px
 
 The data can also be obtained in JSON for 3rd-party apps at:
 
@@ -98,7 +98,7 @@ monitored in console in real-time. Use "s" key to switch sorting between
 message count and bytes.
 
 .. figure:: ss/cli_top.png
-    :scale: 80%
+    :width: 535px
 
 UDP encryption
 ==============

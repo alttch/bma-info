@@ -6,7 +6,7 @@ Modbus the port (entry point) and all connected devices are simulated by
 independent EVA ICS deployed services.
 
 .. figure:: ../schemas/modbus.png
-    :scale: 60%
+    :width: 455px
     :alt: Virtual Modbus
 
 .. toctree::

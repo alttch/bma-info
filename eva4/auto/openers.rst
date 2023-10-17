@@ -16,7 +16,7 @@ The equipment must be connected to 2 relay ports: the first one gives power to
 motors, the second one sets the direction:
 
 .. figure:: ../schemas/ac_motor.png
-    :scale: 75%
+    :width: 440px
     :alt: AC motor circiut
 
     AC motor circuit
@@ -28,7 +28,7 @@ The equipment must be connected to 2 relay ports: the first one gives + power
 to motors, the second one gives -:
 
 .. figure:: ../schemas/rdc_motor.png
-    :scale: 75%
+    :width: 435px
     :alt: reversible DC motor circuit
 
     Reversible DC motor circiut

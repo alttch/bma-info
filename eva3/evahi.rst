@@ -12,7 +12,7 @@ You can use official `EVA ICS Control Center client
 :doc:`SFA<sfa/sfa>` UI from Android-based mobile phones.
 
 .. figure:: evacc.png
-    :scale: 50%
+    :width: 110px
     :align: right
 
 The client is evaHI-based application, so it can be `configured in the same way

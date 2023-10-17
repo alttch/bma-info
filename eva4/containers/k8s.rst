@@ -28,7 +28,7 @@ The figure below shows two acceptable strategies of using EVA ICS paired with
 the orchestra management service, e.g. Kubernetes:
 
 .. figure:: k8s.png
-    :scale: 100%
+    :width: 750px
     :alt: EVA ICS paired with Kubernetes
 
 * The figure shows two clusters connected via EVA ICS replication service and

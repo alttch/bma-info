@@ -84,7 +84,7 @@ the real one:
    result['time'] = times
 
 .. figure:: ../ss/plot_predict.png
-    :scale: 80%
+    :width: 605px
     :alt: Prediction chart
 
 If the sensor data is similar to the data which has been used to train the

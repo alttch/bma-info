@@ -26,7 +26,7 @@ of significant incompatibility, all services above the custom layer must be
 altered/patched/replaced.
 
 .. figure:: schemas/aaa.png
-    :scale: 100%
+    :width: 745px
     :alt: v4 aaa
 
 .. _eva4_acl:

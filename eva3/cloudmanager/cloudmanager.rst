@@ -12,7 +12,7 @@ Dashboard
 =========
 
 .. figure:: cloudmanager.png
-    :scale: 50%
+    :width: 665px
     :alt: Cloud Manager Dashboard
 
 Cloud Manager dashboard displays all resources, available for :doc:`../sfa/sfa`
@@ -29,5 +29,5 @@ entered manually by pressing "edit" button in the controller table. By default,
 the local master key is used.
 
 .. figure:: cloudmanager_edit_controller.png
-    :scale: 50%
+    :width: 670px
     :alt: Cloud Manager Dashboard

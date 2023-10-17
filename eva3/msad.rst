@@ -94,14 +94,14 @@ Log into Active Directory domain controller, open *Active Directory Users and
 Computers* and create organizational unit (default - *EVA*)
 
 .. figure:: msad_ou.png
-    :scale: 70%
+    :width: 330px
     :alt: create AD OU
 
 Create security groups inside organizational unit. Group name should match EVA
 ICS API key ID
 
 .. figure:: msad_group.png
-    :scale: 70%
+    :width: 550px
     :alt: create AD group
 
 Assign security group to domain user. If multiple security groups are assigned,

@@ -14,7 +14,7 @@ port is 8817), enter API key and press Enter to log in or **Remember API key**
 to log in and make your browser remember the key.
 
 .. figure:: ../ei-login.png
-    :scale: 70%
+    :width: 345px
     :alt: Login page
 
 Navigation
@@ -23,7 +23,7 @@ Navigation
 The navigation menu is at the top of the interface.
 
 .. figure:: lm-ei.menu.png
-    :scale: 70%
+    :width: 360px
     :alt: Navigation menu
 
 Use **Save** button to immediately store the runtime data base/configuration to
@@ -33,7 +33,7 @@ System information
 ==================
 
 .. figure:: lm-ei.sysinfo.png
-    :scale: 70%
+    :width: 280px
     :alt: Controller info
 
 System information is at the bottom of the interface. Clicking on the **Debug
@@ -51,7 +51,7 @@ Important: when you create/delete lvars, the interface does not automatically
 display the changes made. Use reload button or refresh the page in browser.
 
 .. figure:: lm-ei.lvars.png
-    :scale: 70%
+    :width: 685px
     :alt: LVars page
 
 Use **SET** button to set status and value of the variable, **RESET** button -
@@ -64,7 +64,7 @@ Macros
 On the :doc:`macros<macros>` page you can review defined macros.
 
 .. figure:: lm-ei.macros.png
-    :scale: 70%
+    :width: 685px
     :alt: Macros page
 
 You can run the macros, enable or disable their execution. As far as macros do
@@ -78,7 +78,7 @@ Decision rules
 The page displays the :doc:`decision-making rules<decision_matrix>`.
 
 .. figure:: lm-ei.rules.png
-    :scale: 70%
+    :width: 690px
     :alt: Rules page
 
 It allows you to add, edit, delete and disable/enable rules of decision-making
@@ -94,7 +94,7 @@ If you set the report level to *DEBUG*, interface automatically prompts you to
 switch the controller to debugging mode.
 
 .. figure:: lm-ei.log.png
-    :scale: 70%
+    :width: 690px
     :alt: Log viewer
 
 Disabling the interface

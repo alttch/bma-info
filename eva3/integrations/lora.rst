@@ -7,7 +7,7 @@ collect metrics from MQTT server or receive direct HTTP push messages with
 state payload.
 
 .. figure:: lora-images/lorawan.png
-    :scale: 75%
+    :width: 680px
     :alt: LoRaWAN network scheme
 
 .. contents::
@@ -45,12 +45,12 @@ Network configuration
 Open *Intrastructure->Network* page and create new LoRa network:
 
 .. figure:: lora-images/network.png
-    :scale: 75%
+    :width: 700px
 
 Open *Intrastructure->Gateways* and append your gateways.
 
 .. figure:: lora-images/gateway.png
-    :scale: 75%
+    :width: 695px
 
 Append EVA ICS back-end
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,20 +86,20 @@ and create "eva" application. Make sure "data" and "deveui" fields are
 selected:
 
 .. figure:: lora-images/handlers.png
-    :scale: 75%
+    :width: 670px
 
 Then open *Backends->Connectors* and create connector to :doc:`EVA UC
 <../uc/uc>`:
 
 .. figure:: lora-images/connector.png
-    :scale: 75%
+    :width: 715px
 
 don't forget to configure connector authentication. EVA ICS API key should have
 either permission to all items or to items with group "phi" and item id
 "A123456789123456" (PHI id we are going to push data in).
 
 .. figure:: lora-images/connector_auth.png
-    :scale: 75%
+    :width: 660px
 
 Append sensor to network server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,12 +108,12 @@ Go to *Devices->Profiles* and create profile for the sensors, don't forget to
 select "eva" as back-end application:
 
 .. figure:: lora-images/profile.png
-    :scale: 75%
+    :width: 645px
 
 Then go to *Devices->Comissioned* and add the sensor:
 
 .. figure:: lora-images/device.png
-    :scale: 75%
+    :width: 660px
 
 .. note::
 

@@ -89,7 +89,7 @@ our agent and provide camera image (as well as any other resource from network
 **B**) for SFA.
 
 .. figure:: cctv_agent_schema.png
-    :scale: 30%
+    :width: 480px
     :alt: CCTV agent schema
 
 The task we are going to solve is pretty complex but it allows to transfer

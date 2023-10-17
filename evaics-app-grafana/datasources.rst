@@ -10,13 +10,13 @@ In Grafana UI, open Apps -> EVA ICS -> Connections and press "Add EVA ICS
 datasource button".
 
 .. figure:: ss/app.png
-    :scale: 20%
+    :width: 195px
 
 Another way is to open Connections -> Data sources, press "Add new data source"
 and select "EVA ICS".
 
 .. figure:: ss/ds.png
-    :scale: 20%
+    :width: 180px
 
 Configuring
 ===========
@@ -52,7 +52,7 @@ Grafana data source
 -------------------
 
 .. figure:: ss/ds_config.png
-    :scale: 20%
+    :width: 270px
 
 * In the Grafana data source configuration, enter the data source name, HMI URL
   and paste the copied API key.

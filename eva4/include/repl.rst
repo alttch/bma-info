@@ -18,7 +18,7 @@ The nodes must be connected via either :doc:`PSRT </psrt/index>` or `MQTT
   various cloud providers.
 
 .. figure:: ../schemas/repl.png
-    :scale: 80%
+    :width: 595px
     :alt: v4 replication
 
 To communicate, both local and remote node must share the same API key (a key

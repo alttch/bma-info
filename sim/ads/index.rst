@@ -6,7 +6,7 @@ virtual ADS the port (entry point) and all AMS services are simulated by
 independent EVA ICS deployed services.
 
 .. figure:: ../schemas/ads.png
-    :scale: 40%
+    :width: 550px
     :alt: Virtual TwinCAT/ADS
 
 .. toctree::

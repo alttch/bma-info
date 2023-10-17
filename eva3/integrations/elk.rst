@@ -31,12 +31,12 @@ Configure ELK
 - On the main Elastic dashboard, press "add data"
 
 .. figure:: elk-images/add-data.png
-    :scale: 50%
+    :width: 410px
 
 - Select "Logstash logs"
 
 .. figure:: elk-images/select-logstash.png
-    :scale: 50%
+    :width: 595px
 
 - Follow the given instructions and setup **filebeat** on all EVA ICS nodes.
 

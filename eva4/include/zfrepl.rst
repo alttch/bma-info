@@ -10,7 +10,7 @@ The service is a perfect helper to fill all gaps in logs, charts or any other
 kind of archive data representation, collection or analysis.
 
 .. figure:: ../schemas/zfrepl.png
-    :scale: 100%
+    :width: 745px
     :alt: Zero-failure replication schema
 
 The service can work in 3 roles (only one can be defined in the deployment

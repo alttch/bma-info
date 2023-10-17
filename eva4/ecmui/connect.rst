@@ -9,7 +9,7 @@ Connection dialog
 When Cloud Manager UI is started, the connect window appears automatically:
 
 .. figure:: ss/connect.png
-    :scale: 30%
+    :width: 340px
 
 To manage connection, use the marked connect/disconnect tool bar buttons.
 

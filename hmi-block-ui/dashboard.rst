@@ -4,7 +4,7 @@ Dashboard page
 Dashboard is usually a primary page of the interface.
 
 .. figure:: images/dashboard.jpg
-    :scale: 50%
+    :width: 505px
     :alt: dashboard page
 
 Configuration looks like
@@ -171,7 +171,7 @@ The button can have a complex menu as well which contains other buttons:
         - thermo_room1_25
 
 .. figure:: images/popover-menu.png
-    :scale: 100%
+    :width: 345px
 
 In the example above, the button *thermo_room1* will display a pop-over with 4
 additional buttons. Configurations of buttons inside pop-over must be defined
@@ -197,7 +197,7 @@ moved.
       #can_off: true
 
 .. figure:: images/slider.png
-    :scale: 100%
+    :width: 315px
 
 Default slider *min* value is *0*, default *max* value is *100*, so they
 usually must be overriden. Default step is *1*.
@@ -288,7 +288,7 @@ All :ref:`control buttons<buttons>` must be grouped in a control blocks. One
 control block can have up to 4 buttons.
 
 .. figure:: images/control-block.png
-    :scale: 100%
+    :width: 330px
 
 A control block looks like:
 
@@ -318,7 +318,7 @@ A data block groups :ref:`data<data>` items and looks like:
     #action: url:sensors.j2
 
 .. figure:: images/data-block.png
-    :scale: 100%
+    :width: 325px
 
 * **size** data block size (small, medium or large, default: small)
 * **css-class** custom data block CSS class
@@ -354,7 +354,7 @@ All parameters are optional. If *sys-block* parameter is specified and is
 at the bottom of the bar.
 
 .. figure:: images/sysblock.png
-    :scale: 100%
+    :width: 305px
 
     System block
 

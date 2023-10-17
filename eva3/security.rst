@@ -32,7 +32,7 @@ The recommended enterprise configuration of the system is represented in the
 following scheme:
 
 .. figure:: network.png
-    :scale: 60%
+    :width: 605px
     :alt: secure network design
 
 * **Public network** external network (company's local network); applications

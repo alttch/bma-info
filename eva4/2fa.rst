@@ -24,7 +24,7 @@ by:
 * :doc:`svc/eva-aaa-msad`
 
 .. figure:: schemas/2fa.png
-    :scale: 100%
+    :width: 500px
     :alt: OTP authentication
 
 To start using OTP, the above services require *otp_svc* configuration

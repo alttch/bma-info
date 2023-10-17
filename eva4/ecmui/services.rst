@@ -10,7 +10,7 @@ The page allows to monitor the node services. The services can be also
 added/edited/destroyed or restarted.
 
 .. figure:: ss/services.png
-    :scale: 20%
+    :width: 465px
 
 .. note::
 
@@ -24,7 +24,7 @@ Right click on a service in the table and select "Call a method". A "Service
 call" dialog will appear.
 
 .. figure:: ss/svc_call.png
-    :scale: 20%
+    :width: 365px
 
 The dialog allows to get service info, list of available methods and their
 parameters. It also allows to call any method, filling the parameters

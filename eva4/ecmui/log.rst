@@ -4,7 +4,7 @@ Log
 The log page opens the log viewer.
 
 .. figure:: ss/log.png
-    :scale: 20%
+    :width: 570px
 
 .. note::
 
