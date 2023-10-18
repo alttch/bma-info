@@ -46,7 +46,9 @@
       :param method: API method
       
       Optional:
+      
           params: API method parameters (dict)
+      
           target: target service (default: eva.core)
       
       :returns: API response payload
@@ -60,6 +62,7 @@
       :param method: API method
       
       Optional:
+      
           params: API method parameters (dict)
       
       :returns: API response payload

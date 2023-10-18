@@ -29,3 +29,4 @@ prepare:
 	pydoc2rst ./sdk/python/pydoc/tpl_client.rst ./sdk/python/pydoc/client.rst /opt/eva4/bindings/python/eva-ics-sdk
 	pydoc2rst ./sdk/python/pydoc/tpl_busclient.rst ./sdk/python/pydoc/busclient.rst /opt/eva4/bindings/python/eva-ics-sdk
 	pydoc2rst ./sdk/python/pydoc/tpl_httpclient.rst ./sdk/python/pydoc/httpclient.rst /opt/eva4/bindings/python/eva-ics-sdk
+	pydoc2rst ./sdk/python/pydoc/tpl_cloudclient.rst ./sdk/python/pydoc/cloudclient.rst /opt/eva4/bindings/python/eva-ics-sdk

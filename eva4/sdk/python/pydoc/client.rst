@@ -10,6 +10,9 @@
    Automatically connects either via BUS/RT or HTTP
    
    Optional:
+   
        path: BUS/RT path or HTTP URI (default: /opt/eva4/var/bus.ipc')
+   
        kwargs passed to client as-is
+   
    

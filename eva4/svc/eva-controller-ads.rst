@@ -10,7 +10,7 @@ single machine (IP), the service instances require
 :doc:`../svc/eva-bridge-ads` to be deployed for each TwinCAT system.
 
 .. figure:: ../schemas/twincat_bridge.png
-    :width: 615px
+    :scale: 50%
     :alt: TwinCAT ADS bridge
 
 

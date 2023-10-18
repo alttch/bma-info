@@ -22,3 +22,8 @@ HTTP client
 ===========
 
 .. include:: ./pydoc/httpclient.rst
+
+Cloud client
+============
+
+.. include:: ./pydoc/cloudclient.rst

@@ -117,8 +117,10 @@
       (after receiving a termination signal/event)
       
       Optional:
+      
           prepare: default: True, if False, register_signals, mark_ready and
                    mark_terminating must be called manually
+      
       
    
    .. py:method:: Service.drop_privileges()
@@ -142,8 +144,11 @@
       (if info specified)
       
       Optional:
+      
           info: RPC info
+      
           on_frame: bus frame handler
+      
       
    
    .. py:method:: Service.init_bus()
