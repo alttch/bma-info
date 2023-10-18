@@ -64,8 +64,8 @@ Hardware
 ========
 
 Thanks to EVA ICS architecture and optimization for modern multi-core CPUs, the
-platform can provide good results even on a microcomputers. System components
-and :doc:`CLI<cli>` tools may require more time to launch on architectures
+platform can provide good results even on microcomputers. System components and
+:doc:`CLI<cli>` tools may require more time to launch on architectures
 different than Intel x86_64, but the regular performance should not be affected
 even on an embedded ARM-based systems.
 

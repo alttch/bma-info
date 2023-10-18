@@ -40,7 +40,7 @@ Hardware
 ========
 
 Thanks to EVA ICS architecture and optimization for modern multi-core CPUs, the
-platform can provide good results even on a microcomputers.
+platform can show perfect results even on microcomputers.
 
 According to tests, EVA ICS can show worse performance on industrial and micro
 computers if they have:
