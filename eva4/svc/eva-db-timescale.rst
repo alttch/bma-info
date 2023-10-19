@@ -3,13 +3,7 @@ TimescaleDB databases state history
 
 .. contents::
 
-Allows to store item states history in Timescale/PosgreSQL database. Unlike
-:doc:`eva-db-sql` this service provides a dedicated connector, optimized
-for speed and database size.
-
-Note that the service can store numeric item state values only.
-
-The service provides unified database EAPI.
+.. include:: ../include/timescale_svc.rst
 
 
 Setup

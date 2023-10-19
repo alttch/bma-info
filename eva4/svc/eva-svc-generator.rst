@@ -49,7 +49,7 @@ source.apply
    * - Parameters
      - required
    * - Returns
-     - *nothing*
+     - Apply job ID
 
 .. list-table:: Parameters
    :align: left
@@ -74,6 +74,16 @@ source.apply
      - Vec<String>
      - target item OIDs
      - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "job_id": "e36c624b-bac0-4a6b-b520-8dc5dedc726d"
+  }
+  
 
 .. _eva4_eva.generator.default__source.deploy:
 
