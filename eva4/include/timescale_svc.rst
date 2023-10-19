@@ -25,7 +25,8 @@ manually:
 
 .. warning::
 
-   The operation blocks the events table and may be slow.
+   The operation blocks the events table and may consume a lot of time for
+   large databases.
 
 .. code:: sql
 
