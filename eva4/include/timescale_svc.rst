@@ -60,8 +60,9 @@ To check compression effectiveness, use the following command:
 
 .. code:: sql
 
-    SELECT before_compression_total_bytes AS before,
-            after_compression_total_bytes AS after,
-            before_compression_total_bytes/after_compression_total_bytes*100
-                || '%' AS "compression rate"
-            FROM hypertable_compression_stats('state_history_events');
+   SELECT before_compression_total_bytes AS before,
+        after_compression_total_bytes AS after,
+        (before_compression_total_bytes::DOUBLE PRECISION
+            /after_compression_total_bytes)::DECIMAL(100,2) || 'x'
+        AS "compression rate"
+        FROM hypertable_compression_stats('state_history_events');
