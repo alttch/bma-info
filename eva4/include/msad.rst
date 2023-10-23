@@ -54,9 +54,7 @@ or with Powershell:
    New-ADGroup -Name "operator" -Path "OU=EVA,DC=your,DC=domain,DC=com"
 
 Assign a security group to a domain user. If multiple security groups are
-assigned, a combined ACL is created. If the required ACL ID does not exist,
-authentications attempts are considered as failed, despite the user may have
-additional existing ACLs assigned.
+assigned, a combined ACL is created.
 
 or with Powershell:
 
