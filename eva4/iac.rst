@@ -375,8 +375,13 @@ Deploying
 ---------
 
 Deployment configuration can be applied using  *eva cloud deploy* (or
-*eva-cloud-manager cloud deploy*) command.  When deployed with
-:doc:`CLI<cli>`, deployment files can contain external variables.
+*eva-cloud-manager cloud deploy*) command.
+
+Variables
+~~~~~~~~~
+
+When deployed with :doc:`CLI<cli>`, deployment files can contain external
+variables.
 
 Example:
 
@@ -390,6 +395,17 @@ Here is *srv* variable defined. To set its value, e.g. to "plant1", use *-c
 srv=plant* command line argument. If multiple variable values are going to be
 set, use *-c* argument multiple times.
 
+The deployment variable values can be also got from the system environment,
+from variables which have got *ECD_* prefix. For the above example, use a
+variable *ECD_srv* to set *srv* template variable:
+
+.. code:: shell
+
+   ECD_srv=node1 eva cloud deploy file.yml
+
+Timeouts
+~~~~~~~~
+
 The default deployment timeout is 5 seconds. If some deployment calls
 require more time to be executed, consider increasing the timeout value
 with command-line argument *-T*:
@@ -399,6 +415,9 @@ with command-line argument *-T*:
     eva -T 15 cloud deploy file.yml
 
 The deployment file can be a local one or HTTP URL.
+
+Flushing registry
+~~~~~~~~~~~~~~~~~
 
 .. _eva4_iac_auto_flush_off:
 
