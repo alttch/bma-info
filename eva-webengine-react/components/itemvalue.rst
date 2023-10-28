@@ -51,6 +51,10 @@ Parameters
      - (value: any) => any
      - no
      - a custom function to format value
+   * - set_color_with
+     - (value: any) => string | undefined
+     - no
+     - a custom function to set value color
    * - engine
      - Eva
      - no
