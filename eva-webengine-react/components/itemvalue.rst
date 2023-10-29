@@ -43,6 +43,10 @@ Parameters
      - string
      - no
      - value units
+   * - className
+     - string
+     - no
+     - base class name
    * - threshold
      - Array<ItemValueThreshold>
      - no
@@ -55,6 +59,10 @@ Parameters
      - (value: any) => string | undefined
      - no
      - a custom function to set value color
+   * - set_class_name_with
+     - (value: any) => string | undefined
+     - no
+     - a custom function to set CSS class
    * - engine
      - Eva
      - no

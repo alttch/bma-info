@@ -67,6 +67,9 @@
     - name: units
       type: string
       description: value units
+    - name: className
+      type: string
+      description: base class name
     - name: threshold
       type: Array<ItemValueThreshold>
       description: alters value CSS classes according to threshold rules
@@ -76,6 +79,9 @@
     - name: set_color_with
       type: "(value: any) => string | undefined"
       description: a custom function to set value color
+    - name: set_class_name_with
+      type: "(value: any) => string | undefined"
+      description: a custom function to set CSS class
     - *ENGINE
   interfaces:
     - name: ItemValueThreshold
@@ -90,7 +96,7 @@
       description: the source node is disconnected
 - name: ItemValueTable
   preview_width: 300
-  description: Outputs a table of item values
+  description: Outputs a table of :doc:`item values <itemvalue>`.
   parameters:
     - name: items
       type: Array<ItemValueDisplay>

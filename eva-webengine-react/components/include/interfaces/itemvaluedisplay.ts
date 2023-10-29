@@ -3,7 +3,10 @@ interface ItemValueDisplay {
   state?: ItemState,
   label?: string;
   units?: string;
+  className?: string;
   format_with?: (value: any) => any;
+  set_color_with?: (value: any) => string | undefined;
+  set_class_name_with?: (value: any) => string | undefined;
   digits?: number;
   threshold?: Array<ItemValueThreshold>;
   position?: CanvasPosition; // used by Canvas only

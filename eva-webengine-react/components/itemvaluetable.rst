@@ -6,7 +6,7 @@ ItemValueTable
 
 .. contents::
 
-React component. Outputs a table of item values
+React component. Outputs a table of :doc:`item values <itemvalue>`.
 
 Example
 =======
