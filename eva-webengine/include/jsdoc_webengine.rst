@@ -206,9 +206,14 @@
     :param func: function called on event
     :type func: function
 
+.. js:function:: Eva.register_globals()
+
+    Registers the global object window.$eva
+
+
 .. js:function:: Eva.register_legacy_globals()
 
-    Registers the legacy global object window.$eva
+    Registers global objects + legacy globals
 
 
 .. js:function:: Eva.restart()

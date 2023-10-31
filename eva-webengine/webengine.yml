@@ -96,5 +96,7 @@
 - name: Eva#stop
   alias: Eva.stop
   async: true
+- name: Eva#register_globals
+  alias: Eva.register_globals
 - name: Eva#register_legacy_globals
   alias: Eva.register_legacy_globals
