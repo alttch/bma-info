@@ -326,6 +326,47 @@ tpl.reload
    * - Returns
      - *nothing*
 
+.. _eva4_eva.hmi.default__user_data.get:
+
+user_data.get
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get user data*
+   * - Parameters
+     - required
+   * - Returns
+     - User data field value
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **login**
+     - String
+     - user login
+     - **yes**
+   * - **key**
+     - String
+     - field key
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+    "value": "somedata"
+  }
+  
+
 .. _eva4_eva.hmi.default__ws.stats:
 
 ws.stats

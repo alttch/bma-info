@@ -1110,6 +1110,114 @@ test
     :response: ../../http_api_examples/test.resp
 
 
+.. _eva4_hmi_http__user_data.delete:
+
+user_data.delete
+----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Delete user data*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **key**
+     - String
+     - field key
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/user_data.delete.req
+    :response: ../../http_api_examples/user_data.delete.resp
+
+
+.. _eva4_hmi_http__user_data.get:
+
+user_data.get
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get user data*
+   * - Parameters
+     - required
+   * - Returns
+     - User data field value
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **key**
+     - String
+     - field key
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/user_data.get.req
+    :response: ../../http_api_examples/user_data.get.resp
+
+
+.. _eva4_hmi_http__user_data.set:
+
+user_data.set
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set user data*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **key**
+     - String
+     - field key
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/user_data.set.req
+    :response: ../../http_api_examples/user_data.set.resp
+
+
 .. _eva4_hmi_http__x__TARGET_SVC__METHOD:
 
 x::<TARGET_SVC>::<METHOD>
