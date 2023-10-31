@@ -1,7 +1,7 @@
 Storing user data
 *****************
 
-:doc:`../svc/eva-hmi` instance has got built-in key-value storage to keep
+:doc:`../svc/eva-hmi` instances have got built-in key-value storage to keep
 persistent user data, such as settings, profile information etc. 
 
 The data is stored in HMI database (see the service instance configuration).
@@ -20,7 +20,7 @@ API method :ref:`eva4_hmi_http__user_data.set`.
 Getting user data
 -----------------
 
-A HMI application can set data for the current logged in user using HTTP API
+A HMI application can get data for the current logged in user using HTTP API
 method :ref:`eva4_hmi_http__user_data.get`.
 
 Other services can get user data using :doc:`../eapi` method
@@ -41,13 +41,13 @@ sub-fields:
 .. code:: yaml
 
     user_data:
-        max_records: 100
-        max_record_length: 16384
+      max_records: 100
+      max_record_length: 16384
 
 Where
 
 * **max_records** maximum number of data records a user can have
 * **max_record_length** maximum JSON-serialized length of a single record
 
-To completely disable user data functionality, either set limits to zeroes or
-remove the field from the service configuration completely.
+To disable user data functionality, either set limits to zeroes or remove the
+field from the service configuration completely.
