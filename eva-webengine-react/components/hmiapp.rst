@@ -61,6 +61,25 @@ LoginProps
 .. literalinclude:: include/interfaces/loginprops.ts
    :language: typescript
 
+Kiosk Compatibility
+===================
+
+To make a WebEngine-React application compatible with
+:doc:`../../eva4/svc/eva-kioskman`, set *register_globals* login property to
+*true*.
+
+The component automatically registers *window.$eva* and *window.$eva.hmi*
+objects with required functions.
+
+Running in React Strict mode
+============================
+
+The component may produce additional login error messages when strict mode in
+React is enabled.
+
+Such unsolicited behavior can be noticed on development systems only and does
+not affect production.
+
 CSS classes
 ===========
 
