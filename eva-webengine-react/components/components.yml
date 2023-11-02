@@ -3,6 +3,25 @@
   description: |
     Base application class. Handles user authorization, displays the
     application dashboard if successful.
+
+    Kiosk Compatibility
+    ===================
+
+    To make a WebEngine-React application compatible with
+    :doc:`../../eva4/svc/eva-kioskman`, set *register_globals* login property to
+    *true*.
+
+    The component automatically registers *window.$eva* and *window.$eva.hmi*
+    objects with required functions.
+
+    Running in React Strict mode
+    ============================
+
+    The component may produce additional login error messages when strict mode in
+    React is enabled.
+
+    Such unsolicited behavior can be noticed on development systems only and does
+    not affect production.
   parameters:
     - name: Dashboard
       type: JSX.Element
@@ -180,6 +199,8 @@
       description: primary button container
     - name: input.eva.button.value.CSS_CLASS
       description: value input
+    - name: input.eva.button.value.changed
+      description: value input changed
     - name: div.eva.button.input.label.CSS_CLASS
       description: text label
     - name: button.eva.button.input.apply.CSS_CLASS

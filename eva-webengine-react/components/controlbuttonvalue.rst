@@ -68,6 +68,8 @@ CSS classes
      - primary button container
    * - input.eva.button.value.CSS_CLASS
      - value input
+   * - input.eva.button.value.changed
+     - value input changed
    * - div.eva.button.input.label.CSS_CLASS
      - text label
    * - button.eva.button.input.apply.CSS_CLASS
