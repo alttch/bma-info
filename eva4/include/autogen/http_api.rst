@@ -345,6 +345,38 @@ The method should be used in human-interactive environments only.
     :response: ../../http_api_examples/call.resp
 
 
+.. _eva4_hmi_http__db.list:
+
+db.list
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get available databases*
+   * - Parameters
+     - required
+   * - Returns
+     - List of available databases
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/db.list.req
+    :response: ../../http_api_examples/db.list.resp
+
+
 .. _eva4_hmi_http__item.check_access:
 
 item.check_access

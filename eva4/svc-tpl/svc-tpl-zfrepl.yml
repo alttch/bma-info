@@ -33,6 +33,8 @@ config:
         auto_flush: false
         # periodic collection interval
         interval: null
+        # do not submit remote disconnected items (useful for zfrepl or similar)
+        skip_disconnected: false
         # ignore real-time events
         ignore_events: false
         # oids to watch
