@@ -204,6 +204,7 @@ wildcards:
 
 * **+:group1/id1** - group1/id1 item of any kind
 * **+:group1/+** all items in group1
+* **+:group1/+/id1** all items in all subgroups of group1 matching id1
 * **+:group1/#** all items in group1 and its subgroups
 * **sensor:#** all sensors
 * **#** - all available items
