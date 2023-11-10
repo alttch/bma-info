@@ -38,6 +38,8 @@ control systems.
     :caption: EVA ICS v4 documentation
     :maxdepth: 1
 
+    What is new (CHANGELOG) <changelog>
+    quickstart
     sysdoc
     core_svcs
     va

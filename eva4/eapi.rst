@@ -267,11 +267,11 @@ TOPIC: RPL/ST/<OID>
 
 MSGPACK payload:
 
-t: set time // (float timestamp)
-ieid: XXXX // ieid
-status: i32 // status
-value: XXXX // value
-node: xxxxx // source node
+* t: set time // (float timestamp)
+* ieid: XXXX // ieid
+* status: i32 // status
+* value: XXXX // value
+* node: xxxxx // source node
 
 If no item exist, the core creates a new one. If the item exists, the core
 either updates its state (if the received state is newer) or sends replication
@@ -282,9 +282,11 @@ sending the frame to:
 
 RPL/NODE/<SRC>
 
-{
-"status": "online", "offline", "removed"
-}
+.. code:: json
+
+    {
+        "status": "online" // "offline", "removed"
+    }
 
 When the node is marked online, an additional field info (with subfields build:
 u64 and version: string) can be present:
@@ -398,32 +400,40 @@ STDIN:
 
 .. code:: yaml
 
-    version: 4
-    system_name: System name
-    name: service name (you)
-    command: service executable path and optional arguments
-    data_path: path to the service directory (runtime/svc_data/NAME), if exists
+    version: 4 # number
+    system_name: System name # string
+    id: service id (you) # string
+    command: service executable path and optional arguments # string
+    prepare_command: prepare command, must be handled by service # string, optional
+    data_path: path to the service directory (runtime/svc_data/NAME) # string
     timeout:
-        startup: startup timeout
-        shutdown: shutdown timeout
-        default: the default timeout
+        startup: startup timeout # number, optional
+        shutdown: shutdown timeout # number, optional
+        default: the default timeout # number, optional
     core:
-        build: core build
-        version: core version
-        eapi_version: EAPI version
-        path: path to EVA ICS installation directory
+        build: core build # number
+        version: core version # string
+        eapi_version: EAPI version # number
+        path: path to EVA ICS installation directory # string
+        log_level: logging level # number
+        active: is the node already active # boolean
     bus:
-        type: "native" (always)
-        path: path to the bus socket (required)
-        timeout: bus timeout (optional)
-        buf_ttl: buffer ttl (seconds)
-        buf_size: buffer size (optional, not required for JS)
-        queue_size: queue size (optional, not required for Python)
-        ping_interval: ping interval (optional)
+        type: "native" (always) # string
+        path: path to the bus socket (required) # string
+        timeout: bus timeout # number, optional
+        buf_ttl: buffer ttl (seconds) # number, optional
+        buf_size: buffer size (optional, not required for JS) # number, optional
+        queue_size: queue size (optional, not required for Python) # number, optional
+        ping_interval: ping interval, number, DEPRECATED
     config:
-        SERVICE CONFIG
-    prepare_command: an optional prepare command, must be handled by service
-    user: username to drop privileges to
+        SERVICE CONFIG # any, optional
+    workers: number of worker threads # number, optional
+    user: username to drop privileges to # string, optional
+    react_to_fail: react-to-fail support # boolean, optional
+    fail_mode: react-to-fail mode state (if the previous instance exited with error) # boolean, optional
+    fips: FIPS-140 mode # boolean, optional
+    call_tracing: call tracing enabled # boolean, optional
+    
 
 When the service is successfully started, it must report "status: ready"
 payload to everyone, otherwise it will be not marked as "online".

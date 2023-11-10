@@ -4,22 +4,20 @@ System documentation
 .. toctree::
     :maxdepth: 1
 
-    quickstart
     install
-    replication
     v3migration
-    What is new <changelog>
     architecture
-    local_cluster
+    items
     config
     registry
     aaa
-    items
     cli
     iac
+    replication
+    local_cluster
     containers/containers
     containers/k8s
     highload
     timeouts
-    troubleshooting
     security
+    troubleshooting
