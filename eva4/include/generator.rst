@@ -157,6 +157,48 @@ Sample source payload:
     targets:
     - sensor:tests/voltage
 
+Time
+----
+
+The source provides a generator which reads values from a clock and sends them
+to targets in a specified format.
+
+.. code:: yaml
+
+   kind: time
+   name: t1
+   params:
+     clock: local
+     format: timestamp
+   sampling: 1
+    targets:
+    - sensor:tests/timestamp
+
+Clocks supported:
+
+* **local** local time (default)
+* **utc** UTC time
+* **monotonic** system monotonic clock
+
+Formats supported:
+
+* **timestamp** integer timestamp (default)
+* **timestamp_float** float timestamp with nanoseconds
+* **timestamp_nanos** integer timestamp with nanoseconds
+* **rfc3339** RFC-3339 date string
+* **year** the current year
+* **month** the current month (integer)
+* **day** the current day of the month
+* **hour** the current hour
+* **minute** the current minute
+* **second** the current second
+
+Limitations:
+
+* the source does not support *plan* command
+* the source does not support *apply* command
+* the clock **monotonic** supports timestamp formats only
+
 UDP float
 ---------
 
