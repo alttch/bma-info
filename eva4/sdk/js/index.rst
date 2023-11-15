@@ -121,4 +121,4 @@ Then run TypeScript service files directly with the following *command* field:
 
 .. code:: shell
 
-   deno run --allow-read --allow-write --allow-ffi --allow-env --unstable /path/to/svc.ts
+   deno run --allow-read --allow-write --allow-ffi --allow-env --allow-net --unstable /path/to/svc.ts
