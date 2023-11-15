@@ -108,8 +108,24 @@ If using :doc:`../../../eva-webengine/index`, the call can be made as:
 Running with Deno
 =================
 
-To run services, built with EVA ICS JS SDK, with `Deno <https://deno.com>`_, it
-is possible to modify imports as the following:
+Installation
+------------
+
+`Deno <https://deno.com>`_ can be installed directly into */opt/eva4* folder
+with the following command:
+
+.. code:: shell
+
+   curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=/opt/eva4/deno sh
+
+Deno caches all modules in *$HOME/.cache/deno* folder. The cached modules can
+be purged if required, e.g. when migrating to a newer SDK version.
+
+SDK imports
+-----------
+
+To run services, built with EVA ICS JS SDK, with, it is possible to modify
+imports as the following:
 
 .. code:: typescript
 
@@ -117,8 +133,14 @@ is possible to modify imports as the following:
     // required imports
    } from "npm:@eva-ics/sdk";
 
-Then run TypeScript service files directly with the following *command* field:
+Service command
+---------------
+
+Run TypeScript service files directly with the following *command* field:
 
 .. code:: shell
 
-   deno run --allow-read --allow-write --allow-ffi --allow-env --allow-net --unstable /path/to/svc.ts
+   deno/bin/deno run --allow-read --allow-write --allow-ffi --allow-env --allow-net --unstable /path/to/svc.ts
+
+It is recommended to start the service for the first time manually to let the
+runtime download all required modules or increase service startup timeout.
