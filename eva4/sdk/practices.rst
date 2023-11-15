@@ -58,7 +58,7 @@ STDIN beacon
 
 *(covered by SDK if available)*
 
-After the initial payload is processed, the service MUST leave STDIN open and
+After the initial payload is processed, the service MUST keep STDIN open and
 spawn a worker, which reads single bytes from it.
 
 The service receives from time to time data from launcher, which MUST be equal
