@@ -126,7 +126,7 @@ The logic is the following:
   error. The service may deal with it or just ignore the flag.
 
 * **initial.react_to_fail = true** a user asks the service to provide some
-  reaction, when started in the fail mode (e.g. setting mapped :doc:`items
+  reaction, when started in the fail mode, e.g. setting mapped :doc:`items
   <../items>` to status **-1** or other less than zero (failed).
 
 The service SHOULD:
