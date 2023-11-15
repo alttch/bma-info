@@ -34,7 +34,7 @@ https://github.com/eva-ics/eva4/tree/main/bindings/js/example
 Service code (TypeScript)
 -------------------------
 
-.. literalinclude:: ../../sdk-examples/js/test.ts
+.. literalinclude:: ../../sdk-examples/js/svc-example.ts
     :language: typescript
 
 package.json
