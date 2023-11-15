@@ -1,7 +1,9 @@
 import {
+  createService,
   ServiceInfo,
   ServiceMethod,
   Service,
+  OID,
   pack,
   unpack,
   EventKind,
@@ -38,6 +40,18 @@ const onFrame = async (e: RpcEvent): Promise<void> => {
     "payload:",
     payload
   );
+  if (e.frame.topic?.startsWith(EapiTopic.LocalStateTopic)) {
+    const oid = new OID(
+      e.frame.topic.slice(EapiTopic.LocalStateTopic.length),
+      true
+    );
+    log.info(
+      "received item state for",
+      oid.asString(),
+      `status: ${payload.status}`,
+      `value: ${payload.value}`
+    );
+  }
 };
 
 /** RPC calls handler */
@@ -56,7 +70,9 @@ const onRpcCall = async (e: RpcEvent): Promise<Buffer | undefined> => {
     case "run":
       const lAction = new Action(payload);
       console.log(lAction);
+      // mark action running
       await service.controller.eventRunning(lAction);
+      // mark action failed
       await service.controller.eventFailed(
         lAction,
         "lmacro execution",
@@ -68,8 +84,11 @@ const onRpcCall = async (e: RpcEvent): Promise<Buffer | undefined> => {
     case "action":
       const uAction = new Action(payload);
       console.log(uAction);
+      // mark action running
       await service.controller.eventRunning(uAction);
+      // mark action completed
       await service.controller.eventCompleted(uAction, "all fine");
+      // announce new unit state
       const path = uAction.oid.asPath();
       await service.bus.publish(
         `${EapiTopic.RawStateTopic}${path}`,
@@ -88,20 +107,19 @@ const onRpcCall = async (e: RpcEvent): Promise<Buffer | undefined> => {
 };
 
 const main = async () => {
-  service = new Service();
-  // the service initial payload must be loaded
-  await service.load();
-  // initialize the local bus and RPC engine
-  await service.init({
-    info: new ServiceInfo({
-      author: "Bohemia Automation",
-      description: "Test JS service",
-      version: "0.0.1"
-    })
-      .addMethod(new ServiceMethod("hello").optional("name"))
-      .addMethod(new ServiceMethod("config")),
-    onFrame: onFrame,
-    onRpcCall: onRpcCall
+  // service info and RPC help
+  const info = new ServiceInfo({
+    author: "Bohemia Automation",
+    description: "Test JS service",
+    version: "0.0.1"
+  })
+    .addMethod(new ServiceMethod("hello").optional("name"))
+    .addMethod(new ServiceMethod("config"));
+  // create a service
+  service = await createService({
+    info,
+    onFrame,
+    onRpcCall
   });
   // set the global logger
   log = service.logger;
