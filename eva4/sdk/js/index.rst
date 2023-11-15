@@ -2,13 +2,24 @@ JavaScript/TypeScript SDK
 *************************
 
 This article provides an all-in-one example for JavaScript/TypeScript EVA ICS
-service, which can be built and started e.g. with `Node.js
-<https://nodejs.org/>`_.
+service.
+
+.. contents::
+
+JavaScript runtime
+==================
 
 .. note::
 
    EVA ICS has no built-in tools to install Node.js or other JavaScript server
    runtime. It must be installed manually.
+
+JavaScript server runtime engines supported:
+
+* `Node.js <https://nodejs.org/>`_
+* `Deno <https://deno.com>`_
+
+Other compatible engines can be used as well.
 
 SDK module
 ==========
@@ -93,3 +104,21 @@ If using :doc:`../../../eva-webengine/index`, the call can be made as:
         'x::my.svc.js_test::some.method',
         { param: "value" }
     );
+
+Running with Deno
+=================
+
+To run services, built with EVA ICS JS SDK, with `Deno <https://deno.com>`_, it
+is possible to modify imports as the following:
+
+.. code:: typescript
+
+   import {
+    // required imports
+   } from "npm:@eva-ics/sdk";
+
+Then run TypeScript service files directly with the following *command* field:
+
+.. code:: shell
+
+   deno run --allow-read --allow-write --allow-ffi --allow-env --unstable /path/to/svc.ts
