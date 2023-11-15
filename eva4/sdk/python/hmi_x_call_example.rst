@@ -37,8 +37,8 @@ The following template can be used to quickly create a service instance with
 .. literalinclude:: ../../sdk-examples/rust/svc-example-sensor-set/svc-tpl.yml
    :language: yaml
 
-API call example
-================
+HTTP API call example
+=====================
 
 The service responds to the following API calls (`httpie <https://httpie.io>`_
 call example):
@@ -49,8 +49,8 @@ call example):
     cat <<EOF
     {
         "jsonrpc": "2.0",
-        "id": 1, "method":
-        "x::my.svc.sensor_set::set",
+        "id": 1,
+        "method": "x::my.svc.sensor_set::set",
         "params": {
             "k": "mykey",
             "i": "sensor:tests/sensor1",

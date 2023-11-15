@@ -1,0 +1,7 @@
+bus:
+  path: var/bus.ipc
+command: node /opt/eva4/bindings/js/example/dist/out.js
+config:
+  a: 2
+  b: 3
+user: nobody
