@@ -1,5 +1,5 @@
-Services best practices
-***********************
+Services practices
+******************
 
 This article covers service best practices, as well as describes how to develop
 an own EVA ICS SDK or a service from scratch.
@@ -197,6 +197,9 @@ depending on SDK implementation)*
 
 The service SHOULD have a logger, which sends messages to *LOG/IN/<level>*
 topics (see :doc:`../eapi`).
+
+The log messages which are sent via the bus, have a plain-text UTF-8 format and
+are not encoded/serialized in any way.
 
 The service MAY also output log messages to STDIN (level: info) and STDERR
 (level: error) which are automatically processed by the local launcher. If
