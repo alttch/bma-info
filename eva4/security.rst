@@ -119,6 +119,8 @@ vulnerabilities are found in the actual OpenSSL version.
 Custom :doc:`enterprise` native binaries for particular OS/distributions can be
 provided for customers with active contracts by request.
 
+.. _eva4_security_fips:
+
 FIPS 140
 ========
 
