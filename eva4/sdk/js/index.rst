@@ -31,8 +31,8 @@ Service example
 The full example can be found at
 https://github.com/eva-ics/eva4/tree/main/bindings/js/example
 
-Service code
-------------
+Service code (TypeScript)
+-------------------------
 
 .. literalinclude:: ../../sdk-examples/js/test.ts
     :language: typescript

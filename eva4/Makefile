@@ -9,7 +9,7 @@ prepare:
 	mkdir -p ./sdk-examples/js/
 	cp /opt/eva4/bindings/js/example/test.ts ./sdk-examples/js/
 	cp /opt/eva4/bindings/js/example/svc-tpl.yml ./sdk-examples/js/
-	sed 's|file:../dist/|^0.0.3|' /opt/eva4/bindings/js/example/package.json > ./sdk-examples/js/package.json
+	sed 's|file:../dist/|^0.0.4|' /opt/eva4/bindings/js/example/package.json > ./sdk-examples/js/package.json
 	cp -r /opt/eva4/svc/svc-example-temp ./sdk-examples/rust/
 	cp -r /opt/eva4/svc/svc-example-sensor-set ./sdk-examples/rust/
 	cp -r /opt/eva4/bindings/python/examples/svc-example-temp ./sdk-examples/python/
