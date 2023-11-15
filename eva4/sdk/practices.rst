@@ -16,8 +16,8 @@ Startup
 
 *(covered by SDK if available)*
 
-A service is a process which is launched by :doc:`../../eva4/core` via a local
-launcher.
+A service is a process which is launched by :doc:`the node core
+<../../eva4/core>` via a local launcher.
 
 * the process may contain user-defined command-line arguments
 
@@ -63,7 +63,7 @@ spawn a worker, which reads single bytes from it.
 
 The service receives from time to time data from launcher, which MUST be equal
 to **0x00**. No response is required in any way. If the byte is not equal or
-STDIN steam is closed, the service MUST terminate itself (with no error code).
+STDIN stream is closed, the service MUST terminate itself (with no error code).
 This may happen if the node core process is crashed or killed.
 
 Environment variables
@@ -100,7 +100,7 @@ Initializing
 depending on SDK implementation)*
 
 The service MUST connect to the local bus as soon as possible and after SHOULD
-drop it privileges to a restricted user if set.
+drop its privileges to a restricted user if set.
 
 Workers
 =======
