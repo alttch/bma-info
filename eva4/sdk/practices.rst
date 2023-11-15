@@ -248,12 +248,13 @@ local items via the local bus (topic *ST/LOC*).
 FIPS 140
 ========
 
-If the node is launched in :ref:`FIPS-140 mode <eva4_security_fips>`, the
-service MUST use only FIPS-140 compliant cryptographic libraries/manually turn
-on FIPS-140 mode in them if necessary.
+If the node is launched in :ref:`FIPS-140 mode <eva4_security_fips>`
+(*initial.fips = true*), the service MUST use only FIPS-140 compliant
+cryptographic libraries/manually turn on FIPS-140 mode in them if necessary.
 
 If the service uses libraries which are not FIPS-140 compliant, the service
-vendor MUST clearly specify this information in the service documentation.
+vendor MUST clearly specify this information the service documentation for
+customers, who require FIPS-140 compliant software.
 
 Exit codes
 ==========
