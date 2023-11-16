@@ -1244,6 +1244,10 @@ user_data.set
      - String
      - field key
      - **yes**
+   * - **value**
+     - any
+     - field value
+     - **yes**
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/user_data.set.req
