@@ -245,8 +245,18 @@ When the node core is started and all services become ready (or does not become
 ready via the given max *initial.timeout.startup*), it announces states of all
 local items via the local bus (topic *ST/LOC*).
 
-FIPS 140
+Security
 ========
+
+AAA
+---
+
+If the service caches user accounts, keys or ACLs, it MUST listen to *AAA/ACL*
+*AAA/USER* and *AAA/KEY* bus topics and take actions when the credentials or
+access control lists are modified or deleted.
+
+FIPS 140
+--------
 
 If the node is launched in :ref:`FIPS-140 mode <eva4_security_fips>`
 (*initial.fips = true*), the service MUST use only FIPS-140 compliant
