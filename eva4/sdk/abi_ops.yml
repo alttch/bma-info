@@ -1,0 +1,63 @@
+EVA_FFI_SVC_OP_IS_ACTIVE:
+  code: 1
+  des: Checks is the service active
+  ret: 1 for active, 0 for inactive
+EVA_FFI_SVC_OP_SUBSCRIBE_TOPIC:
+  code: 10
+  des: Subscribes to a topic
+  dat: "topic names, as null-terminated strings"
+  bus: true
+EVA_FFI_SVC_OP_UNSUBSCRIBE_TOPIC:
+  code: 11
+  des: Unsubscribes from a topic
+  dat: "topic names, as null-terminated strings"
+  bus: true
+EVA_FFI_SVC_OP_PUBLISH_TOPIC:
+  code: 12
+  des: Publishes data to a topic
+  dat: MessagePack-encoded payload
+  bus: true
+EVA_FFI_SVC_OP_RPC_CALL:
+  code: 20
+  des: Performs a RPC call
+  dat: "target, method (both null-terminated), payload (MessagePack)"
+  ret: Call result (size) if available
+  bus: true
+EVA_FFI_SVC_OP_GET_RPC_RESULT:
+  code: 29
+  des: Gets result of the latest RPC call
+  dat: The buffer MUST be set up and allocated by the caller
+  ret: The call result is written into FFI buffer
+  bus: true
+EVA_FFI_SVC_OP_LOG_TRACE:
+  code: 100
+  des: Logs a trace-level message
+  dat: "A message string (null termination not required)"
+  bus: true
+EVA_FFI_SVC_OP_LOG_DEBUG:
+  code: 110
+  des: Logs a debug-level message
+  dat: "A message string (null termination not required)"
+  bus: true
+EVA_FFI_SVC_OP_LOG_INFO:
+  code: 120
+  des: Logs an info-level message
+  dat: "A message string (null termination not required)"
+  bus: true
+EVA_FFI_SVC_OP_LOG_WARN:
+  code: 130
+  des: Logs a warn-level message
+  dat: "A message string (null termination not required)"
+  bus: true
+EVA_FFI_SVC_OP_LOG_ERROR:
+  code: 140
+  des: Logs an error-level message
+  dat: "A message string (null termination not required)"
+  bus: true
+EVA_FFI_SVC_OP_TERMINATE:
+  code: -99
+  des: Asks the launcher to terminate the service
+  bus: true
+EVA_FFI_SVC_OP_POC:
+  code: -100
+  des: Asks the launcher to panic (critical error)

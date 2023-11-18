@@ -22,6 +22,7 @@ application development, see: :doc:`../ui` and
     rust/index
     python/index
     js/index
+    abi
     practices
     ../eapi
     ../repl/proto

@@ -109,6 +109,8 @@ are automatically considered as failed and are restarted.
 A service must react to "stop" command. When called, it has shutdown_time to
 stop, otherwise it is forcibly killed.
 
+.. _eva4_eapi_metadata:
+
 Metadata format
 ---------------
 

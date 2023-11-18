@@ -33,9 +33,11 @@ package, called "the initial payload".
 
 The payload structure is well-described in
 
-* https://docs.rs/eva-common/0.3.8/eva_common/services/struct.Initial.html (Rust SDK commons)
+* https://docs.rs/eva-common/latest/eva_common/services/struct.Initial.html (Rust SDK commons)
 
 * https://pub.bma.ai/dev/docs/eva4-js-sdk/interfaces/InitialPayload.html (JavaScript/TypeScript SDK)
+
+* https://github.com/eva-ics/eva4/blob/main/bindings/cpp/sdk/eva4-ffi-sdk.hpp (C++ SDK)
 
 The initial payload is loaded in the following way:
 

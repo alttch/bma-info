@@ -17,11 +17,12 @@ The arguments are:
 * **<LIBRARY_PATH>** path to the shared library (absolute or relative to EVA
   ICS directory), mandatory
 
-* **--command-queue-size <NUMBER>** size of the bus command queue (default:
+* **\--command-queue-size <NUMBER>** size of the bus command queue (default:
   8192). Should be raised for services which have temporary load peaks. If the
-  queue is full, commands coming from the service are dropped with an error.
+  queue is full, commands coming from the service library are dropped with an
+  error.
 
-* **--blocking-fp** turns on blocking frame processing. By default, pub/sub bus
+* **\--blocking-fp** turns on blocking frame processing. By default pub/sub bus
   frames are processed in background, which causes random processing ordering.
   If the ordering is important (e.g. a service watches state of an item,
   managed by another one), the option must be turned on. In this case frames
