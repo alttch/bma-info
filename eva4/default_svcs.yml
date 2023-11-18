@@ -342,3 +342,16 @@
     .. include:: ../include/dapp.rst
   api: svc/dapp/eapi.yml
   tpl: svc-tpl-dapp.yml
+- nam: "custom.name"
+  exe: svc/eva-ffi
+  des: FFI launcher
+  txt: |
+    .. include:: ../include/ffi.rst
+  tpl: svc-tpl-ffi.yml
+  xtr: |
+    EAPI
+    ====
+
+    The launcher itself provides no :doc:`../eapi` methods except the standard
+    ones (“test”, “info” and “stop”). All other methods are proxied to the
+    loaded service library.

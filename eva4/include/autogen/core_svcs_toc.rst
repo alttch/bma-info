@@ -10,6 +10,7 @@
     svc/eva-aaa-acl
     svc/eva-dapp
     svc/eva-controller-enip
+    svc/eva-ffi
     svc/eva-filemgr
     svc/eva-kioskman
     svc/eva-hmi

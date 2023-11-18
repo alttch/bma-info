@@ -32,6 +32,10 @@
      - :doc:`eva.controller.enipN<svc/eva-controller-enip>`
      - svc/eva-controller-enip
      - 
+   * - :doc:`FFI launcher<svc/eva-ffi>`
+     - :doc:`custom.name<svc/eva-ffi>`
+     - svc/eva-ffi
+     - 
    * - :doc:`File manager service<svc/eva-filemgr>`
      - :doc:`eva.filemgr.main<svc/eva-filemgr>`
      - svc/eva-filemgr
