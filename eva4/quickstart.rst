@@ -113,6 +113,12 @@ Connecting the equipment
 Creating items
 --------------
 
+.. note::
+
+   If item auto-creation is enabled in :ref:`eva4_config_core` (default from
+   EVA ICS 4.0.2 build 2023112001), this step can be omitted as all the items
+   are be auto-created by the fieldbus connection controller service.
+
 Create the items. There following two types of items are required:
 :ref:`eva4_unit` (can be controlled) and :ref:`eva4_sensor` (can be monitored
 only).
