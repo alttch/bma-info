@@ -12,6 +12,8 @@ Services, written with ABI, are launched with :doc:`../svc/eva-ffi`.
 
 The current stable service ABI version is **1**.
 
+See also: :doc:`cpp/index`
+
 .. contents::
 
 Commons
@@ -133,6 +135,8 @@ operations.
 For multi-thread environments, the function pointer MUST be always stored
 either in an atomic variable or using a higher-level mutex/thread-lock
 mechanism.
+
+.. _eva4_sdk_abi_eva_svc_get_result:
 
 eva_svc_get_result
 ------------------
