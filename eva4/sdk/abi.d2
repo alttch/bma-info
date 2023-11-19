@@ -1,0 +1,10 @@
+direction: right
+
+core: Node core
+bus: BUS/RT { shape: cloud }
+launcher: FFI launcher
+service: Service shared lib
+
+core -- bus
+bus -- launcher
+launcher -- service

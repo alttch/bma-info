@@ -10,6 +10,10 @@ An alternative to a native SDK is writing EVA ICS services using ABI.
 
 Services, written with ABI, are launched with :doc:`../svc/eva-ffi`.
 
+.. figure:: abi.svg
+    :width: 745px
+    :alt: ABI architecture
+
 The current stable service ABI version is **1**.
 
 See also: :doc:`cpp/index`
