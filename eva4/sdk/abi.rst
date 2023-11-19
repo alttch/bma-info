@@ -245,6 +245,10 @@ svc_on_frame
 
    void svc_on_frame(struct EvaFFIFrame *r)
 
+.. note::
+
+   The launcher executes this method in a separate thread.
+
 Called with a bus frame is received. The frame format differs depending of
 topic, the majority of frames are well-described in:
 
@@ -260,6 +264,27 @@ command:
 .. code:: shell
 
    /opt/eva4/sbin/bus /opt/eva4/var/bus.ipc listen -t TOPIC # Set "#" to listen to all bus topics
+
+svc_on_rpc_call
+---------------
+
+.. code:: c
+
+   int32_t svc_on_rpc_call(struct EvaFFIRpcEvent *r)
+
+.. note::
+
+   The launcher executes this method in a separate thread.
+
+Called when an incoming RPC call is received. The service MAY implement RPC
+methods "action" (for unit actions) and "run" (for lmacro execution) as well as
+custom methods.
+
+The method returns either EVA_OK (0), an error code or size of payload result
+(MessagePack-encoded). The result is put to a thread-local variable to be
+retrieved later.
+
+For payload formats see :ref:`eva4_unit_action` and :ref:`eva4_macro_action`.
 
 Operations
 ==========

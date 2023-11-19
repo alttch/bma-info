@@ -463,7 +463,6 @@ A controller can react to "action" rpc call command. the payload contains:
 * i: OID (String)
 * timeout: timeout (microseconds, u64)
 * priority: u8 // lower is higher
-* params/status: status (i16)
 * params/value: value payload, if required
 * config: optional config
 
