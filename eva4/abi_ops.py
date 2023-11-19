@@ -6,6 +6,9 @@ with open('./sdk/abi_ops.yml') as fh:
     ops = yaml.safe_load(fh)
 
 for (op, info) in ops.items():
+    des = info['des'].capitalize()
+    if not des.endswith('.'):
+        des += '.'
     data = info.get('dat')
     ret = info.get('ret')
     if data:
@@ -15,7 +18,7 @@ for (op, info) in ops.items():
     print(f'.. _eva4_sdk_abi_svc_op_{op.lower()}:\n')
     print(op)
     print('-' * len(op))
-    print(f'\n{info["des"].capitalize()}\n')
+    print(f'\n{des}\n')
     print(f'* Operation code: **{info["code"]}**')
     print(f'* FFI buffer data: {data if data else "none"}')
     print(f'* Returns: {ret if ret else "none"}')

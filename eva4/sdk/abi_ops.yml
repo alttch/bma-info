@@ -60,4 +60,7 @@ EVA_FFI_SVC_OP_TERMINATE:
   bus: true
 EVA_FFI_SVC_OP_POC:
   code: -100
-  des: Asks the launcher to panic (critical error)
+  dat: "A message string (null termination not required)"
+  des: |
+    Forces the launcher to panic (critical error). The caller do not need to
+    log the message itself, it is logged by the launcher automatically

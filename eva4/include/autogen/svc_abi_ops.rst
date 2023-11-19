@@ -3,7 +3,7 @@
 EVA_FFI_SVC_OP_IS_ACTIVE
 ------------------------
 
-Checks is the service active
+Checks is the service active.
 
 * Operation code: **1**
 * FFI buffer data: none
@@ -16,7 +16,7 @@ Checks is the service active
 EVA_FFI_SVC_OP_SUBSCRIBE_TOPIC
 ------------------------------
 
-Subscribes to a topic
+Subscribes to a topic.
 
 * Operation code: **10**
 * FFI buffer data: topic names, as null-terminated strings
@@ -29,7 +29,7 @@ Subscribes to a topic
 EVA_FFI_SVC_OP_UNSUBSCRIBE_TOPIC
 --------------------------------
 
-Unsubscribes from a topic
+Unsubscribes from a topic.
 
 * Operation code: **11**
 * FFI buffer data: topic names, as null-terminated strings
@@ -42,7 +42,7 @@ Unsubscribes from a topic
 EVA_FFI_SVC_OP_PUBLISH_TOPIC
 ----------------------------
 
-Publishes data to a topic
+Publishes data to a topic.
 
 * Operation code: **12**
 * FFI buffer data: messagePack-encoded payload
@@ -55,7 +55,7 @@ Publishes data to a topic
 EVA_FFI_SVC_OP_RPC_CALL
 -----------------------
 
-Performs a rpc call
+Performs a rpc call.
 
 * Operation code: **20**
 * FFI buffer data: target, method (both null-terminated), payload (MessagePack)
@@ -68,7 +68,7 @@ Performs a rpc call
 EVA_FFI_SVC_OP_GET_RPC_RESULT
 -----------------------------
 
-Gets result of the latest rpc call
+Gets result of the latest rpc call.
 
 * Operation code: **29**
 * FFI buffer data: the buffer MUST be set up and allocated by the caller
@@ -81,7 +81,7 @@ Gets result of the latest rpc call
 EVA_FFI_SVC_OP_LOG_TRACE
 ------------------------
 
-Logs a trace-level message
+Logs a trace-level message.
 
 * Operation code: **100**
 * FFI buffer data: a message string (null termination not required)
@@ -94,7 +94,7 @@ Logs a trace-level message
 EVA_FFI_SVC_OP_LOG_DEBUG
 ------------------------
 
-Logs a debug-level message
+Logs a debug-level message.
 
 * Operation code: **110**
 * FFI buffer data: a message string (null termination not required)
@@ -107,7 +107,7 @@ Logs a debug-level message
 EVA_FFI_SVC_OP_LOG_INFO
 -----------------------
 
-Logs an info-level message
+Logs an info-level message.
 
 * Operation code: **120**
 * FFI buffer data: a message string (null termination not required)
@@ -120,7 +120,7 @@ Logs an info-level message
 EVA_FFI_SVC_OP_LOG_WARN
 -----------------------
 
-Logs a warn-level message
+Logs a warn-level message.
 
 * Operation code: **130**
 * FFI buffer data: a message string (null termination not required)
@@ -133,7 +133,7 @@ Logs a warn-level message
 EVA_FFI_SVC_OP_LOG_ERROR
 ------------------------
 
-Logs an error-level message
+Logs an error-level message.
 
 * Operation code: **140**
 * FFI buffer data: a message string (null termination not required)
@@ -146,7 +146,7 @@ Logs an error-level message
 EVA_FFI_SVC_OP_TERMINATE
 ------------------------
 
-Asks the launcher to terminate the service
+Asks the launcher to terminate the service.
 
 * Operation code: **-99**
 * FFI buffer data: none
@@ -159,10 +159,12 @@ Asks the launcher to terminate the service
 EVA_FFI_SVC_OP_POC
 ------------------
 
-Asks the launcher to panic (critical error)
+Forces the launcher to panic (critical error). the caller do not need to
+log the message itself, it is logged by the launcher automatically
+.
 
 * Operation code: **-100**
-* FFI buffer data: none
+* FFI buffer data: a message string (null termination not required)
 * Returns: none
 * Bus required: no
 

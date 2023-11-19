@@ -34,7 +34,7 @@ or using the bus CLI client:
 EAPI
 ====
 
-The launcher itself provides no :doc:`EAPI <../eapi>` methods except the
-standard ones (“test”, “info” and “stop”). All other methods are proxied to the
+The launcher itself provides no :doc:`../eapi` methods except the standard
+ones (“test”, “info” and “stop”). All other methods are proxied to the
 loaded service library.
 
