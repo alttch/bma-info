@@ -10,7 +10,7 @@ Command-line arguments
 
 Unlike other services, the launcher is configured with command-line arguments.
 This is because "config" field of the service parameters payload is passed to
-the loaded.
+the loaded shared library.
 
 The arguments are:
 
