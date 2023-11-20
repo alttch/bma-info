@@ -95,3 +95,6 @@ message is put into the node log immediately.
 .. code:: cpp
 
    std::cerr << "something wrong" << std::endl << std::flush;
+
+There are also helper methods **eva::log::o** (for STDOUT) and **eva::log::e**
+(for STDERR) which automate the process.
