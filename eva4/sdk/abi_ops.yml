@@ -15,7 +15,7 @@ EVA_FFI_SVC_OP_UNSUBSCRIBE_TOPIC:
 EVA_FFI_SVC_OP_PUBLISH_TOPIC:
   code: 12
   des: Publishes data to a topic
-  dat: MessagePack-encoded payload
+  dat: topic payload (MessagePack-encoded)
   bus: true
 EVA_FFI_SVC_OP_RPC_CALL:
   code: 20

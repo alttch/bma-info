@@ -45,7 +45,7 @@ EVA_FFI_SVC_OP_PUBLISH_TOPIC
 Publishes data to a topic.
 
 * Operation code: **12**
-* FFI buffer data: messagePack-encoded payload
+* FFI buffer data: topic payload (MessagePack-encoded)
 * Returns: none
 * Bus required: **yes**
 
