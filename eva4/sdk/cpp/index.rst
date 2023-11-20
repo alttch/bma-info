@@ -2,7 +2,7 @@ C++ SDK
 =======
 
 C++ SDK for EVA ICS v4 allows to create custom services in C++. The current
-minimum supported C++ standard is C++ 14.
+minimum supported standard is C++ 14.
 
 The SDK is a high-level abstraction on top of :doc:`../abi` and requires C++
 services to be compiled as shared libraries and launched by
@@ -41,6 +41,19 @@ to be re-implemented manually:
 * :ref:`eva4_sdk_abi_eva_svc_set_op_fn`
 * :ref:`eva4_sdk_abi_eva_svc_get_result`
 
+Requirements
+============
+
+EVA ICS C++ SDK requires `MessagePack for C/C++
+<https://github.com/msgpack/msgpack-c/>`_.
+
+The library is available in the most Linux distributions out-of-the-box, for
+Ubuntu/Debian **libmsgpack-dev** package needs to be installed:
+
+.. code:: shell
+
+   apt install libmsgpack-dev
+
 Service example
 ===============
 
@@ -53,6 +66,7 @@ Here is an example how to build the service with G++ for LINUX:
 
    g++ -fPIC -I/opt/eva4/bindings/cpp/sdk -I/opt/eva4/bindings/common \
        -std=c++14 -shared -Wall -Werror -s -O3 -o libsvc.so svc.cpp
+
 
 Source code
 -----------
