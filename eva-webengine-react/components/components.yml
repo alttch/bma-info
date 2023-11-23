@@ -437,3 +437,135 @@
     - name: gauge-value-result
       description: value in "modern" gauge
   css_example: true
+- name: Thermometer
+  preview_width: 100
+  description: |
+    Provides a termometer visualization component.
+
+    If showValue parameter is used, the component additionally accepts all
+    parameters of :doc:`itemvalue`.
+  parameters:
+    - name: minValue
+      type: number
+      description: Minimum value
+      required: true
+    - name: maxValue
+      type: number
+      description: Maximum value
+      required: true
+    - name: oid
+      type: string
+      description: item OID
+    - name: state
+      type: ItemState
+      description: item state
+    - name: label
+      type: string
+      description: Bottom label
+    - name: showValue
+      type: boolean
+      description: Display item value
+    - name: warnValue
+      type: number
+      description: Gauge warning upper threshold
+    - name: critValue
+      type: number
+      description: Gauge critical upper threshold
+    - name: lowWarnValue
+      type: number
+      description: Gauge warning lower threshold
+    - name: lowCritValue
+      type: number
+      description: Gauge critical lower threshold
+    - name: showMinMax
+      type: number
+      description: Show min/max tick labels
+    - *ENGINE
+  css:
+    - name: .eva-thermometer-container
+      description: the primary container
+    - name: .eva-thermometer-progress-container
+      description: the bar container
+    - name: .eva-thermometer-seperator
+      description: bar separator ticks
+    - name: .eva-thermometer-min-value
+      description: min. value tick label
+    - name: .eva-thermometer-max-value
+      description: max. value tick label
+    - name: .eva-thermometer-values-container
+      description: label/value container
+    - name: .eva-thermometer-label
+      description: label class
+    - name: .eva-thermometer-progress-color
+      description: the default bar color
+    - name: .eva-thermometer-warning-progress-color
+      description: warning color
+    - name: .eva-thermometer-critical-progress-color
+      description: critical color
+  css_example: true
+- name: ProgressBar
+  preview_width: 300
+  description: |
+    Provides a horizontal progress bar visualization component.
+
+    If showValue parameter is used, the component additionally accepts all
+    parameters of :doc:`itemvalue`.
+  parameters:
+    - name: minValue
+      type: number
+      description: Minimum value
+      required: true
+    - name: maxValue
+      type: number
+      description: Maximum value
+      required: true
+    - name: oid
+      type: string
+      description: item OID
+    - name: state
+      type: ItemState
+      description: item state
+    - name: label
+      type: string
+      description: Bottom label
+    - name: showValue
+      type: boolean
+      description: Display item value
+    - name: warnValue
+      type: number
+      description: Gauge warning upper threshold
+    - name: critValue
+      type: number
+      description: Gauge critical upper threshold
+    - name: lowWarnValue
+      type: number
+      description: Gauge warning lower threshold
+    - name: lowCritValue
+      type: number
+      description: Gauge critical lower threshold
+    - name: showMinMax
+      type: number
+      description: Show min/max tick labels
+    - *ENGINE
+  css:
+    - name: .eva-progressbar-container
+      description: the primary container
+    - name: .eva-progressbar-progress-container
+      description: the bar container
+    - name: .eva-progressbar-labels-container
+      description: ticks container
+    - name: .eva-progressbar-min-value
+      description: min. value tick label
+    - name: .eva-progressbar-max-value
+      description: max. value tick label
+    - name: .eva-progressbar-values-container
+      description: label/value container
+    - name: .eva-progressbar-label
+      description: label class
+    - name: .eva-progressbar-progress-color
+      description: the default bar color
+    - name: .eva-progressbar-warning-progress-color
+      description: warning color
+    - name: .eva-progressbar-critical-progress-color
+      description: critical color
+  css_example: true

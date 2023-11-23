@@ -13,5 +13,7 @@ UI Components
    controlbuttonrun
    controlblock
    gauge
+   thermometer
+   progressbar
    linechart
    canvas
