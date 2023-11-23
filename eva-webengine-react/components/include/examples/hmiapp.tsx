@@ -1,5 +1,6 @@
 import { Eva } from "@eva-ics/webengine";
 import { HMIApp, LoginProps, FunctionLogout } from "@eva-ics/webengine-react";
+import { Toaster } from "react-hot-toast";
 
 const eva = new Eva();
 
@@ -12,9 +13,12 @@ eva.load_config().then(() => {
     cache_auth: true
   };
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+    <>
     //<React.StrictMode>
+    <Toaster position={"bottom-left"} />
     <HMIApp engine={eva} Dashboard={HmiDashboard} login_props={login_props} />
     //</React.StrictMode>
+    </>
   );
 });
 

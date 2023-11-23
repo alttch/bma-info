@@ -19,6 +19,10 @@ To make a WebEngine-React application compatible with
 The component automatically registers *window.$eva* and *window.$eva.hmi*
 objects with required functions.
 
+*window.$eva.hmi.display_alert* is handled via `react-hot-toast
+<https://react-hot-toast.com>`_. To display external alerts, make sure
+*<Toaster />* component is always visible.
+
 Running in React Strict mode
 ============================
 
