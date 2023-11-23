@@ -13,12 +13,10 @@ eva.load_config().then(() => {
     cache_auth: true
   };
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <>
-    //<React.StrictMode>
-    <Toaster position={"bottom-left"} />
-    <HMIApp engine={eva} Dashboard={HmiDashboard} login_props={login_props} />
-    //</React.StrictMode>
-    </>
+    <React.StrictMode>
+      <Toaster position={"bottom-left"} />
+      <HMIApp engine={eva} Dashboard={HmiDashboard} login_props={login_props} />
+    </React.StrictMode>
   );
 });
 
