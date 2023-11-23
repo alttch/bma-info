@@ -58,19 +58,19 @@ Parameters
    * - warnValue
      - number
      - no
-     - Gauge warning upper threshold
+     - Progress bar warning upper threshold
    * - critValue
      - number
      - no
-     - Gauge critical upper threshold
+     - Progress bar critical upper threshold
    * - lowWarnValue
      - number
      - no
-     - Gauge warning lower threshold
+     - Progress bar warning lower threshold
    * - lowCritValue
      - number
      - no
-     - Gauge critical lower threshold
+     - Progress bar critical lower threshold
    * - showMinMax
      - number
      - no

@@ -467,16 +467,16 @@
       description: Display item value
     - name: warnValue
       type: number
-      description: Gauge warning upper threshold
+      description: Thermometer warning upper threshold
     - name: critValue
       type: number
-      description: Gauge critical upper threshold
+      description: Thermometer critical upper threshold
     - name: lowWarnValue
       type: number
-      description: Gauge warning lower threshold
+      description: Thermometer warning lower threshold
     - name: lowCritValue
       type: number
-      description: Gauge critical lower threshold
+      description: Thermometer critical lower threshold
     - name: showMinMax
       type: number
       description: Show min/max tick labels
@@ -533,16 +533,16 @@
       description: Display item value
     - name: warnValue
       type: number
-      description: Gauge warning upper threshold
+      description: Progress bar warning upper threshold
     - name: critValue
       type: number
-      description: Gauge critical upper threshold
+      description: Progress bar critical upper threshold
     - name: lowWarnValue
       type: number
-      description: Gauge warning lower threshold
+      description: Progress bar warning lower threshold
     - name: lowCritValue
       type: number
-      description: Gauge critical lower threshold
+      description: Progress bar critical lower threshold
     - name: showMinMax
       type: number
       description: Show min/max tick labels

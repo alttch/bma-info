@@ -58,19 +58,19 @@ Parameters
    * - warnValue
      - number
      - no
-     - Gauge warning upper threshold
+     - Thermometer warning upper threshold
    * - critValue
      - number
      - no
-     - Gauge critical upper threshold
+     - Thermometer critical upper threshold
    * - lowWarnValue
      - number
      - no
-     - Gauge warning lower threshold
+     - Thermometer warning lower threshold
    * - lowCritValue
      - number
      - no
-     - Gauge critical lower threshold
+     - Thermometer critical lower threshold
    * - showMinMax
      - number
      - no
