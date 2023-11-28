@@ -253,6 +253,29 @@ A special field "force" can be used to forcibly set (when force=true) state of
 disabled items. The field should be used only by admin interfaces or system
 software.
 
+Starting from the build 2023112801 the core also accepts raw bulk events sent
+to "RAW" topic:
+
+.. code:: json
+
+    [
+      {
+        "oid": "sensor:t1",
+        "status": 1,
+        "value": 25.55
+      },
+      {
+        "oid": "sensor:t2",
+        "status": 1,
+        "value": 35.99
+      }
+    ]
+
+.. note::
+
+    Producers should always minimize the number of bus events, especially blank
+    ones.
+   
 Replication events
 ------------------
 
