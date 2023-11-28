@@ -949,6 +949,166 @@ lvar.toggle
     :response: ../../http_api_examples/lvar.toggle.resp
 
 
+.. _eva4_hmi_http__pvt.get:
+
+pvt.get
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get contents of a file in pvt (text)*
+   * - Parameters
+     - required
+   * - Returns
+     - File content
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **path**
+     - String
+     - Relative path
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/pvt.get.req
+    :response: ../../http_api_examples/pvt.get.resp
+
+
+.. _eva4_hmi_http__pvt.list:
+
+pvt.list
+--------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List entries in pvt*
+   * - Parameters
+     - required
+   * - Returns
+     - List of available files and folders
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **path**
+     - String
+     - Relative path
+     - **yes**
+   * - **masks**
+     - String/Vec<String>
+     - file masks
+     - no
+   * - **kind**
+     - String
+     - file, dir or any
+     - no
+   * - **recursive**
+     - bool
+     - recursive listing
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/pvt.list.req
+    :response: ../../http_api_examples/pvt.list.resp
+
+
+.. _eva4_hmi_http__pvt.put:
+
+pvt.put
+-------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Puts contents of a file in pvt (text)*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **path**
+     - String
+     - Relative path
+     - **yes**
+   * - **content**
+     - String
+     - File content
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/pvt.put.req
+    :response: ../../http_api_examples/pvt.put.resp
+
+
+.. _eva4_hmi_http__pvt.unlink:
+
+pvt.unlink
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Deletes a file in pvt*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **path**
+     - String
+     - Relative path
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/pvt.unlink.req
+    :response: ../../http_api_examples/pvt.unlink.resp
+
+
 .. _eva4_hmi_http__run:
 
 run

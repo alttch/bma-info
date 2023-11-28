@@ -8,7 +8,6 @@ host: localhost:7727
   "jsonrpc": "2.0",
   "method": "user_data.get",
   "params": {
-    "k": "secretkey",
-    "key": "datafield"
+    "k": "secretkey"
   }
 }

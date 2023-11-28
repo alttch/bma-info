@@ -6,9 +6,8 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "item.state",
+  "method": "call",
   "params": {
-    "q": "item.state sensor:# full=true",
     "k": "secretkey"
   }
 }

@@ -27,7 +27,7 @@ prepare:
 	/opt/eva4/sbin/eapigen eva.core /opt/eva4/eva/eapi.yml > ./include/autogen/core_eapi.rst
 	/opt/eva4/sbin/eapigen hmi_ws /opt/eva4/svc/hmi/ws_api.yml --omit-title > ./include/autogen/ws_api.rst
 	/opt/eva4/sbin/eapigen hmi_http /opt/eva4/svc/hmi/http_api.yml \
-		--http-api ../../http_api_examples > include/autogen/http_api.rst
+		--http-api ./http_api_examples --http-api-include-dir ../../http_api_examples > include/autogen/http_api.rst
 	./default-svcs.py
 	./fb.py > ./include/fieldbus_table.rst
 	pydoc2rst ./sdk/python/pydoc/tpl_api.rst ./sdk/python/pydoc/api.rst /opt/eva4/bindings/python/eva-ics-sdk

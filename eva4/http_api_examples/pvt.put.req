@@ -6,8 +6,10 @@ host: localhost:7727
 {
   "id": 1,
   "jsonrpc": "2.0",
-  "method": "user_data.delete",
+  "method": "pvt.put",
   "params": {
-    "k": "secretkey"
+    "content": "hello",
+    "k": "secretkey",
+    "path": "vendored-apps/file1.json"
   }
 }
