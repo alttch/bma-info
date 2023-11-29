@@ -165,6 +165,31 @@ nodes and after offers the update plan, which must be additionally confirmed.
 Remote nodes are always updated to the same version, which the management node
 has got.
 
+Mission-critical systems
+------------------------
+
+The following update strategy is recommended for mission-critical systems:
+
+* Backup the system (*/opt/eva4* directory) before updating
+
+* Apply update on a test system before updating the critical one
+
+* If the test system works with no issues after update has been applied,
+  execute the following :ref:`eva4_eva-shell` command:
+
+.. code:: shell
+
+   eva update -i
+
+The above outputs the latest available EVA ICS build/version plus provides a
+command how to update other nodes to the same build the test system has got.
+
+* Execute the provided command on the target mission-critical system as-is:
+
+.. code:: shell
+
+   eva update --target-version VERSION:BUILD
+
 Running under a restricted user
 ===============================
 
