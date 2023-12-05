@@ -6,13 +6,31 @@ Vendored UI applications
 EVA ICS comes with a pack of vendored UI applications which allow to perform
 various tasks such as node monitoring, cloud monitoring etc.
 
-Vendored applications are automatically available in every :doc:`svc/eva-hmi`
-instance at the URL (the default port is 7727):
+Vendored applications are automatically available in every
+:doc:`../svc/eva-hmi` instance at the URL (the default port is 7727):
 
     \http://HOST:PORT/va/
 
 Application list
 ================
+
+Operation centre
+----------------
+
+The application allows operators to create custom dashboards, perform typical
+monitoring and analytics tasks.
+
+Access level required: any
+
+Short URL:
+
+    \http://HOST:PORT/va/opcentre/
+
+.. figure:: ../screenshots/va_opcentre.png
+    :width: 505px
+    :alt: Operation Centre
+
+Read more: :doc:`opcentre`.
 
 Node system dashboard
 ---------------------
@@ -25,7 +43,7 @@ Short URL:
 
     \http://HOST:PORT/va/sdash/
 
-.. figure:: screenshots/va_sdash.png
+.. figure:: ../screenshots/va_sdash.png
     :width: 505px
     :alt: Node system dashboard
 
@@ -50,5 +68,5 @@ Disabling vendored applications
 
 The vendored UI applications can be turned off for security or other purposes.
 
-Edit :doc:`svc/eva-hmi` instance configuration and set *config/vendored_apps*
-to *false*.
+Edit :doc:`../svc/eva-hmi` instance configuration and set
+*config/vendored_apps* to *false*.

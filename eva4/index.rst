@@ -42,7 +42,8 @@ control systems.
     quickstart
     sysdoc
     core_svcs
-    va
+    va/index
+    va/opcentre
     ecmui/index
     enterprise
     ui
