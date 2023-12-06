@@ -96,6 +96,10 @@
      - :doc:`eva.aaa.otp<svc/eva-aaa-otp>`
      - svc/eva-aaa-otp
      - 
+   * - :doc:`Pub/Sub (MQTT) controller gateway<svc/eva-controller-pubsub>`
+     - :doc:`eva.controller.pubsubN<svc/eva-controller-pubsub>`
+     - svc/eva-controller-pubsub
+     - 
    * - :doc:`Python macros controller<svc/eva4-svc-controller-py>`
      - :doc:`eva.controller.py<svc/eva4-svc-controller-py>`
      - venv/bin/eva4-svc-controller-py

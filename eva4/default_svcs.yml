@@ -44,6 +44,11 @@
   txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
   tpl: svc-tpl-controller-enip.yml
   api: svc/controller-enip/eapi.yml
+- nam: eva.controller.pubsubN
+  exe: svc/eva-controller-pubsub
+  des: Pub/Sub (MQTT) controller gateway
+  txt: Allows to communicate with MQTT equipment and 3rd party platforms.
+  tpl: svc-tpl-controller-pubsub.yml
 - nam: eva.controller.opcuaN
   exe: svc/eva-controller-opcua
   des: OPC-UA controller gateway

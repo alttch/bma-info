@@ -26,6 +26,7 @@
     svc/eva-svc-modbus-slave
     svc/eva-controller-opcua
     svc/eva-aaa-otp
+    svc/eva-controller-pubsub
     svc/eva4-svc-controller-py
     svc/eva-repl
     svc/eva-controller-trap

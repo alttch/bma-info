@@ -5,6 +5,12 @@ The approach is very useful as it allows to combine power of Rust and Tokio
 asynchronous runtime with any compiled programming language, which can output
 shared libraries for Linux and supports a standard C-style ABI.
 
+.. note::
+
+   The provided FFI service build is compiled dynamically and does not work
+   on MUSL-based Linux systems (e.g. Alpine). Consider either building the
+   service from source code or contact the product vendor for support.
+
 Command-line arguments
 ======================
 
