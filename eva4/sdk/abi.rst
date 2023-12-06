@@ -199,6 +199,13 @@ use STDOUT/STDERR instead.
 
 If the method returns an error, the service launcher quits.
 
+.. note::
+
+    The service library MUST respect *fips* parameter and use
+    FIPS-140-compliant cryptographic libraries only if it is set to *true*. If
+    the service is unable to work in FIPS-140-compliant mode, it MUST terminate
+    itself with an error.
+
 Optional
 --------
 
