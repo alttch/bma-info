@@ -60,7 +60,6 @@ following format:
               },
               "hum": {
                   "deviceKind": "humidity sensor",
-                  "deviceStatus": "OK",
                   "deviceValue": 50
               }
           }
