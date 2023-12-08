@@ -3,7 +3,8 @@ Pub/Sub (MQTT) controller gateway
 
 .. contents::
 
-Allows to communicate with MQTT equipment and 3rd party platforms.
+.. include:: ../include/pubsub.rst
+
 
 Setup
 =====
