@@ -64,8 +64,8 @@ services.
 "eva" command is automatically added into the system path with the symbolic
 link in */usr/local/bin*.
 
-Node system dashboard and other vendored UI applications are available at the
-URL:
+Node system dashboard, Operation centre and other :doc:`vendored UI
+applications <va/index>` are available at the URL:
 
      \http://localhost:7727/va/
 
@@ -516,6 +516,12 @@ Set the user's ACL to *op*.
 
 Creating a web-HMI application
 ------------------------------
+
+.. note::
+
+   If a dedicated HMI is not required, consider using :doc:`va/opcentre`
+   vendored application, which allows to perform typical operator tasks,
+   including custom dashboard creation.
 
 While developing, turn on :doc:`svc/eva-hmi` development mode to allow CORS:
 
