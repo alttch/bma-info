@@ -15,10 +15,10 @@ The controller supports 3 kinds of blocks:
 * **output** are used to export EVA ICS item states and static payloads.
 
 * **action_map** are used to map EVA ICS actions. When an action is executed,
-  its payload is sent to a pub/sub server topic.
+  the mapped payload is sent to a pub/sub server topic.
 
-Parsing/creating blocks
------------------------
+Parsing/creating payloads
+-------------------------
 
 Blocks are parsed/created with `JSONPath <https://jsonpath.com>`_ lightweight
 implementation:
@@ -29,7 +29,18 @@ implementation:
 
 * $.name - block field "name"
 
-. $.name[0] - first element if block field "name" if the field is an array
+* $.name.value - block field "name", subfield "value"
+
+* $.name[0] - the first element of block field "name" if the field is an array
+
+Array ranges are not supported. If a payload or its part is created as an array
+and no elements are set before an index, their values are set to *null*.
+
+Payloads can be packed/unpacked as JSON (*json*), `MessagePack
+<https://msgpack.org/>`_ (*msgpack*) or as-is for strings/numbers (*no*, the
+default one).
+
+See all the available parameters in the deployment template comments.
 
 Input
 ~~~~~
