@@ -20,7 +20,7 @@ The controller supports 3 kinds of blocks:
 Parsing/creating payloads
 -------------------------
 
-Blocks are parsed/created with `JSONPath <https://jsonpath.com>`_ lightweight
+Payloads are parsed/created with `JSONPath <https://jsonpath.com>`_ lightweight
 implementation:
 
 * $. block root (the default path value, can be omitted)
@@ -34,7 +34,7 @@ implementation:
 * $.name[0] - the first element of block field "name" if the field is an array
 
 Array ranges are not supported. If a payload or its part is created as an array
-and no elements are set before an index, their values are set to *null*.
+and no elements are set before the value index, their values are set to *null*.
 
 Payloads can be packed/unpacked as JSON (*json*), `MessagePack
 <https://msgpack.org/>`_ (*msgpack*) or as-is for strings/numbers (*no*, the
