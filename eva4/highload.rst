@@ -1,5 +1,5 @@
-High-load environments
-**********************
+High-load and mission-critical environments
+*******************************************
 
 Tuning EVA ICS
 ==============
@@ -35,6 +35,42 @@ To use EVA ICS in high-load environments, remember the following:
   set *inventory_db* path). The inventory must be re-deployed after.
 
 * For heavy-loaded services, use :doc:`local_cluster`.
+
+Crash tests
+===========
+
+EVA ICS v4 comes with a :ref:`eva4_watchdog` script bundled, which is started
+automatically.
+
+The watchdog watches :doc:`the node core <core>` liveness using its :ref:`test
+<eva4_eva.core__test>` method. If the core is not responding, it is
+automatically restarted.
+
+To make sure the watchdog works properly in production environment, the core
+has got a special method to simulate various kinds of critical crashes:
+
+.. code:: shell
+
+   eva svc call eva.core simulate.crash kind=KIND
+
+where *KIND* can be:
+
+* **error** "test" method starts responding errors with the code -32010
+  (function failed)
+
+* **freeze** "test" method freezes itself forever
+
+* **crash** the primary node process crashes by sending *SIGKILL* to itself
+
+* **no** return the node to the normal mode if a crash simulation is active
+  (unless the whole process had been crashed)
+
+After any kind of simulated crash, the node watchdog must restart the core
+process within the specified interval. The default is 30 seconds, the value can
+be customized in :ref:`eva4_watchdog` configuration file.
+
+If the node is not automatically restarted within the specified interval, check
+the watchdog configuration or contact your support engineer.
 
 Hardware
 ========

@@ -22,6 +22,8 @@ server:
 .. literalinclude:: ./etc-config/eva_config-dist
     :language: shell
 
+.. _eva4_watchdog:
+
 watchdog
 --------
 
