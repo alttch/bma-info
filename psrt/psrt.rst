@@ -15,6 +15,8 @@ Other repositories:
   (sync), SDK is semi-compatible with `paho-mqtt
   <https://github.com/eclipse/paho.mqtt.python>`_.
 
+.. _psrt_install:
+
 Installation (free version)
 ===========================
 

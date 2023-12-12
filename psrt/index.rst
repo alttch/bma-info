@@ -72,3 +72,4 @@ topic masks etc:
     cluster
     proto
     security
+    eva_embedded
