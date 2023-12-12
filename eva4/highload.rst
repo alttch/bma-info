@@ -38,6 +38,25 @@ To use EVA ICS in high-load environments, remember the following:
 
 * For heavy-loaded services, use :doc:`local_cluster`.
 
+Memory consumption
+==================
+
+It is highly important to monitor memory consumption of the core process and
+services launched. If a process goes out of memory, it may be killed and
+forcibly restarted by the operating system.
+
+To reduce memory consumption, minimize number of workers for the node
+core/services. Also keep bus and internal service queues minimal, however note
+that large queue sizes could prevent system freezes on peak loads.
+
+Both :ref:`eva4_config_core` and service configurations have got a parameter
+*mem_warn* (in bytes). If the core process or a service process (including its
+child subprocesses) starts consuming more memory than the parameter value, the
+core/service launchers start output warning messages into logs.
+
+The default value of *mem_warn* parameter is 128 MiB (134 217 728 bytes),
+multiplied by the number of workers set.
+
 Crash tests
 ===========
 
