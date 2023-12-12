@@ -64,6 +64,8 @@ where *KIND* can be:
 
 * **crash** the primary node process crashes by sending *SIGKILL* to itself
 
+* **memory_overflow** the primary node process allocates memory until crashed
+
 * **no** return the node to the normal mode if a crash simulation is active
   (unless the whole process had been crashed)
 
@@ -73,6 +75,11 @@ be customized in :ref:`eva4_watchdog` configuration file.
 
 If the node is not automatically restarted within the specified interval, check
 the watchdog configuration or contact your support engineer.
+
+.. warning::
+
+   **memory_overflow** test is dangerous and should be done with extreme care
+   on production systems. The test might crash the operating system completely.
 
 Hardware
 ========

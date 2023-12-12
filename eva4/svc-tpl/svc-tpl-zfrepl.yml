@@ -1,6 +1,6 @@
 # EVA ICS zero-failure replication service
 command: svc/eva-zfrepl
-workers: 2
+workers: 1
 bus:
   path: var/bus.ipc
 config:

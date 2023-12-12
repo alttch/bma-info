@@ -1,6 +1,6 @@
 # EVA ICS HMI kiosk manager service
 command: svc/eva-kioskman
-workers: 2
+workers: 1
 bus:
   path: var/bus.ipc
 config:
