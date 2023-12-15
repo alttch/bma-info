@@ -72,18 +72,19 @@ applications <va/index>` are available at the URL:
 The task
 ========
 
-Let us have a temperature sensor and a fan, both connected with Modbus to the
-local serial port. We want to:
+Consider a temperature sensor and a fan, both of which are Modbus-connected to
+the local serial port. We intend to:
 
-* Monitor state of both and control the fan from UI
+* Monitor state of both and control the fan using the UI.
 
-* Turn the fan on when the temperature reaches 25C.
+* When the temperature reaches 25 degrees Celsius, turn on the fan.
 
-* Turn the fan off when the temperature reaches 22C (3C hysteresis)
+* When the temperature reaches 22 degrees Celsius (3 degrees Celsius
+  hysteresis), turn off the fan.
 
-Usually the above logic is controlled by a PLC, while SCADA software just
-collects, monitors and controls its registers, but in this example we are
-offloading it into the application side.
+Normally, the above logic is controlled by a PLC, whilst SCADA software simply
+collects, monitors, and controls its registers; however, in this example, we
+are offloading it to the application side.
 
 Commons
 =======
