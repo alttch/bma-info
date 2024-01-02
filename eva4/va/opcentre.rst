@@ -14,6 +14,11 @@ Short URL:
     :width: 505px
     :alt: Operation Centre
 
+Quick tour
+==========
+
+.. youtube:: r3zRfRQjhjA
+
 Access levels
 =============
 
