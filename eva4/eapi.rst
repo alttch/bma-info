@@ -388,6 +388,23 @@ API keys modification events are sent to AAA/KEY/KEY_ID
 Key managers must also respond to "key.get" method, providing id/key fields for
 replication and other services.
 
+Authentication services may implement additional methods:
+
+* user.set_password(i, password, check_policy)
+
+* user.get_profile_field(i, field)
+
+.. code:: json
+
+   {
+    "value": "fieldvalue",
+    "readonly": false
+   }
+
+* user.set_profile_field(i, field, value)
+
+where *i* stands for user login.
+
 Service topics
 --------------
 
