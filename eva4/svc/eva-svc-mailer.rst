@@ -59,7 +59,11 @@ send
      - Required
    * - **rcp**
      - String/Vec<String>
-     - recipients
+     - recipients (emails)
+     - no
+   * - **i**
+     - String/Vec<String>
+     - recipients (user accounts)
      - no
    * - **subject**
      - String

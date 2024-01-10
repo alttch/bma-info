@@ -612,7 +612,7 @@ user.get_config
      - Required
    * - **i**
      - String
-     - API key ID
+     - User login
      - **yes**
 
 
@@ -630,6 +630,48 @@ user.get_config
   }
   
 
+.. _eva4_eva.aaa.localauth__user.get_profile_field:
+
+user.get_profile_field
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get user profile field*
+   * - Parameters
+     - required
+   * - Returns
+     - Profile field
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - User login
+     - **yes**
+   * - **field**
+     - String
+     - Field name (email)
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "readonly": false,
+      "value": "admin@localhost"
+  }
+  
+
 .. _eva4_eva.aaa.localauth__user.list:
 
 user.list
@@ -641,9 +683,21 @@ user.list
    * - Description
      - *List local user accounts*
    * - Parameters
-     - *none*
+     - required
    * - Returns
      - List of defined local user accounts, the ACLs and password hashes
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **with_password**
+     - bool
+     - Include user password hashses into the result
+     - no
 
 
 *Return payload example:*
@@ -655,16 +709,14 @@ user.list
           "acls": [
               "admin"
           ],
-          "login": "admin",
-          "password": "cd2eb0837c9b4c962c22d2ff8b5441b7b45805887f051d39bf133b583baf6860"
+          "login": "admin"
       },
      {
           "acls": [
               "ui_default",
               "ui_all"
           ],
-          "login": "operator",
-          "password": "cd2eb0837c9b4c962c22d2ff8b5441b7b45805887f051d39bf133b583baf6860"
+          "login": "operator"
       }
   ]
   
@@ -698,6 +750,45 @@ user.set_password
    * - **password**
      - String
      - New password (plain text)
+     - **yes**
+   * - **check_policy**
+     - bool
+     - Check password policy
+     - no
+
+.. _eva4_eva.aaa.localauth__user.set_profile_field:
+
+user.set_profile_field
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set user profile field*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - User login
+     - **yes**
+   * - **field**
+     - String
+     - Field name (email)
+     - **yes**
+   * - **value**
+     - Any
+     - Field value
      - **yes**
 
 .. _eva4_eva.aaa.localauth__user.undeploy:

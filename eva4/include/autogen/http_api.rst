@@ -949,6 +949,86 @@ lvar.toggle
     :response: ../../http_api_examples/lvar.toggle.resp
 
 
+.. _eva4_hmi_http__profile.get_field:
+
+profile.get_field
+-----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set user profile field*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **field**
+     - String
+     - Field name (email)
+     - **yes**
+   * - **value**
+     - Any
+     - Field value
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/profile.get_field.req
+    :response: ../../http_api_examples/profile.get_field.resp
+
+
+.. _eva4_hmi_http__profile.set_field:
+
+profile.set_field
+-----------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Set user profile field*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **field**
+     - String
+     - Field name (email)
+     - **yes**
+   * - **value**
+     - Any
+     - Field value
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/profile.set_field.req
+    :response: ../../http_api_examples/profile.set_field.resp
+
+
 .. _eva4_hmi_http__pvt.get:
 
 pvt.get

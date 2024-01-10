@@ -114,5 +114,46 @@ cache.purge
    * - Returns
      - *nothing*
 
+.. _eva4_eva.aaa.msad__user.get_profile_field:
+
+user.get_profile_field
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get user profile field*
+   * - Parameters
+     - required
+   * - Returns
+     - Profile field
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - User login
+     - **yes**
+   * - **field**
+     - String
+     - Field name (email)
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "readonly": true,
+      "value": "admin@localhost"
+  }
+
 .. include:: ../include/msad.rst
 

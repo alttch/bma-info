@@ -194,7 +194,8 @@ Optionally:
 
 * **subject** email subject
 * **text** email text
-* **rcp** recipient or array of the recipients
+* **rcp** email recipient or array of the recipients
+* **i** user login recipient or array of the recipients
 
 Raises:
 

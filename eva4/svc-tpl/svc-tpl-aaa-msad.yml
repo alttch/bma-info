@@ -20,9 +20,16 @@ config:
   ## optional ACL prefix
   #acl_prefix: "msad_"
   #tls: true
+  ## alternative CA file (.der for DER, any other extension for PEM)
+  #tls_ca: path/to/crt
   #no_tls_verify: false
   ## cache entries and use the cache if ad is unavailable
   #cache_time: 86400
   ## if cached entry exists - use it before ad authentication
   #cache_first: false
+  ## required to get user profile fields (e.g. email addresses)
+  #service_account_login: someuser
+  #service_account_password: secret
+  # when email profile field is requested, return login in case of username@domain format
+  #login_as_email: ignore # possible values: prefer, fallback
 user: eva
