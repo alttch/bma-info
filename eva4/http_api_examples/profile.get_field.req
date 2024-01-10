@@ -1,0 +1,14 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "profile.get_field",
+  "params": {
+    "field": "email",
+    "k": "secretkey"
+  }
+}
