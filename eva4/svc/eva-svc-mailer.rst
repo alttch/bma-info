@@ -73,3 +73,7 @@ send
      - String
      - e-mail text
      - no
+   * - **delayed**
+     - float
+     - delay and group by sender/subject
+     - no
