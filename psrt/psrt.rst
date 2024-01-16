@@ -36,6 +36,8 @@ Building from source
     git clone https://github.com/alttch/psrt/
     cd psrt
     cargo build --features server,cli --release
+    # for openssl v3
+    cargo build --features server,cli,openssl3 --release
 
 .. _psrt_config:
 
