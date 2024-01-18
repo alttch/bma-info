@@ -15,6 +15,7 @@ Interface development (HMI apps)
     hmi/upload
     hmi/server_templates
     hmi/userdata
+    hmi/api_filter
     hmi/frontend
     evahi
     2fa
