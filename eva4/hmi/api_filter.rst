@@ -5,7 +5,8 @@ Filtering HMI API calls
 which can be used by various restriction policies.
 
 Filtering is implemented using a custom :ref:`eva4_lmacro` which checks API
-call options and can restrict the current call by returning non-zero exit code.
+call options and can restrict the current call by returning a non-zero exit
+code.
 
 If filtered, the user gets *access denied* (-32002) error with a message
 from either *err* or *out* of the execution result payload or the default
@@ -46,7 +47,7 @@ Example task
 ============
 
 Consider there is a :ref:`eva4_sensor` *sensor:tests/auto* which is set by PLC
-to *1* when the system works in automated mode.
+to *1* when the system is working in automated mode.
 
 When the system is in automated mode, we want to refuse HTTP API methods
 :ref:`eva4_hmi_http__action` and :ref:`eva4_hmi_http__action.toggle`, unless
@@ -57,8 +58,8 @@ Preparing
 
 To enable API call filtering:
 
-* create :ref:`eva4_lmacro`, in this example :doc:`a Python macro will be used
-  <../lmacro/py/python_macros>`
+* create :ref:`eva4_lmacro`, in this example :doc:`a Python
+  macro<../lmacro/py/python_macros>` is used.
 
 .. code:: shell
 
