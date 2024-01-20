@@ -228,13 +228,13 @@ only. Recommended for setups with slow/expensive communication between nodes.
   interval, e.g. PLC timestamp. If connected equipment can not provide such, a
   :doc:`generator <../svc/eva-svc-generator>` can be used:
 
-* it is recommended to set *skip_disconnected* option of the target telemetry
-  database service to true to prevent writing state of the heartbeat item when
-  real-time replication is unavailable.
-
 .. code:: shell
 
    eva generator source create heartbeat --target sensor:NODE/heartbeat time
+
+* it is recommended to set *skip_disconnected* option of the target telemetry
+  database service to true to prevent writing state of the heartbeat item when
+  real-time replication is unavailable.
 
 Limitations:
 
