@@ -20,8 +20,13 @@ config:
     # manually and the effective account must have read/write/execute (list)
     # permissions to it
     path: runtime/zfrepl/spool
+    # default database service ID for mailbox.fill without eva.db. prefix, e.g.
+    # "db1" for eva.db.db1
+    #default_history_db_svc: default
     mailboxes:
       node1:
+        # set false to disable auto collection
+        #auto_enabled: false
         # max data block size (uncompressed)
         max_block_size: 2_000_000
         # block time-to-live (sec) before creating a new block
@@ -88,6 +93,22 @@ config:
             #duration: 3600
             #timeout: 60 # override the default timeout
             #trusted: true
+            # self-repairing. requires:
+            # - a heartbeat sensor
+            # - allow_fill set to true on the target server instance
+            #self_repair:
+              # heartbeat sensor, required
+              # any sensor which is changed frequently enough
+              #oid: sensor:NODENAME/heartbeat
+              # auto-repair interval (sec), if not set, only manual repair is available
+              #repair_interval: 600
+              # state history database service to check data in
+              #history_db_svc: default
+              # range to analyze (in seconds, e.g. 86400 - previous day)
+              #range: 86400
+              # telemetry window size (sec), if a gap is higher, self-repairing
+              # is activated
+              #window_size: 5
     #server:
       ## collector service
       #collector_svc: eva.zfrepl.default.collector
@@ -96,4 +117,6 @@ config:
         #node_remote:
           ## API key, required to open the mailbox
           #key_id: default
+          # Allow filling mailbox from remote (required for self-repairing)
+          #allow_fill: true
 user: eva
