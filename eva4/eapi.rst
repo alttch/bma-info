@@ -56,6 +56,9 @@ The following type specifications are used in EVA ICS documentation:
 
 * **Map** key/value map with variable fields (dictionary/object)
 
+* **Time** an internal time type, can be a number (parsed as a timestamp in
+  seconds) or a string
+
 When a parameter or a result field is a time value, it is usually specified as
 f64-timestamp or f64-duration (some low-level methods may require durations as
 micro- or nano-seconds).
