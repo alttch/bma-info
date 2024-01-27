@@ -1,5 +1,5 @@
-Accounting (event logging) service
-**********************************
+Event accounting service
+************************
 
 .. contents::
 

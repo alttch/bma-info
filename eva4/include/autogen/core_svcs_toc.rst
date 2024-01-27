@@ -4,13 +4,13 @@
 
     core
     svc/eva-controller-w1
-    svc/eva-aaa-accounting
     svc/eva-aaa-msad
     svc/eva4-svc-bridge-udp
     svc/eva-svc-generator
     svc/eva-aaa-acl
     svc/eva-dapp
     svc/eva-controller-enip
+    svc/eva-aaa-accounting
     svc/eva-ffi
     svc/eva-filemgr
     svc/eva-kioskman

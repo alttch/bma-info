@@ -8,10 +8,6 @@
      - :doc:`eva.controller.w1_N<svc/eva-controller-w1>`
      - svc/eva-controller-w1
      - 
-   * - :doc:`Accounting (event logging) service<svc/eva-aaa-accounting>`
-     - :doc:`eva.aaa.accounting<svc/eva-aaa-accounting>`
-     - svc/eva-aaa-accounting
-     - requires :doc:`enterprise`
    * - :doc:`Active directory auth service<svc/eva-aaa-msad>`
      - :doc:`eva.aaa.msad<svc/eva-aaa-msad>`
      - svc/eva-aaa-msad
@@ -36,6 +32,10 @@
      - :doc:`eva.controller.enipN<svc/eva-controller-enip>`
      - svc/eva-controller-enip
      - 
+   * - :doc:`Event accounting service<svc/eva-aaa-accounting>`
+     - :doc:`eva.aaa.accounting<svc/eva-aaa-accounting>`
+     - svc/eva-aaa-accounting
+     - requires :doc:`enterprise`
    * - :doc:`FFI launcher<svc/eva-ffi>`
      - :doc:`custom.name<svc/eva-ffi>`
      - svc/eva-ffi
