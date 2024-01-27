@@ -106,9 +106,9 @@ config:
               #history_db_svc: default
               # range to analyze (in seconds, e.g. 86400 - previous day)
               #range: 86400
-              # telemetry window size (sec), if a gap is higher, self-repairing
+              # telemetry gap size (sec), if a gap is higher, self-repairing
               # is activated
-              #window_size: 5
+              #gap: 5
     #server:
       ## collector service
       #collector_svc: eva.zfrepl.default.collector

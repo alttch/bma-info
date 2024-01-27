@@ -64,6 +64,10 @@ client.self_repair
      - String
      - node name
      - **yes**
+   * - **range**
+     - f64
+     - override repair range (sec)
+     - no
    * - **force**
      - bool
      - force all mailbox fill tasks, ignore cache

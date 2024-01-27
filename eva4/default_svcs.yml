@@ -318,6 +318,23 @@
   tpl: svc-tpl-aaa-msad.yml
   xtr: |
     .. include:: ../include/msad.rst
+- nam: eva.aaa.accounting
+  exe: svc/eva-aaa-accounting
+  des: Accounting (event logging) service
+  txt: |
+    .. include:: ../include/accounting.rst
+  api: eva4-esvc/aaa-accounting/eapi.yml
+  ent: true
+  tpl: svc-tpl-aaa-accounting.yml
+  xtr: |
+    HTTP API
+    ========
+
+    The service provides certain methods via
+    :ref:`extra calls<eva4_hmi_http__x__TARGET_SVC__METHOD>` (the methods must
+    be called e.g. as *x::eva.aaa.accounting::query*)
+
+    .. include:: ../include/autogen/http_api-aaa-accounting.rst
 - nam: "eva.zfrepl.N.collector|replicator"
   exe: svc/eva-zfrepl
   des: Zero-failure replication service

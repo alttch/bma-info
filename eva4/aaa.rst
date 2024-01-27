@@ -163,3 +163,8 @@ of time or by request from either the token owner or by admin via bus call.
 
 A token MUST be automatically destroyed by the end-service if the user
 account/ACLs it was formed on top, are modified or removed.
+
+Accounting
+----------
+
+See: doc:`svc/eva-aaa-accounting`.
