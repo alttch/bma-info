@@ -1154,3 +1154,23 @@ Alias for logging.critical
     critical('this is a test debug message')
 
 
+.. _eva4_py_macro_api_report_accounting_event:
+
+report_accounting_event - reports an event into accounting system
+-----------------------------------------------------------------
+
+
+
+Optionally:
+
+* **u** user account name (string)
+* **src** source (e.g. IP address)
+* **svc** service ID (default: sender)
+* **subj** event subject
+* **oid** affected item OID
+* **data** a structure with any additional information
+* **note** a custom note (string)
+* **code** error code (0 = success)
+* **err** error message
+
+
