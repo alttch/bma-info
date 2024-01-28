@@ -246,12 +246,12 @@ mailbox.fill
      - Database service name
      - no
    * - **t_start**
-     - f64
-     - Starting timestamp (default: last 24 hours)
+     - Time
+     - Starting time/timestamp (default: last 24 hours)
      - no
    * - **t_end**
-     - f64
-     - Ending timestamp (default: now)
+     - Time
+     - Ending time/timestamp (default: now)
      - no
    * - **xopts**
      - Map<String,Any>
