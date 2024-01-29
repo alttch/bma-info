@@ -32,6 +32,10 @@
      - :doc:`eva.controller.enipN<svc/eva-controller-enip>`
      - svc/eva-controller-enip
      - 
+   * - :doc:`Event accounting service<svc/eva-aaa-accounting>`
+     - :doc:`eva.aaa.accounting<svc/eva-aaa-accounting>`
+     - svc/eva-aaa-accounting
+     - requires :doc:`enterprise`
    * - :doc:`FFI launcher<svc/eva-ffi>`
      - :doc:`custom.name<svc/eva-ffi>`
      - svc/eva-ffi

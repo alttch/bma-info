@@ -1,0 +1,50 @@
+# Accounting service
+command: svc/eva-aaa-accounting
+bus:
+  path: var/bus.ipc
+config:
+  # lvar OID to store accounting info, super-group name MUST match node name,
+  # ${system_name} is automatically parsed
+  #
+  # There should be only once accounting service instance deployed with the same
+  # accounting_lvar_oid
+  #
+  # If lvar OID is not specified, the service does not accept bus accounting
+  # frames but can be used to store them e.g. in a different storage
+  #
+  # The lvar is created by the service automatically
+  #
+  # Important: make sure no regular users have access to accounting lvar
+  accounting_lvar_oid: "lvar:${system_name}/accounting"
+  # Subscription mask, must match chosen lvar OID
+  # If not specified, the service does not write any events into the database
+  subscribe_accounting_lvar_oids: lvar:+/accounting
+  # Accounting database, default: runtime/svc_data/<SVC_ID>/accounting.db
+  #db: sqlite:///tmp/accounting.db
+  #db: postgres://USER:PASSWORD@HOST/DB
+  #db: elasticsearch
+  #
+  # Elasticsearch requires configuration section:
+  #elasticsearch:
+    #index: eva-accounting
+    # for cloud set url to cloud id (cluster_name:...)
+    #url: http://localhost:9200
+    #
+    # authentication (optional, required for cloud), use a single section only
+    #auth:
+      #basic:
+        #login: username
+        #password: secret
+    #auth:
+      #bearer
+        #token: secret
+    #auth:
+      #api_key:
+        #id: key_id
+        #key: secret
+  # Event buffer size, events are DROPPED if overflown
+  event_buf_size: 16384
+  # keep events (seconds), if not set: keep forever, ignored for Elasticsearch
+  keep: 604800
+# for PostgreSQL and Elasticsearch the service can work under "nobody"
+user: eva

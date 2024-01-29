@@ -221,6 +221,12 @@
       Register service process system signals
       
    
+   .. py:method:: Service.report_accounting_event(u=None, src=None, svc=None, subj=None, oid=None, data=None, note=None, code=None, err=None)
+      :module: evaics.sdk
+   
+      Reports an event into accounting system
+      
+   
    .. py:method:: Service.subscribe_oids(oids, event_kind='any')
       :module: evaics.sdk
    

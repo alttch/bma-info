@@ -38,6 +38,41 @@ EAPI methods
 
 See :doc:`../eapi` for the common information about the bus, types, errors and RPC calls.
 
+.. _eva4_eva.zfrepl.N.collector|replicator__client.self_repair:
+
+client.self_repair
+------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *[replicator] Manually launch self-repair*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - node name
+     - **yes**
+   * - **range**
+     - f64
+     - override repair range (sec)
+     - no
+   * - **force**
+     - bool
+     - force all mailbox fill tasks, ignore cache
+     - no
+
 .. _eva4_eva.zfrepl.N.collector|replicator__client.start:
 
 client.start
@@ -62,7 +97,7 @@ client.start
      - Required
    * - **i**
      - String
-     - Mailbox name
+     - node name
      - **yes**
 
 .. _eva4_eva.zfrepl.N.collector|replicator__disable:
@@ -126,6 +161,60 @@ mailbox.delete_block
      - block ID
      - **yes**
 
+.. _eva4_eva.zfrepl.N.collector|replicator__mailbox.disable:
+
+mailbox.disable
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *[collector] Disable a mailbox*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Mailbox name (* for all)
+     - **yes**
+
+.. _eva4_eva.zfrepl.N.collector|replicator__mailbox.enable:
+
+mailbox.enable
+--------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *[collector] Enable a mailbox*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Mailbox name (* for all)
+     - **yes**
+
 .. _eva4_eva.zfrepl.N.collector|replicator__mailbox.fill:
 
 mailbox.fill
@@ -155,14 +244,14 @@ mailbox.fill
    * - **db_svc**
      - String
      - Database service name
-     - **yes**
+     - no
    * - **t_start**
-     - f64
-     - Starting timestamp (default: last 24 hours)
+     - Time
+     - Starting time/timestamp (default: last 24 hours)
      - no
    * - **t_end**
-     - f64
-     - Ending timestamp (default: now)
+     - Time
+     - Ending time/timestamp (default: now)
      - no
    * - **xopts**
      - Map<String,Any>
@@ -206,6 +295,40 @@ mailbox.get_block
       "last": false,
       "path": "/opt/eva4/runtime/zfrepl/spool/rtest1/mbb_1656445625"
   }
+  
+
+.. _eva4_eva.zfrepl.N.collector|replicator__mailbox.list:
+
+mailbox.list
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *[collector] List mailboxes*
+   * - Parameters
+     - *none*
+   * - Returns
+     - List of mailboxes
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+      {
+          "enabled": true,
+          "name": "rtest1",
+          "path": "/opt/eva4/runtime/zfrepl/spool/rtest1"
+      },
+      {
+          "enabled": false,
+          "name": "rtest2",
+          "path": "/opt/eva4/runtime/zfrepl/spool/rtest2"
+      }
+  ]
   
 
 .. _eva4_eva.zfrepl.N.collector|replicator__mailbox.list_blocks:

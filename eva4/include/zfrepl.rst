@@ -139,3 +139,120 @@ To setup zero-failure replication with an untrusted node, mark its mailbox with
 "trusted: false" in the replicator/client section of the service configuration
 and make sure the configured API key has :ref:`ACL <eva4_acl>` with "write"
 permission for the allowed items.
+
+Strategies
+==========
+
+Zero-failure replication offers the following strategies, the perfect one
+should be selected, based on data importance, data amount, communication speed
+and other customer's requirements.
+
+Continuous
+----------
+
+The default (most reliable) strategy, when zero-failure replication acts as a
+second replication layer. Recommended for mission-critical setups when
+high-speed communication between nodes is available.
+
+As all data is always replicated, *self_repair* in clients is not required.
+
+Manual
+------
+
+Collector mailboxes options *auto_enabled* must be set to *false*.
+
+Used in case of any problems, a system administrator runs "mailbox.fill" method
+manually on secondary nodes to fill data gaps:
+
+.. code::
+
+   eva svc call eva.zfrepl.default.collector mailbox.fill i=NAME t_start=TIMESTAMP t_end=TIMESTAMP
+
+Source-forced
+-------------
+
+Collector mailboxes options *auto_enabled* must be set to *false*.
+
+A secondary node automatically enables/disables mailboxes, e.g. in case of
+network failure.
+
+If communication issues are detected with delay or the target node is
+unavailable, the strategy may be unreliable and require manual assistance.
+
+E.g. the following shell command, which can be started using the system cron,
+disables/enables all collector's mailboxes according to network state:
+
+.. code:: shell
+
+   ping -c1 PUBSUB_HOST && \
+       svc call eva.zfrepl.default.collector mailbox.disable "i=*" || \
+       svc call eva.zfrepl.default.collector mailbox.enable "i=*"
+
+Another example, the following :doc:`Python lmacro
+<../lmacro/py/python_macros>` disables/enables all mailboxes when the default
+real-time replication service is unavailable:
+
+.. code:: python
+
+    try:
+        rpc_call('test', _target='eva.repl.default')
+        rpc_call('mailbox.disable',
+                 i='*',
+                 _target='eva.zfrepl.default.collector')
+    except:
+        rpc_call('mailbox.enable',
+                 i='*',
+                 _target='eva.zfrepl.default.collector')
+
+The scenario can be started with a specific schedule using "jobs" feature of
+:doc:`../svc/eva-controller-lm`.
+
+Self-repairing
+--------------
+
+Collector mailboxes options *auto_enabled* must be set to *false*.
+
+Advanced configuration, which uses smart algorithms to replicate missing data
+only. Recommended for setups with slow/expensive communication between nodes.
+
+* mailboxes on the source (server) must have *allow_fill* option set to *true*
+  to enable target requesting data blocks
+
+* client configurations must have *self_repair* section configured
+
+* *repair_interval* in *self_repair* section must be set if self-repairing
+  is planned to be done automatically
+
+* the source must have a "heartbeat" - an :doc:`item <../items>` (e.g. a
+  :ref:`sensor <eva4_sensor>`) which is always updated within a specific
+  interval, e.g. PLC timestamp. If connected equipment can not provide such, a
+  :doc:`generator <../svc/eva-svc-generator>` can be used:
+
+.. code:: shell
+
+   eva generator source create heartbeat --target sensor:NODE/heartbeat time
+
+* it is recommended to set *skip_disconnected* option of the target telemetry
+  database service to true to prevent writing state of the heartbeat item when
+  real-time replication is unavailable.
+
+Limitations:
+
+* self-repairing can find data gaps only inside *range* configured. If a gap
+  starts before the range, it is ignored. Consider increasing *range* value.
+
+* to prevent data flood in case if the client can not download blocks between
+  self-repairing checks (e.g. a scheduler is used), mailbox fill requests are
+  sent to secondaries only once for each gap found. This may cause data loss,
+  e.g. if the source node is restarted before the fill request is completed or
+  in similar cases. In case of data loss, start self-repairing manually, with
+  *force* option if required.
+
+Starting self-repairing manually:
+
+.. code:: shell
+
+   eva svc call eva.zfrepl.default.replicator client.self_repair i=NODE
+   # forcibly fill all gaps, ignore tasks cache
+   eva svc call eva.zfrepl.default.replicator client.self_repair i=NODE force=true
+

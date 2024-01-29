@@ -40,6 +40,10 @@ action
      - f64
      - Wait max seconds to finish
      - no
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/action.req
@@ -76,6 +80,10 @@ action.kill
      - String
      - Item OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/action.kill.req
@@ -148,6 +156,10 @@ action.terminate
      - String
      - Action UUID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/action.terminate.req
@@ -191,6 +203,10 @@ action.toggle
    * - **wait**
      - f64
      - Wait max seconds to finish
+     - no
+   * - **note**
+     - String
+     - a custom note for accounting
      - no
 
 ..  http:example:: curl wget httpie python-requests
@@ -755,6 +771,10 @@ lvar.clear
      - String
      - Lvar OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.clear.req
@@ -791,6 +811,10 @@ lvar.decr
      - String
      - Lvar OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.decr.req
@@ -827,6 +851,10 @@ lvar.incr
      - String
      - Lvar OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.incr.req
@@ -863,6 +891,10 @@ lvar.reset
      - String
      - Lvar OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.reset.req
@@ -907,6 +939,10 @@ lvar.set
      - Any
      - Desired value
      - no
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.set.req
@@ -943,6 +979,10 @@ lvar.toggle
      - String
      - Lvar OID
      - **yes**
+   * - **note**
+     - String
+     - a custom note for accounting
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/lvar.toggle.req
@@ -1234,6 +1274,10 @@ run
    * - **wait**
      - f64
      - Wait max seconds to finish
+     - no
+   * - **note**
+     - String
+     - a custom note for accounting
      - no
 
 ..  http:example:: curl wget httpie python-requests

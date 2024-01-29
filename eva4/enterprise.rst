@@ -71,6 +71,11 @@ HMI Kiosk manager
 
 See :doc:`svc/eva-kioskman`.
 
+Accounting service
+------------------
+
+See :doc:`svc/eva-aaa-accounting`.
+
 EVA ICS WebEngine WASM extension
 ================================
 

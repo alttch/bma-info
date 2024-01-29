@@ -365,6 +365,24 @@ levels (lowercase): trace, debug, info, warn, error
 if the core bus logger is enabled, the core sends aggregated log events to
 LOG/EV/level bus topics.
 
+.. _eva4_eapi_accounting:
+
+Accounting
+----------
+
+Accounting is similar to logs but is more related to user actions. If a service
+interacts with a user directly, e.g. provides :ref:`extra
+calls <eva4_hmi_http__x__TARGET_SVC__METHOD>`, it should send accounting events
+when a resource is modified or a sensitive one is accessed.
+
+Accounting events can be send by calling
+:ref:`eva4_eva.aaa.accounting__report` method directly (in this case the caller
+must know local service ID), or, as a preferred way, to a special bus topic
+*AAA/REPORT*.
+
+If a topic is used, the payload MUST be a structure with fields equal to
+:ref:`eva4_eva.aaa.accounting__report` method.
+
 Auth
 ----
 
