@@ -96,6 +96,10 @@ query
      - String
      - a note or its part (substring)
      - no
+   * - **data**
+     - String
+     - substring of data payload casted as text
+     - no
    * - **code**
      - i16
      - event error code (0 = success)

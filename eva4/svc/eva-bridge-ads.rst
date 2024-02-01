@@ -48,7 +48,7 @@ ping
    * - Parameters
      - required
    * - Returns
-     - *nothing*
+     - current ADS state
 
 .. list-table:: Parameters
    :align: left
@@ -65,6 +65,16 @@ ping
      - u16
      - Device AMS Port
      - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+    "state": 5
+  }
+  
 
 .. _eva4_eva.bridge.ads__read:
 
