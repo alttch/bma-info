@@ -1,9 +1,13 @@
 Functionality
 =============
 
-The service provides node-local or cloud-wide accounting. Accounting measures
-the resources used by a user during access. It also may contain critical system
-messages sent by the core or services themselves.
+The service provides node-local or cloud-wide event accounting. Accounting
+measures the resources used (modified) by a user during access, such as
+:ref:`eva4_unit` actions, :ref:`eva4_lmacro` executions, file management
+operations etc.
+
+The audit trail contains also failed authentication attempts, unauthorized API
+usage, critical system messages sent by the core or services themselves.
 
 Cloud-wide accounting
 ---------------------
