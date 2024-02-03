@@ -62,7 +62,7 @@ query
      - Required
    * - **t_start**
      - Time
-     - start time (default: previous day)
+     - start time (default: last 24 hours)
      - no
    * - **t_end**
      - Time
@@ -82,7 +82,7 @@ query
      - no
    * - **svc**
      - String
-     - service id (starts with)
+     - service id (substring)
      - no
    * - **subj**
      - String

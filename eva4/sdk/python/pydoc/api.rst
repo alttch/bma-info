@@ -123,6 +123,32 @@
       
       
    
+   .. py:method:: Service.create_items(oids)
+      :module: evaics.sdk
+   
+      Create items one-by one
+      
+      Must be called after the node core is ready
+      
+      Ignores errors if an item already exists
+      
+      :param oids: list of item OIDs to create
+      
+   
+   .. py:method:: Service.deploy_items(items)
+      :module: evaics.sdk
+   
+      Create items using deployment payloads in bulk
+      
+      Must be called after the node core is ready
+      
+      Payloads are equal to item.deploy eva.core EAPI call
+      
+      See also https://info.bma.ai/en/actual/eva4/iac.html#items
+      
+      :param oids: list of items to create
+      
+   
    .. py:method:: Service.drop_privileges()
       :module: evaics.sdk
    
