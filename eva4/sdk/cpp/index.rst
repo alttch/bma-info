@@ -1,5 +1,5 @@
 C++ SDK
-=======
+*******
 
 C++ SDK for EVA ICS v4 allows to create custom services in C++. The current
 minimum supported standard is C++ 14.
