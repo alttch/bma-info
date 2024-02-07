@@ -17,6 +17,8 @@ styles.
 
 * NPM package: https://www.npmjs.com/package/@eva-ics/webengine-react
 
+* API reference: https://pub.bma.ai/dev/docs/eva-webengine-react/
+
 * General documentation about HMI client apps: see :doc:`../eva4/ui`.
 
 EVA ICS WebEngine React is written in TypeScript. It is highly recommended to
