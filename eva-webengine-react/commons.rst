@@ -40,9 +40,7 @@ Modify *main.tsx* as the following:
       ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         // uncomment in production
         //<React.StrictMode> 
-        <Provider store={store}>
           <HMIApp engine={eva} Dashboard={HmiDashboard} />
-        </Provider>
         //</React.StrictMode>
       );
     });
