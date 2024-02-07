@@ -38,8 +38,8 @@ load averages for 1, 5 and 15 seconds (UNIX/Linux standard).
 Memory
 ------
 
-The memory provider creates a sub-group "memory" and displays memory and swap
-information.
+The memory provider creates sub-groups "ram" and "swap" and displays memory and
+swap information.
 
 Disks
 -----
