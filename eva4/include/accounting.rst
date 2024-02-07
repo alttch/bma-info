@@ -44,9 +44,18 @@ Querying events from command-line
 ---------------------------------
 
 "accounting query" command of :ref:`eva4_eva-shell` provides command-line
-interface to view accounting events. Use command arguments to apply required
+interface to view event audit trail. Use command arguments to apply required
 filters.
 
 .. code:: shell
 
    eva accounting query
+
+Querying events using web UI
+----------------------------
+
+Event audit trail can be viewed in :ref:`eva4_va_sdash`, section "Events":
+
+.. figure:: ../screenshots/va_sdash_events.png
+    :width: 605px
+    :alt: SDash Event Audit Trail

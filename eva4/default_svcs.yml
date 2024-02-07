@@ -378,3 +378,11 @@
     The launcher itself provides no :doc:`../eapi` methods except the standard
     ones (“test”, “info” and “stop”). All other methods are proxied to the
     loaded service library.
+- nam: eva.controller.system
+  exe: svc/eva-controller-system
+  des: System controller
+  txt: |
+    .. include:: ../include/controller_system.rst
+  tpl: svc-tpl-controller-system.yml
+  xtr: |
+    .. include:: ../include/controller_system_xtra.rst

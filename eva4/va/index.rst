@@ -32,6 +32,8 @@ Short URL:
 
 Read more: :doc:`opcentre`.
 
+.. _eva4_va_sdash:
+
 Node system dashboard
 ---------------------
 

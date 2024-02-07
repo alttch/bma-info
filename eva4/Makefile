@@ -22,6 +22,7 @@ prepare:
 	rm -rf etc-config
 	mkdir etc-config
 	cp -r /opt/eva4/etc/*-dist etc-config/
+	cp /opt/eva4/svc/controller-system/agent-config-example.yml ./include/controller_system_agent_config.yml
 	find svc-tpl -name "*.yml" -exec sed -i 's|target/debug/|svc/|g' {} \;
 	cp /opt/eva4-enterprise/svc-tpl/* svc-tpl/
 	/opt/eva4/sbin/eapigen eva.core /opt/eva4/eva/eapi.yml > ./include/autogen/core_eapi.rst

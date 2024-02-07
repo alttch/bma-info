@@ -128,6 +128,10 @@
      - :doc:`eva.svc.lockerN<svc/eva-svc-locker>`
      - svc/eva-svc-locker
      - 
+   * - :doc:`System controller<svc/eva-controller-system>`
+     - :doc:`eva.controller.system<svc/eva-controller-system>`
+     - svc/eva-controller-system
+     - 
    * - :doc:`Text-to-speech service<svc/eva4-svc-tts>`
      - :doc:`eva.svc.tts.PROVIDER<svc/eva4-svc-tts>`
      - venv/bin/eva4-svc-tts

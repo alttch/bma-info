@@ -639,6 +639,10 @@ log.get
      - String
      - Filter by regex in message
      - no
+   * - **msg**
+     - String
+     - message filter substring
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/log.get.req

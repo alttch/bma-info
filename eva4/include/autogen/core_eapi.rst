@@ -843,6 +843,10 @@ log.get
      - String
      - message filter regular expression
      - no
+   * - **msg**
+     - String
+     - message filter substring
+     - no
 
 
 *Return payload example:*

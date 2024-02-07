@@ -34,6 +34,7 @@
     svc/eva-db-sql
     svc/eva-controller-sr
     svc/eva-svc-locker
+    svc/eva-controller-system
     svc/eva4-svc-tts
     svc/eva-db-timescale
     svc/eva-bridge-ads
