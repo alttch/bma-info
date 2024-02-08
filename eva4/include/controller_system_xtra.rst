@@ -80,10 +80,10 @@ Microsoft Windows agents
 * The configuration should be secured and allowed to access by system
   administrators/system services only
 
-* The agent binary can be started manually, e.g. for tests with "run"
-  argument. In this case it outputs logs to the system console. When
-  piped/started with Windows service manager, the agent outputs its logs to
-  the Windows event log (section *Application*).
+* The agent binary can be started manually, e.g. for tests with "run" argument.
+  In this case it outputs logs to the system console. When started as a Windows
+  service, the agent outputs its logs to the Windows event log (section
+  *Application*).
 
 To register the windows agent as a service and start it, use the following
 commands:
