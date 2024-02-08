@@ -10,12 +10,10 @@ After setup, the service creates sensors for various system parameters. Reports
 are sent by provider modules, which can be flexibly configured in the service
 configuration.
 
-The following common rules are applied:
+.. note:: 
 
-* If there is no configuration for a provider, it is enabled by default
-
-* If a system metric contains symbols, disallowed in EVA ICS v4 :ref:`OIDs
-  <eva4_oid>`, these symbols are replaced with triple underscores ("___").
+   If a system metric contains symbols, disallowed in EVA ICS v4 :ref:`OIDs
+   <eva4_oid>`, these symbols are replaced with triple underscores ("___").
 
 System
 ------
