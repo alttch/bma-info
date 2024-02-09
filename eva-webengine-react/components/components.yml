@@ -88,7 +88,8 @@
       name: formula
       type: string
       description: value modification formula e.g. "x/1000"
-    - name: digits
+    - &digits
+      name: digits
       type: number
       description: round digits after comma
     - name: units
@@ -356,6 +357,7 @@
       type: boolean
       description: Display item value
     - *formula
+    - *digits
     - name: type
       type: GaugeType
       description: Gauge type
@@ -467,6 +469,8 @@
     - name: state
       type: ItemState
       description: item state
+    - *formula
+    - *digits
     - name: label
       type: string
       description: Bottom label
@@ -533,6 +537,8 @@
     - name: state
       type: ItemState
       description: item state
+    - *formula
+    - *digits
     - name: label
       type: string
       description: Bottom label

@@ -59,6 +59,10 @@ Parameters
      - string
      - no
      - value modification formula e.g. "x/1000"
+   * - digits
+     - number
+     - no
+     - round digits after comma
    * - type
      - GaugeType
      - no
