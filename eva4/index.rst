@@ -37,6 +37,7 @@ control systems.
 .. toctree::
     :caption: EVA ICS v4 documentation
     :maxdepth: 1
+    :titlesonly:
 
     What is new (CHANGELOG) <changelog>
     quickstart

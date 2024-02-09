@@ -1,5 +1,5 @@
-System controller
-*****************
+System monitoring controller
+****************************
 
 .. contents::
 

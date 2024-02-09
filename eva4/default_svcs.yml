@@ -1,4 +1,5 @@
 - nam: eva.aaa.acl
+  grp: aaa
   exe: svc/eva-aaa-acl
   des: Default ACL service
   ins: by default with HMI (*--hmi*)
@@ -6,6 +7,7 @@
   tpl: svc-tpl-aaa-acl.yml
   api: svc/aaa-acl/eapi.yml
 - nam: eva.aaa.localauth
+  grp: aaa
   exe: svc/eva-aaa-localauth
   des: Local user/key authentication service
   ins: by default with HMI (*--hmi*)
@@ -13,12 +15,14 @@
   tpl: svc-tpl-aaa-localauth.yml
   api: svc/aaa-localauth/eapi.yml
 - nam: eva.aaa.otp
+  grp: aaa
   exe: svc/eva-aaa-otp
   des: OTP 2nd-Factor authentication service
   txt: Provides OTP 2FA, see :doc:`../2fa` for more details.
   tpl: svc-tpl-aaa-otp.yml
   api: svc/aaa-otp/eapi.yml
 - nam: eva.controller.lmN
+  grp: auto
   exe: svc/eva-controller-lm
   des: Logic manager
   txt: |
@@ -26,6 +30,7 @@
   tpl: svc-tpl-controller-lm.yml
   api: svc/controller-lm/eapi.yml
 - nam: eva.controller.srN
+  grp: auto
   exe: svc/eva-controller-sr
   des: Script runner controller
   txt: |
@@ -33,36 +38,42 @@
   tpl: svc-tpl-controller-sr.yml
   api: svc/controller-sr/eapi.yml
 - nam: eva.controller.trapN
+  grp: fb
   exe: svc/eva-controller-trap
   des: SNMP/UDP trap handler
   txt: |
     .. include:: ../include/trap.rst
   tpl: svc-tpl-controller-trap.yml
 - nam: eva.controller.enipN
+  grp: fb
   exe: svc/eva-controller-enip
   des: Ethernet/IP PLC controller gateway
   txt: Allows to communicate with Ethernet/IP-powered PLCs and other equipment.
   tpl: svc-tpl-controller-enip.yml
   api: svc/controller-enip/eapi.yml
 - nam: eva.controller.pubsubN
+  grp: fb
   exe: svc/eva-controller-pubsub
   des: Pub/Sub (MQTT) controller gateway
   txt: |
     .. include:: ../include/pubsub.rst
   tpl: svc-tpl-controller-pubsub.yml
 - nam: eva.controller.opcuaN
+  grp: fb
   exe: svc/eva-controller-opcua
   des: OPC-UA controller gateway
   txt: Allows to communicate with OPC-UA servers.
   tpl: svc-tpl-controller-opcua.yml
   api: svc/controller-opcua/eapi.yml
 - nam: eva.bridge.adsN
+  grp: fb
   exe: svc/eva-bridge-ads
   des: TwinCAT ADS bridge
   txt: ADS to BUS/RT bridge, required for :doc:`../svc/eva-controller-ads` instances.
   tpl: svc-tpl-bridge-ads.yml
   api: svc/bridge-ads/eapi.yml
 - nam: eva.controller.adsN
+  grp: fb
   exe: svc/eva-controller-ads
   des: TwinCAT ADS controller
   txt: |
@@ -79,12 +90,14 @@
   tpl: svc-tpl-controller-ads.yml
   api: svc/controller-ads/eapi.yml
 - nam: eva.controller.modbusN
+  grp: fb
   exe: svc/eva-controller-modbus
   des: Modbus master controller
   txt: Allows to communicate with Modbus-powered PLCs and other equipment.
   tpl: svc-tpl-controller-modbus.yml
   api: svc/controller-modbus/eapi.yml
 - nam: eva.controller.w1_N
+  grp: fb
   exe: svc/eva-controller-w1
   des: 1-Wire (OWFS) controller
   txt: |
@@ -93,6 +106,7 @@
   tpl: svc-tpl-controller-w1.yml
   api: svc/controller-w1/eapi.yml
 - nam: eva.svc.modbusN
+  grp: fb
   exe: svc/eva-svc-modbus-slave
   des: Modbus slave service
   txt: |
@@ -103,6 +117,7 @@
   tpl: svc-tpl-modbus-slave.yml
   api: svc/svc-modbus-slave/eapi.yml
 - nam: eva.svc.tts.PROVIDER
+  grp: misc
   exe: venv/bin/eva4-svc-tts
   des: Text-to-speech service
   ins: py:eva4-svc-tts
@@ -110,6 +125,7 @@
   tpl: svc-tpl-tts.yml
   api: svc/svc-tts/eapi.yml
 - nam: eva.bridge.udpN
+  grp: fb
   exe: venv/bin/eva4-svc-bridge-udp
   des: Bus UDP bridge
   ins: py:eva4-bridge-udp
@@ -118,6 +134,7 @@
   tpl: svc-tpl-bridge-udp.yml
   api: svc/bridge-udp/eapi.yml
 - nam: eva.controller.py
+  grp: auto
   exe: venv/bin/eva4-svc-controller-py
   des: Python macros controller
   ins: py:eva4-controller-py
@@ -125,6 +142,7 @@
   tpl: svc-tpl-controller-py.yml
   api: svc/controller-py/eapi.yml
 - nam: eva.controller.virtN
+  grp: dt
   exe: svc/eva-controller-virtual
   des: Virtual controller
   txt: |
@@ -135,6 +153,7 @@
   xtr: |
     .. include:: ../include/controller_virtual.rst
 - nam: eva.filemgr.main
+  grp: system
   des: File manager service
   exe: svc/eva-filemgr
   ins: always by default
@@ -146,6 +165,7 @@
   tpl: svc-tpl-filemgr.yml
   api: svc/filemgr/eapi.yml
 - nam: eva.db.iN
+  grp: db
   exe: svc/eva-db-influx
   des: InfluxDB state history
   txt: |
@@ -181,6 +201,7 @@
   tpl: svc-tpl-db-influx.yml
   api: svc/db-influx/eapi.yml
 - nam: eva.db.sN
+  grp: db
   exe: svc/eva-db-sql
   des: SQL databases state history
   txt: |
@@ -202,6 +223,7 @@
   tpl: svc-tpl-db-sql.yml
   api: svc/db-sql/eapi.yml
 - nam: eva.db.timescaleN
+  grp: db
   exe: svc/eva-db-timescale
   des: TimescaleDB databases state history
   txt: |
@@ -209,6 +231,7 @@
   tpl: svc-tpl-db-timescale.yml
   api: svc/db-timescale/eapi.yml
 - nam: eva.svc.expN
+  grp: auto
   exe: svc/eva-svc-expiration
   des: Item state expiration service
   txt: |
@@ -219,6 +242,7 @@
     because of a data puller service crash).
   tpl: svc-tpl-expiration.yml
 - nam: eva.svc.fwriterN
+  grp: db
   exe: svc/eva-svc-filewriter
   des: Item state file writer (JSON/CSV)
   txt: |
@@ -229,6 +253,7 @@
   tpl: svc-tpl-filewriter.yml
   api: svc/svc-filewriter/eapi.yml
 - nam: eva.hmi.default
+  grp: hmi
   exe: svc/eva-hmi
   des: HMI service
   ins: "by default with *--hmi* arg"
@@ -239,18 +264,21 @@
   xtr: |
     .. include:: ../include/hmi_xtra.rst
 - nam: eva.svc.lockerN
+  grp: auto
   exe: svc/eva-svc-locker
   des: Shared lock service
   txt: Allows other services to work with shared locks
   tpl: svc-tpl-locker.yml
   api: svc/svc-locker/eapi.yml
 - nam: eva.svc.mailer
+  grp: auto
   exe: svc/eva-svc-mailer
   des: Mailer service
   txt: Allows other services to send email notifications
   tpl: svc-tpl-mailer.yml
   api: svc/svc-mailer/eapi.yml
 - nam: eva.svc.mirror
+  grp: system
   exe: svc/eva-svc-mirror
   des: Mirror service
   txt: |
@@ -294,6 +322,7 @@
 
   tpl: svc-tpl-mirror.yml
 - nam: eva.repl.N
+  grp: repl
   exe: svc/eva-repl
   des: Replication service
   txt: |
@@ -302,6 +331,7 @@
   txt: |
     .. include:: ../include/repl.rst
 - nam: eva.repl.legacyN
+  grp: repl
   exe: venv/bin/eva4-svc-repl-legacy
   des: Legacy (V3) replication service
   ins: py:eva4-repl-legacy
@@ -310,6 +340,7 @@
   tpl: svc-tpl-replication-legacy.yml
   api: svc/repl-legacy/eapi.yml
 - nam: eva.aaa.msad
+  grp: aaa
   exe: svc/eva-aaa-msad
   des: Active directory auth service
   txt: Active directory user authentication service, see :doc:`../aaa` for more details.
@@ -319,6 +350,7 @@
   xtr: |
     .. include:: ../include/msad.rst
 - nam: eva.aaa.accounting
+  grp: aaa
   exe: svc/eva-aaa-accounting
   des: Event accounting service
   txt: |
@@ -336,6 +368,7 @@
 
     .. include:: ../include/autogen/http_api-aaa-accounting.rst
 - nam: "eva.zfrepl.N.collector|replicator"
+  grp: repl
   exe: svc/eva-zfrepl
   des: Zero-failure replication service
   txt: |
@@ -344,6 +377,7 @@
   ent: true
   tpl: svc-tpl-zfrepl.yml
 - nam: eva.kioskman.default
+  grp: hmi
   exe: svc/eva-kioskman
   des: HMI kiosk manager
   txt: |
@@ -352,6 +386,7 @@
   ent: true
   tpl: svc-tpl-kioskman.yml
 - nam: eva.generator.default
+  grp: dt
   exe: svc/eva-svc-generator
   des: Data generator
   txt: |
@@ -359,6 +394,7 @@
   api: svc/generator/eapi.yml
   tpl: svc-tpl-generator.yml
 - nam: "dapp.NAME"
+  grp: system
   exe: svc/eva-dapp
   des: Docker Application launcher
   txt: |
@@ -366,6 +402,7 @@
   api: svc/dapp/eapi.yml
   tpl: svc-tpl-dapp.yml
 - nam: "custom.name"
+  grp: system
   exe: svc/eva-ffi
   des: FFI launcher
   txt: |
@@ -379,8 +416,9 @@
     ones (“test”, “info” and “stop”). All other methods are proxied to the
     loaded service library.
 - nam: eva.controller.system
+  grp: system
   exe: svc/eva-controller-system
-  des: System controller
+  des: System monitoring controller
   txt: |
     .. include:: ../include/controller_system.rst
   tpl: svc-tpl-controller-system.yml
