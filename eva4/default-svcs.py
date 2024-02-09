@@ -41,7 +41,8 @@ GROUP_DOCS = {
     'aaa': 'aaa',
     'auto': 'auto/index',
     'repl': 'replication',
-    'hmi': 'ui'
+    'hmi': 'ui',
+    'fb': 'fieldbus'
 }
 
 group_codes = set([g[0] for g in GROUPS])

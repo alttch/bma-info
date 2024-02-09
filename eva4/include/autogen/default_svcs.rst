@@ -186,6 +186,7 @@ Fieldbus and external equipment
      - svc/eva-controller-ads
      - 
 
+Read more: :doc:`fieldbus`
 
 System services
 ---------------
