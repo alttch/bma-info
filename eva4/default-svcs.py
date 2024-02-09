@@ -30,7 +30,7 @@ GROUPS = [
     ('auto', 'SCADA automation'),
     ('db', 'Databases and data storages'),
     ('repl', 'Data replication'),
-    ('dt', 'Digital twins and process simulation'),
+    ('sim', 'Digital twins and process simulation'),
     ('fb', 'Fieldbus and external equipment'),
     ('system', 'System services'),
     ('hmi', 'User interfaces, HMI'),
@@ -42,6 +42,7 @@ GROUP_DOCS = {
     'auto': 'auto/index',
     'repl': 'replication',
     'hmi': 'ui',
+    'sim': '../sim/index',
     'fb': 'fieldbus'
 }
 
@@ -194,5 +195,5 @@ or using the bus CLI client:
                 print(file=fh)
                 group_doc = GROUP_DOCS.get(grp[0])
                 if group_doc:
-                    print(f'Read more: :doc:`{group_doc}`', file=fh)
+                    print(f'See also: :doc:`{group_doc}`', file=fh)
                 print(file=fh)

@@ -28,7 +28,7 @@ Authentication, Authorization and Accounting
      - svc/eva-aaa-otp
      - 
 
-Read more: :doc:`aaa`
+See also: :doc:`aaa`
 
 SCADA automation
 ----------------
@@ -64,7 +64,7 @@ SCADA automation
      - svc/eva-svc-locker
      - 
 
-Read more: :doc:`auto/index`
+See also: :doc:`auto/index`
 
 Databases and data storages
 ---------------------------
@@ -115,7 +115,7 @@ Data replication
      - svc/eva-zfrepl
      - requires :doc:`enterprise`
 
-Read more: :doc:`replication`
+See also: :doc:`replication`
 
 Digital twins and process simulation
 ------------------------------------
@@ -135,6 +135,7 @@ Digital twins and process simulation
      - svc/eva-controller-virtual
      - 
 
+See also: :doc:`../sim/index`
 
 Fieldbus and external equipment
 -------------------------------
@@ -186,7 +187,7 @@ Fieldbus and external equipment
      - svc/eva-controller-ads
      - 
 
-Read more: :doc:`fieldbus`
+See also: :doc:`fieldbus`
 
 System services
 ---------------
@@ -237,7 +238,7 @@ User interfaces, HMI
      - svc/eva-hmi
      - by default with *--hmi* arg
 
-Read more: :doc:`ui`
+See also: :doc:`ui`
 
 Other services
 --------------

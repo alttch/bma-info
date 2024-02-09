@@ -142,7 +142,7 @@
   tpl: svc-tpl-controller-py.yml
   api: svc/controller-py/eapi.yml
 - nam: eva.controller.virtN
-  grp: dt
+  grp: sim
   exe: svc/eva-controller-virtual
   des: Virtual controller
   txt: |
@@ -386,7 +386,7 @@
   ent: true
   tpl: svc-tpl-kioskman.yml
 - nam: eva.generator.default
-  grp: dt
+  grp: sim
   exe: svc/eva-svc-generator
   des: Data generator
   txt: |
