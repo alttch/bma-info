@@ -55,6 +55,10 @@ Parameters
      - boolean
      - no
      - Display item value
+   * - formula
+     - string
+     - no
+     - value modification formula e.g. "x/1000"
    * - type
      - GaugeType
      - no

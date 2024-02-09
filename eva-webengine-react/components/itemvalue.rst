@@ -35,6 +35,10 @@ Parameters
      - ItemState
      - no
      - item state
+   * - formula
+     - string
+     - no
+     - value modification formula e.g. "x/1000"
    * - digits
      - number
      - no

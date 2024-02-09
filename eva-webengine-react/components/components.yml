@@ -84,6 +84,10 @@
     - name: state
       type: ItemState
       description: item state
+    - &formula
+      name: formula
+      type: string
+      description: value modification formula e.g. "x/1000"
     - name: digits
       type: number
       description: round digits after comma
@@ -274,6 +278,9 @@
     - name: labels
       type: Array<string>
       description: line labels
+    - name: formula
+      type: string/Array<string>
+      description: value modification formula(s) e.g. "x/1000"
     - name: title
       type: string
       description: chart title
@@ -348,6 +355,7 @@
     - name: showValue
       type: boolean
       description: Display item value
+    - *formula
     - name: type
       type: GaugeType
       description: Gauge type

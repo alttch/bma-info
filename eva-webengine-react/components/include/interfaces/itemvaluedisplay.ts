@@ -3,6 +3,7 @@ interface ItemValueDisplay {
   state?: ItemState,
   label?: string;
   units?: string;
+  formula?: string;
   className?: string;
   format_with?: (value: any) => any;
   set_color_with?: (value: any) => string | undefined;

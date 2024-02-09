@@ -47,6 +47,10 @@ See :ref:`useEvaStateHistory <eva_webengine_react_use_evastatehistory>` hook.
      - Array<string>
      - no
      - line labels
+   * - formula
+     - string/Array<string>
+     - no
+     - value modification formula(s) e.g. "x/1000"
    * - title
      - string
      - no
