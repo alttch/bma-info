@@ -58,6 +58,7 @@
   txt: |
     .. include:: ../include/pubsub.rst
   tpl: svc-tpl-controller-pubsub.yml
+  api: svc/controller-pubsub/eapi.yml
 - nam: eva.controller.opcuaN
   grp: fb
   exe: svc/eva-controller-opcua
