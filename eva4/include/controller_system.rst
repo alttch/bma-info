@@ -56,6 +56,32 @@ is specified in the service configuration:
 Mount point sensors are specified without leading slashes. For system root in
 Linux/UNIX systems, sensors are created in a sub-group called "SYSTEM_ROOT".
 
+Block devices
+-------------
+
+The block devices provider creates a sub-group "blk" and displays information
+about block devices (physical disk drives).
+
+The list of block devices is detected automatically (loop devices are ignored).
+When a block device is removed, the monitoring is stopped. This behaviour can
+be changed if the list is specified in the service configuration:
+
+* only specific devices are monitored
+
+* if there is no device found, its sensors' status becomes -1 (ERROR)
+
+Explanation for certain sensors:
+
+* **r** read operations a second
+* **rb** read bytes a second
+* **w** write operations a second
+* **wb** written bytes a second
+* **util** % of block device utilization (100 = completely busy)
+
+.. note::
+
+   The block devices provider works on Linux systems only.
+
 Network
 -------
 
