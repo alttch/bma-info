@@ -246,5 +246,8 @@ The service provides certain methods via
 :ref:`extra calls<eva4_hmi_http__x__TARGET_SVC__METHOD>` (the methods must
 be called e.g. as *x::eva.aaa.accounting::query*)
 
+To use HTTP API methods, a user must be either a node administrator or have
+"log" operation permission.
+
 .. include:: ../include/autogen/http_api-aaa-accounting.rst
 
