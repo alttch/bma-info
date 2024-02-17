@@ -1,5 +1,5 @@
-Fieldbus protocols and equipment
-********************************
+Fieldbus and IoT protocols and equipment
+****************************************
 
 The following table contains the Fieldbus protocols and equipment supported
 out-of-the-box.

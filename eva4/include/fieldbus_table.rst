@@ -27,6 +27,18 @@
 |                  |                                                             |                   | 
 |                  | Any equipment with Rockwell-compatible En/IP implementation |                   | 
 +------------------+-------------------------------------------------------------+-------------------+
+| MQTT             | Beckhoff devices with TF6701 (TwinCAT 3 IoT Communication)  | Supported         | 
+|                  |                                                             |                   | 
+|                  | Siemens SIMATIC S7-1500                                     |                   | 
+|                  |                                                             |                   | 
+|                  | Siemens S7-1200                                             |                   | 
+|                  |                                                             |                   | 
+|                  | Siemens Industrial Edge automation platform                 |                   | 
+|                  |                                                             |                   | 
+|                  | WAGO PFC100/PFC200 with MQTT plugin installed               |                   | 
+|                  |                                                             |                   | 
+|                  | Any generic MQTT equipment and automation platforms         |                   | 
++------------------+-------------------------------------------------------------+-------------------+
 | Modbus TCP       | ABB AC500                                                   | Supported         | 
 |                  |                                                             |                   | 
 | Modbus UDP       | ABB AC500-eCo                                               |                   | 
