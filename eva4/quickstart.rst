@@ -745,6 +745,10 @@ Create a deployment file (correct the path to web-HMI application tarball):
           - src: path/to/hmi-app.tgz
             target: ui/
             extract: true
+          - text: |
+              if _1 == 0: stop('unit:room1/fan')
+              elif _1 == 1: start('unit:room1/fan')
+            target: xc/py/room1.fan_control.py
 
 and deploy it:
 
