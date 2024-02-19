@@ -144,3 +144,23 @@ Action maps
 
 Action maps are equal to output blocks with the following exception: if neither
 *oid* nor *prop* is specified in a mapping block, the action value is inserted.
+
+Extra topics
+~~~~~~~~~~~~
+
+Extra topics can be processed with :ref:`eva4_lmacro`. See configuration
+options for more details.
+
+The target lmacro gets the following keyword arguments:
+
+* **pubsub_topic** message topic
+
+* **pubsub_payload** message payload
+
+.. note::
+
+   The process lmacro always gets message paylaods as-is. JSON and other
+   serialized data SHOULD be deserialized manaully.
+
+Extra outgoing payloads can be sent using EAPI bus call
+:ref:`eva4_eva.controller.pubsub__pubsub.publish` to the service instance.
