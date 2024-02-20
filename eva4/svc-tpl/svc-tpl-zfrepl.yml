@@ -89,7 +89,7 @@ config:
             ## lower than block ttl on the remote node collector
             #interval: 30
             ## client session duration (sec). after the specified perioid of time the
-            ## client stops, until triggered again manaully or by the scheduler
+            ## client stops, until triggered again manually or by the scheduler
             #duration: 3600
             #timeout: 60 # override the default timeout
             #trusted: true

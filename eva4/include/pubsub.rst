@@ -160,7 +160,7 @@ The target lmacro gets the following keyword arguments:
 .. note::
 
    The process lmacro always gets message paylaods as-is. JSON and other
-   serialized data SHOULD be deserialized manaully.
+   serialized data SHOULD be deserialized manually.
 
 Extra outgoing payloads can be sent using EAPI bus call
 :ref:`eva4_eva.controller.pubsub__pubsub.publish` to the service instance.
