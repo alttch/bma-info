@@ -22,6 +22,10 @@ config:
   #tls: true
   ## alternative CA file (.der for DER, any other extension for PEM)
   #tls_ca: path/to/crt
+  ## alternative CA file, per domain (has higher priority then the default one)
+  #domains_tls_ca:
+  # mydomain.com: path/to/crt
+  # mydomain2.com: path/to/crt2
   #no_tls_verify: false
   ## cache entries and use the cache if ad is unavailable
   #cache_time: 86400

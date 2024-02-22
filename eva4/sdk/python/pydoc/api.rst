@@ -339,6 +339,12 @@
       Check is the current session writable or read-only
       
 
+.. py:class:: XCallDefault(aci=None, acl=None)
+   :module: evaics.sdk
+
+   HMI X calls mocker for no ACI/ACL
+   
+
 .. py:function:: log_traceback()
    :module: evaics.sdk
 
