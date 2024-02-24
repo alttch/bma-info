@@ -161,6 +161,16 @@ After updating, no special actions are required. If persistent volumes are
 used, the container automatically updates the registry keys and other files if
 necessary.
 
+Logging customization
+---------------------
+
+By default EVA ICS and command-line tools log into the system console full
+lines, including event times. This may be overhead if an external log processor
+(such as Docker internal one) is used.
+
+With an environment variable set **EVA_CONSOLE_LOG_NO_TIMESTAMP=1** the event
+times can be omitted.
+
 Features of using with Kubernetes
 =================================
 
