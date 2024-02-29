@@ -128,6 +128,7 @@ Parameters
       prop?: StateProp;
       fill?: string;
       args?: any;
+      update_uninit?: number;
       engine?: Eva;
     }
 
@@ -141,6 +142,11 @@ Parameters
 * **fill** filling interval (see :ref:`eva4_hmi_http__item.state_history`)
 
 * **args** extra API call arguments
+
+* **update_uninit** (seconds) when used standalone with no web-engine
+  :doc:`components/hmiapp` component and no *login.success* callback, refresh
+  login status more frequently than update interval set. Use in case of
+  problems when the first hook iteration is skipped.
 
 Output
 ------
@@ -197,6 +203,11 @@ Parameters
     }
 
 * **update** update interval in seconds (default: 1 sec)
+
+* **update_uninit** (seconds) when used standalone with no web-engine
+  :doc:`components/hmiapp` component and no *login.success* callback, refresh
+  login status more frequently than update interval set. Use in case of
+  problems when the first hook iteration is skipped.
 
 Output
 ------
