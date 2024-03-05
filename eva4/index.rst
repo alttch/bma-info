@@ -45,6 +45,7 @@ control systems.
     core_svcs
     va/index
     va/opcentre
+    reports
     ecmui/index
     enterprise
     ui

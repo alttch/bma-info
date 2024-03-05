@@ -63,6 +63,8 @@ putting a single or multiple values on the same canvas.
 
 Use the upper panel to customize general chart settings.
 
+.. _eva4_idc:
+
 IDC
 ===
 
