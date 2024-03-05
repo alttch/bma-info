@@ -13,6 +13,9 @@ reports.
     :width: 305px
     :alt: An example trends report
 
+    An example trends report, includes charts and a table with historical item
+    data.
+
 Unlike classic SCADA approach, when a dedicated reporting tool is provided, EVA
 ICS vendored UI applications allow users to use any page as a report source.
 
