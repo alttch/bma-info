@@ -68,6 +68,34 @@ The primary core configuration
 .. literalinclude:: ./registry_config/core.yml
     :language: yaml
 
+Inventory databases
+~~~~~~~~~~~~~~~~~~~
+
+By default, EVA ICS uses :doc:`./registry` to store item inventory. This may be
+slow for large nodes and it is recommended to switch either to SQLite (no
+database server required) or to PostgreSQL (requires a server installed).
+
+.. warning::
+
+   When switched, the new database is empty. EVA ICS does not perform any
+   automatic inventory conversion.
+
+Inventory conversion between databases is not automatic, but an easy procedure,
+starting from :ref:`eva4_eva-shell` 0.2.17 as it can now export both item
+configurations and their states:
+
+.. code:: shell
+
+   # export inventory from the old database
+   eva item export --full -o inventory.yml
+   # edit core configuration and switch the database
+   eva edit config/core
+   # restart the node to apply the new configuration
+   eva server restart
+   # import inventory to the new database
+   eva item deploy -f inventory.yml
+
+
 .. _eva4_config_bus:
 
 eva/config/bus
