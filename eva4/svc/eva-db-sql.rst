@@ -19,6 +19,8 @@ The service provides unified database EAPI.
 
 For a dedicated TimescaleDB connector, see :doc:`eva-db-timescale`.
 
+.. include:: ../include/common/timeframe-fill.rst
+
 
 Setup
 =====

@@ -8,6 +8,8 @@ Allows to store item states history in `InfluxDB
 
 The service provides unified database EAPI.
 
+.. include:: ../include/common/timeframe-fill.rst
+
 
 Setup
 =====
