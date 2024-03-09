@@ -171,6 +171,7 @@ Usage example
      const state = useEvaStateHistory({
          oid: "sensor:env/temp",
          timeframe: "1D",
+         fill: "30A", // get exactly 30 records
          update: 1
      });
 
