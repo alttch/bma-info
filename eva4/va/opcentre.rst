@@ -212,3 +212,26 @@ etc. If a user is not logged in yet, the login screen appears automatically.
 
 After successful authentication the browser is automatically navigated to the
 desired dashboard.
+
+Element properties
+------------------
+
+Certain elements have properties with additional formatting options.
+
+.. _eva4_va_opcentre_idc_image:
+
+Image
+~~~~~
+
+The SizedImage element has got additional **image** (URL) property formatting:
+
+* **${token}** when found in URL, is automatically replaced with the current EVA ICS API token
+
+* **${ts}** when found in URL, is automatically replaced with the current UNIX
+  timestamp (in seconds)
+
+IFrame
+~~~~~~
+
+The IFrame element **url** property has got the same URL formatting as
+:ref:`Image/image <eva4_va_opcentre_idc_image>`.
