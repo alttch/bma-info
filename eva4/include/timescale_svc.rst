@@ -6,7 +6,7 @@ Note that the service can store numeric item state values only.
 
 The service provides unified database EAPI.
 
-.. include:: common/timeframe-fill.rst
+.. include:: ../include/common/timeframe-fill.rst
 
 Timescale Installation
 ======================
