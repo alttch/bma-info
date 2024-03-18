@@ -1023,10 +1023,6 @@ profile.get_field
      - String
      - Field name (email)
      - **yes**
-   * - **value**
-     - Any
-     - Field value
-     - **yes**
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/profile.get_field.req
