@@ -265,6 +265,43 @@ before continue.
             workers: 1
             user: nobody
 
+Data objects
+------------
+
+:doc:`dobj` can be deployed as the following:
+
+.. code:: yaml
+
+    version: 4
+    content:
+      - node: .local
+        data_objects:
+        - name: Env
+          fields:
+          - name: temp
+            oid: sensor:env/temp
+            type: f64
+          - name: hum
+            oid: sensor:env/hum
+            type: f64
+          - name: pressure
+            oid: sensor:env/pressure
+            type: f64
+        - name: sub1
+          fields:
+          - name: counter_array
+            type: u64,10
+        - name: test
+          fields:
+          - name: value2
+            type: u16
+          - name: value_s1
+            oid: sensor:tests/s1
+            type: i16
+          - name: substruct
+            type: sub1
+
+
 Generator sources
 -----------------
 

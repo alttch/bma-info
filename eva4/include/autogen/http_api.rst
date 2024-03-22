@@ -223,7 +223,7 @@ api_log.get
    :header-rows: 0
 
    * - Description
-     - *Gets log of recent API calls*
+     - *Gets log of recent API calls (requires ACL op "moderator")*
    * - Parameters
      - required
    * - Returns
@@ -391,6 +391,74 @@ db.list
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/db.list.req
     :response: ../../http_api_examples/db.list.resp
+
+
+.. _eva4_hmi_http__dobj.get_struct:
+
+dobj.get_struct
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get data object structure (requires ACL op "developer")*
+   * - Parameters
+     - required
+   * - Returns
+     - Data object structure
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String
+     - Data object name
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/dobj.get_struct.req
+    :response: ../../http_api_examples/dobj.get_struct.resp
+
+
+.. _eva4_hmi_http__dobj.list:
+
+dobj.list
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get list of data objects (requires ACL op "developer")*
+   * - Parameters
+     - required
+   * - Returns
+     - List of data objects
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/dobj.list.req
+    :response: ../../http_api_examples/dobj.list.resp
 
 
 .. _eva4_hmi_http__item.check_access:

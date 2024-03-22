@@ -402,6 +402,187 @@ core.sysinfo
   }
   
 
+.. _eva4_eva.core__dobj.deploy:
+
+dobj.deploy
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Deploys data objects*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **data_objects**
+     - Vec<struct>
+     - Data object parameters
+     - no
+
+.. _eva4_eva.core__dobj.get_config:
+
+dobj.get_config
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get data object configuration*
+   * - Parameters
+     - required
+   * - Returns
+     - Data object configuration
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Data object name
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  fields:
+  - name: temp
+    oid: sensor:env/temp
+    type: f64
+  - name: hum
+    oid: sensor:env/hum
+    type: f64
+  - name: pressure
+    oid: sensor:env/pressure
+    type: f64
+  name: Env
+  
+
+.. _eva4_eva.core__dobj.list:
+
+dobj.list
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *List data objects*
+   * - Parameters
+     - *none*
+   * - Returns
+     - List of data objects
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+      {
+          "name": "test",
+          "size": 10
+      },
+      {
+          "name": "test2",
+          "size": 548
+      }
+  ]
+  
+
+.. _eva4_eva.core__dobj.push:
+
+dobj.push
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Push buffer to data object*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Data object name
+     - **yes**
+   * - **d**
+     - Vec<u8>
+     - Data buffer
+     - **yes**
+   * - **e**
+     - String
+     - Endianess (big/little), the default is little
+     - no
+
+.. _eva4_eva.core__dobj.undeploy:
+
+dobj.undeploy
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Undeploys data objects*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **data_objects**
+     - Vec<struct/String>
+     - Data object parameters or a list of data object names
+     - no
+
+.. _eva4_eva.core__dobj.validate:
+
+dobj.validate
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Validate node data objects*
+   * - Parameters
+     - *none*
+   * - Returns
+     - Validation result
+
 .. _eva4_eva.core__item.announce:
 
 item.announce

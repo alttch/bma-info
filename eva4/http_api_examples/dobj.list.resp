@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 276
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": [
+    {
+        "name": "Env",
+        "size": 24
+    },
+    {
+        "name": "sub1",
+        "size": 8
+    },
+    {
+        "name": "test",
+        "size": 12
+    },
+    {
+        "name": "xstruct",
+        "size": 2
+    }
+  ]
+}
+

@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 370
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "fields": [
+        {
+            "name": "value2",
+            "type": "u16"
+        },
+        {
+            "name": "value_s1",
+            "oid": "sensor:tests/s1",
+            "type": "i16"
+        },
+        {
+            "name": "subpayload",
+            "type": "sub1"
+        }
+    ],
+    "name": "test"
+  }
+}
+
