@@ -62,7 +62,7 @@ The default ACL has the following structure:
         items: ['oids']
     ops:
         - log
-        - supervisor
+        - developer
     meta:
         var: ['value']
         var2: ['value']
@@ -82,10 +82,18 @@ Fields:
 * **deny_write** denies write access to certain items (e.g. :ref:`unit
   <eva4_unit>` actions, setting :ref:`lvar <eva4_lvar>` values etc.)
 
-* **ops** list of special operations ("allow" in v3). supported values: *log*,
-  *supervisor*
+* **ops** list of special operations ("allow" in v3). supported values:
 
-* **meta** map of key=list fields, used for information purposes only
+  * **log** system log access via :doc:`svc/eva-hmi`
+
+  * **developer** access to :doc:`data object <dobj>` methods of :doc:`svc/eva-hmi`
+
+  * **moderator** API call log access via :doc:`svc/eva-hmi`
+
+  * **supervisor** reserved for custom applications
+
+* **meta** map of key=list fields, used for information purposes only. Can be
+  used by custom applications for special access control.
 
 When two ACLs are combined, all fields are combined as well, including meta.
 
