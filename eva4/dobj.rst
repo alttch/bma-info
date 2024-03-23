@@ -156,8 +156,48 @@ data objects via HTTP API (read-only):
 * :ref:`eva4_hmi_http__dobj.get_struct` - get a data object as a structure
   (with no :doc:`items <items>` mapping)
 
-This allows to automatically generate interface control documentation (ICD) and
-structured types for various programming languages.
+* :ref:`eva4_hmi_http__dobj.generate_struct_code` - generate a data object
+  structure code for the selected programming language
 
-To access the functions, a user must have *developer* operation set in his
-:ref:`ACL <eva4_acl>`.
+The methods allow to automatically generate interface control documentation
+(ICD) and structured types for various programming languages.
+
+.. note::
+
+    To access the functions, a user must have *developer* operation set in his
+    :ref:`ACL <eva4_acl>`.
+
+Code generation
+---------------
+
+* Code generation is performed with
+  :ref:`eva4_hmi_http__dobj.generate_struct_code` HTTP method.
+
+C/C++
+~~~~~
+
+No any special options are available for C/C++ generator. Arrays and arrays of
+structures are always generated in stack. Consider moving them to heap manually
+if required.
+
+Rust
+~~~~
+
+Rust generator has got special options, provided as subfields for "config"
+field:
+
+* **box_arrays (number)** automatically box arrays which are equal or larger
+  than the specified number of elements (default: from 100 elements)
+
+* **derive_debug (boolean)** automatically derive Debug trait for the structure
+
+* **derive_default (boolean)** automatically derive Default trait for the structure
+
+* **derive_clone (boolean)** automatically derive Clone trait for the structure
+
+* **derive_copy (boolean)** automatically derive Copy trait for the structure
+
+* **derive_eq (boolean)** automatically derive Eq and PartialEq traits for the structure
+
+* **binrw (string)** generate binrw serialization/deserialization code for the
+  structure. The string can be "big", "little" or "native"

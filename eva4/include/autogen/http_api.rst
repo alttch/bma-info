@@ -393,6 +393,50 @@ db.list
     :response: ../../http_api_examples/db.list.resp
 
 
+.. _eva4_hmi_http__dobj.generate_struct_code:
+
+dobj.generate_struct_code
+-------------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Generate data object structure code*
+   * - Parameters
+     - required
+   * - Returns
+     - Data object structure code
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - String/Vec<String>
+     - Data object name(s)
+     - **yes**
+   * - **lang**
+     - String
+     - Language ("rust", "c")
+     - **yes**
+   * - **config**
+     - Any
+     - A specific language generator configuration
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/dobj.generate_struct_code.req
+    :response: ../../http_api_examples/dobj.generate_struct_code.resp
+
+
 .. _eva4_hmi_http__dobj.get_struct:
 
 dobj.get_struct
@@ -402,7 +446,7 @@ dobj.get_struct
    :header-rows: 0
 
    * - Description
-     - *Get data object structure (requires ACL op "developer")*
+     - *Get data object structure*
    * - Parameters
      - required
    * - Returns
@@ -438,7 +482,7 @@ dobj.list
    :header-rows: 0
 
    * - Description
-     - *Get list of data objects (requires ACL op "developer")*
+     - *Get list of data objects*
    * - Parameters
      - required
    * - Returns

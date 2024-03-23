@@ -461,17 +461,26 @@ dobj.get_config
 
 .. code:: json
 
-  fields:
-  - name: temp
-    oid: sensor:env/temp
-    type: f64
-  - name: hum
-    oid: sensor:env/hum
-    type: f64
-  - name: pressure
-    oid: sensor:env/pressure
-    type: f64
-  name: Env
+  {
+  "fields": [
+        {
+            "name": "temp",
+            "oid": "sensor:env/temp",
+            "type": "f64"
+        },
+        {
+            "name": "hum",
+            "oid": "sensor:env/hum",
+            "type": "f64"
+        },
+        {
+            "name": "pressure",
+            "oid": "sensor:env/pressure",
+            "type": "f64"
+        }
+    ],
+    "name": "Env"
+  }
   
 
 .. _eva4_eva.core__dobj.list:

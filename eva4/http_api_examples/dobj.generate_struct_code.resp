@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 318
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+"id": 1,
+"jsonrpc": "2.0",
+"result": {
+    "code": "#[derive(Clone, Debug)]\n#[binrw]\n#[brw(little)]\nstruct test {\n    value2: u16,\n    value_s1: i16,\n    subpayload: sub1,\n}\n\n#[derive(Clone, Debug)]\n#[binrw]\n#[brw(little)]\nstruct Env {\n    temp: [f64; 2],\n    hum: f64,\n    pressure: f64,\n}\n"
+  }
+}
+
