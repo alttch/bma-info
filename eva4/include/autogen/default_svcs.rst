@@ -154,6 +154,10 @@ Fieldbus and external equipment
      - :doc:`eva.bridge.udpN<svc/eva4-svc-bridge-udp>`
      - venv/bin/eva4-svc-bridge-udp
      - requires `eva4-bridge-udp <https://pypi.org/project/eva4-bridge-udp/>`_ Python module
+   * - :doc:`Data objects I/O controller<svc/eva-controller-dobj>`
+     - :doc:`eva.controller.dobj<svc/eva-controller-dobj>`
+     - svc/eva-controller-dobj
+     - 
    * - :doc:`Ethernet/IP PLC controller gateway<svc/eva-controller-enip>`
      - :doc:`eva.controller.enipN<svc/eva-controller-enip>`
      - svc/eva-controller-enip

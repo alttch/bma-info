@@ -97,6 +97,16 @@
   txt: Allows to communicate with Modbus-powered PLCs and other equipment.
   tpl: svc-tpl-controller-modbus.yml
   api: svc/controller-modbus/eapi.yml
+- nam: eva.controller.dobj
+  grp: fb
+  exe: svc/eva-controller-dobj
+  des: Data objects I/O controller
+  txt: |
+    Allows to accept :doc:`data objects <../dobj>` as raw UDP packets from
+    various 3rd party sources such as Matlab, LabView, other data modelling
+    software as well as from compatible hardware.
+  tpl: svc-tpl-controller-dobj.yml
+  #api: svc/controller-dobj/eapi.yml
 - nam: eva.controller.w1_N
   grp: fb
   exe: svc/eva-controller-w1

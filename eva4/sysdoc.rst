@@ -8,6 +8,7 @@ System documentation
     v3migration
     architecture
     items
+    dobj
     config
     registry
     aaa

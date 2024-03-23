@@ -7,6 +7,7 @@
     svc/eva-aaa-msad
     svc/eva4-svc-bridge-udp
     svc/eva-svc-generator
+    svc/eva-controller-dobj
     svc/eva-aaa-acl
     svc/eva-dapp
     svc/eva-controller-enip
