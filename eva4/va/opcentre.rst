@@ -39,6 +39,15 @@ IDC:
     pvt:
       - vendored-apps/opcentre/idc/dashboards/#
 
+To access data objects, the user must have either admin access or "developer"
+ops allowed:
+
+.. code:: yaml
+
+   # ...
+   ops: ["developer"]
+   # ...
+
 User access can be also limited to read/write specific dashboards only.
 
 Items
@@ -50,6 +59,17 @@ The **Items** page allows to browse the node :doc:`items <../items>`. Use
 .. figure:: ./oc_ss/items.png
     :width: 505px
     :alt: Items
+
+Data objects
+============
+
+The **Data objects** page allows to browse the node :doc:`data objects
+<../dobj>`, generate interface control documentation (ICD) and source code for
+programming languages.
+
+.. figure:: ./oc_ss/dobj.png
+    :width: 505px
+    :alt: Data objects
 
 Trends
 ======

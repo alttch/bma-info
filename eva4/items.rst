@@ -1,15 +1,26 @@
-Items
-*****
+DCS Items
+*********
 
 .. contents::
 
-EVA ICS v4 has four types of items: "unit", "sensor", "lvar" and "lmacro".
+EVA ICS v4 has four types of DCS items: "unit", "sensor", "lvar" and "lmacro".
 External services can have more types, e.g.  ACLs, users, API keys, cycles and
 rules, but "eva.core" and replication services operate only with the listed
 ones.
 
 EVA ICS v4 has the very minimal core logic for items. This allows to process
 dozens million items on a single node without additional overhead.
+
+DCS items vs interfaces
+=======================
+
+In distributed control systems, items are usually simplified to contain
+primitive values only. This makes data replication and processing much easier
+and faster. Also it allows to store item values directly into time-series
+databases.
+
+EVA ICS provides both DCS items and traditional structural interfaces. See
+:doc:`dobj`.
 
 Item types
 ==========

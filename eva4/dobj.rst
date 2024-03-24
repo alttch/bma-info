@@ -3,8 +3,8 @@ Data objects
 
 .. contents::
 
-Data objects are structures which allow to process and convert traditional
-SCADA/fieldbus data into EVA ICS DCS :doc:`items`.
+Data objects are structural interfaces which allow to process and convert
+traditional SCADA/fieldbus data into EVA ICS DCS :doc:`items`.
 
 The data objects are defined and processed by :doc:`EVA ICS core <core>`.
 
@@ -167,10 +167,13 @@ The methods allow to automatically generate interface control documentation
     To access the functions, a user must have *developer* operation set in his
     :ref:`ACL <eva4_acl>`.
 
-Code generation
----------------
+ICD and Code generation
+-----------------------
 
-* Code generation is performed with
+* ICD (Interface Control Documentation) and code generation is available in
+  :doc:`va/opcentre`, section "Data objects".
+
+* ICD and code generation can be also performed manually with
   :ref:`eva4_hmi_http__dobj.generate_struct_code` HTTP method.
 
 C/C++
