@@ -4,9 +4,25 @@ Data objects
 .. contents::
 
 Data objects are structural interfaces which allow to process and convert
-traditional SCADA/fieldbus data into EVA ICS DCS :doc:`items`.
+traditional SCADA/fieldbus data into EVA ICS :doc:`items`.
 
 The data objects are defined and processed by :doc:`EVA ICS core <core>`.
+
+.. raw:: html
+
+    <div style="font-size: larger; width: 100%; margin-bottom: 20px; text-align: center; font-weight: bold; font-style: italic;">
+    Data Object = Structured interface + Data Buffer + DCS item mappings
+    </div>
+
+.. note::
+
+   EVA ICS core data objects have write-only (push) access. Reading data back
+   is not supported.
+
+   PLCs and real-time applications should not use the core data objects for
+   data exchange. Instead they should use either unmapped fieldbus shared
+   context or channels. Consider reviewing features of chosen fieldbus
+   protocols.
 
 Manipulating data objects
 =========================
@@ -148,6 +164,9 @@ See :doc:`svc/eva-controller-dobj`.
 Development
 ===========
 
+ICD and HTTP API methods
+------------------------
+
 :doc:`svc/eva-hmi` has got certain methods to allow developers to work with
 data objects via HTTP API (read-only):
 
@@ -167,14 +186,16 @@ The methods allow to automatically generate interface control documentation
     To access the functions, a user must have *developer* operation set in his
     :ref:`ACL <eva4_acl>`.
 
-ICD and Code generation
------------------------
+ICD (Interface Control Documentation) and code generation is available in
+:doc:`va/opcentre`, section "Data objects".
 
-* ICD (Interface Control Documentation) and code generation is available in
-  :doc:`va/opcentre`, section "Data objects".
+Code generation
+---------------
 
-* ICD and code generation can be also performed manually with
-  :ref:`eva4_hmi_http__dobj.generate_struct_code` HTTP method.
+Code generation can be automated with
+:ref:`eva4_hmi_http__dobj.generate_struct_code` HTTP method.
+
+.. _eva4_dobj_codegen_c:
 
 C/C++
 ~~~~~
@@ -182,6 +203,8 @@ C/C++
 No any special options are available for C/C++ generator. Arrays and arrays of
 structures are always generated in stack. Consider moving them to heap manually
 if required.
+
+.. _eva4_dobj_codegen_rust:
 
 Rust
 ~~~~
