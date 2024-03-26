@@ -429,6 +429,37 @@ dobj.deploy
      - Data object parameters
      - no
 
+.. _eva4_eva.core__dobj.error:
+
+dobj.error
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Report an error to mapped OIDs*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Data object name
+     - **yes**
+   * - **status**
+     - i16
+     - Error status code (<0)
+     - no
+
 .. _eva4_eva.core__dobj.get_config:
 
 dobj.get_config
