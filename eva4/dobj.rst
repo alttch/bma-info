@@ -215,11 +215,15 @@ field:
 * **box_arrays (number)** automatically box arrays which are equal or larger
   than the specified number of elements (default: from 100 elements)
 
+* **repr_c** use C representation for the structure (default: true)
+
 * **derive_debug (boolean)** automatically derive Debug trait for the structure
+  (default: true)
 
 * **derive_default (boolean)** automatically derive Default trait for the structure
 
 * **derive_clone (boolean)** automatically derive Clone trait for the structure
+  (default: true)
 
 * **derive_copy (boolean)** automatically derive Copy trait for the structure
 
