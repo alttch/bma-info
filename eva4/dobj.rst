@@ -195,6 +195,11 @@ Code generation
 Code generation can be automated with
 :ref:`eva4_hmi_http__dobj.generate_struct_code` HTTP method.
 
+See also:
+
+* `EVA ICS Plugin for Visual Studio Code
+  <https://github.com/eva-ics/eva-ics-vscode-plugin>`_
+
 .. _eva4_dobj_codegen_c:
 
 C/C++

@@ -21,6 +21,8 @@ styles.
 
 * General documentation about HMI client apps: see :doc:`../eva4/ui`.
 
+* EVA ICS Plugin for Visual Studio Code: https://github.com/eva-ics/eva-ics-vscode-plugin
+
 EVA ICS WebEngine React is written in TypeScript. It is highly recommended to
 use TypeScript instead of JavaScript to get all engine benefits (types,
 auto-completion etc.).
