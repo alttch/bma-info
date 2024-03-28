@@ -198,7 +198,7 @@ Code generation can be automated with
 See also:
 
 * `EVA ICS Plugin for Visual Studio Code
-  <https://github.com/eva-ics/eva-ics-vscode-plugin>`_
+  <https://marketplace.visualstudio.com/items?itemName=bohemia-automation.evaics>`_
 
 .. _eva4_dobj_codegen_c:
 
