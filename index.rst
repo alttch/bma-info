@@ -23,7 +23,6 @@ educational purposes without any restrictions.
     eva-webengine/index
     eva-webengine-react/index
     evaics-app-grafana/index
-    rplc/index
     sim/index
     psrt/index
     busrt/index

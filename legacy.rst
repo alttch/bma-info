@@ -8,3 +8,4 @@ Legacy products
     eva3/index
     eva-js-framework/index
     hmi-block-ui/index
+    rplc/index
