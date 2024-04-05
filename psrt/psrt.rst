@@ -20,8 +20,24 @@ Other repositories:
 Installation (free version)
 ===========================
 
-Use binaries from https://github.com/alttch/psrt/releases. For Debian/Ubuntu
-and other deb-based distributions, .deb packages can be used.
+Use binaries from https://github.com/alttch/psrt/releases.
+
+For Debian/Ubuntu and other deb-based distributions, .deb packages can be used,
+downloaded either directly or via the apt repository:
+
+.. code:: shell
+
+    curl https://pub.bma.ai/apt/setup | sudo sh
+    sudo apt-get install psrt
+
+The apt repository contains packages compatible with Ubuntu 20.04 LTS which
+require OpenSSL 1.1. To enable OpenSSL 1.1 support on newer Ubuntu versions,
+install the following:
+
+.. code:: shell
+
+   wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+   sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 
 .. _psrt_compile:
 
@@ -145,7 +161,13 @@ supported out-of-the-box:
 * `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
 * `Debian GNU/Linux 11+ <https://www.debian.org>`_
 
-Download packages from https://pub.bma.ai/psrt-enterprise/
+Download packages from either https://pub.bma.ai/psrt-enterprise/ or the apt
+repository:
+
+.. code:: shell
+
+    curl https://pub.bma.ai/apt/setup | sudo sh
+    sudo apt-get install psrt-enterprise
 
 The Enterprise version can be tested in "unlimited trial" mode. Feel free to
 download testing `key files
