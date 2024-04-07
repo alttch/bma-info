@@ -24,6 +24,7 @@ educational purposes without any restrictions.
     eva-webengine-react/index
     evaics-app-grafana/index
     sim/index
+    roboplc/index
     psrt/index
     busrt/index
     common/index

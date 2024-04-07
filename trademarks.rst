@@ -24,6 +24,29 @@ categories of goods and services:
 - Data processors
 - Data networks
 
+**RoboPLC®** is the registered trademark (UK UK00004024780), owned by `Dmitriy
+Yurin <https://www.linkedin.com/in/dmitriy-yurin-62057b20b/>`__ and used by the
+`Altertech Group <https://www.altertech.com>`__ companies and their partners
+for the following categories of goods and services:
+
+- Computer software development tools
+- Computer software programs
+- Bus interfaces
+- Data bus interface units
+- Data carriers
+- Industrial software
+- Industrial automation software
+- Industrial process control software
+- Product engineering software
+- Software development tools
+- Industrial automation controls
+- Data wires
+- Data transmitters
+- Data networks
+- Data processors
+- Data processing software
+- Process controlling software
+
 **IOTE Cloud™** is the trademark used by the `Altertech Group
 <https://www.altertech.com>`__ companies and their partners for the following
 categories of goods and services:
