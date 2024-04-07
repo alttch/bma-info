@@ -4,12 +4,12 @@ Flashing
 .. contents::
 
 If :ref:`roboplc_manager` is installed, it is possible to flash the program
-remotely via either its web interface or using *robo* CI program. Note that the
-program can be flashed only when the host is in *CONFIG* mode.
+remotely via either its web interface or using *robo* CLI program. Note that
+the program can be flashed only when the host is in *CONFIG* mode.
 
 .. note::
 
-   RoboPLC manager is not a mandatory component. The program can be
+   RoboPLC Manager is not a mandatory component. The program can be
    uploaded/run using any custom method.
 
 Installing RoboPLC CLI
@@ -51,7 +51,7 @@ The following options are available:
     cargo = "cargo"
     target = "x86_64-unknown-linux-gnu"
 
-* **remote.url** URL of the RoboPLC manager (with no trailing slashes etc.)
+* **remote.url** URL of the RoboPLC Manager (with no trailing slashes etc.)
 
 * **remote.key** host management key
 

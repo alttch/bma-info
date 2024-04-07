@@ -8,19 +8,19 @@ Configuring the system
 RoboPLC Manager
 ===============
 
-RoboPLC manager is a server which provides a convenient way to manage RoboPLC
+RoboPLC Manager is a server which provides a convenient way to manage RoboPLC
 programs, monitor their states as well as the overall system state.
 
 Installation
 ------------
 
-Before installing RoboPLC manager, read :doc:`manager_license`.
+Before installing RoboPLC Manager, read :doc:`manager_license`.
 
-RoboPLC manager is compatible with Debian, Ubuntu, Raspbian and other
+RoboPLC Manager is compatible with Debian, Ubuntu, Raspbian and other
 Debian-based Linux distributions. Binaries are available for 64-bit x86 and
 64-bit ARM architectures.
 
-To install RoboPLC manager, add the repository and install the package:
+To install RoboPLC Manager, add the repository and install the package:
 
 .. code:: shell
 
@@ -47,7 +47,7 @@ Layout
 Modes
 ~~~~~
 
-RoboPLC manager brings the traditional PLC paradigm:
+RoboPLC Manager brings the traditional PLC paradigm:
 
 * There can be only one active program at a time.
 
@@ -67,7 +67,7 @@ RoboPLC manager brings the traditional PLC paradigm:
 Services and folders
 ~~~~~~~~~~~~~~~~~~~~
 
-* RoboPLC manager automatically enables and starts a systemd service named
+* RoboPLC Manager automatically enables and starts a systemd service named
   "roboplc.program"
 
 * The program binary is stored in */var/roboplc/program*, the current binary is
