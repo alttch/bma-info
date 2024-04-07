@@ -53,7 +53,7 @@ Program code
 Let us review the program code with comments included. A few notes:
 
 * In RoboPLC data exchange between workers can be performed in both traditional
-  way, using a shared variables, and using a centralized `data hub
+  way: using shared variables. And using a centralized `data hub
   <https://docs.rs/roboplc/latest/roboplc/hub/struct.Hub.html>`_ with real-time
   channels. The last one way is preferred, as it allows to perfectly
   synchronize workers, minimizes event latency and can be used not only in
