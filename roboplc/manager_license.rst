@@ -1,5 +1,5 @@
-RoboPLC Manager Software License Agreement
-******************************************
+RoboPLC Manager License
+***********************
 
 This License Agreement ("Agreement") is a legal agreement between you (either
 an individual or a single entity) and Bohemia Automation ("Author") for the
