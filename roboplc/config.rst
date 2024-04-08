@@ -78,8 +78,8 @@ Services and folders
 
 * The program must be always compiled as a single binary file.
 
-* The program is always started as root. It is highly recommended either to
-  keep field-bus either fully isolated (preferred) or drop process privileges
+* The program is always started as root. It is highly recommended either
+  keeping field-bus fully isolated (preferred) or dropping process privileges
   at some point.
 
 Logging
