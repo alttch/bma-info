@@ -6,8 +6,9 @@ RoboPLC
    :class: no-scaled-link
    :align: right
 
-RoboPLC is a framework for creating both PLC (Programmable Logic Controller)
-and robotic real-time Linux applications in Rust.
+`RoboPLC <https://www.bohemia-automation.com/software/roboplc/>`_ is a
+framework for creating both PLC (Programmable Logic Controller) and robotic
+real-time Linux applications in Rust.
 
 RoboPLC is a successor of :doc:`../rplc/index` project and continues our
 evolution of Rust-based controller programming.

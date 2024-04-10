@@ -58,7 +58,7 @@ The following options are available:
 * **remote.timeout** max API timeout (keep it high enough for binary uploading)
 
 * **build.cargo** cargo executable. If not specified, *cross* is used if
-  present in the PATH, otherwise the compilation is fell back to the default
+  present in the PATH, otherwise the compilation falls back to the default
   *cargo*
 
 * **build.target** the remote target architecture. If not specified, the host

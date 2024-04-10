@@ -70,7 +70,7 @@ Configuring the remote
 ======================
 
 How we need to prepare the remote (a board, an industrial computer etc.) to run
-the program. To do this, see :doc:`configuring` section.
+the program. To do this, see :doc:`config` section.
 
 Flashing
 ========
