@@ -50,6 +50,7 @@ The following options are available:
     [build]
     cargo = "cargo"
     target = "x86_64-unknown-linux-gnu"
+    #cargo-args = "--some-extra --cargo-arguments"
 
 * **remote.url** URL of the RoboPLC Manager (with no trailing slashes etc.)
 
