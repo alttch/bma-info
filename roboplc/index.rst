@@ -33,9 +33,9 @@ See also:
   <https://marketplace.visualstudio.com/items?itemName=bohemia-automation.evaics>`_
   - for quick import of :doc:`EVA ICS data objects <../eva4/dobj>`.
 
-* `RoboPLC GitHub repository <https://github.com/eva-ics/roboplc>`_
+* `RoboPLC GitHub repository <https://github.com/roboplc/roboplc>`_
 
-* `RoboPLC examples <https://github.com/eva-ics/roboplc/tree/main/examples>`_
+* `RoboPLC examples <https://github.com/roboplc/roboplc/tree/main/examples>`_
 
 .. toctree::
    :caption: RoboPLC documentation
