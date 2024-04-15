@@ -125,6 +125,23 @@ this, add the following kernel boot parameters:
 
 where 2,3,4 are CPU cores to isolate (starting from 0).
 
+Memory allocation
+=================
+
+Memory allocation/deallocation operations can significantly slow down real-time
+tasks. To resolve this, either avoid dynamically allocating/dropping variables
+which use heap memory (maps, vectors, etc.) or use RoboPLC heap pre-allocation:
+
+.. code:: rust
+
+   roboplc::thread_rt::prealloc_heap(20_000_000).unwrap();
+
+The above code pre-allocates 20 MB of heap memory plus prevents existing
+process memory (after fixing, the pages are extended to 5-10 MB in total) from
+being dropped.
+
+The code needs to be executed once, at the beginning of the program.
+
 Troubleshooting
 ===============
 
