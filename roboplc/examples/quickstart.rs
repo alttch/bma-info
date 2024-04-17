@@ -125,6 +125,9 @@ impl Worker<Message, Variables> for FanControl {
 
 // The main function of the program
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    // Setup the panic handler. RoboPLC provides a custom panic handler, which immediately kills
+    // the process with SIGKILL, no matter in which thread the panic occurs.
+    roboplc::setup_panic();
     // Configure the logger. RoboPLC automatically configures the logger to log messages to
     // stdout, with no timestamp if started by systemd.
     roboplc::configure_logger(roboplc::LevelFilter::Info);
