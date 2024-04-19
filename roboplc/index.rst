@@ -43,6 +43,7 @@ See also:
 
    quickstart
    config
+   metrics
    flashing
    license
    manager_license
