@@ -21,6 +21,7 @@ Example:
 
 .. code:: rust
 
+   use roboplc::prelude::*;
    use roboplc::metrics::{counter, gauge, histogram};
 
    let mut prev = None;
@@ -31,7 +32,7 @@ Example:
        counter!("worker::counter", "incr" => "2").increment(2);
        // a gauge
        gauge!("worker::value").set(123);
-       let now = std::time::Instant::now();
+       let now = Monotonic::now();
        if let Some(prev) = prev {
            // a histogram
            histogram!("worker").record(now.duration_since(prev).as_micros() as f64);
