@@ -103,6 +103,25 @@ Uploading a program (flashing)
 A program binary can be uploaded either using the Web UI or *robo* CLI command
 (see :doc:`flashing`).
 
+Uninstalling RoboPLC Manager
+----------------------------
+
+To uninstall RoboPLC Manager, run:
+
+.. code:: shell
+
+   sudo apt-get remove roboplc-manager
+
+Note that the program is not automatically stopped and the service is not
+uninstalled. To stop the program and uninstall the service, run:
+
+.. code:: shell
+
+   sudo systemctl stop roboplc.program.service
+   sudo systemctl disable roboplc.program.service
+   rm -f /etc/systemd/system/roboplc.program.service
+   systemctl daemon-reload
+
 Kernel
 ======
 
