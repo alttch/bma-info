@@ -25,17 +25,21 @@ Example:
    use roboplc::metrics::{counter, gauge, histogram};
 
    let mut prev = None;
+   // a counter
+   let c1 = counter!("worker::counter");
+   // a counter with a label
+   let c2 = counter!("worker::counter", "incr" => "2");
+   // a gauge
+   let g = gauge!("worker::value");
+   // a histogram
+   let h = histogram!("worker");
    for _ in roboplc::time::interval(step) {
-       // a counter
-       counter!("worker::counter").increment(1);
-       // a counter with a label
-       counter!("worker::counter", "incr" => "2").increment(2);
-       // a gauge
-       gauge!("worker::value").set(123);
+       c1.increment(1);
+       c2.increment(2);
+       g.set(123);
        let now = Monotonic::now();
        if let Some(prev) = prev {
-           // a histogram
-           histogram!("worker").record(now.duration_since(prev).as_micros() as f64);
+           h.record(now.duration_since(prev).as_micros() as f64);
        }
        prev.replace(now);
    }
