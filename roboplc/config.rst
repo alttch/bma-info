@@ -161,6 +161,15 @@ being dropped.
 
 The code needs to be executed once, at the beginning of the program.
 
+IRQs
+====
+
+IRQs from devices can significantly slow down real-time tasks. To resolve this,
+move IRQs to shared CPUs (not isolated) or disable the devices which are not
+used.
+
+Refer to the documentation for OS distribution and hardware for more details.
+
 Troubleshooting
 ===============
 
@@ -180,3 +189,19 @@ Real-time thread parameters can not be set with "operation not permitted"
    let _sys = SystemConfig::new().set("kernel/sched_rt_runtime_us", -1)
        .apply()
        .expect("Unable to set system config");
+
+
+Hardware
+========
+
+RoboPLC has been working on various hardware, from Raspberry Pi Zero to big
+industrial machines.
+
+* RoboPLC is designed to run on bare-metal Linux, with no virtualisation.
+
+* It may be not the best idea to run RoboPLC programs in containers, unless you
+  know what you are doing.
+
+* Always remember that RoboPLC is a software, not a hardware. It can not do a
+  miracle and turn $20-worth micro-computer into a high-performance industrial
+  controller. Choose a proper hardware for your applications wisely.
