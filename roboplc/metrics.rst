@@ -15,7 +15,7 @@ The crate provides several kinds of metrics:
 
 * Counter (an integer value that can only increase)
 * Gauge (a floating point value)
-* Histogram (a histogram of floating point values with quantiles)
+* Histogram
 
 Example:
 
@@ -55,16 +55,21 @@ Refer to the `Metrics documentation <https://docs.rs/metrics/>`_ for more detail
 Exporting metrics
 =================
 
-The Metrics project provides several ways to expose metrics. RoboPLC provides a
-method to export metrics in the Prometheus format:
+The Metrics project provides several ways to expose metrics. RoboPLC re-exports
+`metrics-exporter-prometheus <https://docs.rs/metrics-exporter-prometheus/>`_
+builder:
 
 .. code:: rust
 
-   roboplc::setup_metrics_exporter().unwrap();
+   roboplc::metrics_exporter()
+      .set_bucket_duration(Duration::from_secs(600)).unwrap()
+      .install().unwrap();
 
-The method starts an HTTP server on the default address 0.0.0.0:9000. To
-start the server on a different address, use `metrics_exporter_prometheus
-<https://docs.rs/metrics-exporter-prometheus/>`_ crate directly.
+
+The above example starts an HTTP server on the default address 0.0.0.0:9000
+with bucket time-to-live of 600 seconds. To start the server on a different
+address, refer to `metrics_exporter_prometheus
+<https://docs.rs/metrics-exporter-prometheus/>`_ crate documentation.
 
 Viewing metrics
 ===============
@@ -77,4 +82,5 @@ The program metrics must be available on the host at the address
     :width: 505px
     :alt: Metrics
 
-The metrics can be also viewed in any Prometheus-compatible monitoring system.
+The viewer supports histograms exported as summaries with quantiles only. The
+metrics can be also viewed in any Prometheus-compatible monitoring system.
