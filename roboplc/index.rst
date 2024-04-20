@@ -13,7 +13,7 @@ robotic real-time Linux applications in Rust.
 RoboPLC is a successor of :doc:`../rplc/index` project and continues our
 evolution of Rust-based controller programming.
 
-* Completely Rust-way (everything is done with procedural macros)
+* Completely Rust-way (everything is done with procedural macros).
 
 * Fully modular architecture. The framework components can be used both
   together and separately.
@@ -43,7 +43,7 @@ See also:
 
    quickstart
    config
-   metrics
    flashing
+   metrics
    license
    manager_license
