@@ -15,11 +15,14 @@ the program can be flashed only when the host is in *CONFIG* mode.
 Installing RoboPLC CLI
 ======================
 
-The *robo* CLI program is available in cargo package *roboplc-cli*:
+The *robo* CLI tool is available in cargo package *roboplc-cli*:
 
 .. code:: shell
 
    cargo install roboplc-cli
+
+The tool should be installed on the client machine, where the Rust project is
+being developed. It is also possible to include the tool into CI/CD pipelines.
 
 Configuring
 ===========
