@@ -40,6 +40,12 @@ The priority is the following:
 Configuration file
 ------------------
 
+.. note::
+
+   When a new project is created with *robo new* command, it is possible to
+   specify the remote url, key and timeout. If specified, the values are stored
+   in the *robo.toml* file.
+
 The file must be placed into the projects root directory and named *robo.toml*.
 The following options are available:
 
@@ -48,7 +54,7 @@ The following options are available:
     [remote]
     url = "http://IP_OR_HOST:7700"
     key = "roboplc"
-    timeout = 30
+    #timeout = 60
 
     [build]
     cargo = "cargo"
@@ -90,7 +96,8 @@ The program can be flashed using the following command:
 The program is automatically compiled for the remote target (release) and
 uploaded to the remote host.
 
-* use **\--run** option to automatically start the program after flashing
+* use **\--run** (short: **-r**) option to automatically start the program
+  after flashing
 
-* use **\--force** option to switch the remote into *CONFIG* mode before
-  flashing.
+* use **\--force** (short: **-f**) option to switch the remote into *CONFIG*
+  mode before flashing.

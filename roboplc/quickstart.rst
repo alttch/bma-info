@@ -21,15 +21,17 @@ Creating a new Rust project
 If Rust is not installed yet, install it using instructions from
 https://www.rust-lang.org/tools/install
 
-Then execute
+Then install RoboPLC CLI:
 
 .. code:: shell
 
-   cargo new quickstart
-   cd quickstart
+   cargo install roboplc-cli
 
-   cargo add roboplc --features modbus
-   cargo add tracing --features log
+And create a new RoboPLC project with *modbus* RoboPLC feature:
+
+.. code:: shell
+
+   robo new quickstart --features modbus
 
 The Rust project is ready. Its *Cargo.toml* should look like:
 
@@ -44,8 +46,8 @@ The Rust project is ready. Its *Cargo.toml* should look like:
    roboplc = { version = "0.1", features = ["modbus"] }
    tracing = { version = "0.1", features = ["log"] }
 
-The *tracing* crate will be used for logging. It is not a mandatory thing, the
-logging can be done in any other preferred way.
+The *tracing* crate is added by default for logging. It is not a mandatory
+thing, the logging can be done in any other preferred way.
 
 Program code
 ============
@@ -78,11 +80,8 @@ Flashing
 RoboPLC provides a very easy way to flash the program to the remote. Install
 **roboplc-cli** tool:
 
-.. code:: shell
-
-   cargo install roboplc-cli
-
-Create a file *robo.toml* in the project root directory with the following content:
+Modify the file *robo.toml* in the project root directory with the following
+content:
 
 .. code:: toml
 

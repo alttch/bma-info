@@ -238,3 +238,6 @@ commit:
 
 pydocs:
 	./generate-pydocs.py
+
+open:
+	xdg-open _build/html/index.html
