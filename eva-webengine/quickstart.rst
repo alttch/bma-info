@@ -22,9 +22,9 @@ Initialization
 
     const eva = new Eva();
 
-    // optionally register window.$eva for older HMI apps and for testing
+    // optionally register window.$eva for external apps and for testing
     // purposes
-    eva.register_legacy_globals();
+    eva.register_globals();
 
     const log = eva.log; // Get the engine console logger
 
