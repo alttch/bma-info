@@ -71,9 +71,6 @@ the program. To do this, see :doc:`config` section.
 Flashing
 ========
 
-RoboPLC provides a very easy way to flash the program to the remote. Install
-**roboplc-cli** tool:
-
 Modify the file *robo.toml* in the project root directory with the following
 content:
 

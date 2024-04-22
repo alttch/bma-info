@@ -57,8 +57,8 @@ The following options are available:
     #timeout = 60
 
     [build]
-    cargo = "cargo"
-    target = "x86_64-unknown-linux-gnu"
+    #cargo = "cargo"
+    #target = "x86_64-unknown-linux-gnu"
     #cargo-args = "--some-extra --cargo-arguments"
 
 * **remote.url** URL of the RoboPLC Manager (with no trailing slashes etc.)
@@ -75,7 +75,7 @@ The following options are available:
   architecture is tried to be detected automatically, using RoboPLC Manager API
 
 Cross-compilation
------------------
+=================
 
 For cross compilation, it is recommended to install `cross
 <https://github.com/cross-rs/cross>`_:

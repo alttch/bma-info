@@ -43,8 +43,8 @@ See also:
    :caption: RoboPLC documentation
    :maxdepth: 1
 
-   hello
-   quickstart
+   quickstart_hello
+   quickstart_modbus
    config
    flashing
    metrics
