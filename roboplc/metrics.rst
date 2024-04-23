@@ -48,7 +48,7 @@ Refer to the `Metrics documentation <https://docs.rs/metrics/>`_ for more detail
 
 .. note::
 
-   Metrics are not be used to export production data. Use a proper fieldbus
+   Metrics should not be used to export production data. Use a proper fieldbus
    protocol for that. Metrics are useful for program debugging and monitoring
    purposes only.
 
