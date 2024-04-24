@@ -74,6 +74,11 @@ The following options are available:
 * **build.target** the remote target architecture. If not specified, the host
   architecture is tried to be detected automatically, using RoboPLC Manager API
 
+.. warning::
+
+   As the file contains the remote key, make sure it has got proper permissions
+   and do not publish it to public source repositories.
+
 Cross-compilation
 =================
 
@@ -101,3 +106,37 @@ uploaded to the remote host.
 
 * use **\--force** (short: **-f**) option to switch the remote into *CONFIG*
   mode before flashing.
+
+Switching between remotes
+=========================
+
+The file *robo.toml* contains the primary remote where the program is flashed.
+Sometimes it is useful to switch between multiple remotes, e.g. to test the
+program on different devices.
+
+RoboPLC CLI allows to create a list of the remotes in a file named
+*.robo-global.toml*. The file must be placed in the home directory of the user.
+
+Example:
+
+.. code:: toml
+
+    [remote.system1]
+    url = "http://192.168.20.200:7700"
+    key = "secret1"
+
+    [remote.other]
+    url = "http://192.168.20.201:7700"
+    key = "secret2"
+
+When executing RoboPLC commands, specify the remote name instead of the URL,
+e.g.:
+
+.. code:: shell
+
+   robo -U system1 stat
+   robo -U system1 flash
+
+.. warning::
+
+   As the file contains remote keys, make sure it has got proper permissions.
