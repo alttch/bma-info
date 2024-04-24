@@ -2,7 +2,7 @@ The Trademarks
 ==============
 
 **EVA ICS®** is the registered trademark (EUIPO 018411224, UK 00003751405),
-owned by `Serhij Symonenko <https://www.makeitwork.cz>`__ and used by the
+owned by `Serhij Symonenko <https://me.g5.is>`__ and used by the
 `Altertech Group <https://www.altertech.com>`__ companies and their partners
 for the following categories of goods and services:
 
@@ -11,7 +11,7 @@ for the following categories of goods and services:
 -  Home automation software
 
 **BUS/RT®** is the registered trademark (UK 00003805015), owned by `Serhij
-Symonenko <https://www.makeitwork.cz>`__ and used by the `Altertech Group
+Symonenko <https://me.g5.is>`__ and used by the `Altertech Group
 <https://www.altertech.com>`__ companies and their partners for the following
 categories of goods and services:
 
