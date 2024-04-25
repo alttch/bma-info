@@ -9,6 +9,24 @@ General functions
 
 
 
+.. _eva4_py_macro_api_bus_publish:
+
+bus_publish - publishes a message to a bus topic
+------------------------------------------------
+
+
+
+.. code-block:: python
+
+    bus_publish('SOME/TOPIC', 'Hello, World!')
+
+Parameters:
+
+* **topic** topic name
+* **payload** message payload
+* **qos** QoS level (default: 0)
+
+
 .. _eva4_py_macro_api_date:
 
 date - date/time
@@ -323,7 +341,7 @@ Raises:
 service - get the service object for the direct access
 ------------------------------------------------------
 
-e.g. service.bus: direct access to BUS/RT service.rpc: direct access to BUS/RT RPC
+e.g. service.bus: direct access to BUS/RT, service.rpc: direct access to BUS/RT RPC
 
 Returns:
 
@@ -532,6 +550,24 @@ item status (integer)
 Raises:
 
 * **ResourceNotFound** item not found
+
+
+.. _eva4_py_macro_api_update_state:
+
+update_state - updates item state
+---------------------------------
+
+
+
+.. code-block:: python
+
+    update_state('sensor:tests/temp', dict(value=20))
+    update_state('sensor:tests/failed', dict(status=-1))
+
+Parameters:
+
+* **oid** item OID
+* **state** new state (may contain status/value fields)
 
 
 .. _eva4_py_macro_api_value:
@@ -1160,6 +1196,10 @@ report_accounting_event - reports an event into accounting system
 -----------------------------------------------------------------
 
 
+
+.. code-block:: python
+
+    report_accounting_event(subj='test', note='all is fine')
 
 Optionally:
 
