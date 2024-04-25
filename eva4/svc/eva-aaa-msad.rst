@@ -142,7 +142,7 @@ user.get_profile_field
      - **yes**
    * - **field**
      - String
-     - Field name (email)
+     - Field name (email/phone)
      - **yes**
 
 
