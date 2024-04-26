@@ -50,3 +50,8 @@ See also:
    metrics
    license
    manager_license
+
+Additional modules available:
+
+* `RoboPLC I/O connector for TwinCAT/ADS
+  <https://github.com/roboplc/roboplc-io-ads/>`_
