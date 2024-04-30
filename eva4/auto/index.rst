@@ -9,3 +9,4 @@ Automation
     openers
     ../lmacro/py/python_macros
     nodered
+    wireless
