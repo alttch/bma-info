@@ -104,8 +104,8 @@ Edit lmacro code to the following:
     # The line variable is None when the update_pipe command is exited while
     # the service is still running. Set status of the items to -1 (error)
     if line is None:
-        update_state('sensor:outside/temp', dict(status=-1))
-        update_state('sensor:outside/hum', dict(status=-1))
+        update_state('sensor:env/temp', dict(status=-1))
+        update_state('sensor:env/hum', dict(status=-1))
     # The line contains a JSON payload
     elif line.startswith('{'):
         import json
@@ -127,7 +127,7 @@ After the receiver receives a signal, the sensors are updated:
 
 .. code:: shell
 
-   eva item state "sensor:outside/#"
+   eva item state "sensor:env/#"
 
 .. code::
 
