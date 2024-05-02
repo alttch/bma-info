@@ -3,10 +3,10 @@ Wireless equipment
 
 .. contents::
 
-This documentation article explains how to connect wireless equipment (433-Mhz)
+This documentation article explains how to connect wireless equipment (433-MHz)
 to EVA ICS.
 
-Despite being a bit ancient and insecure, 433-Mhz equipment is still popular
+Despite being a bit ancient and insecure, 433-MHz equipment is still popular
 and widely used, especially in environmental monitoring.
 
 System preparation
