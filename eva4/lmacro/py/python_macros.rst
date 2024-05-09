@@ -141,4 +141,7 @@ Macros have the following built-in variables:
 * **is_shutdown** contains a function which returns *True* if macro caller got
   a core shutdown
 
+* **aci**/**acl** if called by a user, contains the user's API call info and
+  ACL
+
 .. include:: python_macros_api.rst

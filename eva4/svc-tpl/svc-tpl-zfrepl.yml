@@ -45,6 +45,8 @@ config:
         # oids to watch
         oids:
           - "#"
+        # oids to exclude
+        oids_exclude: []
         # DANGEROUS, enable for multi-level clusters only
         #replicate_remote: true
   #standalone: {}
