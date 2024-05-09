@@ -496,13 +496,15 @@ STDIN:
     fail_mode: react-to-fail mode state (if the previous instance exited with error) # boolean, optional
     fips: FIPS-140 mode # boolean, optional
     call_tracing: call tracing enabled # boolean, optional
-    
+    log_level: override log level ("off" - disable logging).
 
 When the service is successfully started, it must report "status: ready"
 payload to everyone, otherwise it will be not marked as "online".
 
 When the service is stopping, it should report "status: terminating" payload to
 everyone.
+
+When the log level is overridden, it can not be lower than the core log level.
 
 Controller service requirements
 ===============================
