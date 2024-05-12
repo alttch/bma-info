@@ -1,0 +1,19 @@
+# Alarm service
+command: svc/eva-svc-alarms
+bus:
+  path: var/bus.ipc
+config:
+  # alarm lvar prefix, must be the same for all nodes
+  prefix: alarm/default
+  # Alarm database, default: runtime/svc_data/<SVC_ID>/alarms.db
+  #db: sqlite:///tmp/alarms.db
+  #db: postgres://USER:PASSWORD@HOST/DB
+  # keep alarm events (seconds), if not set: keep forever
+  keep: 604800
+  notify:
+    # Mailer service to notify via
+    mailer_svc: eva.svc.mailer
+    # Mailer delay (seconds) to group notifications
+    mailer_delay: 5
+# for PostgreSQL the service can work under "nobody"
+user: eva

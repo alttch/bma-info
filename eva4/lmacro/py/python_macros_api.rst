@@ -348,6 +348,27 @@ Returns:
 the service object
 
 
+.. _eva4_py_macro_api_set_alarm:
+
+set_alarm - sets alarm state
+----------------------------
+
+Requires alarm svc to be set in the controller config
+
+Parameters:
+
+* **oid** alarm OID
+* **op** alarm operation
+
+Optionally:
+
+* **source** alarm source (default: lmacro)
+
+Raises:
+
+* **FunctionFailed** failed to set alarm state
+
+
 .. _eva4_py_macro_api_set_shared:
 
 set_shared - sets value of the shared variable
