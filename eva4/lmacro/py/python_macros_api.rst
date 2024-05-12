@@ -355,6 +355,10 @@ set_alarm - sets alarm state
 
 Requires alarm svc to be set in the controller config
 
+.. code-block:: python
+
+    set_alarm('lvar:alarm/default/mws1/20/test/AL001', 'TL')
+
 Parameters:
 
 * **oid** alarm OID
