@@ -39,6 +39,10 @@ SCADA automation
      - Suggested name
      - Executable
      - Deployed
+   * - :doc:`Alarm service<svc/eva-svc-alarms>`
+     - :doc:`eva.alarm.N<svc/eva-svc-alarms>`
+     - svc/eva-svc-alarms
+     - requires :doc:`enterprise`
    * - :doc:`Item state expiration service<svc/eva-svc-expiration>`
      - :doc:`eva.svc.expN<svc/eva-svc-expiration>`
      - svc/eva-svc-expiration

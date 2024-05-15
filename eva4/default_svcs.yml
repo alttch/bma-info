@@ -385,6 +385,14 @@
     "log" operation permission.
 
     .. include:: ../include/autogen/http_api-aaa-accounting.rst
+- nam: eva.alarm.N
+  grp: auto
+  exe: svc/eva-svc-alarms
+  des: Alarm service
+  txt: ISA18.2 alarm service
+  api: eva4-esvc/alarms/eapi.yml
+  ent: true
+  tpl: svc-tpl-alarms.yml
 - nam: "eva.zfrepl.N.collector|replicator"
   grp: repl
   exe: svc/eva-zfrepl
