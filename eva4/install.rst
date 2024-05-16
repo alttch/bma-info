@@ -326,3 +326,8 @@ Set "python" field to "python3.8" then execute:
 .. code:: shell
 
     /opt/eva4/sbin/venvmgr build -S
+
+.. note::
+
+   Python 3.8 backport to Debian 10 is not officially supported by Debian.
+
