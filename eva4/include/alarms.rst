@@ -181,6 +181,10 @@ least to the following operations: *TT*, *TL*, *OS*.
 Note that triggered and triggered + latched alarm operations are different,
 despite the user may see the same notification.
 
+If an alarm or user is deleted, its subscriptions are kept so if a new alarm
+with the same OID/user with the same login is created, the subscriptions are
+restored.
+
 Defining alarms
 ===============
 
