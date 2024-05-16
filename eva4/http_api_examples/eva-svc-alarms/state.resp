@@ -1,6 +1,6 @@
 HTTP/1.1 200 OK
 cache-control: no-cache, no-store
-content-length: 711
+content-length: 781
 content-type: application/json
 date: Thu, 13 Aug 2021 00:00:00 GMT
 expires: 0
@@ -13,6 +13,7 @@ pragma: no-cache
       {
           "active": false,
           "current": "CC",
+          "description": "test alarm",
           "group": "test",
           "id": "AL001",
           "level": 20,
@@ -27,6 +28,7 @@ pragma: no-cache
       {
           "active": true,
           "current": "TL",
+          "description": null,
           "group": "test",
           "id": "AL002",
           "level": 20,

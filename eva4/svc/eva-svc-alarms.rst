@@ -161,6 +161,7 @@ alarm.get_config
               }
           ]
       },
+      "description": "test alarm",
       "group": "test",
       "id": "AL001",
       "level": 20
@@ -343,12 +344,14 @@ alarm.list
 
   [
       {
+          "description": "test alarm",
           "group": "test",
           "id": "AL001",
           "level": 20,
           "oid": "lvar:alarm/default/mws1/20/test/AL001"
       },
       {
+          "description": null,
           "group": "test",
           "id": "AL002",
           "level": 20,
@@ -448,6 +451,7 @@ alarm.state
       {
           "active": false,
           "current": "CC",
+          "description": "test alarm",
           "group": "test",
           "id": "AL001",
           "level": 20,
@@ -462,6 +466,7 @@ alarm.state
       {
           "active": true,
           "current": "TL",
+          "description": null,
           "group": "test",
           "id": "AL002",
           "level": 20,

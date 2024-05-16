@@ -203,6 +203,8 @@ An alarm payload example:
       id: AL001
       # a mandatory alarm level (0-255)
       level: 20
+      # an optional alarm description
+      description: "test alarm"
       # an optional configuration
       - config:
           # optional delayed alarm configuration
@@ -255,6 +257,9 @@ An alarm payload example:
 When deployed, the above payload creates an alarm with assigned
 :ref:`eva4_lvar` *lvar:alarm/default/NODE_NAME/20/test/AL001*. After creation,
 the majority operations are handled by providing lvar OID.
+
+If a description is defined, it is placed into meta/description field of the
+item.
 
 .. warning::
 

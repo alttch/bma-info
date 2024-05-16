@@ -235,6 +235,10 @@ sh
      - String
      - STDIN data
      - no
+   * - **check_exit_code**
+     - bool
+     - Check exit code, return error if non-zero
+     - no
 
 
 *Return payload example:*
