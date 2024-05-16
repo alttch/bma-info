@@ -61,6 +61,14 @@ The installer automatically prepares the system, installs the latest EVA ICS
 distribution to /opt/eva4 (default) folder and sets up Python virtual
 environment in /opt/eva4/venv (for mode >= 1).
 
+To specify an alternative Python path during the installation, use *PYTHON*
+environment variable:
+
+.. code:: shell
+
+    sudo -s
+    curl https://pub.bma.ai/eva4/install | env PYTHON=/path/to/python sh /dev/stdin -a --hmi
+
 Installer arguments
 -------------------
 
@@ -85,6 +93,32 @@ modules into venv.
 
 * **\--prepare-only** allows to install additional compilers / headers, without
   installing EVA ICS. Can be executed after the installation at any time.
+
+Uninstalling
+============
+
+To uninstall EVA ICS, execute the following:
+
+.. code:: shell
+
+   systemctl stop eva4
+   rm -rf /opt/eva4
+   rm -f /etc/systemd/system/eva4.service
+   systemctl daemon-reload
+
+On Alpine Linux, stop EVA ICS using:
+
+.. code:: shell
+
+   rc-service eva4 stop
+   # or
+   /etc/init.d/eva4 stop
+
+.. note::
+
+   If installation has been failed at some point, it is recommended to execute
+   the above commands to clean up the system before the next installation
+   attempt.
 
 Post-install configuration
 ==========================
@@ -255,3 +289,40 @@ and put the following to override the user:
     When deploying new services on EVA ICS system, which runs under a
     restricted user, avoid using "user" field in the service primary params
     section (remove it if using the default templates).
+
+Installing/updating on Debian 10
+================================
+
+Despite Debian 10 is not officially supported, EVA ICS can be installed on it.
+If :ref:`eva4_eva-shell` or Python services are required, install Python 3.8
+back-port:
+
+.. code:: shell
+
+   apt -y install curl lsb-release
+   curl https://people.debian.org/~paravoid/python-all/unofficial-python-all.asc | \
+        sudo tee /etc/apt/trusted.gpg.d/unofficial-python-all.asc
+   echo "deb http://people.debian.org/~paravoid/python-all $(lsb_release -sc) main" | \
+        sudo tee /etc/apt/sources.list.d/python-all.list
+   apt update
+   apt -y install python3.8
+
+The install EVA ICS as the following:
+
+.. code:: shell
+
+    curl https://pub.bma.ai/eva4/install | env PYTHON=python3.8 sh /dev/stdin -a --hmi
+
+If updating Python venv on an existing system, execute:
+
+.. code:: shell
+
+    /opt/eva4/sbin/venvmgr edit
+    # or
+    /opt/eva4/sbin/eva-registry-cli edit eva/config/python-venv
+
+Set "python" field to "python3.8" then execute:
+
+.. code:: shell
+
+    /opt/eva4/sbin/venvmgr build -S
