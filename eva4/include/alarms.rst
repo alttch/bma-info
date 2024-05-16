@@ -17,7 +17,7 @@ Architecture
 The service implements ANSI/ISA 18.2 alarm management standard and allows to
 deal with alarms on both local and remote nodes.
 
-.. figure:: ../schemas/alarms.svg
+.. figure:: ../schemas/alarms.png
     :width: 445px
     :alt: Alarms architecture
 
