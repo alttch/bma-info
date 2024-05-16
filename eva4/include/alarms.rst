@@ -18,7 +18,7 @@ The service implements ANSI/ISA 18.2 alarm management standard and allows to
 deal with alarms on both local and remote nodes.
 
 .. figure:: ../schemas/alarms.png
-    :width: 445px
+    :width: 500px
     :alt: Alarms architecture
 
 Each alarm is represented by a :ref:`eva4_lvar` item. The service manages lvars
