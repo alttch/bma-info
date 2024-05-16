@@ -1,0 +1,19 @@
+A: node_A
+A_svc: Alarm svc
+Alarm: Alarm 1
+A -- A_svc
+A_db: Database {shape: cylinder}
+A_svc -- A_db
+A_svc -- Alarm: managed
+
+B: node_B
+B_svc: Alarm svc
+B_db: Database {shape: cylinder}
+B -- B_svc
+B_svc -- B_db
+B_svc -- Alarm: replicated
+
+pubsub: PubSub {shape: cloud}
+
+A -- pubsub
+B -- pubsub
