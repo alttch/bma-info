@@ -174,12 +174,12 @@ Code   Description
 M      E-mail
 =====  ===================
 
-When a subscription method is called, a user is subscribed to an alarm state
-changes. It is recommended to subscribe at least to the following states: *TT*,
-*TL*, *OS*.
+When a subscription method is called, a notification is sent to the subscribed
+user when an alarm operation is applied. It is recommended to subscribe at
+least to the following operations: *TT*, *TL*, *OS*.
 
-Note that triggered and triggered + latched alarm states are different, despite
-an operator can see the same notification.
+Note that triggered and triggered + latched alarm operations are different,
+despite the user may see the same notification.
 
 Defining alarms
 ===============
