@@ -31,6 +31,8 @@ prepare:
 		--http-api ./http_api_examples --http-api-include-dir ../../http_api_examples > include/autogen/http_api.rst
 	/opt/eva4/sbin/eapigen aaa_accounting_http /opt/eva4-enterprise/eva4-esvc/aaa-accounting/http_api.yml \
 		--http-api ./http_api_examples/eva-aaa-accounting --http-api-include-dir ../../http_api_examples/eva-aaa-accounting > include/autogen/http_api-aaa-accounting.rst
+	/opt/eva4/sbin/eapigen svc_alarm /opt/eva4-enterprise/eva4-esvc/alarms/http_api.yml \
+		--http-api ./http_api_examples/eva-svc-alarms --http-api-include-dir ../../http_api_examples/eva-svc-alarms > include/autogen/http_api-svc-alarms.rst
 	./default-svcs.py
 	./fb.py > ./include/fieldbus_table.rst
 	pydoc2rst ./sdk/python/pydoc/tpl_api.rst ./sdk/python/pydoc/api.rst /opt/eva4/bindings/python/eva-ics-sdk

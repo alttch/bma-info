@@ -1,0 +1,43 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 711
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+      {
+          "active": false,
+          "current": "CC",
+          "group": "test",
+          "id": "AL001",
+          "level": 20,
+          "node": "mws1",
+          "oid": "lvar:alarm/default/mws1/20/test/AL001",
+          "subscribed_email": [
+            "TT",
+            "TL",
+            "OS"
+          ]
+      },
+      {
+          "active": true,
+          "current": "TL",
+          "group": "test",
+          "id": "AL002",
+          "level": 20,
+          "node": "mws1",
+          "oid": "lvar:alarm/default/mws1/20/test/AL002",
+          "subscribed_email": [
+            "TT",
+            "TL",
+            "OS"
+          ]
+      }
+  ]
+}
+

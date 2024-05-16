@@ -5,7 +5,8 @@ Alarm service
 
 **Requires** :doc:`../enterprise`.
 
-ISA18.2 alarm service
+.. include:: ../include/alarms.rst
+
 
 Setup
 =====
@@ -607,3 +608,16 @@ alarm.unsubscribe
      - String/Vec<String>
      - Alarm operation code
      - **yes**
+
+HTTP API
+========
+
+The service provides certain methods via
+:ref:`extra calls<eva4_hmi_http__x__TARGET_SVC__METHOD>` (the methods must
+be called e.g. as *x::eva.alarm.default::summary*)
+
+To use HTTP API methods, a user must have read or write access to alarm
+lvars.
+
+.. include:: ../include/autogen/http_api-svc-alarms.rst
+

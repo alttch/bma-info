@@ -1,0 +1,49 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 953
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+      {
+          "ack": false,
+          "alarm_group": "test",
+          "alarm_id": "AL001",
+          "alarm_level": 20,
+          "alarm_node": "mws1",
+          "latch": false,
+          "lo": "TT",
+          "los": "",
+          "losk": "P",
+          "oid": "lvar:alarm/default/mws1/20/test/AL001",
+          "oos": false,
+          "sbd": false,
+          "shelv": false,
+          "t": 1715732660.061618,
+          "trig": true
+      },
+      {
+          "ack": false,
+          "alarm_group": "test",
+          "alarm_id": "AL001",
+          "alarm_level": 20,
+          "alarm_node": "mws1",
+          "latch": false,
+          "lo": "CC",
+          "los": "",
+          "losk": "P",
+          "oid": "lvar:alarm/default/mws1/20/test/AL001",
+          "oos": false,
+          "sbd": false,
+          "shelv": false,
+          "t": 1715732890.977563,
+          "trig": false
+      }
+  ]
+}
+

@@ -30,7 +30,7 @@ query
    * - **filter**
      - Filter structure (see :ref:`eva4_eva.aaa.accounting__query`)
      - Record filter
-     - **yes**
+     - no
 
 ..  http:example:: curl wget httpie python-requests
     :request: ../../http_api_examples/eva-aaa-accounting/query.req
