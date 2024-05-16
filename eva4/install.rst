@@ -299,11 +299,12 @@ back-port:
 
 .. code:: shell
 
+   sudo -s
    apt -y install curl lsb-release
    curl https://people.debian.org/~paravoid/python-all/unofficial-python-all.asc | \
-        sudo tee /etc/apt/trusted.gpg.d/unofficial-python-all.asc
+        tee /etc/apt/trusted.gpg.d/unofficial-python-all.asc
    echo "deb http://people.debian.org/~paravoid/python-all $(lsb_release -sc) main" | \
-        sudo tee /etc/apt/sources.list.d/python-all.list
+        tee /etc/apt/sources.list.d/python-all.list
    apt update
    apt -y install python3.8
 
