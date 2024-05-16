@@ -76,11 +76,6 @@ Command-line tools
 
 * **sbin/eva-registry-cli** registry command-line tool (included by default)
 
-* **sbin/key-as-source** and **sbin/key-set-flag** wrappers around
-  "eva-registry-cli" for certain tasks.
-    
-* **sbin/eva-edit-python-venv** edit Python virtual environment configuration.
-
 Python VENV management
 ======================
 
