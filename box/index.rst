@@ -57,6 +57,10 @@ during the system boot.
 
 After the script is placed on the storage device, the box must be rebooted.
 
+.. note::
+
+   It is highly recommended to have UNIX line endings in the script.
+
 Configuring static IP address
 -----------------------------
 
