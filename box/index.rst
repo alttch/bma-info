@@ -103,3 +103,13 @@ Place the following script named *box-configure* on the storage device:
     systemctl restart systemd-networkd
 
 Make sure the network interface name is correct.
+
+Disabling execution from a USB stick
+------------------------------------
+
+Script execution from USB may be insecure in certain configurations. To disable
+it, execute the following:
+
+.. code:: shell
+
+   systemctl disable box-configure-usb
