@@ -27,6 +27,7 @@ educational purposes without any restrictions.
     roboplc/index
     psrt/index
     busrt/index
+    box/index
     common/index
     legacy
     trademarks
