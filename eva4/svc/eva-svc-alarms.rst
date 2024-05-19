@@ -437,6 +437,14 @@ alarm.state
      - String
      - Alarm ID
      - no
+   * - **active**
+     - bool
+     - Active/inactive alarms
+     - no
+   * - **current**
+     - String
+     - Current alarm state
+     - no
    * - **u**
      - String
      - View alarm state as a user (including subscriptions)
