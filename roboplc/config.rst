@@ -132,8 +132,11 @@ reviewing documentation for your distribution.
     :width: 505px
     :alt: System
 
+CPUs
+====
+
 CPU isolation
-=============
+-------------
 
 It is highly recommended to isolate CPUs for real-time program threads. To do
 this, add the following kernel boot parameters:
@@ -143,6 +146,22 @@ this, add the following kernel boot parameters:
    isolcpus=2,3,4
 
 where 2,3,4 are CPU cores to isolate (starting from 0).
+
+CPU governor
+------------
+
+If certain tasks require the lowest latency possible, it is recommended to set
+CPU governor to *performance* for the cores used by such ones:
+
+.. code:: rust
+
+   let _governor = roboplc::thread_rt::CpuGovernor::performance([1,2,3])?;
+
+The above code sets CPU governor to *performance* for cores 1, 2 and 3. Note
+that it is enough to set the governor to a single core per physical CPU.
+
+The operation sets CPU frequency to the maximum possible, which increases power
+consumption, but also may significantly reduce latency.
 
 Memory allocation
 =================
