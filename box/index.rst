@@ -3,6 +3,11 @@ Hardware boxes
 
 A hardware box is a computer (a server or industrial PC), installed by Bohemia Automation engineers.
 
+.. image:: ipc.png
+    :width: 350
+    :class: no-scaled-link
+    :align: right
+
 .. contents::
 
 System information and access
