@@ -185,6 +185,11 @@ If an alarm or user is deleted, its subscriptions are kept so if a new alarm
 with the same OID/user with the same login is created, the subscriptions are
 restored.
 
+.. note::
+
+   Alarm subscriptions are processed by the node where the user was logged in
+   and created the subscription.
+
 Defining alarms
 ===============
 
