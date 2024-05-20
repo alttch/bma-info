@@ -275,6 +275,12 @@ item.
 For more complex rule chains it is recommended to use
 :doc:`../svc/eva-controller-lm` or a custom event-processing service.
 
+.. warning::
+
+    Bus event subscriptions are preserved for deleted alarm rules. If alarms
+    are mass-undeployed and not required anymore, it is recommended to restart
+    the service to clear bus subscriptions.
+
 Service instance IDs
 ====================
 
