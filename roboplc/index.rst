@@ -48,6 +48,7 @@ See also:
    config
    flashing
    metrics
+   hardware
    license
    manager_license
 
