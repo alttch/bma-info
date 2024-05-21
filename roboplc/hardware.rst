@@ -14,13 +14,13 @@ Automation labs):
 =======================  ====================================================
 Board                    Notes
 =======================  ====================================================
+Odroid N2                eMMC IRQs can block real-time tasks in certain cases
+Orange Pi 5              CSI IRQs 81/82 can block real-time tasks
 Raspberry Pi 4        
 Raspberry Pi 5
 Raspberry Pi Zero 2 W
-Orange Pi 5              CSI IRQs 81/82 can block real-time tasks
-Odroid N2                eMMC IRQs can block real-time tasks in certain cases
-UniPi Neuron series      Raspberry Pi 4-based
 UniPi Axon series        EOL
+UniPi Neuron series      Raspberry Pi 4-based
 =======================  ====================================================
 
 Have a board working or having issues? `Please let us know!
