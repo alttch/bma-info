@@ -66,6 +66,13 @@ After the script is placed on the storage device, the box must be rebooted.
 
    It is highly recommended to have UNIX line endings in the script.
 
+The script has got the following current directory at launch:
+
+* for memory card: depends on the box model, for Raspberry Pi-based boxes:
+  */boot/firmware*
+
+* for USB stick: */mnt/usbflash*
+
 Configuring static IP address
 -----------------------------
 
@@ -112,6 +119,19 @@ Place the following script named *box-configure* on the storage device:
     systemctl restart systemd-networkd
 
 Make sure the network interface name is correct.
+
+Enabling root access for own keys
+---------------------------------
+
+By default SSH access is enabled for Bohemia Automation support engineers only.
+To enable SSH access for your own keys, place the following script named
+*box-configure* on the storage device:
+
+.. code:: shell
+
+    cat <<EOF >> /root/.ssh/authorized_keys
+    your-ssh-public-key-here
+    EOF
 
 Disabling execution from a USB stick
 ------------------------------------
