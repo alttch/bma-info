@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2024-05-23T22:07:27.640Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="UsAQcIG3aemphUTGrlQF" version="23.1.5" type="device">
+  <diagram name="Page-1" id="WJMKb1jDJ2kDr84K1O4s">
+    <mxGraphModel dx="2280" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ej3UYsazenKrUYvjSKk1-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="-830" y="30" width="430" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="Ej3UYsazenKrUYvjSKk1-2" value="Header with item states" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-815" y="50" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ej3UYsazenKrUYvjSKk1-3" value="Status bar with item states" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-815" y="400" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ej3UYsazenKrUYvjSKk1-5" value="Data block A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-815" y="100" width="195" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="Ej3UYsazenKrUYvjSKk1-6" value="Data block B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="100" width="185" height="290" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

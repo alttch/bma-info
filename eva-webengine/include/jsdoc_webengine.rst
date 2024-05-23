@@ -216,6 +216,15 @@
     Registers global objects + legacy globals
 
 
+.. js:function:: Eva.register_state_block(name, state_updates)
+
+    Register a state block
+
+    :param name: block name
+    :type name: string
+    :param state_updates: state updates
+    :type state_updates: boolean or Array.<string>
+
 .. js:function:: Eva.restart()
 
     Restart the engine
@@ -243,7 +252,7 @@
 
     Ask server to return the token to normal mode
     
-    (Eva ICS 3.3.2+)
+    (EVA ICS 3.3.2+)
 
     :param u: login
     :type u: string
@@ -257,7 +266,7 @@
 
     Ask server to set the token read-only (e.g. after idle)
     
-    (Eva ICS 3.3.2+)
+    (EVA ICS 3.3.2+)
     
     the current mode can be obtained from $eva.server_info.aci.token_mode
 
@@ -322,6 +331,13 @@
     Get system name
 
     :return: the system name or null if the engine is not logged in
+
+.. js:function:: Eva.unregister_state_block(name)
+
+    Unregister a state block
+
+    :param name: block name
+    :type name: string
 
 .. js:function:: Eva.unwatch(oid, func)
 

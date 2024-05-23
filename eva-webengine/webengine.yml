@@ -100,3 +100,7 @@
   alias: Eva.register_globals
 - name: Eva#register_legacy_globals
   alias: Eva.register_legacy_globals
+- name: Eva#register_state_block
+  alias: Eva.register_state_block
+- name: Eva#unregister_state_block
+  alias: Eva.unregister_state_block
