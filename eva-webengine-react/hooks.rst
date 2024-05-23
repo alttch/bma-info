@@ -19,7 +19,7 @@ only to states of items which are currently displayed.
 
 The hook is used in UI layouts where the state updates can be formed as global
 for all components displayed. For complex block layouts, see:
-ref:`eva_webengine_react_use_evastateblock`.
+:ref:`eva_webengine_react_use_evastateblock`.
 
 Parameters
 ----------
@@ -92,8 +92,16 @@ It is highly recommended to set WebEngine state updates to *false* by default,
 especially for large setups, (see :doc:`../eva-webengine/config`) and subscribe
 only to states of items which are currently displayed.
 
-Each state block gets own subscription set which doesn't interfere neither with
-the global state subscription nor with other state blocks.
+Each state block gets own subscription set which does not interfere neither
+with the global state subscription nor with other state blocks.
+
+The data, collected by blocks is pushed into the global state map, so all other
+functions and methods can use it, no matter which block has collected it.
+
+Using state blocks may lead to situations when the same data/events are
+received from the server multiple times which may produce additional load to
+front-end applications, so it is recommended to use state blocks only for
+really complex layouts, where development costs are higher.
 
 .. figure:: blocks.png
     :width: 300px
