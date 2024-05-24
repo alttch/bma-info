@@ -33,6 +33,12 @@ In addition to the internal rule engine, the service provides a flexible
 :doc:`../eapi` interface which allows system integrators to create complex
 alarm setups.
 
+Alarm UI
+========
+
+Alarms can be managed in :doc:`../va/opcentre` or in :doc:`custom HMI
+applications <../ui>`.
+
 Terminology
 ===========
 

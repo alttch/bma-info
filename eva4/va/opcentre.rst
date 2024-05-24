@@ -60,6 +60,71 @@ The **Items** page allows to browse the node :doc:`items <../items>`. Use
     :width: 505px
     :alt: Items
 
+Alarms
+======
+
+The **Alarms** section allows to view current alarm states and alarm history.
+
+Requires :doc:`../svc/eva-svc-alarms` service deployed.
+
+Alarm states
+------------
+
+Alarm states page allows to view current alarm states, acknowledge,
+shelve/unshelve (suspend/resume) and manage alarm subscriptions.
+
+.. figure:: ./oc_ss/alarm-states.png
+    :width: 505px
+    :alt: Alarm states
+
+The history button allows to switch to the alarm history page, filtered by the
+selected alarm.
+
+.. figure:: ./oc_ss/alarm-btn-history.png
+    :width: 300px
+    :alt: Alarm history button
+
+The acknowledge button allows to acknowledge a selected alarm.
+
+.. figure:: ./oc_ss/alarm-btn-ack.png
+    :width: 300px
+    :alt: Alarm acknowledge button
+
+The shelve button allows to shelve (suspend) or unshelve (resume) a selected
+alarm.
+
+.. figure:: ./oc_ss/alarm-btn-shelve.png
+    :width: 300px
+    :alt: Alarm shelve button
+
+The subscribe button allows to subscribe/unsubscribe to a selected alarm. The
+following alarm events are subscribed:
+
+* **TT** - Triggered
+* **TL** - Triggered+Latched
+* **OS** - Out-of-service
+* **IS** - In-service
+
+.. figure:: ./oc_ss/alarm-btn-subscribe.png
+    :width: 300px
+    :alt: Alarm subscribe button
+
+.. note::
+
+   To receive alarm notifications, the user must have his email address set in
+   the profile (*Navigate* -> *Profile*) or the email address must be provided
+   by a 3rd party authentication service (e.g. :doc:`../svc/eva-aaa-msad`).
+
+Alarm history
+-------------
+
+The alarm history page allows to view the alarm history, filtered by selected
+parameters.
+
+.. figure:: ./oc_ss/alarm-history.png
+    :width: 505px
+    :alt: Alarm history
+
 Data objects
 ============
 
@@ -216,7 +281,7 @@ Editing elements
 To select an element, click or tap on it. Newly added elements are selected by
 default.
 
-The element can be moved (dragged) when selected. Parameters of the selected
+The element can be moved (dragged) when selected. Parameters of a selected
 element are available on the side-bar.
 
 .. figure:: ./oc_ss/idc-element-params.png
