@@ -103,7 +103,6 @@ following alarm events are subscribed:
 * **TT** - Triggered
 * **TL** - Triggered+Latched
 * **OS** - Out-of-service
-* **IS** - In-service
 
 .. figure:: ./oc_ss/alarm-btn-subscribe.png
     :width: 300px
