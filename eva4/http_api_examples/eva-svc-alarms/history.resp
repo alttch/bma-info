@@ -1,6 +1,6 @@
 HTTP/1.1 200 OK
 cache-control: no-cache, no-store
-content-length: 953
+content-length: 905
 content-type: application/json
 date: Thu, 13 Aug 2021 00:00:00 GMT
 expires: 0
@@ -12,10 +12,10 @@ pragma: no-cache
     "result": [
       {
           "ack": false,
-          "alarm_group": "test",
-          "alarm_id": "AL001",
-          "alarm_level": 20,
-          "alarm_node": "mws1",
+          "group": "test",
+          "id": "AL001",
+          "level": 20,
+          "node": "mws1",
           "latch": false,
           "lo": "TT",
           "los": "",
@@ -29,10 +29,10 @@ pragma: no-cache
       },
       {
           "ack": false,
-          "alarm_group": "test",
-          "alarm_id": "AL001",
-          "alarm_level": 20,
-          "alarm_node": "mws1",
+          "group": "test",
+          "id": "AL001",
+          "level": 20,
+          "node": "mws1",
           "latch": false,
           "lo": "CC",
           "los": "",

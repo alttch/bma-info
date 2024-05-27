@@ -267,10 +267,10 @@ alarm.history
   [
       {
           "ack": false,
-          "alarm_group": "test",
-          "alarm_id": "AL001",
-          "alarm_level": 20,
-          "alarm_node": "mws1",
+          "group": "test",
+          "id": "AL001",
+          "level": 20,
+          "node": "mws1",
           "latch": false,
           "lo": "TT",
           "los": "",
@@ -284,10 +284,10 @@ alarm.history
       },
       {
           "ack": false,
-          "alarm_group": "test",
-          "alarm_id": "AL001",
-          "alarm_level": 20,
-          "alarm_node": "mws1",
+          "group": "test",
+          "id": "AL001",
+          "level": 20,
+          "node": "mws1",
           "latch": false,
           "lo": "CC",
           "los": "",
@@ -425,9 +425,13 @@ alarm.state
      - String
      - Alarm node
      - no
-   * - **level**
+   * - **level_min**
      - u8
-     - Alarm level
+     - Alarm level min
+     - no
+   * - **level_max**
+     - u8
+     - Alarm level max
      - no
    * - **group**
      - String
