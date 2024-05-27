@@ -76,6 +76,13 @@ Accounting service
 
 See :doc:`svc/eva-aaa-accounting`.
 
+Alarm service
+-------------
+
+When a license is applied, the alarm service is not limited in functionality.
+
+See :doc:`svc/eva-svc-alarms`.
+
 EVA ICS WebEngine WASM extension
 ================================
 

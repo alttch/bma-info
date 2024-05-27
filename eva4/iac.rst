@@ -330,6 +330,22 @@ following:
     There is no generator service deployed by default. Make sure the service is
     already either deployed or included into the deployment payload.
 
+Alarms
+------
+
+:doc:`Alarms <svc/eva-svc-alarms>` can be deployed as the following:
+
+.. code:: yaml
+
+    version: 4
+    content:
+      - node: .local
+        alarms:
+        - group: test
+          id: AL001
+          level: 20
+          # extra parameters
+
 Extra commands
 --------------
 
@@ -517,6 +533,7 @@ deployment process is applied for:
        user_svc: eva.aaa.localauth
        filemgr_svc: eva.filemgr.main
        generator_svc: eva.generator.default
+       alarm_svc: eva.alarm.default
 
 Advanced configuration
 ======================

@@ -5,6 +5,7 @@
     core
     svc/eva-controller-w1
     svc/eva-aaa-msad
+    svc/eva-svc-alarms
     svc/eva4-svc-bridge-udp
     svc/eva-svc-generator
     svc/eva-controller-dobj

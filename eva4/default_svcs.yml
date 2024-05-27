@@ -385,6 +385,27 @@
     "log" operation permission.
 
     .. include:: ../include/autogen/http_api-aaa-accounting.rst
+- nam: eva.alarm.N
+  grp: auto
+  exe: svc/eva-svc-alarms
+  des: Alarm service
+  txt: |
+    .. include:: ../include/alarms.rst
+  api: eva4-esvc/alarms/eapi.yml
+  ent: true
+  tpl: svc-tpl-alarms.yml
+  xtr: |
+    HTTP API
+    ========
+
+    The service provides certain methods via
+    :ref:`extra calls<eva4_hmi_http__x__TARGET_SVC__METHOD>` (the methods must
+    be called e.g. as *x::eva.alarm.default::summary*)
+
+    To use HTTP API methods, a user must have read or write access to alarm
+    lvars.
+
+    .. include:: ../include/autogen/http_api-svc-alarms.rst
 - nam: "eva.zfrepl.N.collector|replicator"
   grp: repl
   exe: svc/eva-zfrepl
