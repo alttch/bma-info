@@ -103,6 +103,21 @@ Uploading a program (flashing)
 A program binary can be uploaded either using the Web UI or *robo* CLI command
 (see :doc:`flashing`).
 
+Environment variables
+~~~~~~~~~~~~~~~~~~~~~
+
+It is not recommended to use environment variables in RoboPLC programs, each
+program must be self-contained and built for a specific configuration.
+
+However if a program requires environment variables and there is no plan to
+avoid them/rewrite the code, they can be set in the file
+*/etc/roboplc/program.env*. The file format is NAME=VALUE, one per line:
+
+.. code:: shell
+
+   VAR1=value1
+   VAR2=value2
+
 Uninstalling RoboPLC Manager
 ----------------------------
 
