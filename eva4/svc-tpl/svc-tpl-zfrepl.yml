@@ -100,7 +100,7 @@ config:
             # - allow_fill set to true on the target server instance
             #self_repair:
               # heartbeat sensor, required
-              # any sensor which is changed frequently enough
+              # any sensor which is changed frequently enough, single OID or list
               #oid: sensor:NODENAME/heartbeat
               # auto-repair interval (sec), if not set, only manual repair is available
               #repair_interval: 600
