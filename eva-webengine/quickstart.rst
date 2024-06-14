@@ -18,7 +18,9 @@ Initialization
 
 .. code:: typescript
 
-    import { Eva, EventKind, EvaError } from "@eva-ics/webengine";
+    import { Eva, EventKind, EvaError, disableTabFreeze } from "@eva-ics/webengine";
+
+    disableTabFreeze(); // tries to disable tab freezing, important for dashboards
 
     const eva = new Eva();
 

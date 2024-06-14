@@ -104,3 +104,5 @@
   alias: Eva.register_state_block
 - name: Eva#unregister_state_block
   alias: Eva.unregister_state_block
+- name: disableTabFreeze
+  alias: disableTabFreeze

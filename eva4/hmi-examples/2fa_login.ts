@@ -1,12 +1,14 @@
 import "./style.css";
 
-import { Eva, EventKind } from "@eva-ics/webengine";
+import { Eva, EventKind, disableTabFreeze } from "@eva-ics/webengine";
 import QRious from "qrious";
 
 interface Config {
   api_uri?: string;
   debug?: boolean;
 }
+
+disableTabFreeze();
 
 const eva = new Eva();
 

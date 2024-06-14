@@ -359,7 +359,7 @@
     :type oid: string
     :return: item value or undefined if no item found
 
-.. js:function:: Eva.watch(oid, func, ignore_initial)
+.. js:function:: Eva.watch(oid, func, ignore_initial, prot)
 
     Watch item state updates
     
@@ -375,6 +375,8 @@
     :type func: function
     :param ignore_initial: skip initial state callback
     :type ignore_initial: boolean
+    :param prot: protected (not removed on global unwatch)
+    :type prot: boolean
 
 .. js:function:: Eva.watch_action(uuid, func)
 
@@ -394,4 +396,11 @@
     :type uuid: string
     :param func: function to be called
     :type func: function
+
+.. js:function:: disableTabFreeze(keep_visible)
+
+    Disable tab freeze
+
+    :param keep_visible: keep special elements visible
+    :type keep_visible: boolean
 

@@ -1,7 +1,9 @@
 import "./style.css";
 import "./slider.css";
 
-import { Eva } from "@eva-ics/webengine";
+import { Eva, disableTabFreeze } from "@eva-ics/webengine";
+
+disableTabFreeze();
 
 const eva = new Eva();
 
