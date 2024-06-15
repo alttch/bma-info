@@ -62,3 +62,8 @@ contains at least HMI API URI:
 See :doc:`WebEngine Quick start <../eva-webengine/quickstart>` and :doc:`EVA
 ICS v4 Quick start <../eva4/quickstart>` about how to build and deploy the web
 application.
+
+Single-page applications
+========================
+
+See :ref:`eva_webengine-spa`.

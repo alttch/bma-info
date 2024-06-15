@@ -57,3 +57,24 @@ If there is a front-end server installed in front of UI and it has got HTTP
 basic authentication set up, the fields **eva.login** and **eva.password** can
 be empty and let the engine log in using the basic authentication
 credentials.
+
+.. _eva_webengine-spa:
+
+Single-page applications
+========================
+
+To make sure that single-page applications (SPAs) work correctly, add the
+following option into :doc:`../eva4/svc/eva-hmi` configuration:
+
+.. code:: yaml
+
+   ui_not_found_to_base: true
+
+If `Vite <https://vitejs.dev>`_ is used to build the application, the following
+base prefix in configuration should be set:
+
+.. code:: js
+
+    export default defineConfig({
+      base: '/ui/',
+    });
