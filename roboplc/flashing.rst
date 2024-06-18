@@ -46,8 +46,10 @@ Configuration file
    specify the remote url, key and timeout. If specified, the values are stored
    in the *robo.toml* file.
 
-The file must be placed into the projects root directory and named *robo.toml*.
-The following options are available:
+The file must be placed into the root directory of the project and named
+*robo.toml*. If a project has no *Cargo.toml* or its present in a subfolder,
+*robo.toml* from the current directory is used. The following options are
+available:
 
 .. code:: toml
 
@@ -60,6 +62,10 @@ The following options are available:
     #cargo = "cargo"
     #target = "x86_64-unknown-linux-gnu"
     #cargo-args = "--some-extra --cargo-arguments"
+
+    [build-custom]
+    #command = "some complex command to build"
+    #file = "target file to upload"
 
 * **remote.url** URL of the RoboPLC Manager (with no trailing slashes etc.)
 
@@ -99,6 +105,9 @@ A completely custom compilation can be done using the following settings
     [build-custom]
     command = "some complex command to build"
     file = "target file to upload"
+
+If *build-custom* section is present and *command* field is specified, *build*
+section is ignored.
 
 Flashing
 ========
