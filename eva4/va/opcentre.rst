@@ -168,26 +168,11 @@ top panel.
     :width: 300px
     :alt: IDC new dashboard
 
-Going online
-------------
 
-New dashboards are always created as offline, which means they can not output
-any dynamical data.
+.. note::
 
-To put a dashboard online, press a button on the side-panel near its status and
-select :ref:`eva4_oid` masks.
-
-.. figure:: ./oc_ss/idc-online.png
-    :width: 300px
-    :alt: IDC Online
-
-On tiny nodes, dashboards can be subscribed to all items (**#**). On large
-ones, the best practice is to subscribe a dashboard only to items/groups it
-supposed to work with.
-
-Dashboards receive events from all subscribed node items, even if the items are
-not visible as UI elements. The more particular subscription is set, the faster
-the dashboard works.
+   Starting from EVA ICS v4 build 2024061801, dashboard subscriptions do not
+   need to be manually managed.
 
 Editing best practices
 ----------------------

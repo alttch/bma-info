@@ -1105,6 +1105,38 @@ lvar.toggle
     :response: ../../http_api_examples/lvar.toggle.resp
 
 
+.. _eva4_hmi_http__ping:
+
+ping
+----
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Pings the back-end, prolongs the session*
+   * - Parameters
+     - required
+   * - Returns
+     - Nothing
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/ping.req
+    :response: ../../http_api_examples/ping.resp
+
+
 .. _eva4_hmi_http__profile.get_field:
 
 profile.get_field
