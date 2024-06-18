@@ -89,6 +89,17 @@ For cross compilation, it is recommended to install `cross
 
    cargo install cross
 
+Custom compilation
+==================
+
+A completely custom compilation can be done using the following settings
+
+.. code:: toml
+
+    [build-custom]
+    command = "some complex command to build"
+    file = "target file to upload"
+
 Flashing
 ========
 
