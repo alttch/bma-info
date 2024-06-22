@@ -103,6 +103,13 @@ program and other systemd services:
     :width: 505px
     :alt: Logs
 
+.. note::
+
+   Emebedded systems, disconnected from networks, may have no time
+   synchronization. Starting from RoboPLC Manager 0.2, the log viewer ALWAYS
+   displays log timestamps in local (client) time, calculating possible
+   differences with the remote clock and applying them to the output.
+
 Uploading a program (flashing)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
