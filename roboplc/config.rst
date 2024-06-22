@@ -35,7 +35,13 @@ The Web UI is available by default at *http://IP:7700*. The default management k
     :alt: Program
 
 The management key and other settings can be changed in the configuration file
-*/etc/roboplc/manager.yml*. After modifying, the service must be restarted:
+*/etc/roboplc/manager.toml*. After modifying, the service must be restarted:
+
+.. note::
+
+   Starting from RoboPLC manager 0.2, the configuration file format has been
+   changed to TOML. The YAML format is still supported, but has been
+   DEPRECATED.
 
 .. code:: shell
 
