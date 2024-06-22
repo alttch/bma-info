@@ -41,12 +41,12 @@ Example:
 
    #[derive(WorkerOpts)]
    #[worker_opts(cpu = 3, priority = 50, scheduling = "fifo", blocking = true)]
-   struct Worker1 {
+   struct Detector {
        stream: rvideo::Stream,
        // ...
    }
 
-   impl Worker<Message, Variables> for Worker1 {
+   impl Worker<Message, Variables> for Detector {
        fn run(&mut self, _context: &Context<Message, Variables>) -> WResult {
            let mut frame_number = 1;
            // consider the source provides 720p RGB images as raw RGB8 vectors
@@ -85,7 +85,7 @@ Example:
        // ...
        let stream = rvideo::add_stream(rvideo::Format::Rgb8, 1280, 720)?;
        controller.spawn_worker(RvideoSrv {})?;
-       controller.spawn_worker(Worker1 { stream })?;
+       controller.spawn_worker(Detector { stream })?;
        // ...
    }
 
