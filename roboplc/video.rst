@@ -30,7 +30,7 @@ Example:
 
    // ...
 
-   // RVideo metadata structure, see rvideo documentation for more details
+   // RVideo metadata structure, required if frames must have meta-data
    #[derive(Serialize)]
    struct Meta {
        // Required to preview bounding boxes in rvideo-compatible viewers
@@ -51,7 +51,8 @@ Example:
            let mut frame_number = 1;
            // consider the source provides 720p RGB images as raw RGB8 vectors
            for img in get_images_from_some_source() {
-               // obtain bouding boxes
+               // optionally, obtain some bounding boxes, convert to
+               // `rvideo::BoundingBox` if necessary
                let bboxes = detect_something(&img);
                let meta_packed: Arc<Vec<u8>> = rmp_serde::to_vec_named(&Meta {
                    bboxes,
@@ -59,6 +60,7 @@ Example:
                })?
                .into();
                let frame = rvideo::Frame::new_with_metadata(
+                   meta_packed.into(),
                    img.into(),
                );
                self.stream.send_frame(frame)?;
