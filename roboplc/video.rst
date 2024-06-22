@@ -60,7 +60,7 @@ Example:
                })?
                .into();
                let frame = rvideo::Frame::new_with_metadata(
-                   meta_packed.into(),
+                   meta_packed,
                    img.into(),
                );
                self.stream.send_frame(frame)?;
