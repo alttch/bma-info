@@ -11,9 +11,10 @@ recommended to expose video streams from the program.
 Working with video streams
 ==========================
 
-For computer-vision application is always important to debug internal video
-streams. The streams may be processed, converted into different formats and it
-is important to check at all points that the picture is correct.
+For computer-vision applications is always important to debug internal video
+streams. The stream images may be captured, converted into different formats,
+resized, cropped, altered etc. and it is important to check at all points that
+the picture is correct.
 
 RVideo provides a simple way to expose video streams from the program, as
 similar as exposing :doc:`data metrics <metrics>`. No any special interface is
