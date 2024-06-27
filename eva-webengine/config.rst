@@ -37,6 +37,10 @@ filled by the engine automatically.
 * **api_token** current API token, filled automatically after login. Can be
   filled manually if obtained e.g. for an embedded JS HMI application.
 
+* **allow_logged_in_calls_only** (default: false) if true, API calls are
+  allowed only if the engine is logged in and running. Otherwise, the call is
+  rejected with a local access error instead of sending it to the server.
+
 Item processing, special
 ========================
 
