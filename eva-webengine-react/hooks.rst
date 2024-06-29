@@ -158,7 +158,7 @@ Parameters
 .. code:: typescript
 
     interface EvaStateParams {
-      oid: string;
+      oid?: string;
       engine?: Eva;
     }
 
@@ -173,6 +173,49 @@ Usage example
      const state = useEvaState({ oid: "sensor:env/temp" }, []);
 
      return <span>{state?.value}</span>;
+   }
+
+useEvaStateBulk
+===============
+
+React hook, which contains states of multiple EVA ICS item. The states are
+automatically updated in real time.
+
+The states are returned as an object, where keys are item OIDs and values are
+the item states.
+
+Parameters
+----------
+
+.. code:: typescript
+
+    interface EvaStateBulkParams {
+      oid?: Array<string>;
+      engine?: Eva;
+    }
+
+Usage example
+-------------
+
+.. code:: jsx
+
+   import { useEvaStateBulk } from "@eva-ics/webengine-react";
+
+   const MyComponent = () => {
+    const states = useEvaStateBulk(
+        { oid: ["sensor:tests/s1", "sensor:tests/s2", "sensor:tests/s3"] }, []);
+
+    return (
+      <>
+        {Object.keys(states).map((oid) => {
+          return (
+            <div key={oid}>
+              {oid} = {states[oid].value}
+            </div>
+          );
+        })}
+      </>
+    );
    }
 
 .. _eva_webengine_react_use_evastatehistory:
