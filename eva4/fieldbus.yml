@@ -18,6 +18,15 @@
     - ""
     - Any equipment with Rockwell-compatible En/IP implementation
 - name: |
+    IEC 60870-5 101
+    IEC 60870-5 104
+  status: Available per request
+  devices:
+    - Any equipment with IEC 60870-5 101 (Serial)
+    - Any equipment with IEC 60870-5 104 (TCP)
+    - Both client (slave) and server (master) roles are supported
+    - Custom IEC 60870-5 frames are supported
+- name: |
     MQTT
   status: Supported
   devices:
