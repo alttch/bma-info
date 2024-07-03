@@ -94,6 +94,30 @@ modules into venv.
 * **\--prepare-only** allows to install additional compilers / headers, without
   installing EVA ICS. Can be executed after the installation at any time.
 
+Overriding keys/passwords
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If :doc:`HMI service <./svc/eva-hmi>` is selected to be installed, the
+installer automatically sets up :doc:`./svc/eva-aaa-acl` and
+:doc:`./svc/eva-aaa-localauth` services as well.
+
+The passwords / API keys are generated automatically. To override, use the
+following environment variables:
+
+* **DEFAULTKEY** - the default host API key
+* **ADMINKEY** - the admin API key
+* **ADMINPASSWD** - the admin password
+* **OPKEY** - the operator API key
+* **OPPASSWD** - the operator password
+
+Example:
+
+.. code:: shell
+
+    sudo -s
+    curl https://pub.bma.ai/eva4/install | env DEFAULTKEY=secret sh /dev/stdin -a --hmi
+
+
 Uninstalling
 ============
 
