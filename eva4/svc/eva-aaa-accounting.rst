@@ -69,7 +69,7 @@ query
      - end time (default: now)
      - no
    * - **node**
-     - String
+     - String/Vec<String>
      - event node
      - no
    * - **u**
@@ -107,6 +107,14 @@ query
    * - **err**
      - String
      - event error message
+     - no
+   * - **limit**
+     - i64
+     - maximum number of events to return
+     - no
+   * - **offset**
+     - i64
+     - number of events to skip
      - no
 
 
@@ -177,6 +185,139 @@ query
       "t": 1706309888.0001206,
       "u": "opx"
     }
+  ]
+  
+
+.. _eva4_eva.aaa.accounting__query.count:
+
+query.count
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Count accounting events*
+   * - Parameters
+     - required
+   * - Returns
+     - Number of events matching the filter, limit and offset are ignored
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **t_start**
+     - Time
+     - start time (default: last 24 hours)
+     - no
+   * - **t_end**
+     - Time
+     - end time (default: now)
+     - no
+   * - **node**
+     - String/Vec<String>
+     - event node
+     - no
+   * - **u**
+     - String
+     - user account name
+     - no
+   * - **src**
+     - String
+     - source
+     - no
+   * - **svc**
+     - String
+     - service id (substring)
+     - no
+   * - **subj**
+     - String
+     - event subject
+     - no
+   * - **oid**
+     - String
+     - OID affected
+     - no
+   * - **note**
+     - String
+     - a note or its part (substring)
+     - no
+   * - **data**
+     - String
+     - substring of data payload casted as text
+     - no
+   * - **code**
+     - i16
+     - event error code (0 = success)
+     - no
+   * - **err**
+     - String
+     - event error message
+     - no
+   * - **limit**
+     - i64
+     - maximum number of events to return
+     - no
+   * - **offset**
+     - i64
+     - number of events to skip
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  count: 2
+  
+
+.. _eva4_eva.aaa.accounting__query.field_aggregated:
+
+query.field_aggregated
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Query aggregated field values*
+   * - Parameters
+     - required
+   * - Returns
+     - Aggregated field values
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **t_start**
+     - Time
+     - start time (default: last 24 hours)
+     - no
+   * - **t_end**
+     - Time
+     - end time (default: now)
+     - no
+   * - **field**
+     - String
+     - Database field (node/u/src/svc/subj/oid/note/code)
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+      "started",
+      "terminating"
   ]
   
 
