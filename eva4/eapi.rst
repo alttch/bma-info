@@ -252,9 +252,14 @@ following payload:
 * value (optional): any serializable value, including null (no value). If the
   field is absent, the item value is not modified.
 
-A special field "force" can be used to forcibly set (when force=true) state of
-disabled items. The field should be used only by admin interfaces or system
-software.
+A special field "force" can be used with the value
+
+**weak** updates item state even if the state is not changed (increases IEID
+         and updates state timestamp)
+
+**full** or **true** does the same as *weak* but also allows to forcibly set
+   state of disabled items. This kind should be used only by admin interfaces
+   or system software.
 
 Starting from the build 2023112801 the core also accepts raw bulk events sent
 to "RAW" topic:
