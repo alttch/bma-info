@@ -10,7 +10,7 @@ import {
   Legend
 } from "chart.js";
 import "chartjs-adapter-date-fns";
-import { LineChart } from "@eva-ics/webengine-react";
+import { Chart, ChartKind } from "@eva-ics/webengine-react";
 
 ChartJS.register(
   CategoryScale,
@@ -27,8 +27,9 @@ const MyBlock = () => {
   const chart_oids = ["sensor:tests/temp", "sensor:tests/temp2"];
   return (
     <>
-      <LineChart
+      <Chart
         oid={chart_oids}
+        kind={ChartKind.Line}
         timeframe="1T"
         fill="1S:2"
         title="int.temp"

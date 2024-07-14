@@ -15,5 +15,5 @@ UI Components
    gauge
    thermometer
    progressbar
-   linechart
+   chart
    canvas

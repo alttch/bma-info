@@ -1,20 +1,20 @@
 ..
   AUTO-GENERATED, DO NOT MODIFY
 
-LineChart
-*********
+Chart
+*****
 
 .. contents::
 
-React component. Displays a line chart (based on Chart.js v4)
+React component. Displays a chart (based on Chart.js v4)
 
 Example
 =======
 
-.. image:: images/linechart.png
+.. image:: images/chart.png
     :width: 450
 
-.. literalinclude:: include/examples/linechart.tsx
+.. literalinclude:: include/examples/chart.tsx
    :language: react
 
 Preparing
@@ -39,6 +39,10 @@ See :ref:`useEvaStateHistory <eva_webengine_react_use_evastatehistory>` hook.
      - type
      - required
      - description
+   * - kind
+     - ChartKind
+     - no
+     - Chart kind (Line, Bar, Radar, Doughnut)
    * - colors
      - Array<string>
      - no
