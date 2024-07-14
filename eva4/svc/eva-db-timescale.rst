@@ -84,7 +84,7 @@ state_history
      - no
    * - **xopts**
      - Map<String, String>
-     - Extra, not used for SQL databases
+     - Extra: vfn=fn for value grouping: mean/sum (d: mean)
      - no
    * - **compact**
      - bool
