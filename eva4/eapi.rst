@@ -240,6 +240,8 @@ with the following payload fields:
 The OID of the item is not present in the payload and should be obtained from
 the event topic.
 
+.. _eva4_eapi_raw:
+
 Raw events
 ----------
 
@@ -254,12 +256,14 @@ following payload:
 
 A special field "force" can be used with the value
 
-**weak** updates item state even if the state is not changed (increases IEID
+**update** updates item state even if the state is not changed (increases IEID
          and updates state timestamp)
 
 **full** or **true** does the same as *weak* but also allows to forcibly set
    state of disabled items. This kind should be used only by admin interfaces
    or system software.
+
+See also: :doc:`sdk/eapi_raw`.
 
 Starting from the build 2023112801 the core also accepts raw bulk events sent
 to "RAW" topic:

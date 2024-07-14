@@ -26,4 +26,5 @@ application development, see: :doc:`../ui` and
     abi
     practices
     ../eapi
+    eapi_raw.rst
     ../repl/proto
