@@ -1,0 +1,17 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "query.count",
+  "params": {
+    "filter": {
+      "node": "mws1",
+      "subj": "login"
+    },
+    "k": "secretkey"
+  }
+}

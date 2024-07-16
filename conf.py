@@ -19,6 +19,10 @@ __version__ = 'current'
 import sys
 import os
 
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+
+
 # httpexample_scheme = 'https'
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -176,6 +180,9 @@ html_css_files = [
 ]
 
 html_context = {"display_github": False}
+
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
