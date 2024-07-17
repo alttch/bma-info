@@ -28,6 +28,10 @@ the raw payload. If they are present, the item state is update to the provided
 ones. Note, that if a condition is specified, the field **status_else** is
 mandatory, otherwise the core sets the item status to -1 (error).
 
+.. figure:: s/cond.png
+    :width: 600px
+    :alt: Set state conditional
+
 In example, let us update sensor value if the sensor is in working state. In
 case if the sensor is in error state, set the value to zero:
 
@@ -54,6 +58,10 @@ In case if the item state is updated (note: this requires REAL update, in case
 of forced update the condition is not met), set states of other items to
 specific status/value.
 
+.. figure:: s/setother.png
+    :width: 600px
+    :alt: Set state of other items
+
 .. code:: json
 
    {
@@ -78,6 +86,10 @@ Set other value delta
 In case if the item state is updated (also applies for force updates), set the
 value of other item to the delta between the previous and the new value of the
 item the raw event is applied to.
+
+.. figure:: s/setdelta.png
+    :width: 600px
+    :alt: Set value delta to other item value
 
 .. code:: json
 
