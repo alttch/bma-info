@@ -7,7 +7,7 @@ The official images
 ===================
 
 The official EVA ICS v4 `Docker <https://www.docker.com>`_ images can be found
-at https://hub.docker.com/r/altertech/eva-ics4. These images can be used with
+at https://hub.docker.com/r/bmauto/eva-ics4. These images can be used with
 Docker, as well as with `Kubernetes <https://kubernetes.io>`_.
 
 What is included
