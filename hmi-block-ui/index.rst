@@ -8,9 +8,6 @@ Uses `bootstrap <https://getbootstrap.com/>`_ and `jQuery
 <https://jquery.com/>`_. No HTML or JavaScript coding is required: just
 download, create configuration files and the app is ready to go.
 
-The app is fully compatible with `EVA ICS Control Center Android app
-<https://play.google.com/store/apps/details?id=com.altertech.evacc>`_.
-
 Screenshots:
 
 Theme **default**:

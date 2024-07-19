@@ -8,7 +8,7 @@ EVA ICS Control Center client
 -----------------------------
 
 You can use official `EVA ICS Control Center client
-<https://play.google.com/store/apps/details?id=com.altertech.evacc>`_ to access
+<https://pub.bma.ai/evacc/>`_ to access
 :doc:`SFA<sfa/sfa>` UI from Android-based mobile phones.
 
 .. figure:: evacc.png

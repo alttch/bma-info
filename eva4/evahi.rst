@@ -12,8 +12,6 @@ EVA ICS has got the official EVA ICS Control Center client to access
 
 F-Droid repository (recommended): https://pub.bma.ai/fdroid/repo
 
-Google Play: https://play.google.com/store/apps/details?id=com.altertech.evacc
-
 Direct APK download URL: https://pub.bma.ai/evacc/
 
 The client is evaHI-based application, so it can be `configured in the same way
