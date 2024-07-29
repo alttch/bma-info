@@ -1,7 +1,7 @@
 RFlow chat
 **********
 
-RoboPLC re-exports `RVideo <https://docs.rs/rrflow/>`_ crate which allows to
+RoboPLC re-exports `RFlow <https://docs.rs/rflow/>`_ crate which allows to
 create a chat-line HMI for debugging, testing or production purposes.
 
 .. note::
