@@ -49,6 +49,7 @@ See also:
    flashing
    metrics
    video
+   rflow-chat
    hardware
    license
    manager_license

@@ -95,7 +95,7 @@ Refer to the `RVideo documentation <https://docs.rs/rvideo/>`_ for more details.
 Viewing streams with RoboPLC manager
 ====================================
 
-If :ref:`roboplc_manager` is used, the metrics can be viewed in its interface.
+If :ref:`roboplc_manager` is used, the streams can be viewed in its interface.
 RVideo server must listen at the TCP port *localhost:3001*.
 
 .. figure:: ./ss/manager-streams.png
