@@ -54,6 +54,7 @@ Example:
 
     impl Worker<Message, Variables> for RflowSrv {
         fn run(&mut self, _context: &Context<Message, Variables>) -> WResult {
+            // Listen on 0.0.0.0:4001
             roboplc::serve_rflow().map_err(Into::into)
         }
     }
@@ -76,11 +77,21 @@ Example:
 
 Refer to the `RFlow documentation <https://docs.rs/rflow/>`_ for more details.
 
+.. warning::
+
+    By default the chat server is exposed to the network with no
+    authentication, if the chat is programmed to input/output
+    sensitive data, it should be restricted to the local host only:
+
+    .. code:: rust
+
+        roboplc::rflow::serve("127.0.0.1:4001").map_err(Into::into)
+
 RFlow chat interface in RoboPLC manager
 =======================================
 
 If :ref:`roboplc_manager` is used, the chat can be used from its interface.
-RFlow server must listen at the TCP port *localhost:4001*.
+RFlow server must listen at the TCP port *127.0.0.1:4001*.
 
 .. figure:: ./ss/manager-rflow.png
     :width: 605px

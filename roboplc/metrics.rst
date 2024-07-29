@@ -61,6 +61,7 @@ builder:
 
 .. code:: rust
 
+   // listen on 0.0.0.0:9000
    roboplc::metrics_exporter()
       .set_bucket_duration(Duration::from_secs(600)).unwrap()
       .install().unwrap();
@@ -71,12 +72,25 @@ with bucket time-to-live of 600 seconds. To start the server on a different
 address, refer to `metrics_exporter_prometheus
 <https://docs.rs/metrics-exporter-prometheus/>`_ crate documentation.
 
+.. warning::
+
+   If the metrics contain sensitive data, the access to the metrics server
+   should be restricted, as an option, the server can be available for the
+   local host only:
+
+   .. code:: rust
+
+       roboplc::metrics_exporter()
+           .with_http_listener("127.0.0.1:9000".parse::<std::net::SocketAddr>().unwrap())
+           .set_bucket_duration(Duration::from_secs(600)).unwrap()
+           .install().unwrap();
+
 Viewing metrics
 ===============
 
 If :ref:`roboplc_manager` is used, the metrics can be viewed in its interface.
 The program metrics must be available on the host at the address
-*http://localhost:9000*.
+*http://127.0.0.1:9000*.
 
 .. figure:: ./ss/manager-metrics.png
     :width: 505px

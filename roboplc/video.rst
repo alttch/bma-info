@@ -78,6 +78,7 @@ Example:
 
    impl Worker<Message, Variables> for RvideoSrv {
        fn run(&mut self, _context: &Context<Message, Variables>) -> WResult {
+           // Listen on 0.0.0.0:3001
            roboplc::serve_rvideo().map_err(Into::into)
        }
    }
@@ -92,11 +93,21 @@ Example:
 
 Refer to the `RVideo documentation <https://docs.rs/rvideo/>`_ for more details.
 
+.. warning::
+
+    By default the streams are exposed to the network with no authentication,
+    if streams contain sensitive data, the server should be restricted to the
+    local host only:
+
+    .. code:: rust
+    
+         roboplc::rvideo::serve("127.0.0.1:3001").map_err(Into::into)
+
 Viewing streams with RoboPLC manager
 ====================================
 
 If :ref:`roboplc_manager` is used, the streams can be viewed in its interface.
-RVideo server must listen at the TCP port *localhost:3001*.
+RVideo server must listen at the TCP port *127.0.0.1:3001*.
 
 .. figure:: ./ss/manager-streams.png
     :width: 505px
