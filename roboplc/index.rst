@@ -47,6 +47,7 @@ See also:
    quickstart_modbus
    config
    flashing
+   docker
    metrics
    video
    rflow-chat
