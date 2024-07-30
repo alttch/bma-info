@@ -127,6 +127,36 @@ uploaded to the remote host.
 * use **\--force** (short: **-f**) option to switch the remote into *CONFIG*
   mode before flashing.
 
+Debugging/testing
+=================
+
+The command
+
+.. code:: shell
+
+   robo x
+
+Executes the program on the remote host in a virtual terminal and outputs the
+result to the local console. This mode can be useful for debugging/testing
+purposes.
+
+.. note::
+
+   The program does not capture the local console standard input on Microsoft
+   Windows.
+
+This mode also accepts additional command-line arguments, which are passed to
+the program:
+
+.. code:: shell
+
+   robo x -- -a -b -c arg1 arg2
+
+.. warning::
+
+   It is not recommended to execute programs remotely on live production
+   systems.
+
 Switching between remotes
 =========================
 
