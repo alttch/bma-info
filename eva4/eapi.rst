@@ -248,11 +248,15 @@ Raw events
 any service (e.g. a controller) can send raw event to "RAW/OID" with the
 following payload:
 
-* status: I16 - item status (-1 = generic error for units/sensors, other -
+* status: i16 - item status (-1 = generic error for units/sensors, other -
   custom)
 
 * value (optional): any serializable value, including null (no value). If the
   field is absent, the item value is not modified.
+
+* t: f64 (optional, recommended for certain data sources only): override the
+  event time (seconds). In case if the field is set to zero, the item state set
+  time is not modified.
 
 A special field "force" can be used with the value
 
