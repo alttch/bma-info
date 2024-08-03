@@ -272,7 +272,9 @@ query.count
 
 .. code:: json
 
-  count: 2
+  {
+    "count": 2
+  }
   
 
 .. _eva4_eva.aaa.accounting__query.field_aggregated:

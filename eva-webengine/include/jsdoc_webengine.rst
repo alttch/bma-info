@@ -302,7 +302,7 @@
 
     Get item state
 
-    :param oid: item OID
+    :param oid: item OID or OID mask
     :type oid: string
     :return: state object or undefined if no item found
 
@@ -346,7 +346,7 @@
     If item oid or function is not specified, all watching functions are
     removed for a single oid (mask) or for all the items watched.
 
-    :param oid: item oid (e.g. sensor:env/temp1, or sensor:env/\*)
+    :param oid: item OID or a mask
     :type oid: string
     :param func: function to be removed
     :type func: function
@@ -367,9 +367,10 @@
     first state load).
     
     If state is already loaded, function will be called immediately. One item
-    (or item mask, set with "*") can have multiple watchers.
+    (or item mask, set with "*" or a traditional OID mask) can have multiple
+    watchers.
 
-    :param oid: item oid (e.g. sensor:env/temp1, or sensor:env/\*)
+    :param oid: item oid (e.g. sensor:env/temp1, sensor:env/\*, sensor:+/temp1)
     :type oid: string
     :param func: function to be called
     :type func: function

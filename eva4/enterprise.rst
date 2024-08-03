@@ -172,7 +172,9 @@ Licensing
 Limitations
 -----------
 
-* OID masks do not support internal wildcards (e.g. "sensor:\*/test")
+* OID masks did not support internal wildcards (e.g. "sensor:\*/test") in
+  legacy versions. Starting from :doc:`../eva-webengine/index` 0.8.9 and WASM
+  extension build 336, traditional :ref:`eva4_oid` masks are fully supported.
 
 PSRT Enterprise
 ===============
