@@ -69,3 +69,9 @@ To check compression effectiveness, use the following command:
             /after_compression_total_bytes)::DECIMAL(100,2) || 'x'
         AS "compression rate"
         FROM hypertable_compression_stats('state_history_events');
+
+Data insertion policy
+=====================
+
+On conflicts, the service always replaces states for sames items and timestamps
+to the most recent ones.
