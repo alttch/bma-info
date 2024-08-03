@@ -43,6 +43,32 @@ virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
 The latest eva-shell version number can be obtained from
 https://pypi.org/project/eva-shell/
 
+Installing on a client machine
+------------------------------
+
+**eva-shell** can be installed on a client machine (with limited
+functionality):
+
+.. code:: shell
+
+   # consider Python and pip are installed
+   pip install eva-shell
+
+The remote node must have :ref:`bus connection <eva4_config_bus>` enabled via
+TCP/IP.
+
+.. warning::
+
+   Bus connection gives full access to the node without authentication and
+   should be enabled for trusted clients only. The target port may be
+   additionally protected by a firewall.
+
+Launch *eva-shell* executable with the bus address specified:
+
+.. code:: shell
+
+   EVA_BUS=HOST:PORT eva
+
 .. _eva4_eva-cloud-manager-cli:
 
 EVA Cloud Manager CLI
