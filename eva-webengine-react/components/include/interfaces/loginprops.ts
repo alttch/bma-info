@@ -14,5 +14,6 @@ interface LoginProps {
   otp_qr_size?: number; // OTP QR code size
   cache_login?: boolean; // cache login in cookies
   cache_auth?: boolean; // cache password in cookies
+  keep_engine_auth?: boolean; // less secure but allows to re-login if token is expired
   register_globals?: boolean; // register window.$eva and set window.$eva.hmi
 }
