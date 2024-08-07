@@ -81,10 +81,12 @@ Usage Conditions
 ----------------
 
 For any form of redistribution, except computer operating system
-packages, the words "EVA ICS" and "BUS/RT" should be always ended with the
-registered trademark symbol (®), unless there is no technical ability to meet.
+packages, the words "EVA ICS", "RoboPLC", and "BUS/RT" should be always ended
+with the registered trademark symbol (®), unless there is no technical ability
+to do.
 
-The trademark IOTE Cloud can be used without any additional symbols.
+The trademarks "IOTE Cloud" and "PSRT" can be used without any additional
+symbols.
 
 Common conditions
 ~~~~~~~~~~~~~~~~~
