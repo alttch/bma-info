@@ -36,10 +36,9 @@ Configuration
 .. code:: javascript
 
     // login with API key
-    eva.apikey = "secret";
+    eva.set_api_key("secret");
     // or with login/password
-    //eva.login = "operator";
-    //eva.password= "secret";
+    eva.set_login_password("operator", "secret");
 
     // required for development servers only, remove when hosted in EVA ICS HMI
     eva.api_uri = "http://localhost:7727";

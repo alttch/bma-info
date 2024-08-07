@@ -81,6 +81,16 @@
   alias: Eva.on
 - name: Eva#set_interval
   alias: Eva.set_interval
+- name: Eva#set_login_password
+  alias: Eva.set_login_password
+- name: Eva#set_api_key
+  alias: Eva.set_api_key
+- name: Eva#is_password_set
+  alias: Eva.is_password_set
+- name: Eva#is_auth_set
+  alias: Eva.is_auth_set
+- name: Eva#clear_auth
+  alias: Eva.clear_auth
 - name: Eva#watch
   alias: Eva.watch
 - name: Eva#watch_action

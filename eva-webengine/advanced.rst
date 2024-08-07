@@ -54,9 +54,8 @@ Authentication with front-end server
 ====================================
 
 If there is a front-end server installed in front of UI and it has got HTTP
-basic authentication set up, the fields **eva.login** and **eva.password** can
-be empty and let the engine log in using the basic authentication
-credentials.
+basic authentication set up, authentication credentials in the engine be empty
+and let the engine log in using the basic authentication credentials.
 
 .. _eva_webengine-spa:
 

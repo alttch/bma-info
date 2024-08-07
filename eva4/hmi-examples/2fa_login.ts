@@ -20,7 +20,6 @@ eva.on(EventKind.LoginSuccess, () => {
   set_status(`Logged in as ${eva.server_info.aci.u}`);
   // do not forget to clear the password in DOM and framework variables
   clear("password");
-  eva.password = "";
   eva.login_xopts = null;
 });
 eva.on(EventKind.LoginFailed, (err) => {
@@ -94,10 +93,11 @@ const set_status = (msg: string) => {
 const process_login = (e: SubmitEvent) => {
   e.preventDefault();
   set_status("Logging in...");
-  eva.login = (document.getElementById("login") as HTMLInputElement).value;
-  eva.password = (
+  const login = (document.getElementById("login") as HTMLInputElement).value;
+  const password = (
     document.getElementById("password") as HTMLInputElement
   ).value;
+  eva.set_login_password(login, password);
   hide("login_form");
   eva.start();
 };

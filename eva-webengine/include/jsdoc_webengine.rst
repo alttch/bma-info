@@ -83,6 +83,11 @@
     :return: Promise object
     :async: Async function/Promise
 
+.. js:function:: Eva.clear_auth()
+
+    Clear engine authenication credentials
+
+
 .. js:function:: Eva.erase_token_cookie()
 
     Erase auth token cookie
@@ -96,6 +101,18 @@
     Get engine mode
 
     :return: "js" or "wasm"
+
+.. js:function:: Eva.is_auth_set()
+
+    Is engine authentication set
+
+    :return: true if auth is set
+
+.. js:function:: Eva.is_password_set()
+
+    Is engine password set
+
+    :return: true if password is set
 
 .. js:function:: Eva.load_config(config_path)
 
@@ -232,6 +249,13 @@
     e.g. used on heartbeat error or if subscription parameters are changed
 
 
+.. js:function:: Eva.set_api_key(apikey)
+
+    Set/clear engine API key
+
+    :param apikey: API key
+    :type apikey: string or null
+
 .. js:function:: Eva.set_interval(interval_id, value)
 
     Set intervals
@@ -247,6 +271,15 @@
 
     :param log_level: log processing level
     :type log_level: number
+
+.. js:function:: Eva.set_login_password(login, password)
+
+    Set engine login credentials
+
+    :param login: login
+    :type login: string or null
+    :param password: password
+    :type password: string or null
 
 .. js:function:: Eva.set_normal(user, password, xopts)
 
