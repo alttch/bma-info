@@ -20,11 +20,7 @@ filled by the engine automatically.
 
 * **login** user login
 
-* **password** user password
-
 * **xopts** extra login options (EVA ICS v4 only)
-
-* **apikey** API key
 
 * **client_id** report a custom client id to the server (e.g. a custom-defined
   ID of the current UI page)
@@ -40,6 +36,9 @@ filled by the engine automatically.
 * **allow_logged_in_calls_only** (default: false) if true, API calls are
   allowed only if the engine is logged in and running. Otherwise, the call is
   rejected with a local access error instead of sending it to the server.
+
+Authentication credentials must be set with methods *set_login_password()* or
+*set_api_key()*:
 
 Item processing, special
 ========================
