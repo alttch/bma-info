@@ -20,7 +20,7 @@
 - name: |
     IEC 60870-5 101
     IEC 60870-5 104
-  status: Available per request
+  status: Available via :doc:`../roboplc/index`
   devices:
     - Any equipment with IEC 60870-5 101 (Serial)
     - Any equipment with IEC 60870-5 104 (TCP)
