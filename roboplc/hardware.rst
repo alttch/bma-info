@@ -21,6 +21,7 @@ Raspberry Pi 5
 Raspberry Pi Zero 2 W
 UniPi Axon series        EOL
 UniPi Neuron series      Raspberry Pi 4-based
+RevPi Connect            Raspberry Pi 4/4S-based
 =======================  ====================================================
 
 Have a board working or having issues? `Please let us know!
