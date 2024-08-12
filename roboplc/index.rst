@@ -25,7 +25,7 @@ evolution of Rust-based controller programming.
 * RoboPLC programs are created for Linux only, work in *std* mode and use
   real-time capabilities of the Linux kernel.
 
-Minimum supported Rust version: **1.66.0**.
+Minimum supported Rust version: **1.68.0**.
 
 See also:
 
