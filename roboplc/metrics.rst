@@ -85,6 +85,19 @@ address, refer to `metrics_exporter_prometheus
            .set_bucket_duration(Duration::from_secs(600)).unwrap()
            .install().unwrap();
 
+Prometheus exporter can automatically be combined with `metrics_exporter_scope
+<https://docs.rs/metrics-exporter-scope/>`_, which is especially optimized for
+frequently changed values:
+
+.. code:: rust
+
+    roboplc::metrics_exporter_install(
+        roboplc::metrics_exporter().set_bucket_duration(Duration::from_secs(600))?,
+    )?;
+    // Scope metrics names must have a prefix '~', only Gauge-type metrics are
+    // supported. All unprefixed metrics are exported with Prometheus exporter.
+    gauge!("~worker::value").set(123);
+
 Viewing metrics
 ===============
 
@@ -98,3 +111,19 @@ The program metrics must be available on the host at the address
 
 The viewer supports histograms exported as summaries with quantiles only. The
 metrics can be also viewed in any Prometheus-compatible monitoring system.
+
+For scope metrics, install *metrics-scope*:
+
+.. image:: https://raw.githubusercontent.com/roboplc/metrics-exporter-scope/main/scope.gif
+   :width: 400px
+   :alt: metrics-scope
+
+.. code:: shell
+
+   cargo install metrics-scope
+
+Then execute it, specifying the program host/IP:
+
+.. code:: shell
+
+   metrics-scope HOST
