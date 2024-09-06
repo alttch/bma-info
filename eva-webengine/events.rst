@@ -34,6 +34,12 @@ The following events are handled using a string-type event kind:
 
 * **supervisor.EVENT** supervisor events (message, lock, unlock)
 
+The following events are handled as the following: if the handler throws an
+exception, the execution is stopped:
+
+* **WASMError** :ref:`WebAssembly extension <eva4_webengine_wasm>` load error
+  (WebEngine 0.9.3+)
+
 Each event can have only one handler.
 
 Example:
