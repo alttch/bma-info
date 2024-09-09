@@ -617,3 +617,9 @@ Example:
 
 .. literalinclude:: ./sdk-examples/python/deploy.py
    :language: python
+
+It is also possible to deploy using a generation script directly:
+
+.. code:: shell
+
+    python3 deploy.py | eva cloud deploy -
