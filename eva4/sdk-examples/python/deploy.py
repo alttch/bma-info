@@ -36,6 +36,8 @@ n.add_element(Alarm('sensor', 'high', 2))
 n.add_element(EAPICall('test'))
 # add a function element (executed after the node deployment)
 n.add_element(Function('sleep', 5))
+# same function, but with set method
+n.add('extra/deploy/after', dict(function='sleep', args=[5]))
 # add more data from an export file
 n.add_from_export('items.yml')
 

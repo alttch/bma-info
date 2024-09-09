@@ -596,11 +596,22 @@ Deployment automation
 =====================
 
 Starting from the version 0.2.29, :doc:`EVA ICS Python SDK
-<./sdk/python/index.rst>` provides a module for deployment automation. It is
+<./sdk/python/index>` provides a module for deployment automation. It is
 recommended to use the module for all tasks where the deployment configuration
 is generated dynamically, is complicated or requires a lot of boilerplate code.
 
+All deployment automation components except `Deploy` and `Node` are optional
+and allow development operators both using the high-level API with pre-defined
+elements or modify the payload either directly or using `add`/`set` methods,
+which accept key names as paths.
+
 :ref:`Full API reference <eva4_python_sdk_deploy>`
+
+If using on a non-EVA ICS system, install the SDK and PyYAML:
+
+.. code:: shell
+
+    pip3 install evaics pyyaml
 
 Example:
 
