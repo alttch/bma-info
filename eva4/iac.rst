@@ -591,3 +591,18 @@ instance on the **remote** node:
 .. code:: shell
 
     eva svc edit eva.filemgr.main
+
+Deployment automation
+=====================
+
+Starting from the version 0.2.29, :doc:`EVA ICS Python SDK
+<./sdk/python/index.rst>` provides a module for deployment automation. It is
+recommended to use the module for all tasks where the deployment configuration
+is generated dynamically, is complicated or requires a lot of boilerplate code.
+
+:ref:`Full API reference <eva4_python_sdk_deploy>`
+
+Example:
+
+.. literalinclude:: ./sdk-examples/python/deploy.py
+   :language: python

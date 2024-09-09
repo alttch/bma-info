@@ -199,7 +199,7 @@ state_push
    :header-rows: 0
 
    * - Description
-     - *push item states into db, (payload: single item state or list)*
+     - *push item states into db, (payload: single item state or list). skips existing states*
    * - Parameters
      - *none*
    * - Returns

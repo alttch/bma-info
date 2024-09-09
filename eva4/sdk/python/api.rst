@@ -27,3 +27,10 @@ Cloud client
 ============
 
 .. include:: ./pydoc/cloudclient.rst
+
+.. _eva4_python_sdk_deploy:
+
+Deploy
+======
+
+.. include:: ./pydoc/deploy.rst

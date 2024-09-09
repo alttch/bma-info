@@ -2,7 +2,7 @@
 .. py:attribute:: CloudClient
    :module: evaics.client
 
-   alias of :py:class:`evaics.client.cloud.Client`
+   alias of :py:class:`~evaics.client.cloud.Client`
 
 .. py:module:: evaics.client.cloud
 
@@ -17,7 +17,7 @@
    :param client: HTTP or BUS/RT client
    
    
-   .. py:method:: Client.bus_call(method: str, params: Optional[dict] = None, target='eva.core', node=None)
+   .. py:method:: Client.bus_call(method: str, params: dict | None = None, target='eva.core', node=None)
       :module: evaics.client.cloud
    
       Call BUS/RT EAPI method

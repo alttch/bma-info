@@ -592,7 +592,7 @@ update_state - updates item state
 Parameters:
 
 * **oid** item OID
-* **state** new state (may contain status/value fields)
+* **state** new state (may contain status/value/t and other state fields)
 
 
 .. _eva4_py_macro_api_value:
