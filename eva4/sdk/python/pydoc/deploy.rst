@@ -267,7 +267,7 @@
       Specify the number of workers for the service
       
 
-.. py:class:: Upload(src, target)
+.. py:class:: Upload(src=None, text=None, target=None)
    :module: evaics.deploy
 
    Upload class is used to represent a file upload element
