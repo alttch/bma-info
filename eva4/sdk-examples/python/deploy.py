@@ -1,5 +1,6 @@
-from evaics.deploy import (Deploy, Node, Service, Item, User, Upload, service_from_tpl,
-                    DataObject, Alarm, EAPICall, Function, load_deploy)
+from evaics.deploy import (Deploy, Node, Service, Item, User, Upload,
+                           service_from_tpl, DataObject, Alarm, EAPICall,
+                           Function, load_deploy)
 
 # create a node object (if no name is provided, the local node is used)
 n = Node()
@@ -19,7 +20,7 @@ n.add_element(Item('unit:t2').set('action/svc', 'eva.controller.plc2'))
 # add a user
 n.add_element(User('admin2').set('acls', ['admin']))
 # add a file upload element
-n.add_element(Upload('http://bma.ai/file.txt', 'plant/'))
+n.add_element(Upload(src='http://bma.ai/file.txt', target='plant/'))
 # add a service element
 n.add_element(
     Service('eva.controller.plc1',
