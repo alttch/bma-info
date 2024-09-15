@@ -41,13 +41,6 @@ configuration:
 .. literalinclude:: ../include/controller_system_agent_config.yml
    :language: yaml
 
-.. warning::
-
-   The provided agent binaries are not FIPS-140 compliant and should not be
-   used with HTTPS URLs if FIPS-140 is mandatory. FIPS-140 compliant binaries
-   can be provided for Enterprise customers by request.
-
-
 Linux agents
 ~~~~~~~~~~~~
 
@@ -67,6 +60,13 @@ automatically create *eva-cs-agent* user in the system.
 
 For other systems the following systemd service template can be used:
 https://github.com/eva-ics/eva4/blob/stable/svc/controller-system/eva-cs-agent.service
+
+.. warning::
+
+   The provided Linux agent binaries are not FIPS-140 compliant and should not
+   be used with HTTPS URLs if FIPS-140 is mandatory. FIPS-140 compliant
+   binaries can be provided for Enterprise customers by request.
+
 
 Microsoft Windows agents
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,6 +108,13 @@ To unregister the service, use the following command:
 
 The last command stops the service by itself however it is recommended to stop
 it manually before to ensure the instance is stopped.
+
+.. note::
+
+   The provided Windows agent binaries use standard Windows cryptographic
+   modules only. To enable FIPS-140 compliance, enable it system-wide, by
+   setting "Use FIPS compliant algorithms for encryption, hashing, and signing"
+   in the system security policy.
 
 Using HTTP API
 ~~~~~~~~~~~~~~
