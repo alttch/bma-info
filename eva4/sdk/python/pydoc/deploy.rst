@@ -58,6 +58,14 @@
       Clone the Deploy object
       
    
+   .. py:method:: Deploy.merge(other)
+      :module: evaics.deploy
+   
+      Merge another deploy with the current one
+      
+      :param other - the other deploy object or a path to a deploy file:
+      
+   
    .. py:method:: Deploy.print(*args, **kwargs)
       :module: evaics.deploy
    
