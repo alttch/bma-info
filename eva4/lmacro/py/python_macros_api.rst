@@ -9,6 +9,8 @@ General functions
 
 
 
+
+
 .. _eva4_py_macro_api_bus_publish:
 
 bus_publish - publishes a message to a bus topic
@@ -510,6 +512,8 @@ Item functions
 
 
 
+
+
 .. _eva4_py_macro_api_state:
 
 state - gets item state
@@ -631,6 +635,8 @@ Raises:
 
 LVar functions
 ==============
+
+
 
 
 
@@ -796,6 +802,8 @@ Raises:
 
 Unit control
 ============
+
+
 
 
 
@@ -1096,6 +1104,8 @@ Locking functions
 
 
 
+
+
 .. _eva4_py_macro_api_lock:
 
 lock - acquires a lock
@@ -1148,6 +1158,12 @@ Raises:
 Logging
 =======
 
+.. note::
+
+  All logging functions accept multiple parameters as message parts. The
+  parameters are concatenated with a space character.
+
+
 
 
 .. _eva4_py_macro_api_debug:
@@ -1167,16 +1183,18 @@ Alias for logging.debug
 info - log info message
 -----------------------
 
-Alias for logging.info
 
 .. note::
 
-  In Python macros, the default "print" function is alias for logging.info as well.
+  In Python macros, the default "print" function is alias for "info" as well.
 
 
 .. code-block:: python
 
     info('this is a test debug message')
+    
+    a = 123
+    info('the value is', a)
 
 
 .. _eva4_py_macro_api_warning:
