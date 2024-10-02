@@ -59,3 +59,4 @@ Additional modules available:
 
 * `RoboPLC I/O connector for TwinCAT/ADS
   <https://github.com/roboplc/roboplc-io-ads/>`_
+* `RoboPLC I/O connector for IEC 60870-5 <https://github.com/roboplc/roboplc-io-iec60870-5/>`_
