@@ -150,6 +150,7 @@ html_theme_options = {
     'sticky_navigation': False,
     'navigation_depth': 5,
     'includehidden': True,
+    'flyout_display': 'hidden',
     # 'titles_only': False
 }
 
