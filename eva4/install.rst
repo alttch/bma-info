@@ -117,6 +117,15 @@ Example:
     sudo -s
     curl https://pub.bma.ai/eva4/install | env DEFAULTKEY=secret sh /dev/stdin -a --hmi
 
+Advanced options
+~~~~~~~~~~~~~~~~
+
+The following environment variables override the default installation options:
+
+* **EVA_REPOSITORY** - EVA ICS repository URL (default: https://pub.bma.ai/eva4)
+
+* **EVA_VERSION** and **EVA_BUILD** - EVA ICS version and build to install
+  (both must be set, default: latest)
 
 Uninstalling
 ============
