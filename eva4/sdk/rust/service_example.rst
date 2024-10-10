@@ -15,7 +15,21 @@ and sends email notifications when temperature is above a threshold.
 Creating a project
 ==================
 
-Create a new Rust project:
+Install `eva-lsl <https://crates.io/crates/eva-lsl>`_:
+
+.. code:: shell
+
+    cargo install eva-lsl
+
+Create a new project:
+
+.. code:: shell
+
+    eva-lsl new svc-example-temp
+
+The command will automatically create a new project with the service template
+and add required dependencies. Alternatively, a new project can be created with
+the regular `cargo` command:
 
 .. code:: shell
 
@@ -74,3 +88,22 @@ The following template can be used to quickly create a service instance with
 
 .. literalinclude:: ../../sdk-examples/rust/svc-example-temp/svc-tpl.yml
    :language: yaml
+
+Testing the service
+===================
+
+Temporarily disable the service instance, executed by the node launcher:
+
+.. code:: shell
+
+    eva svc disable my.svc.alarm_temp
+
+After the service code is ready and the configuration is deployed, the service
+can be tested locally using `eva-lsl <https://crates.io/crates/eva-lsl>`_:
+
+.. code:: shell
+
+    eva-lsl run my.svc.alarm_temp
+
+If the EVA ICS node is on a remote machine, append `-b` (`--bus`) parameter and
+make sure the node bus accepts remote connections (`eva edit config/bus`).
