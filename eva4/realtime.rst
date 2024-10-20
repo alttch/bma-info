@@ -1,10 +1,22 @@
-Real-time
-*********
+Low-latency real-time
+*********************
 
 .. contents::
 
-EVA ICS supports real-time mode. In the real-time mode certain or even all
-fieldbus operations can be replaced with EVA ICS services.
+EVA ICS v4 supports low-latency real-time mode. With this functionality,
+certain or even all fieldbus operations can be replaced with EVA ICS services.
+
+This allows to:
+
+* Replace traditional fieldbus controllers, reducing the number of devices,
+  costs of ownership and maintenance
+
+* Significantly increase the overall system reliability
+
+* Increase overall flexibility and bring modern development and maintenance
+  approaches to control fieldbus devices
+
+* Use the same nodes for both real-time and high-load tasks
 
 The ultimate design of the platform allows to have guaranteed low latency
 (<100us) for the majority of real-time-critical tasks.
@@ -17,6 +29,9 @@ Requirements
 
 * For non-commercial purposes, real-time functions can be used for free.
   :doc:`svc/eva-rtmon` is not available.
+
+* Real-time mode is available in EVA ICS 4.0.2 build 2024101301 or above. Earlier
+  versions do not provide low-latency real-time functionality.
 
 System preparation
 ==================
@@ -83,6 +98,15 @@ service parameters:
   real-time priority. If set to 1-99, the service runs with real-time priority
   with FIFO scheduling policy. If not set, the default priority is used.
 
+.. note::
+
+   The best practice is to run in real-time mode only fieldbus interfaces and
+   decision-making services.
+
+   Do not launch general-purpose services in real-time mode (such as HMI,
+   authentication, database interfaces etc.) except for certain very specific
+   cases or testing purposes.
+
 Real-time core
 --------------
 
@@ -93,9 +117,10 @@ To enable real-time mode for the core, specify `REALTIME` parameter in
 :ref:`eva4_eva_config`. The parameter sets CPU affinity and real-time priority
 for the core threads.
 
-When the core is running in real-time mode, all services are started in
-real-time by default. To disable real-time mode for a service, forcibly set
-`priority` to 0 and set `cpu_ids` to non-real-time CPU cores.
+When the core is running in real-time mode, all services are started as
+real-time by default, inheriting the core parameters. To disable real-time mode
+for a service, forcibly set `priority` to 0 and set `cpu_ids` to non-real-time
+CPU cores.
 
 Real-time EAPI bus
 ~~~~~~~~~~~~~~~~~~
