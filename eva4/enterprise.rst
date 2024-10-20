@@ -83,6 +83,11 @@ When a license is applied, the alarm service is not limited in functionality.
 
 See :doc:`svc/eva-svc-alarms`.
 
+Real-time mode
+--------------
+
+See :doc:`realtime`.
+
 .. _eva4_webengine_wasm:
 
 EVA ICS WebEngine WASM extension
