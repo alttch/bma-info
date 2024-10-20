@@ -83,8 +83,8 @@ When a license is applied, the alarm service is not limited in functionality.
 
 See :doc:`svc/eva-svc-alarms`.
 
-Real-time mode
---------------
+Low-latency real-time mode
+--------------------------
 
 See :doc:`realtime`.
 

@@ -4,7 +4,7 @@ Low-latency real-time
 .. contents::
 
 EVA ICS v4 supports low-latency real-time mode. With this functionality,
-certain or even all fieldbus operations can be replaced with EVA ICS services.
+certain or even all fieldbus tasks can be replaced with EVA ICS services.
 
 This allows to:
 
