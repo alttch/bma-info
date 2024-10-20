@@ -424,6 +424,15 @@
   api: eva4-esvc/kiosk-manager/eapi.yml
   ent: true
   tpl: svc-tpl-kioskman.yml
+- nam: eva.svc.rtmon
+  grp: system
+  exe: svc/eva-rtmon
+  des: Real-time monitor
+  api: eva4-esvc/rtmon/eapi.yml
+  ent: true
+  tpl: svc-tpl-rtmon.yml
+  txt: |
+      See also :doc:`../realtime`.
 - nam: eva.generator.default
   grp: sim
   exe: svc/eva-svc-generator

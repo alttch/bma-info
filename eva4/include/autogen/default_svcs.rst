@@ -222,6 +222,10 @@ System services
      - :doc:`eva.svc.mirror<svc/eva-svc-mirror>`
      - svc/eva-svc-mirror
      - 
+   * - :doc:`Real-time monitor<svc/eva-rtmon>`
+     - :doc:`eva.svc.rtmon<svc/eva-rtmon>`
+     - svc/eva-rtmon
+     - requires :doc:`enterprise`
    * - :doc:`System monitoring controller<svc/eva-controller-system>`
      - :doc:`eva.controller.system<svc/eva-controller-system>`
      - svc/eva-controller-system

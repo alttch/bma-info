@@ -31,6 +31,7 @@
     svc/eva-aaa-otp
     svc/eva-controller-pubsub
     svc/eva4-svc-controller-py
+    svc/eva-rtmon
     svc/eva-repl
     svc/eva-controller-trap
     svc/eva-db-sql

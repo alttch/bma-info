@@ -1,0 +1,6 @@
+# EVA ICS real-time monitor service
+command: svc/eva-rtmon
+workers: 1
+bus:
+  path: var/bus.ipc
+config: {}

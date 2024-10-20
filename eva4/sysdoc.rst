@@ -18,6 +18,7 @@ System documentation
     local_cluster
     containers/containers
     containers/k8s
+    realtime
     highload
     timeouts
     security
