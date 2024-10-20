@@ -24,8 +24,7 @@ The ultimate design of the platform allows to have guaranteed low latency
 Requirements
 ============
 
-* For commercial purposes, EVA ICS license requires :doc:`enterprise` to be
-  purchased.
+* For commercial purposes, :doc:`enterprise` is required to be purchased.
 
 * For non-commercial purposes, real-time functions can be used for free.
   :doc:`svc/eva-rtmon` is not available.
