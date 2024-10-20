@@ -49,7 +49,7 @@ Refer to your Linux distribution documentation for more information.
 .. note::
 
    EVA ICS core always uses CPU 0 for certain general tasks, so it is not
-   recommended to isolate CPU 0 or use it for real-time tasks.
+   recommended to isolate CPU 0 or use it for real-time.
 
 General setup
 =============
