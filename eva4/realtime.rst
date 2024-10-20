@@ -173,11 +173,11 @@ Limitations
 * Currently :doc:`svc/eva-rtmon` does not support monitoring of :doc:`secondary
   points<local_cluster>`.
 
-* Real-time parameters are applied only to services, built with :doc:`EVA ICS
-  Rust SDK <sdk/rust/index>` version `0.3.58` or above or to services, started
-  with :doc:`svc/eva-ffi` (:doc:`sdk/cpp/index` and other binary-compiled). To
-  apply real-time parameters for other services (including Python and
-  TypeScript), use the bundled `rt-launch` tool:
+* Real-time parameters are applied only on services, built with :doc:`EVA ICS
+  Rust SDK <sdk/rust/index>` version `0.3.58` or above and for services,
+  started with :doc:`svc/eva-ffi` (:doc:`sdk/cpp/index` and other
+  binary-compiled). To apply real-time parameters on other services (including
+  Python and TypeScript), use the bundled `rt-launch` tool:
 
 .. code:: yaml
 
