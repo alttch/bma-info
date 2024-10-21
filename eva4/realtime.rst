@@ -121,6 +121,10 @@ real-time by default, inheriting the core parameters. To disable real-time mode
 for a service, forcibly set `priority` to 0 and set `cpu_ids` to non-real-time
 CPU cores.
 
+:doc:`Secondary points<local_cluster>` do not need to have real-time parameters
+in `eva-config`, however they may be specified to set the default parameters
+for the services launched.
+
 Real-time EAPI bus
 ~~~~~~~~~~~~~~~~~~
 
@@ -149,6 +153,9 @@ to limit memory allocation for the incoming messages.
 Monitoring
 ==========
 
+Node system dashboard
+---------------------
+
 Real-time tasks can be monitored with :doc:`svc/eva-rtmon`. Deploy the service instance:
 
 .. code-block:: bash
@@ -160,9 +167,21 @@ After deploying, real-time tasks can be viewed in :ref:`eva4_va_sdash`, section
 
 .. figure:: screenshots/va_sdash_rtmon.png
     :width: 605px
-    :alt: Real-time tasks
+    :alt: Real-time tasks in the system dashboard
 
+eva-shell
+---------
 
+To view real-time tasks with :ref:`eva4_eva-shell`, use the following command:
+
+.. code-block:: bash
+
+    eva rt
+
+.. figure:: screenshots/eva-shell_rt.png
+    :width: 605px
+    :alt: Real-time tasks in EVA shell
+    
 Limitations
 ===========
 
