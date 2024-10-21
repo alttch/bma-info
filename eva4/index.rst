@@ -32,6 +32,10 @@ control systems.
 * Real-time event :doc:`replication<svc/eva-repl>` and interaction between
   cluster nodes and web HMI applications.
 
+* In low-latency real-time mode, EVA ICS v4 can perform the majority of the
+  typical fieldbus tasks and minimize the need for additional hardware or
+  software PLCs.
+
 * Supported architectures out-of-the-box (Linux only): x86_64, aarch64.
 
 .. toctree::
