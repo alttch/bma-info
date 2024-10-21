@@ -153,17 +153,16 @@ to limit memory allocation for the incoming messages.
 Monitoring
 ==========
 
-Node system dashboard
----------------------
-
 Real-time tasks can be monitored with :doc:`svc/eva-rtmon`. Deploy the service instance:
 
 .. code-block:: bash
 
     eva svc create eva.svc.rtmon /opt/eva4/share/svc-tpl/svc-tpl-rtmon.yml
 
-After deploying, real-time tasks can be viewed in :ref:`eva4_va_sdash`, section
-"Realtime":
+Node system dashboard
+---------------------
+
+Real-time tasks can be viewed in :ref:`eva4_va_sdash`, section "Realtime":
 
 .. figure:: screenshots/va_sdash_rtmon.png
     :width: 605px
