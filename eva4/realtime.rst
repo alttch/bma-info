@@ -196,6 +196,12 @@ Limitations
   binary-compiled). To apply real-time parameters on other services (including
   Python and TypeScript), use the bundled `rt-launch` tool:
 
+* Latency may significantly increase during certain core tasks, such as
+  deploying items / services or replicating large amounts of remote items from
+  remotes. It is highly recommended to modify production node inventory
+  with putting affected fieldbus components into maintenance and limit
+  replication tasks to outgoing only.
+
 .. code:: yaml
 
    # service parameters
