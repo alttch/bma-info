@@ -190,17 +190,21 @@ Limitations
 * Currently :doc:`svc/eva-rtmon` does not support monitoring of :doc:`secondary
   points<local_cluster>`.
 
-* Real-time parameters are applied only on services, built with :doc:`EVA ICS
-  Rust SDK <sdk/rust/index>` version `0.3.58` or above and for services,
-  started with :doc:`svc/eva-ffi` (:doc:`sdk/cpp/index` and other
-  binary-compiled). To apply real-time parameters on other services (including
-  Python and TypeScript), use the bundled `rt-launch` tool:
-
 * Latency may significantly increase during certain core tasks, such as
   deploying items / services or replicating large amounts of remote items from
   remotes. It is highly recommended to modify production node inventory
   with putting affected fieldbus components into maintenance and limit
   replication tasks to outgoing only.
+
+* It is not recommended to use Python and TypeScript-based services in
+  real-time mode for mission-critical tasks. The behavior may be unpredictable
+  due to garbage collection and other factors.
+
+* Real-time parameters are applied only on services, built with :doc:`EVA ICS
+  Rust SDK <sdk/rust/index>` version `0.3.58` or above and for services,
+  started with :doc:`svc/eva-ffi` (:doc:`sdk/cpp/index` and other
+  binary-compiled). To apply real-time parameters on other services (including
+  Python and TypeScript), use the bundled `rt-launch` tool:
 
 .. code:: yaml
 
