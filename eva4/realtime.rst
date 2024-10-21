@@ -26,7 +26,7 @@ Requirements
 
 * For commercial purposes, :doc:`enterprise` is required to be purchased.
 
-* For non-commercial purposes, real-time functions can be used for free.
+* For non-commercial purposes, real-time functionality can be used for free.
   :doc:`svc/eva-rtmon` is not available.
 
 * Real-time mode is available in EVA ICS 4.0.2 build 2024101301 or above. Earlier
@@ -191,7 +191,7 @@ Limitations
   points<local_cluster>`.
 
 * Latency may significantly increase during certain core tasks, such as
-  deploying items / services or replicating large amounts of remote items from
+  deploying items / services or replicating a large amount of items from
   remotes. It is highly recommended to modify production node inventory
   with putting affected fieldbus components into maintenance and limit
   replication tasks to outgoing only.
