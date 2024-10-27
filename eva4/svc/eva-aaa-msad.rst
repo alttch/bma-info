@@ -71,6 +71,10 @@ auth.user
      - f64
      - Max operation timeout
      - no
+   * - **xopts**
+     - map<String/Any>
+     - Extra options map (e.g. otp=code for two-factor auth)
+     - no
 
 .. _eva4_eva.aaa.msad__cache.delete:
 
