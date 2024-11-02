@@ -396,12 +396,13 @@ must know local service ID), or, as a preferred way, to a special bus topic
 If a topic is used, the payload MUST be a structure with fields equal to
 :ref:`eva4_eva.aaa.accounting__report` method.
 
-Auth
-----
+Authentication
+--------------
 
 Services authenticate users via RPC calls with the following methods:
 
 * auth.user(login, password, timeout)
+
 * auth.key(key, timeout)
 
 .. note::
@@ -438,6 +439,21 @@ Authentication services may implement additional methods:
 * user.set_profile_field(i, field, value)
 
 where *i* stands for user login.
+
+Overriding login information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The method *auth.user* can override/extend login data by returning additional
+fields:
+
+* **_login** overrides the login name. This can be used if an authentication
+  service accepts a same login name for multiple possible users (e.g. for OAuth
+  or similar). The service obtains the actual login name after the
+  authentication is done and reports it to the caller.
+
+* **_note** a string, where an additional information about the authentication
+  call can be provided (e.g. logged in with an authentication provider
+  "3rdparty").
 
 Service topics
 --------------
