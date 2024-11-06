@@ -340,6 +340,6 @@ rst_epilog = """
 .. |Version| replace:: {versionnum}
 """.format(versionnum=version,)
 
-def setup(app):
-    app.add_js_file("https://st.bma.ai/a.js")
+# def setup(app):
+    # app.add_js_file("https://st.bma.ai/a.js")
 
