@@ -15,4 +15,6 @@ interface LoginProps {
   cache_login?: boolean; // cache login in cookies
   cache_auth?: boolean; // cache password in cookies
   register_globals?: boolean; // register window.$eva and set window.$eva.hmi
+  form_header?: () => JSX.Element; // custom login form header
+  form_footer?: () => JSX.Element; // custom login form footer
 }
