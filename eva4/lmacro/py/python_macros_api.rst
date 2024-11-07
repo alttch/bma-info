@@ -1166,6 +1166,18 @@ Logging
 
 
 
+.. _eva4_py_macro_api_trace:
+
+trace - log trace message
+-------------------------
+
+Logs a message with trace level
+
+.. code-block:: python
+
+    trace('this is a test trace message')
+
+
 .. _eva4_py_macro_api_debug:
 
 debug - log debug message

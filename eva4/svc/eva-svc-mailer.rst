@@ -65,6 +65,10 @@ send
      - String/Vec<String>
      - recipients (user accounts)
      - no
+   * - **sender**
+     - String
+     - override the default sender
+     - no
    * - **subject**
      - String
      - e-mail subject
@@ -73,7 +77,11 @@ send
      - String
      - e-mail text
      - no
+   * - **html**
+     - String
+     - e-mail html
+     - no
    * - **delayed**
      - float
-     - delay and group by sender/subject
+     - delay and group by sender/subject (plain-text only)
      - no
