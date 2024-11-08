@@ -17,4 +17,11 @@ interface LoginProps {
   register_globals?: boolean; // register window.$eva and set window.$eva.hmi
   form_header?: () => JSX.Element; // custom login form header
   form_footer?: () => JSX.Element; // custom login form footer
+  on_login_failed?: (err: EvaError) => LoginFailedAction | void;
+}
+
+enum LoginFailedAction {
+  Default = "default", // process login error as usual
+  Retry = "retry", // retry the login
+  Abort = "abort" // abort further processing, show the error message and login form
 }
