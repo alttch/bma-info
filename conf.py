@@ -174,7 +174,7 @@ html_title = 'BMA InfoSys'
 # of the sidebar.
 html_logo = 'images/logo.png'
 
-html_js_files = ['products.js']
+html_js_files = ['products.js', 'cookies_consent.js']
 
 html_css_files = [
     'css/style.css',
