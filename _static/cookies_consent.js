@@ -71,6 +71,8 @@
 
     const message = document.createElement("p");
     message.textContent = "This site uses cookies for analytics";
+    message.style.color = 'white';
+    message.style.marginTop = '20px';
 
     banner.appendChild(message);
 
