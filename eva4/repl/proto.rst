@@ -56,7 +56,8 @@ Bulk events
 
 where protocol flags byte is (bits)
 
-0-3 - encryption type (0 - none, 1 - AES-128-GCM, 2 - AES-256-GCM)
+0-3 - encryption type (0 - none, 1 - AES-128-GCM, not supported by EVA ICS, 2 -
+AES-256-GCM)
 
 4-5 - compression type (0 - none, 1 - bzip2)
 
