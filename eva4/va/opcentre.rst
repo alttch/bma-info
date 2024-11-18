@@ -304,3 +304,18 @@ IFrame
 
 The IFrame element **url** property has got the same URL formatting as
 :ref:`Image/image <eva4_va_opcentre_idc_image>`.
+
+Custom cliparts
+---------------
+
+To use custom cliparts, create a folder
+*pvt/vendored-apps/opcentre/idc/clipart/CLIPART_NAME* on the server and put the
+clipart images there. As soon as the folder is created, the images are
+available for dashboards:
+
+.. figure:: ./oc_ss/idc-clipart.png
+    :width: 300px
+    :alt: IDC clipart
+
+Each folder corresponds to a clipart category. The folders must contain image
+files only. Files with names starting with "_" symbol are reserved.
