@@ -646,12 +646,16 @@ item.announce
      - Description
      - Required
    * - **i**
-     - String
-     - Item OID or OID mask
+     - String/Vec<String>
+     - Item OID, OID mask or list
      - no
    * - **node (alias: src)**
      - String
      - filter items by node (use .local as an alias for the local one)
+     - no
+   * - **broadcast**
+     - bool
+     - to all bus clients (default: true) or for the sender only
      - no
 
 .. _eva4_eva.core__item.create:
