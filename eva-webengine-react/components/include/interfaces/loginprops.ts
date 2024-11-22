@@ -22,7 +22,7 @@ interface LoginProps {
   // eva.login_xopts = { data: response }. can be used e.g. to install various
   // CAPTCHA verification schemes
   prelogin_hook?: () => Promise<unknown>;
-  state_announce?: (state: HMIAppState) => void; // application state hook
+  state_announce?: (app_state: HMIAppState) => void; // application state hook
 }
 
 enum LoginFailedAction {
