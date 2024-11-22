@@ -22,10 +22,27 @@ interface LoginProps {
   // eva.login_xopts = { data: response }. can be used e.g. to install various
   // CAPTCHA verification schemes
   prelogin_hook?: () => Promise<unknown>;
+  state_announce?: (state: HMIAppState) => void; // application state hook
 }
 
 enum LoginFailedAction {
   Default = "default", // process login error as usual
   Retry = "retry", // retry the login
   Abort = "abort" // abort further processing, show the error message and login form
+}
+
+interface HMIAppState {
+  state: HMIAppStateKind;
+  svc_msg?: SvcMessage;
+  err?: EvaError;
+}
+
+export enum HMIAppStateKind {
+  LoginSession = "login_session",
+  LoginAuto = "login_auto",
+  Login = "login",
+  OtpSetup = "otp_setup",
+  OtpAuth = "otp_auth",
+  LoginForm = "login_form",
+  Active = "active"
 }
