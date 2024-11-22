@@ -18,6 +18,10 @@ interface LoginProps {
   form_header?: () => JSX.Element; // custom login form header
   form_footer?: () => JSX.Element; // custom login form footer
   on_login_failed?: (err: EvaError) => LoginFailedAction | void;
+  // if set, launched after the login button is pressed, the response is set as
+  // eva.login_xopts = { data: response }. can be used e.g. to install various
+  // CAPTCHA verification schemes
+  prelogin_hook?: () => Promise<unknown>;
 }
 
 enum LoginFailedAction {
