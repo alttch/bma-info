@@ -405,6 +405,10 @@ Services authenticate users via RPC calls with the following methods:
 
 * auth.key(key, timeout)
 
+The methods may accept an additional parameter "source" which can be used to
+provide additional information about the authentication source, e.g. IP
+address.
+
 .. note::
 
     Authentication RPC calls may contain additional payload fields which can be
