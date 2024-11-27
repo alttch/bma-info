@@ -27,6 +27,14 @@ filled by the engine automatically.
 
 * **api_uri** API URI (do not required if working in a web browser)
 
+* **ignore_password_set_on_next_login** If false (the default behavior), the
+  engine tries to login in with existing auth session, however rolls back to
+  login/password authentication in case if the credentials are set. if true,
+  the engine tries logging in with existing session even if login/password are
+  set in the engine (the authentication credentials may be set for further
+  re-login attempts) The flag is automatically cleared during the login
+  attempt.
+
 * **set_auth_cookies** if true (default), *auth* cookie is used to store API
   token.
 
