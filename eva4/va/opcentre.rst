@@ -319,3 +319,19 @@ available for dashboards:
 
 Each folder corresponds to a clipart category. The folders must contain image
 files only. Files with names starting with "_" symbol are reserved.
+
+Dashboard variables
+-------------------
+
+`UI Elements/Dashboard variable` component allows to define a switchable
+dashboard variable (string). As soon as a variable is defined, it can be used
+in all elements properties, as `${variable}`.
+
+.. figure:: ./oc_ss/idc-dashvar.png
+    :width: 600px
+    :alt: IDC dashboard variable
+
+E.g. a variable named `group` switches item groups in item value components
+when their `OID` property is set as:
+
+    `sensor:${group}/temperature`
