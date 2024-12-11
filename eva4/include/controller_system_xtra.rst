@@ -154,7 +154,7 @@ is 16-bit signed integer) values for errors.
 X509 authentication
 -------------------
 
-Remote systems agent can be authenticated using X509 client certificates. To
+Remote systems agents can be authenticated using X509 client certificates. To
 enable X509 authentication, follow these steps:
 
 Front-end configuration
@@ -244,6 +244,6 @@ store ("Computer certificates").
 
 .. note::
 
-   Starting from the build #10, FIPS-140 windows agent binary uses `AWS
-   Libcrypto <https://github.com/aws/aws-lc>`_ for certain cryptographic
-   operations. The library is FIPS-140-3 compliant.
+   Starting from the build #10, FIPS-140 windows agents use `AWS Libcrypto
+   <https://github.com/aws/aws-lc>`_ for certain cryptographic operations. The
+   library is FIPS-140-3 compliant.
