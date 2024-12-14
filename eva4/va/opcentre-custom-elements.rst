@@ -7,6 +7,10 @@ purposes, such as general UI elements, value displays, buttons, etc.
 To create a custom IDC element, a basic knowledge of TypeScript (JavaScript can
 be used as well) and `React <https://reactjs.org/>`_ is required.
 
+.. note::
+
+   IDC custom elements require EVA ICS 4.0.2 build 2024120401 or later.
+
 Creating a new element module
 =============================
 
