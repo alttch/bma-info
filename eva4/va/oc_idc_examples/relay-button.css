@@ -1,0 +1,9 @@
+.relay-label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.relay-button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

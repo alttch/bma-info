@@ -28,3 +28,4 @@ application development, see: :doc:`../ui` and
     ../eapi
     eapi_raw.rst
     ../repl/proto
+    ../va/opcentre-custom-elements

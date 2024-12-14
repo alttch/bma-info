@@ -335,3 +335,8 @@ E.g. a variable named `group` switches item groups in item value components
 when their `OID` property is set as:
 
     `sensor:${group}/temperature`
+
+Custom elements
+---------------
+
+See :doc:`opcentre-custom-elements` for custom elements development.
