@@ -6,6 +6,7 @@ import {
 } from "idc-custom-elements";
 import { useEvaState, get_engine } from "@eva-ics/webengine-react";
 import { Eva, EvaError, EvaErrorKind, ActionResult } from "@eva-ics/webengine";
+import packageInfo from "../package.json";
 import "./style.css";
 
 // Element parameters interface
@@ -110,3 +111,8 @@ const element = new IDCElement("relay-button", Element)
   .iconDraw(() => <div style={{ fontSize: 21, fontWeight: "bold" }}>R</div>);
 
 export default element.export();
+
+// output module name/version for debugging purposes, highly recommended
+console.debug(
+  `Element module ${packageInfo.name} v${packageInfo.version} loaded`
+);
