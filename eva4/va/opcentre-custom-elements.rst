@@ -100,7 +100,7 @@ Defining an element
             )
        .actions(false) // if set to true, the element viewer gets additional parameters for action handling
        .boxed(true) // If set to true, the element is placed into <div class="idc-element-box"></div> container
-                    // Useful, if a view returns e.g. a `canvas` or `input` HTML element directly
+                    // Useful if a view returns e.g. a `canvas` or `input` HTML element directly
        .description("Some element") // Element description, displayed in IDC sidebar
        .defaultValue("prop1", 12345) // Default value for an element property
        .defaultZIndex(10) // Default element z-index
