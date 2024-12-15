@@ -83,6 +83,27 @@ as well.
 
 Always installed by default, location: */opt/eva4/bin/eva-cloud-manager*
 
+JS CLI
+======
+
+EVA ICS `node.js <https://nodejs.org>`_ command-line tool, useful for UI
+development and certain deployment automation tasks.
+
+Can be both included into JS projects and used as a standalone tool. Calls
+:doc:`./svc/eva-hmi` HTTP API methods directly.
+
+Requires configuration file, equal to :doc:`WebEngine
+<../eva-webengine/config>`. The configuration must be placed either in
+`config.json` file in the current directory or specified with *\--config*
+argument.
+
+Usage example:
+
+.. code:: shell
+
+   # when running with npx, the client is installed automatically
+   npx eva-ics-cli --config ./public/config.json item.state i="#"
+
 Bus CLI
 =======
 
