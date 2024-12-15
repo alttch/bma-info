@@ -27,6 +27,11 @@ Execute:
 The command automatically creates a folder named `my-element` with a single
 dashboard element.
 
+.. note:: 
+
+    The default module bundler is `webpack`. The bundler can be switched to
+    `vite <https://vitejs.dev/>`_ by specifying `-b vite` option.
+
 The module contains a single TypeScript file `src/index.tsx`.
 
 To build the element module, execute:
@@ -58,7 +63,8 @@ Here are several options how to deploy the element module:
 
    To simplify the deployment process, it is recommended to pack all module
    resources (CSS, images, etc.) into a single file. Refer to `webpack
-   documentation <https://webpack.js.org/>`_ for more information.
+   <https://webpack.js.org/>`_ or `vite <https://vitejs.dev/>`_ documentation
+   for more information.
 
 After the element module is uploaded, refresh the web browser to load it. For
 debugging purposes, open the browser developer console. If `Verbose` console
