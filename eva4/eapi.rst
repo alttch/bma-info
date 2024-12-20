@@ -401,9 +401,12 @@ Authentication
 
 Services authenticate users via RPC calls with the following methods:
 
-* auth.user(login, password, timeout)
+* auth.user(login, password, timeout, xopts)
 
-* auth.key(key, timeout)
+* auth.key(key, timeout, xopts)
+
+Where `xopts` is an optional map with extra options, e.g. 2FA code, CAPTCHA
+etc.
 
 The methods may accept an additional parameter "source" which can be used to
 provide additional information about the authentication source, e.g. IP
@@ -428,6 +431,8 @@ Key managers must also respond to "key.get" method, providing id/key fields for
 replication and other services.
 
 Authentication services may implement additional methods:
+
+* reset.user(login, password, xopts) - reset user account (e.g. clear 2FA)
 
 * user.set_password(i, password, check_policy)
 
