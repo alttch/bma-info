@@ -118,6 +118,41 @@ cache.purge
    * - Returns
      - *nothing*
 
+.. _eva4_eva.aaa.msad__reset.user:
+
+reset.user
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Resets user account (e.g. clears 2FA)*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **login**
+     - String
+     - Account login
+     - **yes**
+   * - **password**
+     - String
+     - Account password (plain text)
+     - **yes**
+   * - **xopts**
+     - map<String/Any>
+     - Extra options map (e.g. otp=code for two-factor auth)
+     - no
+
 .. _eva4_eva.aaa.msad__user.get_profile_field:
 
 user.get_profile_field

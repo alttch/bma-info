@@ -1570,6 +1570,46 @@ test
     :response: ../../http_api_examples/test.resp
 
 
+.. _eva4_hmi_http__user.reset:
+
+user.reset
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Reset account (e.g. clear 2FA), the user must be logged in*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **password**
+     - String
+     - User password (plain), if required
+     - no
+   * - **xopts**
+     - Map<String, Any>
+     - Extra auth options
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/user.reset.req
+    :response: ../../http_api_examples/user.reset.resp
+
+
 .. _eva4_hmi_http__user_data.delete:
 
 user_data.delete
