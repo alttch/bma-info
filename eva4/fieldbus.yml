@@ -106,7 +106,7 @@
     - "" 
     - Any equipment with OPC-UA server access
     - Any 3rd party servers compatible with OPC Foundation specs
-- name: SNMP v1/v2c/v3
+- name: SNMP v1/v2/v3
   status: |
     v1/v2 traps: natively supported
 
@@ -128,7 +128,7 @@
     - AKCP securityProbe 5ESV-X20
     - AKCP securityProbe 5ESV-X60
     - ""
-    - Any equipment with SNMP v1/v2c trap signals
+    - Any equipment with SNMP v1/v2/v3 pull/traps
 - name: |
     TwinCAT/ADS
   status: Supported
