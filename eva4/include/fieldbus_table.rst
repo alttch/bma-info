@@ -157,7 +157,7 @@
 |                  |                                                             |                                                     | 
 |                  | Any 3rd party servers compatible with OPC Foundation specs  |                                                     | 
 +------------------+-------------------------------------------------------------+-----------------------------------------------------+
-| SNMP v1/v2c/v3   | AKCP SensorProbe2                                           | v1/v2 traps: natively supported                     | 
+| SNMP v1/v2/v3    | AKCP SensorProbe2                                           | v1/v2 traps: natively supported                     | 
 |                  |                                                             |                                                     | 
 |                  | AKCP SensorProbe4                                           | Full support: available via :doc:`../roboplc/index` | 
 |                  |                                                             |                                                     | 
@@ -189,7 +189,7 @@
 |                  |                                                             |                                                     | 
 |                  |                                                             |                                                     | 
 |                  |                                                             |                                                     | 
-|                  | Any equipment with SNMP v1/v2c trap signals                 |                                                     | 
+|                  | Any equipment with SNMP v1/v2/v3 pull/traps                 |                                                     | 
 +------------------+-------------------------------------------------------------+-----------------------------------------------------+
 | TwinCAT/ADS      | Beckhoff C6015                                              | Supported                                           | 
 |                  |                                                             |                                                     | 
