@@ -61,18 +61,15 @@ impl Worker<Message, Variables> for Puller {
     // The method `run` is mandatory for each worker.
     fn run(&mut self, context: &Context<Message, Variables>) -> WResult {
         let hub = context.hub();
-        // let us pull the sensor every 500ms and send the temperature via the hub
-        for _ in interval(Duration::from_millis(500)) {
+        // Let us pull the sensor every 500ms and send the temperature via the hub.
+        // The worker iterator loop is stopped in case if the controller goes to `stopping` state
+        // (got SIGTERM or SIGINT or terminated in any other way).
+        for _ in interval(Duration::from_millis(500)).take_while(|_| context.is_online()) {
             match self.sensor_mapping.read::<Sensor>() {
                 Ok(v) => hub.send(Message::Temperature(v.temperature)),
                 Err(e) => {
                     error!(worker=self.worker_name(), err=%e, "Modbus pull error");
                 }
-            }
-            // Stop the worker in case if the controller goes to `stopping` state (got SIGTERM or
-            // SIGINT or terminated in any other way).
-            if !context.is_online() {
-                break;
             }
         }
         Ok(())
