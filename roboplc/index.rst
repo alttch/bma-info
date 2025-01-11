@@ -43,6 +43,7 @@ See also:
    :caption: RoboPLC documentation
    :maxdepth: 1
 
+   benefits
    quickstart_hello
    quickstart_modbus
    config

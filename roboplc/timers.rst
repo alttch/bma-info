@@ -1,6 +1,8 @@
 Timers and intervals
 ********************
 
+.. contents::
+
 Timers
 ======
 

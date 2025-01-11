@@ -10,6 +10,8 @@ manager command.
 If the state file extension is `.json`, the state is saved in JSON format.
 Otherwise, the state is saved in MessagePack.
 
+.. contents::
+
 Required features and 3rd party crates
 ======================================
 

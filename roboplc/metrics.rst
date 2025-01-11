@@ -8,6 +8,8 @@ recommended to expose metrics from the program.
 
    To work with metrics, enable roboplc crate **metrics** feature.
 
+.. contents::
+
 Working with metrics
 ====================
 

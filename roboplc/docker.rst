@@ -8,6 +8,8 @@ Docker adds almost no overhead to the execution of PLC programs, running them
 in containers is more related to the security, isolation and deployment
 aspects.
 
+.. contents::
+
 Creating RoboPLC project for Docker
 ===================================
 

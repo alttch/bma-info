@@ -8,6 +8,8 @@ recommended to expose video streams from the program.
 
    To work with video streams, enable roboplc crate **rvideo** feature.
 
+.. contents::
+
 Working with video streams
 ==========================
 

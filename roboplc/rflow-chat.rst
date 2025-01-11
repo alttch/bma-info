@@ -8,6 +8,8 @@ create a chat-line HMI for debugging, testing or production purposes.
 
    To work with rflow, enable roboplc crate **rflow** feature.
 
+.. contents::
+
 Working with RFlow
 ==================
 
