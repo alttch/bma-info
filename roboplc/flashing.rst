@@ -63,6 +63,9 @@ available:
     #target = "x86_64-unknown-linux-gnu"
     #cargo-args = "--some-extra --cargo-arguments"
 
+    #[build.env]
+    #DOCKER_OPTS = "-v /some/folder:/some/folder"
+
     [build-custom]
     #command = "some complex command to build"
     #file = "target file to upload"
@@ -79,6 +82,11 @@ available:
 
 * **build.target** the remote target architecture. If not specified, the host
   architecture is tried to be detected automatically, using RoboPLC Manager API
+
+* **build.env** additional environment variables for the build process. E.g. if
+  certain crates are imported from local folders, specify `DOCKER_OPTS` to
+  mount the folder into the container as: `DOCKER_OPTS = "-v
+  /some/folder:/some/folder"`
 
 .. warning::
 
