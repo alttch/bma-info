@@ -133,7 +133,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         // The method sets "simulated" mode, which means all real-time settings such as scheduling,
         // CPU affinity and etc. are ignored. It is useful for debugging and testing the program on
         // a local machine.
-        roboplc::thread_rt::set_simulated();
+        roboplc::set_simulated();
     }
     // The controller instance
     let mut controller: Controller<Message, Variables> = Controller::new();

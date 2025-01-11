@@ -183,7 +183,7 @@ CPU governor to *performance* for the cores used by such ones:
 
 .. code:: rust
 
-   let _governor = roboplc::thread_rt::CpuGovernor::performance([1,2,3])?;
+   let _governor = roboplc::system::CpuGovernor::performance([1,2,3])?;
 
 The above code sets CPU governor to *performance* for cores 1, 2 and 3. Note
 that it is enough to set the governor to a single core per physical CPU.
@@ -231,7 +231,7 @@ Real-time thread parameters can not be set with "operation not permitted"
 
 .. code:: rust
 
-   use roboplc::thread_rt::SystemConfig;
+   use roboplc::system::SystemConfig;
 
    let _sys = SystemConfig::new().set("kernel/sched_rt_runtime_us", -1)
        .apply()
