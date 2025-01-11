@@ -49,6 +49,7 @@ See also:
    flashing
    docker
    state
+   timers
    metrics
    video
    rflow-chat
