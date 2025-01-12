@@ -117,6 +117,8 @@ A completely custom compilation can be done using the following settings
 If *build-custom* section is present and *command* field is specified, *build*
 section is ignored.
 
+.. _roboplc_flash:
+
 Flashing
 ========
 
@@ -198,3 +200,156 @@ e.g.:
 .. warning::
 
    As the file contains remote keys, make sure it has got proper permissions.
+
+.. _roboplc_rollback:
+
+Program rollback
+================
+
+.. note::
+
+   This feature requires :doc:`pro`.
+
+To check the versions available, execute a command:
+
+.. code:: shell
+
+    robo stat --show-versions
+
+The output is similar to:
+
+.. code::
+
+    Mode RUN
+    PID  2016131
+    Mem  66322432
+    Up   2
+
+    +---------+--------+---------------------------+
+    | Program | Exists | Created                   |
+    +---------+--------+---------------------------+
+    | current | YES    | 2025-01-10T11:15:54+01:00 |
+    +---------+--------+---------------------------+
+    | prev.0  | YES    | 2025-01-10T11:05:44+01:00 |
+    +---------+--------+---------------------------+
+
+The system keeps a single previous version of the program, "current" is the
+current active one, and "prev.0" is the previous one.
+
+In case of a problem with the current program, it is possible to quickly roll
+back to the previous:
+
+.. code:: shell
+
+    robo rollback
+
+The command accepts the same flags as the *flash*: the rollback procedure can
+be forced, without putting the system into *CONFIG* mode, the rolled back
+program can be started automatically etc.
+
+The rollback procedure can be also performed in RoboPLC Manager web interface.
+To roll back using the web interface, the system must be in *CONFIG* mode.
+
+.. figure:: ./ss/rollback.png
+    :width: 405px
+    :alt: Rollback
+
+.. warning::
+
+    When a program is rolled back, the current version is replaced with the
+    previous one. Backup of the current version is not performed.
+
+.. _roboplc_live_updates:
+
+Live updates
+============
+
+.. note::
+
+   This feature requires :doc:`pro`.
+
+Certain mission-critical configurations may require the system to be updated in
+live mode, without stopping the program. When a live update is performed, the
+program is not restarted with `systemd` but reloads its executable file. This
+can save up to dozens, sometimes hundreds of milliseconds and minimize the
+program downtime.
+
+Live update is available for both :ref:`flashing <roboplc_flash>` and
+:ref:`rollback <roboplc_rollback>` commands. Live update can be performed from
+command-line only.
+
+Preparing the program code to handle live updates
+-------------------------------------------------
+
+Despite the downtime is minimized as much as possible, the program starts from
+the beginning, so it is important to :doc:`save the current state <state>`
+before performing the live update.
+
+Code example. Create a live update handler function:
+
+.. code:: rust
+
+   fn live_update_handler(
+    context: &Context<Message, Variables>,
+    ) -> roboplc::controller::HandlerResult {
+        // get the persistent state lock
+        let data = context.variables().persistent_data.lock();
+        // save the state
+        roboplc::state::save(STATE_FILE, &*data)?;
+        // forget the lock to freeze all program workers during the live update
+        // process
+        std::mem::forget(data);
+        // in case if an error is returned, the live update process is aborted
+        Ok(())
+    }
+
+Instead of using `register_signals`, use `registers_signals_with_handlers
+<https://docs.rs/roboplc/latest/roboplc/controller/struct.Controller.html#method.register_signals_with_handlers>`_
+when launching the controller:
+
+.. code:: rust
+
+   controller.register_signals_with_handlers(|_| {}, live_update_handler, SHUTDOWN_TIMEOUT)?;
+   controller.block();
+
+Performing the live update
+--------------------------
+
+Execute `robo flash` or `robo rollback` with `--live` option:
+
+.. code:: shell
+
+    robo flash --live
+
+* Options `--force` and `--run` are not required, as the system is assumed to
+  be in *RUN* mode.
+
+* In case if the program is not running, a regular flashing is performed, equal
+  to `robo flash --force --run`.
+
+.. warning::
+
+    In rarely cases if the program fails to reload itself, it panics
+    immediately. As there program file is overridden during the live update,
+    the client must immediately execute either :ref:`rollback
+    <roboplc_rollback>` or :ref:`flash <roboplc_flash>` (`\--force` option is
+    recommended) to restore the previous working version.
+
+    The client can also try running live update again, which is equal to
+    flashing with the `\--force` and `\--run` options.
+
+Technical details
+-----------------
+
+When the live update is performed, the current program file is forcibly
+replaced, then the active program process receives `SIGUSR2` signal. The signal
+immediately launches the live update handler function and in
+case of no errors, calls `reload_executable
+<https://docs.rs/roboplc/latest/roboplc/fn.reload_executable.html>`_ method.
+
+The method determines the current program executable file and reloads it with
+`execvp` system call.
+
+Despite the live updates are supported by :doc:`pro` only, the feature is
+technically available and still can be used in custom deployment environments
+in the RoboPLC community edition.

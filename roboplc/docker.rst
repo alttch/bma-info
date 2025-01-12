@@ -103,3 +103,15 @@ Environment variables
 * **ROBOPLC_DOCKER_PORT** by default, the manager is available at
   127.0.0.1:7700. To override the port, set the `ROBOPLC_DOCKER_PORT`
   environment variable. To disable port mapping, set the variable to empty.
+
+Limitations
+===========
+
+As containerized programs do not support :doc:`flashing <flashing>`, certain
+:doc:`pro` features are not available as well:
+
+* :ref:`roboplc_rollback`
+
+* :ref:`roboplc_live_updates`
+
+Use the container manager / orchestrator to manage the program life cycle.

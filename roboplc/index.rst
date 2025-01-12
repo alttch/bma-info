@@ -55,6 +55,7 @@ See also:
    video
    rflow-chat
    hardware
+   pro
    license
    manager_license
 
