@@ -157,7 +157,7 @@ With RoboPLC:
         Duration::from_secs(600)).unwrap().install().unwrap();
 
    // Use it
-   gauge!("my_gauge", 42.0);
+   gauge!("my_gauge").set(42.0);
 
 Open :doc:`RoboPLC Manager <./config>` and enjoy.
 
