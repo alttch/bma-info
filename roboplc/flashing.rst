@@ -261,8 +261,8 @@ To roll back using the web interface, the system must be in *CONFIG* mode.
 
 .. _roboplc_live_updates:
 
-Live updates
-============
+Program live updates
+====================
 
 .. note::
 
