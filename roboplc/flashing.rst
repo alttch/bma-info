@@ -330,10 +330,10 @@ Execute `robo flash` or `robo rollback` with `--live` option:
 .. warning::
 
     In rarely cases if the program fails to reload itself, it panics
-    immediately. As there program file is overridden during the live update,
-    the client must immediately execute either :ref:`rollback
-    <roboplc_rollback>` or :ref:`flash <roboplc_flash>` (`\--force` option is
-    recommended) to restore the previous working version.
+    immediately. As the program file is overridden during the live update, the
+    client must immediately execute either :ref:`rollback <roboplc_rollback>`
+    or :ref:`flash <roboplc_flash>` (`\--force` option is recommended) to
+    restore the previous working version.
 
     The client can also try running live update again, which is equal to
     flashing with the `\--force` and `\--run` options.
@@ -352,4 +352,4 @@ The method determines the current program executable file and reloads it with
 
 Despite the live updates are supported by :doc:`pro` only, the feature is
 technically available and still can be used in custom deployment environments
-in the RoboPLC community edition.
+in RoboPLC community edition.
