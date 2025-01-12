@@ -9,7 +9,7 @@ Timers
 Timers are one of the primary automation component for almost any project.
 
 RoboPLC crate re-exports `AtomicTimer` component from
-`atomic_timer <https://crates.io/crates/atomic_timer>`_ crate, which is also a
+`atomic-timer <https://crates.io/crates/atomic-timer>`_ crate, which is also a
 part of RoboPLC project.
 
 The timer is truly atomic, meaning that it can be safely shared between threads
