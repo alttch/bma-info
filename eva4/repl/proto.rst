@@ -21,6 +21,12 @@ Events
 * Log and action state replication are not supported by default and has no any
   standard.
 
+A state event may contain extra data fields (meta/enabled), in this case the
+data is replicated as an inventory item instead of a state. This increases the
+payload size and overall system load and is not recommended unless the remote
+can not execute API calls to get the inventory data (e.g. Pub/Sub API is
+disabled).
+
 Tests
 =====
 
