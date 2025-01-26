@@ -178,10 +178,12 @@ An optional Python virtual environment can be configured using the command:
 
 .. code:: shell
 
-    /opt/eva4/sbin/eva-edit-python-venv
+    /opt/eva4/sbin/venvmgr edit
 
 or by editing "eva/config/python-venv" registry key in :doc:`eva-shell<cli>` or
 in other tools.
+
+After configuring, rebuild the virtual environment:
 
 .. code:: shell
 
