@@ -167,3 +167,37 @@ Connecting untrusted remote nodes
 =================================
 
 See :ref:`eva4_repl_untrusted` and :ref:`eva4_zfrepl_untrusted`.
+
+Enhanced memory protection
+==========================
+
+Starting from EVA ICS 4.0.2 build 2025012701 the memory allocator has been
+switched to `mimalloc <https://en.wikipedia.org/wiki/Mimalloc>`_.  This
+allocator has got additional security features to prevent common heap attacks
+even before a system vulnerability is discovered:
+
+* All internal memory pages are surrounded by guard pages and the heap metadata
+  is behind a guard page as well (so a buffer overflow exploit cannot reach
+  into the metadata).
+
+* All free list pointers are encoded with per-page keys which is used both to
+  prevent overwrites with a known pointer, as well as to detect heap
+  corruption.
+
+* Double frees are detected (and ignored).
+
+* The free lists are initialized in a random order and allocation randomly
+  chooses between extension and reuse within a page to mitigate against attacks
+  that rely on a predicable allocation order. Similarly, the larger heap blocks
+  allocated by the allocator from the OS are also address randomized.
+
+To enable secure mode in the memory allocator, either compile EVA ICS with
+"secure" feature of the `mimalloc crate <https://crates.io/crates/mimalloc>`_
+or contact the product vendor for a dedicated secure distribution (available
+for Enterprise customers).
+
+.. note:: 
+
+   The secure mode reduces the allocator performance up to 25% which can
+   seriously affect high-loaded or real-time-critical EVA ICS nodes.
+
