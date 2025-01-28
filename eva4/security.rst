@@ -163,11 +163,6 @@ Limitations:
 * :doc:`svc/eva4-svc-repl-legacy` does not use FIPS-complaint cryptographic
   methods.
 
-Connecting untrusted remote nodes
-=================================
-
-See :ref:`eva4_repl_untrusted` and :ref:`eva4_zfrepl_untrusted`.
-
 Enhanced memory protection
 ==========================
 
@@ -201,3 +196,7 @@ for Enterprise customers).
    The secure mode reduces the allocator performance up to 25% which can
    seriously affect high-loaded or real-time-critical EVA ICS nodes.
 
+Connecting untrusted remote nodes
+=================================
+
+See :ref:`eva4_repl_untrusted` and :ref:`eva4_zfrepl_untrusted`.
