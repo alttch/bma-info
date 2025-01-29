@@ -102,10 +102,88 @@
       Converts OID to path
       
 
+.. py:class:: Registry(service)
+   :module: evaics.sdk
+
+   Service registry helper class. All key names are relative to
+   eva/svc_data/<service_id>
+   
+   
+   .. py:method:: Registry.key_decrement(key)
+      :module: evaics.sdk
+   
+      Decrement key value
+      
+      :param key: key name
+      
+      :returns: new key value
+      
+   
+   .. py:method:: Registry.key_delete(key)
+      :module: evaics.sdk
+   
+      Delete key
+      
+      :param key: key name
+      
+   
+   .. py:method:: Registry.key_delete_recursive(key)
+      :module: evaics.sdk
+   
+      Delete key and all subkeys
+      
+      :param key: key name
+      
+   
+   .. py:method:: Registry.key_get(key)
+      :module: evaics.sdk
+   
+      Get key value
+      
+      :param key: key name
+      
+      :returns: key value
+      
+   
+   .. py:method:: Registry.key_get_recursive(key)
+      :module: evaics.sdk
+   
+      Get all key-value pairs
+      
+      :param key: key name
+      
+      :returns: list of [key, value] pairs
+      
+   
+   .. py:method:: Registry.key_increment(key)
+      :module: evaics.sdk
+   
+      Increment key value
+      
+      :param key: key name
+      
+      :returns: new key value
+      
+   
+   .. py:method:: Registry.key_set(key, value)
+      :module: evaics.sdk
+   
+      Set key value
+      
+      :param key: key name
+      :param value: key value
+      
+
 .. py:class:: Service()
    :module: evaics.sdk
 
    The primary service class
+   
+   Useful varibles:
+   
+   self.data_path - service data path (None for nobody user)
+   
+   self.registry - service registry manager (available after init)
    
    
    .. py:method:: Service.block(prepare=True)
