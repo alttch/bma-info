@@ -49,7 +49,7 @@ With pure Rust/cargo:
 * Find the I/O is not reliable. Patch the crate. Replace `std` I/O components
   with some wrappers. Manually handle errors.
 
-With pure Rust/cargo:
+With RoboPLC:
 
 * A dozen of protocols are supported out of the box. Others can be added either
   as-is or easily modified to use the provided reliable I/O wrappers.
