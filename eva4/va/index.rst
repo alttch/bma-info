@@ -73,7 +73,7 @@ the command line as well as entering the system shell remotely.
    disable for mission-critical systems. Also, ensure the web application is
    protected with SSL if used in untrusted or public networks.
 
-The terminal can be also opened-closed with a keyboard shortcut *Alt+`*
+The terminal can be also opened/closed with a keyboard shortcut *Alt+`*
 
 Note that the web terminal is not a complete replacement for SSH access and
 certain applications may not work correctly (known issues: Midnight Commander,
