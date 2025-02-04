@@ -250,3 +250,89 @@ sh
       "exitcode": 0,
       "out": "STDOUT OUTPUT"
   }
+  
+
+.. _eva4_eva.filemgr.main__terminal.create:
+
+terminal.create
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Creates a terminal*
+   * - Parameters
+     - required
+   * - Returns
+     - Terminal ID (UUID packed as String)
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **dimensions**
+     - (u16, u16)
+     - Columns, Rows
+     - **yes**
+
+.. _eva4_eva.filemgr.main__terminal.kill:
+
+terminal.kill
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Kills a terminal*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Terminal ID (UUID packed as String)
+     - **yes**
+
+.. _eva4_eva.filemgr.main__terminal.sync:
+
+terminal.sync
+-------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Syncs terminal output*
+   * - Parameters
+     - required
+   * - Returns
+     - Terminal output buffer
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Terminal ID (UUID packed as String)
+     - **yes**
+   * - **input**
+     - String/Vec<u8>
+     - Input data
+     - no

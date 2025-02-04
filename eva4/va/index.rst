@@ -49,6 +49,36 @@ Short URL:
     :width: 505px
     :alt: Node system dashboard
 
+Web terminal
+~~~~~~~~~~~~
+
+The terminal button opens a web terminal for the current node.
+
+.. figure:: ../screenshots/va_sdash_terminal_button.png
+    :width: 300px
+    :alt: Terminal button
+
+Requires Terminal API to be enabled in :doc:`../svc/eva-filemgr`.
+
+.. figure:: ../screenshots/va_sdash_terminal.png
+    :width: 505px
+    :alt: Web terminal
+
+The terminal opens :ref:`eva4_eva-shell` which allows to manage the node using
+the command line as well as entering the system shell remotely.
+
+.. note::
+
+   As the terminal is always opened with superuser privileges, it should be
+   disable for mission-critical systems. Also, ensure the web application is
+   protected with SSL if used in untrusted or public networks.
+
+The terminal can be also opened-closed with a keyboard shortcut *Alt+`*
+
+Note that the web terminal is not a complete replacement for SSH access and
+certain applications may not work correctly (known issues: Midnight Commander,
+terminal multiplexers).
+
 Single sign-on and session sharing
 ==================================
 

@@ -224,7 +224,7 @@
       
       See also https://info.bma.ai/en/actual/eva4/iac.html#items
       
-      :param oids: list of items to create
+      :param items: list of items to create
       
    
    .. py:method:: Service.drop_privileges()
