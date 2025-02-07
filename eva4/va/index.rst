@@ -75,10 +75,6 @@ the command line as well as entering the system shell remotely.
 
 The terminal can be also opened/closed with a keyboard shortcut *Alt+`*
 
-Note that the web terminal is not a complete replacement for SSH access and
-certain applications may not work correctly (known issues: Midnight Commander,
-terminal multiplexers).
-
 Single sign-on and session sharing
 ==================================
 

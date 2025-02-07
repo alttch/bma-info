@@ -306,6 +306,37 @@ terminal.kill
      - Terminal ID (UUID packed as String)
      - **yes**
 
+.. _eva4_eva.filemgr.main__terminal.resize:
+
+terminal.resize
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Resizes a terminal*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Terminal ID (UUID packed as String)
+     - **yes**
+   * - **dimensions**
+     - (u16, u16)
+     - Columns, Rows
+     - **yes**
+
 .. _eva4_eva.filemgr.main__terminal.sync:
 
 terminal.sync
@@ -315,7 +346,7 @@ terminal.sync
    :header-rows: 0
 
    * - Description
-     - *Syncs terminal output*
+     - *Syncs terminal I/O*
    * - Parameters
      - required
    * - Returns
