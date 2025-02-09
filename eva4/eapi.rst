@@ -260,12 +260,12 @@ following payload:
 
 A special field "force" can be used with the value
 
-**update** updates item state even if the state is not changed (increases IEID
-         and updates state timestamp)
+* **update** - updates item state even if the state is not changed (increases
+  IEID and updates state timestamp)
 
-**full** or **true** does the same as *weak* but also allows to forcibly set
-   state of disabled items. This kind should be used only by admin interfaces
-   or system software.
+* **full** or **true** -  does the same as *update* but also allows to forcibly
+  set state of disabled items. This kind should be used only by admin
+  interfaces or system software.
 
 See also: :doc:`sdk/eapi_raw`.
 
