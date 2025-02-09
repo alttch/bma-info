@@ -16,6 +16,27 @@ Bus events are sent via UDP packets as-is (see :ref:`EAPI Core events
 Incoming payload
 ================
 
+The service accepts two kinds of payloads: state and RPC call. The payload
+kind is auto-detected.
+
+The service accept both single and bulk payloads. The bulk payloads must be
+sent as arrays.
+
+State
+-----
+
+State payloads should have fields:
+
+* **oid** - item OID
+* **status** - item status
+* **value** - item value (optional)
+* **t** - item state set time
+
+Extra fields are ignored.
+
+RPC call
+--------
+
 3rd-party applications can execute any bus methods via RPC payload which has
 the following fields:
 
