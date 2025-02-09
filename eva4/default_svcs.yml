@@ -345,6 +345,22 @@
   api: svc/repl/eapi.yml
   txt: |
     .. include:: ../include/repl.rst
+- nam: eva.repl.N
+  grp: repl
+  exe: svc/eva-repl-uni
+  des: Data diode replication service
+  txt: |
+  tpl: svc-tpl-replication-uni.yml
+  api: svc/repl-uni/eapi.yml
+  txt: |
+    Allows to replicate nodes via uni-directional network. The configuration is
+    similar to :doc:`../svc/eva-repl` with the following differences:
+
+    * Incoming API calls can not be enabled.
+    * Only :doc:`../../psrt/index` is supported as the pub/sub server. Requires
+      the server to accept UDP publish requests.
+
+    See also: :ref:`eva4_replication_diodes`.
 - nam: eva.repl.legacyN
   grp: repl
   exe: venv/bin/eva4-svc-repl-legacy

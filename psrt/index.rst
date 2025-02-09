@@ -27,10 +27,15 @@ loss.
 
     <h2>Why not MQTT</h2>
 
-We love MQTT. And we use MQTT a lot. There are cases where MQTT ideally fits
-requirements. However, for some it does not satisfy our speed and reliability
-needs and produces additional overhead. That is why we invented PSRT and use it
-as the primary protocol for :doc:`../eva4/index` in large Enterprise setups.
+* We love MQTT. And we use MQTT a lot. There are cases where MQTT ideally fits
+  requirements. However, for some it does not satisfy our speed and reliability
+  needs and produces additional overhead. That is why we invented PSRT and use
+  it as the primary protocol for :doc:`../eva4/index` in large Enterprise
+  setups.
+
+* MQTT servers usually do not accept UDP publish messages, which makes
+  impossible to use MQTT in uni-directional setups. PSRT can work with UDP
+  frames out-of-the-box, both plain and encrypted.
 
 .. raw:: html
 

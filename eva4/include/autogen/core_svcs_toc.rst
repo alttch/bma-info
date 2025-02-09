@@ -7,6 +7,7 @@
     svc/eva-aaa-msad
     svc/eva-svc-alarms
     svc/eva4-svc-bridge-udp
+    svc/eva-repl-uni
     svc/eva-svc-generator
     svc/eva-controller-dobj
     svc/eva-aaa-acl

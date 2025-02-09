@@ -106,6 +106,10 @@ Data replication
      - Suggested name
      - Executable
      - Deployed
+   * - :doc:`Data diode replication service<svc/eva-repl-uni>`
+     - :doc:`eva.repl.N<svc/eva-repl-uni>`
+     - svc/eva-repl-uni
+     - 
    * - :doc:`Legacy (V3) replication service<svc/eva4-svc-repl-legacy>`
      - :doc:`eva.repl.legacyN<svc/eva4-svc-repl-legacy>`
      - venv/bin/eva4-svc-repl-legacy

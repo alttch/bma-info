@@ -338,3 +338,84 @@ nodes ("central" in our example).
    * middle nodes must have a dedicated uplink collector instance. In the
      instance configuration, "replicate_remote" option must be enabled for
      mailboxes to let the service store events which come from remote nodes.
+
+Uni-directional replication
+===========================
+
+Uni-directional replication is recommended for read-only mission-critical
+systems.
+
+* No API calls are allowed from remote nodes
+
+* Actions/scenario executions from remotes are impossible
+
+.. figure:: schemas/repl-uni.png
+    :width: 505px
+    :alt: Uni-directional replication
+
+Bi-directional networks
+-----------------------
+
+In the regular TCP/IP networks, the setup is similar to the regular
+replication, with the following differences in the :doc:`./svc/eva-repl`
+configuration:
+
+* *config/api_enabled* must be set to *false* to disable API calls via pub/sub from remotes.
+
+* *config/interval* must be specified to let the service periodically submit
+  inventory to remotes. Without the inventory synchronization, state events are
+  ignored.
+
+* On the remote side a proper node timeout must be set. As the remote does not
+  perform reload/liveness API calls, the timeout must be greater either than
+  the maximal event frequency or the interval of the inventory synchronization.
+
+.. _eva4_replication_diodes:
+
+Uni-directional networks (Data diodes)
+--------------------------------------
+
+Regular replication
+~~~~~~~~~~~~~~~~~~~
+
+The most recommended and convenient way for high-loaded nodes. Requires
+:doc:`./svc/eva-repl-uni` to be setup on the local node, while the remote uses
+a :doc:`./svc/eva-repl` instance.
+
+Note that :doc:`./svc/eva-repl-uni` supports bulk sends only. Events/inventory
+payloads are sent in bulk to preserve the network/pub/sub server resources,
+with optional compression.
+
+.. figure:: schemas/repl-uni-diode.png
+    :width: 595px
+    :alt: Uni-directional node replication with data diodes
+
+State synchronization
+~~~~~~~~~~~~~~~~~~~~~
+
+A scenario with simpler architecture, recommended in case if there are only
+parts of the network protected by data diodes (e.g. the fieldbus network).
+
+In this scenario:
+
+* A special node twin is installed inside the protected network.
+
+* All :doc:`items <./items>` must be deployed on both nodes: the protected and
+  the regular. The local items act as the are part of the regular node
+  inventory.
+
+* :doc:`./svc/eva4-svc-bridge-udp` service is used to synchronize the states
+  between the protected and the regular nodes.
+
+* The nodes can work standalone, the further pub/sub replication is optional.
+
+* In case of standalone, a pub/sub server is not required.
+
+.. figure:: schemas/repl-uni-twinsync.png
+    :width: 505px
+    :alt: Twin synchronization with data diodes
+
+.. note::
+
+   If the bridge service is deployed with *eva.controller.* prefix, the items
+   from the protected node are created automatically on the regular one.
