@@ -106,8 +106,8 @@ Replication
       store.dispatch({ type: "eva/processServerInfo", payload: data });
     });
 
-
-Usage:
+Usage
+-----
 
 .. code:: react
 
