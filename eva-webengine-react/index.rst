@@ -53,6 +53,7 @@ template):
    commons
    components/index
    hooks
+   redux
 
 .. figure:: wer_dark.png
     :width: 400

@@ -114,5 +114,19 @@
   alias: Eva.register_state_block
 - name: Eva#unregister_state_block
   alias: Eva.unregister_state_block
+- name: Eva#enable_event_map
+  alias: Eva.enable_event_map
+- name: Eva#subscribe_event_topic
+  alias: Eva.subscribe_event_topic
+- name: Eva#subscribe_event_topics
+  alias: Eva.subscribe_event_topics
+- name: Eva#unsubscribe_event_topic
+  alias: Eva.unsubscribe_event_topic
+- name: Eva#unsubscribe_event_topics
+  alias: Eva.unsubscribe_event_topics
+- name: Eva#unsubscribe_all_event_topics
+  alias: Eva.unsubscribe_all_event_topics
 - name: disableTabFreeze
   alias: disableTabFreeze
+- name: defaultSessionState
+  alias: defaultSessionState

@@ -88,6 +88,12 @@
     Clear engine authenication credentials
 
 
+.. js:function:: Eva.enable_event_map()
+
+    Enables pub/sub event map. Usually not required to be called manually, as
+    called automatically as soon as there is a subscription performed.
+
+
 .. js:function:: Eva.erase_token_cookie()
 
     Erase auth token cookie
@@ -347,7 +353,7 @@
     :type oid: string
     :return: item status(int) or undefined if no object found
 
-.. js:function:: Eva.stop(keep_auth)
+.. js:function:: Eva.stop(keep_auth, further_restart)
 
     Stop the engine
     
@@ -358,6 +364,26 @@
     :type keep_auth: boolean
     :return: Promise object
     :async: Async function/Promise
+
+.. js:function:: Eva.subscribe_event_topic(topic, fn)
+
+    Subscribe to an event topic
+
+    :param topic: event topic
+    :type topic: string
+    :param fn: event handler
+    :type fn: EventHandler
+    :return: true if subscription was successful
+
+.. js:function:: Eva.subscribe_event_topics(topics, fn)
+
+    Subscribe to multiple event topics
+
+    :param topics: event topics
+    :type topics: Array.<string>
+    :param fn: event handler
+    :type fn: EventHandler
+    :return: true if subscription was successful
 
 .. js:function:: Eva.system_name()
 
@@ -371,6 +397,31 @@
 
     :param name: block name
     :type name: string
+
+.. js:function:: Eva.unsubscribe_all_event_topics(fn)
+
+    Unsubscribe from all event topics
+
+    :param fn: event handler
+    :type fn: EventHandler
+
+.. js:function:: Eva.unsubscribe_event_topic(topic, fn)
+
+    Unsubscribe from an event topic
+
+    :param topic: event topic
+    :type topic: string
+    :param fn: event handler
+    :type fn: EventHandler
+
+.. js:function:: Eva.unsubscribe_event_topics(topics, fn)
+
+    Unsubscribe from multiple event topics
+
+    :param topics: event topics
+    :type topics: Array.<string>
+    :param fn: event handler
+    :type fn: EventHandler
 
 .. js:function:: Eva.unwatch(oid, func)
 
@@ -430,6 +481,11 @@
     :type uuid: string
     :param func: function to be called
     :type func: function
+
+.. js:function:: defaultSessionState()
+
+    The default session state
+
 
 .. js:function:: disableTabFreeze(keep_visible)
 
