@@ -167,6 +167,15 @@ the program:
    It is not recommended to execute programs remotely on live production
    systems.
 
+To set environment variables, use either *-e*/*--env* option, or specify them
+in the *robo.toml* file:
+
+.. code:: toml
+
+    [x.env]
+    VAR1 = "value1"
+    VAR2 = "value2"
+
 Switching between remotes
 =========================
 
