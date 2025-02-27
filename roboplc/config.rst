@@ -241,8 +241,8 @@ Real-time thread parameters can not be set with "operation not permitted"
 Hardware
 ========
 
-RoboPLC has been working on various hardware, from Raspberry Pi Zero to big
-industrial machines.
+RoboPLC works on various hardware, from Raspberry Pi Zero to big industrial
+machines.
 
 * RoboPLC is designed to run on bare-metal Linux, with no virtualisation.
 
@@ -252,3 +252,5 @@ industrial machines.
 * Always remember that RoboPLC is a software, not a hardware. It can not do a
   miracle and turn $20-worth micro-computer into a high-performance industrial
   controller. Choose a proper hardware for your applications wisely.
+
+See more: :doc:`hardware`.

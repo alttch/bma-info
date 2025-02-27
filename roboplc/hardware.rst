@@ -19,9 +19,9 @@ Orange Pi 5              CSI IRQs 81/82 can block real-time tasks
 Raspberry Pi 4        
 Raspberry Pi 5
 Raspberry Pi Zero 2 W
+RevPi Connect            Raspberry Pi 4/4S-based
 UniPi Axon series        EOL
 UniPi Neuron series      Raspberry Pi 4-based
-RevPi Connect            Raspberry Pi 4/4S-based
 =======================  ====================================================
 
 Have a board working or having issues? `Please let us know!
