@@ -18,10 +18,13 @@ config:
   auth_svcs:
     - eva.aaa.localauth
   session:
-    timeout: 60
-    prolong: true
-    stick_ip: true
-    allow_list_neighbors: false
+    timeout: 60 # session timeout in seconds
+    prolong: true # prolong session on any activity
+    stick_ip: true # stick session to IP
+    allow_list_neighbors: false # allow list info for other logged in users
+    # allow concurrent sessions (default: true). setting the parameter to false
+    # disables concurrent sessions for all users except administrators
+    allow_concurrent: true
   user_data:
     max_records: 100
     max_record_length: 16384
