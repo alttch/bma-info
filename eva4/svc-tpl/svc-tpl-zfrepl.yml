@@ -98,6 +98,10 @@ config:
             # self-repairing. requires:
             # - a heartbeat sensor
             # - allow_fill set to true on the target server instance
+            # if not set, the client name is used as the remote node name. this
+            # allows to define e.g. different self-repair policies for a single
+            # node
+            #node: remote
             #self_repair:
               # heartbeat sensor, required
               # any sensor which is changed frequently enough, single OID or list
@@ -108,7 +112,7 @@ config:
               #history_db_svc: default
               # range to analyze (in seconds, e.g. 86400 - previous day)
               #range: 86400
-              # telemetry gap size (sec), if a gap is higher, self-repairing
+              # telemetry gap size (sec), if a gap is longer, self-repairing
               # is activated
               #gap: 5
     #server:
