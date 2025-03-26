@@ -168,3 +168,25 @@ The structure is used to carry register values and has the following fields:
 
 * `Data` - the data itself, the length must match the value, specified in the
   `Size` field.
+
+Errors
+------
+
+The protocol defines the standard error codes:
+
+==========  ==================================
+Error code  Description
+==========  ==================================
+0x0001      Unknown host (no route)
+0x0002      Invalid command (unsupported)
+0x0003      Invalid register
+0x0004      Invalid register offset
+0x0005      Invalid reply received
+0x00FC      Overflow (e.g. register)
+0x00F0      Invalid protocol version
+0x00F1      I/O error
+0x00F2      Invalid data
+0x00F3      Packer error
+0xFFFF      Generic error
+0x8000      Custom error codes (0x8000-0xFFFE)
+==========  ==================================
