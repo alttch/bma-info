@@ -54,6 +54,7 @@ See also:
    metrics
    video
    rflow-chat
+   rpdo
    hardware
    pro
    license
