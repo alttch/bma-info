@@ -17,7 +17,7 @@ Host
 Host is a process which supports RPDO communication. The Host supports commands:
 
 * `Ping` - check if the Host is alive
-* `ReadShaeredContext` - read shared context data
+* `ReadSharedContext` - read shared context data
 * `WriteSharedContext` - write shared context data
 * `WriteSharedContextUnconfirmed` - write shared context data without sending a
   confirmation reply
@@ -145,9 +145,9 @@ Command                        Code         Description
 Reply                          0x0000       Reply to another command, may contain data
 Error                          0x0001       Error reply, followed by 16-bit error code and optional UTF-8 message
 Ping                           0x0002       Ping command, contains no data
-ReadShaeredContext             0x0100       Read shared context, carries RawData
-WriteSharedContext             0x0101       Write shared context, carries RawData
-WriteSharedContextUnconfirmed  0x0102       Write unconfirmed (push), carries RawData, no reply sent back
+ReadShaeredContext             0x0003       Read shared context, carries RawData
+WriteSharedContext             0x0004       Write shared context, carries RawData
+WriteSharedContextUnconfirmed  0x0005       Write unconfirmed (push), carries RawData, no reply sent back
 Other                          0x8000       Any  custom commands, 0x8000-0xFFFF range
 =============================  ===========  =====================================================================
 
