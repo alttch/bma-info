@@ -148,7 +148,7 @@ Ping                           0x0002       Ping command, contains no data
 ReadShaeredContext             0x0003       Read shared context, carries RawData
 WriteSharedContext             0x0004       Write shared context, carries RawData
 WriteSharedContextUnconfirmed  0x0005       Write unconfirmed (push), carries RawData, no reply sent back
-Other                          0x8000       Any  custom commands, 0x8000-0xFFFF range
+Other                          0x0064       Any custom commands, 0x0064-0xFFFF range
 =============================  ===========  =====================================================================
 
 RawData
@@ -177,16 +177,16 @@ The protocol defines the standard error codes:
 ==========  ==================================
 Error code  Description
 ==========  ==================================
+0x0000      Generic error
 0x0001      Unknown host (no route)
 0x0002      Invalid command (unsupported)
 0x0003      Invalid register
 0x0004      Invalid register offset
 0x0005      Invalid reply received
-0x00FC      Overflow (e.g. register)
-0x00F0      Invalid protocol version
-0x00F1      I/O error
-0x00F2      Invalid data
-0x00F3      Packer error
-0xFFFF      Generic error
-0x8000      Custom error codes (0x8000-0xFFFE)
+0x0006      Overflow (e.g. register)
+0x0007      Invalid protocol version
+0x0008      I/O error
+0x0009      Invalid data
+0x0010      Packer error
+0x0064      Custom error codes (0x0064-0xFFFF)
 ==========  ==================================
