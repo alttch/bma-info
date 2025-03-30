@@ -48,6 +48,34 @@ values can be changed with :ref:`eva4_eva-shell` manually, as the following:
 
     eva item set sensor:sdktest/temp1 1 -v20
 
+Creating and debugging services with EVA ICS Python SDK
+=======================================================
+
+Starting from Python SDK 0.2.33, it is possible to create and debug services in
+more convenient way. The following steps are required to create and debug the
+service:
+
+* Deploy a service template on a EVA ICS node, mark the service disabled
+
+* If EVA ICS is running on a remote machine, ensure there is direct access to
+  the :ref:`IPC bus <eva4_config_bus>`
+
+Create a service file:
+
+.. code:: shell
+
+   python -m evaics.sdk new myservice
+
+The above command creates a file `myservice.py` in the current directory.
+
+The service can be run locally with the following command:
+
+.. code:: shell
+
+    python -m evaics.sdk run -b BUS_IP:PORT svc_id myservice.py
+
+If EVA ICS is running on a local machine, the parameter `-b` is not required.
+
 Service code
 ============
 
@@ -72,3 +100,4 @@ The following template can be used to quickly create a service instance with
 
 .. literalinclude:: ../../sdk-examples/rust/svc-example-temp/svc-tpl.yml
    :language: yaml
+
