@@ -29,6 +29,9 @@ config:
         #auto_enabled: false
         # max data block size (uncompressed)
         max_block_size: 2_000_000
+        # max size of the mailbox directory to allow manual filling (calling
+        # `mailbox.fill`)
+        #max_size_fill_allowed: 100_000_000
         # block time-to-live (sec) before creating a new block
         block_ttl_sec: 600
         # keep unrequested blocks for (sec)

@@ -201,6 +201,22 @@
       
       
    
+   .. py:method:: Service.call(method: str, params: dict | None = None, target='eva.core')
+      :module: evaics.sdk
+   
+      Call BUS/RT EAPI method
+      
+      :param method: API method
+      
+      Optional:
+      
+          params: API method parameters (dict)
+      
+          target: target service (default: eva.core)
+      
+      :returns: API response payload
+      
+   
    .. py:method:: Service.create_items(oids)
       :module: evaics.sdk
    
