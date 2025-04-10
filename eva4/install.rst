@@ -259,6 +259,36 @@ command how to update other nodes to the same build the test system has got.
 
    eva update --target-version VERSION:BUILD
 
+Offline nodes
+-------------
+
+Nodes without the Internet, restricted Internet access or extremely slow
+connection can be updated using the following procedure:
+
+* Determine the binary architecture used on the target system:
+
+.. code:: shell
+
+   eva -J version|jq -r .arch
+
+* Download the desired EVA ICS tarball from https://pub.bma.ai/eva4/, make sure
+  the architecture matches the one used on the target system, place the file to
+  into `/opt/eva4/` directory.
+
+* Download the `update.sh` script, located in the same directory as the tarball
+  on `pub.bma.ai`, place it into `/opt/eva4/` directory as well. If updating to
+  an older build, download `update-<BUILD_NUMBER>.sh` from `nightly` folder.
+
+* Execute:
+
+.. code:: shell
+
+   cd /opt/eva4
+   sudo bash update.sh
+
+* After the update is finished, delete the downloaded tarball and the
+  `update.sh` script.
+
 Running under a restricted user
 ===============================
 
