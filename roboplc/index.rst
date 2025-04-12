@@ -55,6 +55,7 @@ See also:
    video
    rflow-chat
    rpdo
+   hmi
    hardware
    pro
    license

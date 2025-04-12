@@ -28,6 +28,13 @@ To install RoboPLC Manager, add the repository and install the package:
    sudo apt-get install roboplc-manager
    sudo systemctl start roboplc.manager
 
+Optionally, install `RoboPLC CLI tool` for local management:
+
+.. code:: shell
+
+   curl -s https://pub.bma.ai/roboplc/cli/robo.current.linux-$(uname -m) \
+        -o /usr/local/bin/robo && chmod +x /usr/local/bin/robo
+
 The Web UI is available by default at *http://IP:7700*. The default management key is *roboplc*.
 
 .. figure:: ./ss/manager-program.png
@@ -216,6 +223,19 @@ move IRQs to shared CPUs (not isolated) or disable the devices which are not
 used.
 
 Refer to the documentation for OS distribution and hardware for more details.
+
+Mission-critical systems
+========================
+
+Linux-based PLCs should be used in mission-critical systems only accompanied by
+a watchdog. A watchdog can be either another Linux machine or a bare-metal MCU,
+which continuously monitors pulse of critical PLC threads and puts the system
+into emergency state in case of failure.
+
+`heartbeat-watchdog
+<https://docs.rs/heartbeat-watchdog/latest/heartbeat_watchdog/>`_ crate, which
+is a part of RoboPLC eco-system, can be used to easily implement such kind of
+monitoring.
 
 Troubleshooting
 ===============
