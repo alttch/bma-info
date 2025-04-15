@@ -239,6 +239,21 @@ Where `store` is the certificate store name (valid values are `My` for Personal
 store, `Trust` for Enterprise Trust store) and `cert` is the certificate
 subject name (CN).
 
+In case if the certificate subject contains additional fields, it is required to specify
+
+.. code:: yaml
+
+   # ....
+   cert: "FULL SUBJECT"
+
+The certificate resolver can also find the required certificated by its `sha1`
+(Thumbprint):
+
+.. code:: yaml
+
+   # ....
+   cert: id=aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+
 The certificate together with the private key must be installed in the system
 store ("Computer certificates").
 
