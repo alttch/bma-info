@@ -79,8 +79,8 @@ automatically started locally after building:
 
 .. note::
 
-   If the program inside the container is using privileged system calls, such
-   as heap pre-allocation, task scheduling, etc., the target container must be
+   If the program inside the container uses privileged system calls, such as
+   heap pre-allocation, task scheduling, etc., the target container must be
    started in privileged mode.
 
 To start the container in privileged mode with `robo`, use:
@@ -104,6 +104,9 @@ Environment variables
   127.0.0.1:7700. To override the port, set the `ROBOPLC_DOCKER_PORT`
   environment variable. To disable port mapping, set the variable to empty.
 
+* **ROBOPLC_DOCKER_OPTS** passed to the `docker` executable as-is (requires
+  `roboplc-cli` 0.6.2 or later).
+
 Limitations
 ===========
 
@@ -115,3 +118,20 @@ As containerized programs do not support :doc:`flashing <flashing>`, certain
 * :ref:`roboplc_live_updates`
 
 Use the container manager / orchestrator to manage the program life cycle.
+
+Docker on Windows, Mac OSX and some other platforms does not have certain
+Linux system calls, such as `sched_setscheduler`. These platforms should not be
+used for production, for testing and development purposes, use the following
+workaround:
+
+.. code:: rust
+
+  if !roboplc::is_production() || std::env::var("SIMULATE").is_ok_and(|v| v == "1") {
+       roboplc::set_simulated();
+  }
+
+Then run the containers as:
+
+.. code:: shell
+
+   ROBOPLC_DOCKER_OPTS="-e SIMULATE=1" /opt/roboplc/roboplc-cli/target/debug/robo flash -r
