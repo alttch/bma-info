@@ -130,8 +130,8 @@ workaround:
        roboplc::set_simulated();
   }
 
-Then run the containers as:
+Then run the container as:
 
 .. code:: shell
 
-   ROBOPLC_DOCKER_OPTS="-e SIMULATE=1" /opt/roboplc/roboplc-cli/target/debug/robo flash -r
+   ROBOPLC_DOCKER_OPTS="-e SIMULATE=1" robo flash -r
