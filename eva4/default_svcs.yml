@@ -245,6 +245,8 @@
     .. include:: ../include/timescale_svc.rst
   tpl: svc-tpl-db-timescale.yml
   api: svc/db-timescale/eapi.yml
+  xtr: |
+    .. include:: ../include/timescale_svc_xtra.rst
 - nam: eva.svc.expN
   grp: auto
   exe: svc/eva-svc-expiration

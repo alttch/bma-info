@@ -649,6 +649,62 @@ item.state_history
     :response: ../../http_api_examples/item.state_history.resp
 
 
+.. _eva4_hmi_http__item.state_history_combined:
+
+item.state_history_combined
+---------------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets state history combined (TimescaleDB only) for item(s), value only*
+   * - Parameters
+     - required
+   * - Returns
+     - State history combined payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+   * - **i**
+     - Vec<String>/String
+     - Item OID(s)
+     - **yes**
+   * - **t_start**
+     - f64/String
+     - Beginning timestamp (default: last 24 hours)
+     - no
+   * - **t_end**
+     - f64/String
+     - Ending timestamp (default: now)
+     - no
+   * - **fill**
+     - String
+     - Fill (nS/T/H/D/W e.g. 10T for 10-minute or nA for n records) + optional [:precision]
+     - **yes**
+   * - **xopts**
+     - Map<String, String>
+     - Extra options, depending on database type
+     - no
+   * - **database**
+     - String
+     - DB svc to get history from, w/o "eva.db." pfx (def: specified in default_db)
+     - no
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/item.state_history_combined.req
+    :response: ../../http_api_examples/item.state_history_combined.resp
+
+
 .. _eva4_hmi_http__item.state_log:
 
 item.state_log

@@ -84,7 +84,7 @@ state_history
      - no
    * - **xopts**
      - Map<String, String>
-     - Extra: vfn=fn for value grouping: mean/sum (d: mean)
+     - Extra: vfn=fn for value grouping: mean/sum (d: mean), fill_null=none|zero|nan|previous, rp=TABLE for custom rp_TABLE
      - no
    * - **compact**
      - bool
@@ -118,6 +118,82 @@ state_history
           "value": 15
       }
   ]
+  
+
+.. _eva4_eva.db.timescale__state_history_combined:
+
+state_history_combined
+----------------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Gets item state history combined (value only)*
+   * - Parameters
+     - required
+   * - Returns
+     - State history combined payload
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String/Vec<String>
+     - Item OID/OIDs
+     - **yes**
+   * - **t_start**
+     - f64
+     - Beginning timestamp (default: last 24 hours)
+     - no
+   * - **t_end**
+     - f64
+     - Ending timestamp (default: now)
+     - no
+   * - **fill**
+     - String
+     - Fill (nS/T/H/D/W e.g. 10T for 10-minute, requires ts_extension)
+     - **yes**
+   * - **precision**
+     - u32
+     - Round values to digits after commma
+     - no
+   * - **xopts**
+     - Map<String, String>
+     - Extra: vfn=fn for value grouping: mean/sum (d: mean), fill_null=none|zero|nan|previous, rp=TABLE for custom rp_TABLE
+     - no
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {
+      "data": {
+          "sensor:env/temp": [
+              20.0,
+              25.0,
+              22.0,
+              18.0,
+          ],
+          "sensor:env/hum": [
+              40.0,
+              45.0,
+              35.2,
+              34.0,
+          ]
+      },
+      "t": [
+          1745859600.0,
+          1745863200.0,
+          1745866800.0,
+          1745870400.0,
+      ]
+  }
   
 
 .. _eva4_eva.db.timescale__state_log:
@@ -160,7 +236,7 @@ state_log
      - no
    * - **xopts**
      - Map<String, String>
-     - Extra: offset=N for query offset
+     - Extra: offset=N for query offset, rp=TABLE for custom rp_TABLE
      - no
 
 
@@ -204,3 +280,6 @@ state_push
      - *none*
    * - Returns
      - *nothing*
+
+.. include:: ../include/timescale_svc_xtra.rst
+
