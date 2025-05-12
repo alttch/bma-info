@@ -52,6 +52,7 @@ See also:
    state
    timers
    metrics
+   logic
    video
    rflow-chat
    rpdo
