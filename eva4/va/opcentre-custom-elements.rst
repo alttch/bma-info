@@ -21,10 +21,10 @@ Execute:
 
 .. code-block:: bash
 
-   npx idc-create-custom-element my-element
-   cd my-element
+   npx idc-create-custom-element myelement
+   cd myelement
 
-The command automatically creates a folder named `my-element` with a single
+The command automatically creates a folder named `myelement` with a single
 dashboard element.
 
 .. note:: 
@@ -42,7 +42,7 @@ To build the element module, execute:
    npm run build
 
 This will create a `dist` folder with the compiled JavaScript file
-`my-element.js`.
+`myelement.js`.
 
 To use the element module in IDC, it should be placed in `pvt` folder of EVA
 ICS node, the default path is
