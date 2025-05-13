@@ -113,8 +113,8 @@ The `Logic Line` crate also provides built-in UI, which can be enabled by:
 When `exporter-ui` feature is enabled, the default interface is available at
 *http://HOST:9001*.
 
-Schema notation:
-----------------
+Schema notation
+---------------
 
 Active block:
 
