@@ -116,26 +116,6 @@ When `exporter-ui` feature is enabled, the default interface is available at
 Schema notation
 ---------------
 
-Active block:
-
-.. figure:: ./ss/ll-normal.png
-    :width: 165px
-    :alt: Normal block
-
-Inactive block:
-
-.. figure:: ./ss/ll-inactive.png
-    :width: 165px
-    :alt: Inactive block
-
-A block with external input:
-
-.. figure:: ./ss/ll-external.png
-    :width: 205px
-    :alt: External input block
-
-Logical OR:
-
-.. figure:: ./ss/ll-or.png
-    :width: 305px
-    :alt: Logical OR
+.. figure:: ./ss/ll-legend.png
+    :width: 705px
+    :alt: Logic lines legend
