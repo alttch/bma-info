@@ -33,7 +33,7 @@ Create a PSRT service instance with :ref:`eva4_eva-shell`:
    eva svc create eva.pubsub.default path/to/svc-tpl-psrtd.yml
 
 Note that in the proposed configuration the server listens on two sockets: TCP
-port 2873 and UNIX socket *var/psrt.sock* (created as
+port 2873 and UNIX socket *var/psrtd.sock* (created as
 */opt/eva4/var/psrtd.sock*.
 
 Also note that certain parameters, such as timeout, FIPS mode, number of
@@ -54,4 +54,4 @@ The best practice for :doc:`../eva4/svc/eva-repl` and
 :doc:`../eva4/svc/eva-zfrepl` is to use UNIX socket instead of TCP to speed up
 data exchange and minimize system load.
 
-Set socket path in the above service configurations as *var/psrt.sock*.
+Set socket path in the above service configurations as *var/psrtd.sock*.
