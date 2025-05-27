@@ -1,4 +1,4 @@
-command: /opt/eva4/svc/eva-svc-generator
+command: svc/eva-svc-generator
 bus:
   path: var/bus.ipc
 config:

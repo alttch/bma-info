@@ -761,6 +761,38 @@ item.state_log
     :response: ../../http_api_examples/item.state_log.resp
 
 
+.. _eva4_hmi_http__llc.list:
+
+llc.list
+--------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get logic line controller services*
+   * - Parameters
+     - required
+   * - Returns
+     - List of logic line controller services
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **k**
+     - String
+     - valid API key/token
+     - **yes**
+
+..  http:example:: curl wget httpie python-requests
+    :request: ../../http_api_examples/llc.list.req
+    :response: ../../http_api_examples/llc.list.resp
+
+
 .. _eva4_hmi_http__log.get:
 
 log.get
