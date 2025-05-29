@@ -135,6 +135,16 @@ programming languages.
     :width: 505px
     :alt: Data objects
 
+Logic
+=====
+
+The **Logic** page displays visualization for :doc:`Logic line
+<../sdk/rust/ll>` controllers.
+
+.. figure:: ./oc_ss/ll.png
+    :width: 555px
+    :alt: Logic
+
 Trends
 ======
 
