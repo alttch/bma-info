@@ -33,5 +33,11 @@ performs a simple automation, switching `unit:tests/fan` on when
    :width: 500px
    :alt: Logic Line Fan Control Example
 
-.. literalinclude:: ../../sdk-examples/rust/svc-example-ll.rs
+.. literalinclude:: ../../sdk-examples/rust/svc-example-ll/src/main.rs
+   :language: rust
+
+Logic line-enabled services require **logicline** SDK feature, `Cargo.toml`
+example:
+
+.. literalinclude:: ../../sdk-examples/rust/svc-example-ll/Cargo.toml
    :language: rust

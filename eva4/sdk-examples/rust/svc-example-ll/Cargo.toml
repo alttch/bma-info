@@ -1,0 +1,18 @@
+[package]
+name = "svc-example-ll"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+async-trait = "0.1"
+atomic-timer = "0.2.2"
+eva-common = { version = "0.3" }
+eva-sdk = { version = "0.3.70", features = ["logicline"] }
+log = "0.4"
+mimalloc = "0.1"
+parking_lot_rt = "0.12.1"
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "1.36", features = ["full"] }
+
+[features]
+std-alloc = []
