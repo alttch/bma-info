@@ -872,6 +872,10 @@ item.list
      - Vec<String>
      - List of additional masks to exclude
      - no
+   * - **include_binary_values**
+     - bool
+     - Include binary item values
+     - no
 
 
 *Return payload example:*
@@ -935,6 +939,10 @@ item.state
    * - **full**
      - bool
      - Return full item state (include meta and enabled fields)
+     - no
+   * - **include_binary_values**
+     - bool
+     - Include binary item values
      - no
 
 

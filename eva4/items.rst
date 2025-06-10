@@ -194,6 +194,31 @@ Unlike v3, item status 0 does not mean that the item is disabled (all items
 have got "enabled" property instead), however if an lvar has status=0, its
 state can not be updated from raw bus events, unless forced.
 
+Binary values
+-------------
+
+Starting from EVA ICS v4.0.2 build 2025061001 item values may contain binary
+data without affecting the system functionality. This is extremely useful to
+store images, video and audio stream frames and other BLOB data.
+
+Certain things should be considered when using binary values:
+
+* Binary values are not stored into the node inventory, mean they are available
+  in runtime only. If a node has been restarted, the binary value for an item
+  should be set again.
+
+* Binary values may affect system performance, in case if such present, the
+  services must be subscribed to required states only.
+
+* Binary values may contain data which is already compressed, in this case a
+  different :doc:`replication <./replication>` replication scenario may be required for
+  the efficiency.
+
+* Binary values are not returned by :ref:`eva4_eva.core__item.list` and
+  :ref:`eva4_eva.core__item.state` unless `include_binary_values` parameter is
+  set to `true`. Instead, the first 3 bytes (or less) are returned, which can
+  be used to determine the data type.
+
 Common item properties
 ======================
 
