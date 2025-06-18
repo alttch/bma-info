@@ -17,3 +17,4 @@ UI Components
    progressbar
    chart
    canvas
+   evaliveplayer

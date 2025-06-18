@@ -45,3 +45,4 @@ Installation:
    evahi
    advanced
    api
+   multimedia

@@ -16,6 +16,7 @@ System documentation
     iac
     replication
     local_cluster
+    streams
     containers/containers
     containers/k8s
     realtime

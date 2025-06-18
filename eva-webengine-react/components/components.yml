@@ -586,3 +586,57 @@
     - name: .eva-progressbar-critical-progress-color
       description: critical color
   css_example: true
+- name: EvaLivePlayer
+  preview_width: 300
+  description: |
+    Live video player
+  interfaces:
+    - name: EvaLivePlayerParams
+  parameters:
+    - name: oid
+      type: string
+      description: item OID
+      required: true
+    - name: streamName
+      type: string
+      description: An optional WebEngine custom stream name
+    - name: width
+      type: string | number
+      description: video player width
+    - name: height
+      type: string | number
+      description: video player height
+    - name: className
+      type: string
+      description: custom CSS class
+    - name: style
+      type: React.CSSProperties
+      description: custom CSS styles
+    - name: autoSize
+      type: EvaLivePlayerAutoSize (enum from eva-webengine-multimedia)
+      description: Automatically adjust player size
+    - name: onError
+      type: "(err: EvaError) => void"
+      description: Called on stream/decoder errors
+    - name: onFrame
+      type: "() => void"
+      description: Called on each video frame
+    - name: onEOS
+      type: "() => void"
+      description: Called on end of stream
+    - name: onChange
+      type: "(info: EvaVideoStreamInfo) => void"
+      description: Called on stream parameters init / change
+    - name: onInit
+      type: "(canvas: HTMLCanvasElement) => void"
+      description: Called on player initialization with the canvas element
+    - name: setPlayer
+      type: "(player: EvaLivePlayer) => void (class from eva-webengine-multimedia)"
+      description: Allows to get the player internal instance
+    - name: decoderHardwareAcceleration
+      type: boolean
+      description: "Use hardware acceleration for video decoding (default: true)"
+    - name: decoderFallbackToSoftware
+      type: boolean
+      description: "Fallback to software decoding if hardware acceleration fails (default: true)"
+    - *ENGINE

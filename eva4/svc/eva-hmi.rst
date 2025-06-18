@@ -311,6 +311,38 @@ session.list
   ]
   
 
+.. _eva4_eva.hmi.default__stream.list:
+
+stream.list
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Lists active data streams*
+   * - Parameters
+     - *none*
+   * - Returns
+     - *nothing*
+
+
+*Return payload example:*
+
+.. code:: json
+
+  [
+    {
+        "key": ".admin",
+        "oid": "sensor:s0"
+    },
+    {
+        "key": "token:3ce27e5c1840470fb918583d58835130aavwzACdjlwJAlzG",
+        "oid": "sensor:s0"
+    }
+  ]
+  
+
 .. _eva4_eva.hmi.default__tpl.reload:
 
 tpl.reload

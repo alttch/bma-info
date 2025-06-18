@@ -194,6 +194,8 @@ Unlike v3, item status 0 does not mean that the item is disabled (all items
 have got "enabled" property instead), however if an lvar has status=0, its
 state can not be updated from raw bus events, unless forced.
 
+.. _eva4_item_binary_values:
+
 Binary values
 -------------
 

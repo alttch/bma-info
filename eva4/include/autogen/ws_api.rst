@@ -28,6 +28,21 @@ ping
    * - Returns
      - {s:"pong"}
 
+.. _eva4_hmi_ws__stream.start:
+
+stream.start
+------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Starts a binary stream*
+   * - Parameters
+     - i=OID
+   * - Returns
+     - {s:"stream", d: "start"}, {s:"stream", d: "forbidden"}
+
 .. _eva4_hmi_ws__subscribe.log:
 
 subscribe.log
