@@ -88,3 +88,30 @@ Using :doc:`./sdk/index`, it is possible to create custom applications that can
 send and receive binary streams. EVA ICS SDK provides easy-to-use methods to
 manipulate and process item values, the same methods are used for binary
 streams.
+
+The video stream sensor header value must have the following format:
+
+=====  =====================================================
+Byte   Description
+=====  =====================================================
+0-2    Magic: EVS (0x45, 0x56, 0x53)
+3      Version (1)
+4      Format (codec)
+5-6    Width (little-endian)
+7-8    Height (little-endian)
+9      Metadata (bit 0 = key frame, other bits are reserved)
+=====  =====================================================
+
+Rest of the value contains the video frame data in the specified format.
+
+Formats defined:
+
+====  =========================
+Code  Description
+====  =========================
+10    H.264
+11    H.265
+12    VP8
+13    VP9
+14    AV1
+====  =========================
