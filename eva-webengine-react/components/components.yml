@@ -590,6 +590,10 @@
   preview_width: 300
   description: |
     Live video player
+
+    .. note::
+
+       Video decoding in web browser requires secure connection (HTTPS). See :doc:`../../eva4/hmi/frontend`.
   interfaces:
     - name: EvaLivePlayerParams
   parameters:

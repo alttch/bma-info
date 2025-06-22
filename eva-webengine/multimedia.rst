@@ -17,6 +17,10 @@ Provides video decoding and playing components to use with EVA ICS binary stream
 Example: video playback
 =======================
 
+.. note::
+
+   Video decoding in web browser requires secure connection (HTTPS). See :doc:`../eva4/hmi/frontend`.
+
 .. code-block:: typescript
 
    import {

@@ -8,6 +8,10 @@ EvaLivePlayer
 
 React component. Live video player
 
+.. note::
+
+   Video decoding in web browser requires secure connection (HTTPS). See :doc:`../../eva4/hmi/frontend`.
+
 
 Example
 =======

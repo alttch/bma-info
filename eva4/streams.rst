@@ -43,6 +43,10 @@ Multimedia streams in web applications
 See :doc:`../eva-webengine/multimedia` and
 :doc:`../eva-webengine-react/components/evaliveplayer`.
 
+.. note::
+
+   Video decoding in web browser requires secure connection (HTTPS). See :doc:`./hmi/frontend`.
+
 Stream replication between nodes
 ================================
 
