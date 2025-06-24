@@ -35,6 +35,37 @@ EAPI methods
 
 See :doc:`../eapi` for the common information about the bus, types, errors and RPC calls.
 
+.. _eva4_eva.bridge.ads__get_symbol_info:
+
+get_symbol_info
+---------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Get ADS symbol info tables*
+   * - Parameters
+     - required
+   * - Returns
+     - Symbol info tables
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **net_id**
+     - String/[u8; 6]
+     - Device AMS Net ID
+     - **yes**
+   * - **port**
+     - u16
+     - Device AMS Port
+     - **yes**
+
 .. _eva4_eva.bridge.ads__ping:
 
 ping

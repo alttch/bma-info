@@ -175,6 +175,13 @@
     but file deployment.
   tpl: svc-tpl-filemgr.yml
   api: svc/filemgr/eapi.yml
+- nam: eva.controller.camera.N
+  grp: misc
+  exe: svc/eva-videosink
+  des: Video sink controller
+  txt: Allows to sink video streams from cameras and other video sources
+  tpl: svc-tpl-videosink.yml
+  api: svc/videosink/eapi.yml
 - nam: eva.db.iN
   grp: db
   exe: svc/eva-db-influx
