@@ -3,7 +3,8 @@ Video sink controller
 
 .. contents::
 
-Allows to sink video streams from cameras and other video sources
+.. include:: ../include/videosink.rst
+
 
 Setup
 =====

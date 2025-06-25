@@ -128,7 +128,7 @@
   tpl: svc-tpl-modbus-slave.yml
   api: svc/svc-modbus-slave/eapi.yml
 - nam: eva.svc.tts.PROVIDER
-  grp: misc
+  grp: multimedia
   exe: venv/bin/eva4-svc-tts
   des: Text-to-speech service
   ins: py:eva4-svc-tts
@@ -176,10 +176,11 @@
   tpl: svc-tpl-filemgr.yml
   api: svc/filemgr/eapi.yml
 - nam: eva.controller.camera.N
-  grp: misc
+  grp: multimedia
   exe: svc/eva-videosink
   des: Video sink controller
-  txt: Allows to sink video streams from cameras and other video sources
+  txt: |
+    .. include:: ../include/videosink.rst
   tpl: svc-tpl-videosink.yml
   api: svc/videosink/eapi.yml
 - nam: eva.db.iN

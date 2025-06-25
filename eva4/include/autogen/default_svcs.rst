@@ -256,8 +256,8 @@ User interfaces, HMI
 
 See also: :doc:`ui`
 
-Other services
---------------
+Multimedia services
+-------------------
 
 .. list-table::
 

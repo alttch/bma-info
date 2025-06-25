@@ -34,6 +34,7 @@ GROUPS = [
     ('fb', 'Fieldbus and external equipment'),
     ('system', 'System services'),
     ('hmi', 'User interfaces, HMI'),
+    ('multimedia', 'Multimedia services'),
     ('misc', 'Other services'),
 ]
 
