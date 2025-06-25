@@ -1,5 +1,7 @@
 The service allows to sink video streams from cameras and other devices.
 
+See more: :doc:`../streams`.
+
 Preparing the system
 ====================
 

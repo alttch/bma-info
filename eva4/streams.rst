@@ -13,8 +13,8 @@ binary data, such as video, audio, images or custom binary streams.
     :width: 595px
     :alt: Video streams
 
-Commons
-=======
+General information
+===================
 
 It is recommended to use :ref:`eva4_sensor` item type for binary streams.
 
@@ -56,8 +56,13 @@ configuration is required. Certain setups may require a dedicated
 tuned, e.g. data compression may be not required if a stream already contains
 compressed data.
 
-Feeding data into streams
+Sinking data into streams
 =========================
+
+Video sink controller
+---------------------
+
+See :doc:`./svc/eva-videosink`.
 
 GStreamer plugins
 -----------------
