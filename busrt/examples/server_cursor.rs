@@ -22,6 +22,7 @@ use tokio::sync::Mutex;
 use tokio::time::sleep;
 
 // max cursor time-to-live before forcibly dropped
+// since 0.4.20 the time is prolonged every time the cursor is accessed
 const CURSOR_TTL: Duration = Duration::from_secs(30);
 
 // a database stream type alias
