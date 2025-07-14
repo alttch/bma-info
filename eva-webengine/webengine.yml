@@ -68,6 +68,9 @@
 - name: Eva#call
   alias: Eva.call
   async: true
+- name: Eva#api_call
+  alias: Eva.api_call
+  async: true
 - name: Eva#set_state_updates
   alias: Eva.set_state_updates
   async: true

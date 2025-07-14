@@ -68,11 +68,26 @@
     :type wait: boolean
     :async: Async function/Promise
 
-.. js:function:: Eva.call(method, p1, p2)
+.. js:function:: Eva.api_call()
+
+    Calls any available API function
+
+    :param options: The options for the API call.
+    :type options: Object
+    :param options.method: The API method to call.
+    :type options.method: string
+    :param options.params: Parameters to pass to the API method.
+    :type options.params: object or string or Array.<string>
+    :param options.serialization_kind: Optional serialization kind for the request.
+    :type options.serialization_kind: SerializationKind
+    :return: - A promise that resolves with the result of the API call.
+    :async: Async function/Promise
+
+.. js:function:: Eva.call(method, p1, p2, serialization_kind)
 
     Call API function
     
-    Calls any available SFA API function
+    Calls any available API function (old version, may be deprecated soon)
 
     :param method: API method
     :type method: string

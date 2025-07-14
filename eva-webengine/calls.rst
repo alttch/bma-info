@@ -10,9 +10,15 @@ Any API method can be called with low-level API *call* function:
 
 .. code:: javascript
 
-    eva.call("action", "unit:tests/lamp1", { v: 1 })
+    await eva.api_call({ method: "action" }, params: { i: "unit:tests/lamp1", v: 1 });
+
+Legacy way (not recommended, may be deprecated in future):
+
+.. code:: javascript
+
+    await eva.call("action", "unit:tests/lamp1", { v: 1 });
     // or 
-    eva.call("action", { i: "unit:tests/lamp1", v: 1 })
+    await eva.call("action", { i: "unit:tests/lamp1", v: 1 });
 
 If first parameter is a string, it's automatically set to "i" argument of API
 request.
@@ -60,6 +66,36 @@ in the same order they are prepared.
 Every prepared request in the bulk gets its own unique id. It is not
 recommended to execute *call* method on the same bulk more than once. Prepare a
 new bulk request instead.
+
+Binary data (send/receive)
+==========================
+
+It is highly recommended to perform MessagePack-serialized API calls for
+sending/receiving binary data from the server:
+
+.. code:: javascript
+
+   import { SerializationKind } from "@eva-ics/webengine";
+
+   await eva.api_call({
+        method: "x::somesvc::method_which_returns_blobs",
+        params: { "some": "params" },
+        serialization_kind: SerializationKind.MsgPack
+      });
+
+To let WebEngine work with MessagePack-serialized data, an external MessagePack
+library must be imported and its methods must be set in `eva.external.msgpack`
+as `decode(data)` and `encode(data)`. Example:
+
+.. code:: javascript
+
+   import { encode, decode } from "@msgpack/msgpack";
+
+   eva.external.msgpack = { decode, encode };
+
+.. note::
+
+   Binary API calls are not supported for bulk requests.
 
 Error codes
 ===========
