@@ -5,7 +5,7 @@ interface EvaLivePlayerParams {
   height?: number | string;
   className?: string;
   style?: React.CSSProperties;
-  autoSize?: EvaLivePlayerAutoSize;
+  autoSize?: EvaPlayerAutoSize;
   engine?: Eva;
   onError?: (error: EvaError) => void;
   onFrame?: () => void;

@@ -57,7 +57,7 @@ Parameters
      - no
      - custom CSS styles
    * - autoSize
-     - EvaLivePlayerAutoSize (enum from eva-webengine-multimedia)
+     - EvaPlayerAutoSize (enum from eva-webengine-multimedia)
      - no
      - Automatically adjust player size
    * - onError

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { type EvaVideoStreamInfo } from "@eva-ics/webengine-multimedia";
 import {
   EvaLivePlayer as EvaLivePlayerC,
-  EvaLivePlayerAutoSize
+  EvaPlayerAutoSize
 } from "@eva-ics/webengine-multimedia";
 
 const CustomVideoPlayer = () => {
@@ -54,7 +54,7 @@ const CustomVideoPlayer = () => {
           oid="sensor:streams/s0"
           style={{ backgroundColor: "black" }}
           setPlayer={setPlayer}
-          autoSize={EvaLivePlayerAutoSize.None}
+          autoSize={EvaPlayerAutoSize.None}
           onChange={(info: EvaVideoStreamInfo) => {
             console.log("Stream changed:", info);
             setStreamInfo(info);

@@ -617,7 +617,7 @@
       type: React.CSSProperties
       description: custom CSS styles
     - name: autoSize
-      type: EvaLivePlayerAutoSize (enum from eva-webengine-multimedia)
+      type: EvaPlayerAutoSize (enum from eva-webengine-multimedia)
       description: Automatically adjust player size
     - name: onError
       type: "(err: EvaError) => void"

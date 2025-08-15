@@ -25,7 +25,7 @@ Example: video playback
 
    import {
      EvaLivePlayer,
-     EvaLivePlayerAutoSize,
+     EvaPlayerAutoSize,
      set_engine
    } from "@eva-ics/webengine-multimedia";
 
@@ -39,7 +39,7 @@ Example: video playback
    const player = new EvaLivePlayer({
     canvas: canvas,
     name: "s0",
-    autoSize: EvaLivePlayerAutoSize.None,
+    autoSize: EvaPlayerAutoSize.None,
    });
    player.start("sensor:streams/s0");
 
