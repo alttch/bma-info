@@ -46,7 +46,7 @@ values can be changed with :ref:`eva4_eva-shell` manually, as the following:
 
 .. code:: shell
 
-    eva item set sensor:sdktest/temp1 1 -v20
+    eva item set sensor:sdktest/temp1 20
 
 Creating and debugging services with EVA ICS Python SDK
 =======================================================
