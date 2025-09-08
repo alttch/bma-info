@@ -47,7 +47,8 @@ To set up Raspberry Pi OS in read-only mode, follow the steps:
 
 * Flash the Raspberry Pi OS image to the SD card in the usual way.
 
-* Execute the following:
+* Do not eject SD card yet and execute the following on the system where it is
+  inserted:
 
 .. code:: bash
 
@@ -64,10 +65,11 @@ custom data partition size (in megabytes), use the argument: *\--data-size SIZE*
 The script also adds `fstab` entries to move certain folders (such as
 */var/log*, */tmp*) to *tmpfs* (RAM disk).
 
-* Boot the Raspberry Pi with the SD card. The system will be mounted in read-write mode at first
-  boot to generate required configuration files, ssh keys, etc.
+* Boot the Raspberry Pi with the SD card. The system will be mounted in
+  read-write mode at first boot to generate required configuration files, ssh
+  keys, etc.
 
-* Login to the system and execute the following:
+* Login and execute the following on the Raspberry Pi:
 
 .. code:: bash
 
