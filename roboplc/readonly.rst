@@ -89,7 +89,7 @@ The script also adds `fstab` entries to move certain folders (such as
 
    # optionally: configure DNS server as the network management will be unable to
    # do it itself
-   # echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
+   #echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf
 
    # turn system file systems read only and set the data folder permissions
    sudo chmod 700 /var/roboplc/data
