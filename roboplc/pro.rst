@@ -37,6 +37,8 @@ Features included
 
 * :ref:`roboplc_rollback`
 
+* :doc:`./readonly` out-of-the-box.
+
 * Priority commercial support
 
 Installing a license

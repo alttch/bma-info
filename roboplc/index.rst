@@ -58,6 +58,7 @@ See also:
    rpdo
    hmi
    hardware
+   readonly
    pro
    license
    manager_license
