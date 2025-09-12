@@ -90,7 +90,7 @@ Nrec.pull
    * - Parameters
      - required
    * - Returns
-     - Next video frames from the cursor or null if the end is reached
+     - A next video frame from the cursor or null if the end is reached
 
 .. list-table:: Parameters
    :align: left
