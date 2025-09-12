@@ -1,0 +1,16 @@
+POST /jrpc HTTP/1.1
+accept: application/json
+content-type: application/json
+host: localhost:7727
+
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "method": "rec.segmented",
+  "params": {
+    "i": "sensor:s0",
+    "k": "secretkey",
+    "limit_min": 100,
+    "t": 1625079600
+  }
+}

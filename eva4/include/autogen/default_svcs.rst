@@ -269,6 +269,10 @@ Multimedia services
      - :doc:`eva.svc.tts.PROVIDER<svc/eva4-svc-tts>`
      - venv/bin/eva4-svc-tts
      - requires `eva4-svc-tts <https://pypi.org/project/eva4-svc-tts/>`_ Python module
+   * - :doc:`Video server service<svc/eva-videosrv>`
+     - :doc:`eva.videosrv.N<svc/eva-videosrv>`
+     - svc/eva-videosrv
+     - requires :doc:`enterprise`
    * - :doc:`Video sink controller<svc/eva-videosink>`
      - :doc:`eva.controller.camera.N<svc/eva-videosink>`
      - svc/eva-videosink

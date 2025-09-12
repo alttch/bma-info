@@ -1,0 +1,18 @@
+# Video server service
+command: svc/eva-videosrv
+bus:
+  path: var/bus.ipc
+config:
+  buf_ttl_sec: 1
+  # local database
+  db: postgres:///eva?host=/var/run/postgresql&user=eva
+  # remote database
+  #db: postgres://USER:PASSWORD@HOST/DB
+  # custom gstreamer decode pipelines (required for 
+  #decode_pipeline:
+    #h264: h264parse ! openh264dec ! videoconvert
+    #h265: h265parse ! avdec_h265 ! videoconvert
+    #av1: av1dec ! videoconvert
+  panic_in: 1
+  queue_size: 8192
+user: eva

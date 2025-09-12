@@ -43,6 +43,7 @@
     svc/eva-db-timescale
     svc/eva-bridge-ads
     svc/eva-controller-ads
+    svc/eva-videosrv
     svc/eva-videosink
     svc/eva-controller-virtual
     svc/eva-zfrepl

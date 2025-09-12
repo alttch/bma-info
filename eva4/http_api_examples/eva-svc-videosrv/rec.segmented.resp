@@ -1,0 +1,78 @@
+HTTP/1.1 200 OK
+cache-control: no-cache, no-store
+content-length: 1077
+content-type: application/json
+date: Thu, 13 Aug 2021 00:00:00 GMT
+expires: 0
+pragma: no-cache
+
+{
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": [
+    {
+        "data": [
+            69,
+            86,
+            83,
+            235,
+            174,
+            186,
+            235,
+            174,
+            186
+        ],
+        "key_unit": true,
+        "t": 1755203121.461881
+    },
+    {
+        "data": [
+            69,
+            86,
+            83,
+            1,
+            10,
+            128,
+            2,
+            224,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "key_unit": false,
+        "t": 1755203121.478216
+    },
+    {
+        "data": [
+            69,
+            86,
+            83,
+            1,
+            10,
+            128,
+            2,
+            224,
+            1,
+            0,
+            0
+        ],
+        "key_unit": false,
+        "t": 1755203121.494861
+    },
+    {
+        "data": [
+            69,
+            86,
+            83,
+            1,
+            10,
+            128
+        ],
+        "key_unit": false,
+        "t": 1755203121.511463
+    }
+    ]
+}
+

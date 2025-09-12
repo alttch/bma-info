@@ -432,6 +432,26 @@
     lvars.
 
     .. include:: ../include/autogen/http_api-svc-alarms.rst
+- nam: eva.videosrv.N
+  grp: multimedia
+  exe: svc/eva-videosrv
+  des: Video server service
+  txt: |
+    Video server service
+  api: eva4-esvc/videosrv/eapi.yml
+  ent: true
+  tpl: svc-tpl-videosrv.yml
+  xtr: |
+    HTTP API
+    ========
+
+    The service provides certain methods via
+    :ref:`extra calls<eva4_hmi_http__x__TARGET_SVC__METHOD>` (the methods must
+    be called e.g. as *x::eva.videosrv.default::summary*)
+
+    To use HTTP API methods, a user must have read or write access to video sensors.
+
+    .. include:: ../include/autogen/http_api-svc-videosrv.rst
 - nam: "eva.zfrepl.N.collector|replicator"
   grp: repl
   exe: svc/eva-zfrepl
