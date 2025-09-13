@@ -346,6 +346,25 @@ Alarms
           level: 20
           # extra parameters
 
+Video recordings
+----------------
+
+:doc:`Video stream recordings <svc/eva-videosrv>` can be deployed as the
+following:
+
+.. code:: yaml
+
+    version: 4
+    content:
+      - node: .local
+        video_recordings:
+        - enabled: true
+          keep: 86400000.0
+          oid: sensor:s0
+        - enabled: false
+          keep: 30.0
+          oid: sensor:s1
+
 Extra commands
 --------------
 

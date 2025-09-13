@@ -64,6 +64,8 @@ Video sink controller
 
 See :doc:`./svc/eva-videosink`.
 
+.. _eva4_gst_plugins:
+
 GStreamer plugins
 -----------------
 

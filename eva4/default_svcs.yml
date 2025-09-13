@@ -437,7 +437,7 @@
   exe: svc/eva-videosrv
   des: Video server service
   txt: |
-    Video server service
+    .. include:: ../include/videosrv.rst
   api: eva4-esvc/videosrv/eapi.yml
   ent: true
   tpl: svc-tpl-videosrv.yml

@@ -5,7 +5,7 @@ Video server service
 
 **Requires** :doc:`../enterprise`.
 
-Video server service
+.. include:: ../include/videosrv.rst
 
 
 Setup
