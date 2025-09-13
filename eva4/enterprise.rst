@@ -83,6 +83,14 @@ When a license is applied, the alarm service is not limited in functionality.
 
 See :doc:`svc/eva-svc-alarms`.
 
+Video server service
+--------------------
+
+When a license is applied, the video server service is not limited in
+functionality.
+
+See :doc:`svc/eva-videosrv`.
+
 Low-latency real-time mode
 --------------------------
 
