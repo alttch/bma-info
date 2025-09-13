@@ -1,0 +1,108 @@
+Updating EVA ICS to 4.1.0
+*************************
+
+EVA ICS 4.1.0 brings new powerful multimedia engine, integrating CCTV and video
+analysis into industrial automation workflows.
+
+See also:
+
+* :doc:`../streams`
+* :doc:`../svc/eva-videosink`
+* :doc:`../svc/eva-videosrv`
+
+.. contents::
+
+Community edition
+=================
+
+No changes required, the existing architecture and API remain the same.
+
+Enterprise edition
+==================
+
+EVA ICS Enterprise Edition license keys required to be updated approximately
+every 2 years. This allows customers to ensure they use genuine EVA ICS
+software only and apply latest updates with new features and actual security
+patches.
+
+Starting from EVA ICS 4.1.0 build 2025091302, a new generation license keys are
+required to keep Enterprise services working. DO NOT apply the update before
+the keys are installed, as it will break Enterprise services functionality. Is
+the key update required?
+
+Check is the key update required
+--------------------------------
+
+On the target node execute command
+
+.. code:: shell
+
+    date -d @$(/opt/eva4/sbin/eva-registry-cli \
+      get-field eva/config/ee/license issued)
+
+* The license key, issued on and after Jan 1st 2025 do not needs to be updated
+
+* The license key, issued BEFORE Jan 1st 2025 NEEDS TO BE UPDATED. The same
+  approach is for the keys which have no issue date specified (command error:
+  Field not found: (code: -32005) no such field 'issued') How to update keys
+  Obtain new Enterprise edition keys
+
+How to update keys
+------------------
+
+Obtaining new Enterprise edition keys
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Contact your software integrator or Bohemia Automation Limited directly to
+obtain the new key files. Preparing the system
+
+Preparing the system
+~~~~~~~~~~~~~~~~~~~~
+
+Make sure the updated node has EVA ICS 4.0.2 build 2024100201 or later
+installed as earlier builds can not work with the license keys of newer
+generation. In case if the build is earlier than specified, either update it to
+the most recent 4.0.2 or schedule a maintenance window and temporarily disable
+the Enterprise services until the node is updated.
+
+Execute once
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli \
+      set-field .schema/eva/config/ee/license \
+      additionalProperties true -p boolean
+
+to allow the node to accept additional informational fields in the license keys.
+
+Applying a new key
+~~~~~~~~~~~~~~~~~~
+
+Execute the standard command to install the node license key:
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli set eva/config/ee/license \
+       --type json < eva-ics-ee-NAME.json
+
+If the key content is in the clipboard, execute
+
+.. code:: shell
+
+    /opt/eva4/sbin/eva-registry-cli set eva/config/ee/license --type json -
+
+and press ENTER for a new line, then `Ctrl+D` to finish input.
+
+To ensure the key is installed:
+
+* Check the key issue date (see above)
+* Restart any EVA ICS Enterprise service and ensure it started properly
+* The full node restart is NOT REQUIRED
+
+Updating the node
+~~~~~~~~~~~~~~~~~
+
+After the new generation license key is installed, update EVA ICS node using
+the standard approach: either with `eva update` or with `eva cloud update`
+command (for cloud updates - ensure all nodes have new generation keys
+installed).

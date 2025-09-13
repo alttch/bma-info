@@ -202,6 +202,8 @@ To rebuild the virtual environment from scratch, completely delete
 Updating
 ========
 
+See also: :doc:`./update/4.1.0`.
+
 Local nodes
 -----------
 
