@@ -157,6 +157,20 @@ putting a single or multiple values on the same canvas.
 
 Use the upper panel to customize general chart settings.
 
+CCTV
+====
+
+The **CCTV** page allows to watch :doc:`live video streams
+<../svc/eva-videosink>` and video recordings created with
+:doc:`../svc/eva-videosrv`.
+
+By clicking `Live`/`Recorded` buttons, it is possible to switch between live
+and recorded version of a video stream sensor.
+
+.. figure:: ./oc_ss/cctv.png
+    :width: 505px
+    :alt: CCTV
+
 .. _eva4_idc:
 
 IDC
