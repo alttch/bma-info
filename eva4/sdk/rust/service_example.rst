@@ -113,3 +113,31 @@ can be tested locally using `eva-lsl <https://crates.io/crates/eva-lsl>`_:
 
 If the EVA ICS node is on a remote machine, append `-b` (`--bus`) parameter and
 make sure the node bus accepts remote connections (`eva edit config/bus`).
+
+Deploying the service
+=====================
+
+(requires EVA ICS 4.1.0+)
+
+* Make sure the service executable has got a correct path in the node
+  configuration
+
+* Enable the service instance:
+
+.. code:: shell
+
+    eva svc enable my.svc.alarm_temp
+
+* On the local machine, build and deploy the service:
+
+.. code:: shell
+
+   # for different architectures, use appropriate --target value and/or cross-compilation toolchain
+   cargo build --release
+   eva-lsl flash my.svc.alarm_temp --binary ./target/release/svc-example-temp
+
+.. note::
+
+   It is forbidden to remotely flash services into system folders (/bin,
+   /usr/bin etc.) as well as "svc" and "venv/bin" subfolders in EVA ICS
+   installation folder.
