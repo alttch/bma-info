@@ -5,6 +5,9 @@ See more: :doc:`../streams`.
 Preparing the system
 ====================
 
+The service requires GStreamer for proper functioning. Install GStreamer and
+its plugins (example for Debian/Ubuntu):
+
 .. code:: bash
 
     sudo apt install -y gstreamer1.0-tools \
@@ -75,3 +78,8 @@ CAPs still do not need to be quoted:
    # ....
 
 Where the included file contains the required pipeline.
+
+Video recording
+===============
+
+See: :doc:`../svc/eva-videosrv`
