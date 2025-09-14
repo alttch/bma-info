@@ -27,8 +27,7 @@ patches.
 
 Starting from EVA ICS 4.1.0 build 2025091302, a new generation license keys are
 required to keep Enterprise services working. DO NOT apply the update before
-the keys are installed, as it will break Enterprise services functionality. Is
-the key update required?
+the keys are installed, as it will break Enterprise services functionality.
 
 Check is the key update required
 --------------------------------
@@ -40,12 +39,11 @@ On the target node execute command
     date -d @$(/opt/eva4/sbin/eva-registry-cli \
       get-field eva/config/ee/license issued)
 
-* The license key, issued on and after Jan 1st 2025 do not needs to be updated
+* The license key, issued on and after Jan 1st 2025 do not needs to be updated.
 
 * The license key, issued BEFORE Jan 1st 2025 NEEDS TO BE UPDATED. The same
   approach is for the keys which have no issue date specified (command error:
-  Field not found: (code: -32005) no such field 'issued') How to update keys
-  Obtain new Enterprise edition keys
+  Field not found: (code: -32005) no such field 'issued').
 
 How to update keys
 ------------------
@@ -54,7 +52,7 @@ Obtaining new Enterprise edition keys
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Contact your software integrator or Bohemia Automation Limited directly to
-obtain the new key files. Preparing the system
+obtain the new key files.
 
 Preparing the system
 ~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +94,9 @@ and press ENTER for a new line, then `Ctrl+D` to finish input.
 To ensure the key is installed:
 
 * Check the key issue date (see above)
+
 * Restart any EVA ICS Enterprise service and ensure it started properly
+
 * The full node restart is NOT REQUIRED
 
 Updating the node
