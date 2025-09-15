@@ -1542,6 +1542,37 @@ svc.deploy
      - Service parameters
      - no
 
+.. _eva4_eva.core__svc.flash:
+
+svc.flash
+---------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Flashes a local service with new binary*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Service ID
+     - **yes**
+   * - **binary**
+     - Vec<u8>
+     - New service binary
+     - **yes**
+
 .. _eva4_eva.core__svc.get:
 
 svc.get
