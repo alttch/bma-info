@@ -173,6 +173,11 @@ and recorded version of a video stream sensor.
     :width: 505px
     :alt: CCTV
 
+.. note::
+
+   The majority of the modern web browsers require secure connection to access
+   video codecs, so make sure the application is opened via HTTPS
+
 .. _eva4_idc:
 
 IDC
