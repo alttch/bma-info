@@ -117,7 +117,7 @@ make sure the node bus accepts remote connections (`eva edit config/bus`).
 Deploying the service
 =====================
 
-(requires EVA ICS 4.1.0+)
+(requires EVA ICS 4.1.0 build 2025091601 or later)
 
 * Make sure the service executable has got a correct path in the node
   configuration
