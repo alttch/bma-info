@@ -8,7 +8,7 @@ config:
   db: postgres:///eva?host=/var/run/postgresql&user=eva
   # remote database
   #db: postgres://USER:PASSWORD@HOST/DB
-  # custom gstreamer decode pipelines (required for 
+  # custom gstreamer decode pipelines (required for decoding methods, e.g. "rec.image")
   #decode_pipeline:
     #h264: h264parse ! openh264dec ! videoconvert
     #h265: h265parse ! avdec_h265 ! videoconvert
