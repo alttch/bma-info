@@ -213,8 +213,8 @@ Certain things should be considered when using binary values:
   services must be subscribed to required states only.
 
 * Binary values may contain data which is already compressed, in this case a
-  different :doc:`replication <./replication>` replication scenario may be required for
-  the efficiency.
+  different :doc:`replication <./replication>` scenario may be required for the
+  efficiency.
 
 * Binary values are not returned by :ref:`eva4_eva.core__item.list` and
   :ref:`eva4_eva.core__item.state` unless `include_binary_values` parameter is
