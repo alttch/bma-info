@@ -117,12 +117,19 @@ Rest of the value contains the video frame data in the specified format.
 
 Formats defined:
 
-====  =========================
+====  ============================
 Code  Description
-====  =========================
+====  ============================
+0     Raw uncompressed or a custom
 10    H.264
 11    H.265
 12    VP8
 13    VP9
 14    AV1
-====  =========================
+====  ============================
+
+.. note::
+
+   Color format for raw uncompressed video is not stored, the user must
+   manually ensure the correct color format is used for a sensor in all
+   applications and pipelines.
