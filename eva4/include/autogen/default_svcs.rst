@@ -265,6 +265,10 @@ Multimedia services
      - Suggested name
      - Executable
      - Deployed
+   * - :doc:`GStreamer pipeline service<svc/eva-gst-pipeline>`
+     - :doc:`eva.gst_pipeline.N<svc/eva-gst-pipeline>`
+     - svc/eva-gst-pipeline
+     - 
    * - :doc:`Text-to-speech service<svc/eva4-svc-tts>`
      - :doc:`eva.svc.tts.PROVIDER<svc/eva4-svc-tts>`
      - venv/bin/eva4-svc-tts

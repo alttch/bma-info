@@ -291,6 +291,21 @@ connection can be updated using the following procedure:
 * After the update is finished, delete the downloaded tarball and the
   `update.sh` script.
 
+The offline update does not work properly if Python `venv` has been setup on
+the node. Starting from 4.1.0 build 2025092301 it is also possible to use
+`EVA_UPDATE_SKIP_VENV=1` environment variable:
+
+.. code:: shell
+
+   cd /opt/eva4
+   sudo EVA_UPDATE_SKIP_VENV=1 bash update.sh
+
+In this case `venv` is not updated automatically but it is highly recommended
+to do manual update of the following packages:
+
+* `evaics` (use the version from `install/mods.list`)
+* `eva-shell` (use the latest version available)
+
 Running under a restricted user
 ===============================
 

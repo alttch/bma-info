@@ -41,6 +41,18 @@ or :ref:`eva4_eva-cloud-manager-cli`:
 
   /opt/eva4/bin/eva-cloud-manager node mirror-set <URL>
 
+To change URLs back to the default, use:
+
+.. code:: shell
+
+  eva mirror set default
+  # or
+  /opt/eva4/bin/eva-cloud-manager node mirror-set default
+
+.. note::
+
+  If Python virtual environment is used, use `eva-shell` only for the mirror switching.
+
 
 Setup
 =====

@@ -16,6 +16,7 @@
     svc/eva-aaa-accounting
     svc/eva-ffi
     svc/eva-filemgr
+    svc/eva-gst-pipeline
     svc/eva-kioskman
     svc/eva-hmi
     svc/eva-db-influx

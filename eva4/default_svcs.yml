@@ -183,6 +183,14 @@
     .. include:: ../include/videosink.rst
   tpl: svc-tpl-videosink.yml
   api: svc/videosink/eapi.yml
+- nam: eva.gst_pipeline.N
+  grp: multimedia
+  exe: svc/eva-gst-pipeline
+  des: GStreamer pipeline service
+  txt: |
+    .. include:: ../include/gst-pipeline.rst
+  tpl: svc-tpl-gst-pipeline.yml
+  api: svc/gst-pipeline/eapi.yml
 - nam: eva.db.iN
   grp: db
   exe: svc/eva-db-influx
@@ -344,6 +352,18 @@
     .. code:: shell
 
       /opt/eva4/bin/eva-cloud-manager node mirror-set <URL>
+
+    To change URLs back to the default, use:
+
+    .. code:: shell
+
+      eva mirror set default
+      # or
+      /opt/eva4/bin/eva-cloud-manager node mirror-set default
+
+    .. note::
+
+      If Python virtual environment is used, use `eva-shell` only for the mirror switching.
 
   tpl: svc-tpl-mirror.yml
 - nam: eva.repl.N
