@@ -77,6 +77,23 @@ Use :doc:`../va/opcentre` to view video recordings. See :ref:`OpCentre CCTV
    To view video recordings in OpCentre, the service instance must be deployed
    as **eva.videosrv.default**
 
+Video recoding FPS
+==================
+
+Video recording FPS (frames per second) is calculated dynamically based on the
+actual time difference between frames. In case of unstable communications
+between the source and the video server service, dynamic video recording rules,
+the FPS may be not convenient to playback. In such cases, it is possible to fix 
+the FPS to a specific value, using the sensor metadata field:
+
+.. code:: yaml
+
+   # ....
+   meta:
+     fps: 30 # fix the sensor FPS to 30 frames per second
+   # ....
+
+
 Extracting video to a file
 ==========================
 
