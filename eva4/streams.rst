@@ -73,6 +73,8 @@ EVA ICS provides a set of GStreamer plugins to work with binary media streams.
 
 The recent plugin library can be downloaded from: https://pub.bma.ai/eva-gst/
 
+Download the latest plugin version and rename it to `libgsteva.so`
+
 Sink pipeline example:
 
 .. code:: shell
