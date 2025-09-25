@@ -104,16 +104,16 @@ streams.
 
 The video stream sensor header value must have the following format:
 
-=====  =====================================================
+=====  ==================================================
 Byte   Description
-=====  =====================================================
+=====  ==================================================
 0-2    Magic: EVS (0x45, 0x56, 0x53)
 3      Version (1)
 4      Format (codec)
 5-6    Width (little-endian)
 7-8    Height (little-endian)
-9      Metadata (bit 0 = key frame, other bits are reserved)
-=====  =====================================================
+9      Flags (bit 0 = key frame, other bits are reserved)
+=====  ==================================================
 
 Rest of the value contains the video frame data in the specified format.
 
