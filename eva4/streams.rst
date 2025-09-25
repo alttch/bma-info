@@ -134,4 +134,4 @@ Code  Description
 
    Color format for raw uncompressed video is not stored, the user must
    manually ensure the correct color format is used for a sensor in all
-   applications and pipelines.
+   applications and pipelines. The default interpretation is RGB8.
