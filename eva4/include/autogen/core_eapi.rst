@@ -1542,6 +1542,60 @@ svc.deploy
      - Service parameters
      - no
 
+.. _eva4_eva.core__svc.disable:
+
+svc.disable
+-----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Disable a local service*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Service ID
+     - **yes**
+
+.. _eva4_eva.core__svc.enable:
+
+svc.enable
+----------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Enable a local service*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Service ID
+     - **yes**
+
 .. _eva4_eva.core__svc.flash:
 
 svc.flash
