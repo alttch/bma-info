@@ -19,6 +19,7 @@
     svc/eva-gst-pipeline
     svc/eva-kioskman
     svc/eva-hmi
+    svc/eva4-svc-yolo-detector
     svc/eva-db-influx
     svc/eva-svc-expiration
     svc/eva-svc-filewriter

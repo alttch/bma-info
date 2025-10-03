@@ -135,6 +135,14 @@
   txt: Allows to use text-to-speech functions via the local bus
   tpl: svc-tpl-tts.yml
   api: svc/svc-tts/eapi.yml
+- nam: eva.detector.N
+  grp: ai
+  exe: venv/bin/eva4-svc-yolo-detector
+  des: Image object detector for YOLO models
+  ins: py:eva4-svc-yolo-detector
+  txt: Allows to use YOLO object detection models for image analysis
+  tpl: svc-tpl-yolo-detector.yml
+  api: svc/svc-yolo-detector/eapi.yml
 - nam: eva.bridge.udpN
   grp: fb
   exe: venv/bin/eva4-svc-bridge-udp

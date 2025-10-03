@@ -35,6 +35,7 @@ GROUPS = [
     ('system', 'System services'),
     ('hmi', 'User interfaces, HMI'),
     ('multimedia', 'Multimedia services'),
+    ('ai', 'Artificial Intelligence'),
     ('misc', 'Other services'),
 ]
 
@@ -72,8 +73,7 @@ with open('include/autogen/core_svcs_toc.rst', 'w') as tfh:
     print('    core', file=tfh)
     for svc in svcs:
         exe = svc['exe']
-        exe_link = exe.replace('venv/bin/',
-                               'svc/').replace('path/to/', 'svc/')
+        exe_link = exe.replace('venv/bin/', 'svc/').replace('path/to/', 'svc/')
         print(f'    {exe_link}', file=tfh)
 with open('include/autogen/default_svcs.rst', 'w') as fh:
     for grp in GROUPS:
