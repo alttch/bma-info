@@ -138,7 +138,7 @@
 - nam: eva.detector.N
   grp: ai
   exe: venv/bin/eva4-svc-yolo-detector
-  des: Image object detector for YOLO models
+  des: Object detector for YOLO models
   ins: py:eva4-svc-yolo-detector
   txt: Allows to use YOLO object detection models for image analysis
   tpl: svc-tpl-yolo-detector.yml

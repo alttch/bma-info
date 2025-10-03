@@ -292,7 +292,7 @@ Artificial Intelligence
      - Suggested name
      - Executable
      - Deployed
-   * - :doc:`Image object detector for YOLO models<svc/eva4-svc-yolo-detector>`
+   * - :doc:`Object detector for YOLO models<svc/eva4-svc-yolo-detector>`
      - :doc:`eva.detector.N<svc/eva4-svc-yolo-detector>`
      - venv/bin/eva4-svc-yolo-detector
      - requires `eva4-svc-yolo-detector <https://pypi.org/project/eva4-svc-yolo-detector/>`_ Python module

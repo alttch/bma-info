@@ -19,7 +19,6 @@
     svc/eva-gst-pipeline
     svc/eva-kioskman
     svc/eva-hmi
-    svc/eva4-svc-yolo-detector
     svc/eva-db-influx
     svc/eva-svc-expiration
     svc/eva-svc-filewriter
@@ -32,6 +31,7 @@
     svc/eva-svc-modbus-slave
     svc/eva-controller-opcua
     svc/eva-aaa-otp
+    svc/eva4-svc-yolo-detector
     svc/eva-controller-pubsub
     svc/eva4-svc-controller-py
     svc/eva-rtmon

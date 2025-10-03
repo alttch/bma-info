@@ -1,5 +1,5 @@
-Image object detector for YOLO models
-*************************************
+Object detector for YOLO models
+*******************************
 
 .. contents::
 
@@ -8,7 +8,7 @@ Allows to use YOLO object detection models for image analysis
 Installing/updating
 ===================
 
-Image object detector for YOLO models is not included into EVA ICS distribution. To install/update it,
+Object detector for YOLO models is not included into EVA ICS distribution. To install/update it,
 either edit "eva/config/python-venv" :doc:`registry<../registry>` key, specify
 the desired version in "extra" section (e.g. *eva4-svc-yolo-detector>=0.0.1*) and rebuild the
 Python virtual environment (*/opt/eva4/sbin/venvmgr build*). Or execute:
