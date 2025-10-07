@@ -149,10 +149,9 @@ Service configuration
       process: lmacro:streams/s0/s0_cv_process
     # .....
 
-After the deployment, the detector must start automatically.
+After the deployment, the detector will start automatically.
 
-Create a sensor for the debug stream and ensure it is filled with debug
-streams:
+Create a sensor for the debug stream and ensure it is filled with debug frames:
 
 .. code:: shell
 
