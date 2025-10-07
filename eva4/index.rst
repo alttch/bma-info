@@ -55,6 +55,7 @@ control systems.
     enterprise
     ui
     auto/index
+    cv/index
     sdk/index
     fieldbus
     License <license>
