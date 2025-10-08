@@ -8,7 +8,7 @@ detection, facial recognition, and image classification.
 
 In this document we will explore how to use these capabilities in EVA ICS with
 `Ultralytics YOLO <https://www.ultralytics.com/>`_ models. Detectors for other
-models and engines can be built and set up using EVA ICS :doc:`../sdk/index`
+models and engines can be built and set up with EVA ICS :doc:`../sdk/index`
 using similar steps. Detector for YOLO models is provided as ready-to-use.
 
 .. contents::
@@ -74,14 +74,20 @@ them into another sensor:
 
     # .....
     config:
-      # ensure the destination caps are set properly, the video can be scaled
-      # as well using `videoscale` element
-      caps_dst: video/x-raw,format=RGB,width=640,height=360
-      oid_dst: sensor:streams/s0/raw
       oid_src: sensor:streams/s0/camera
       # for basic analysis, 10 frames per second is enough
       pipeline: h264parse ! nvh264dec ! videoscale ! videoconvert ! videorate ! video/x-raw,framerate=10/1
+      oid_dst: sensor:streams/s0/raw
+      # ensure the destination caps are set properly, the video can be scaled
+      # as well using `videoscale` element
+      caps_dst: video/x-raw,format=RGB,width=640,height=360
     # .....
+
+Ensure the stream is decoded properly:
+
+.. code:: shell
+
+   eva item stream-info sensor:streams/s0/raw
 
 The stream videos can be viewed in :doc:`../va/opcentre`, section `CCTV`.
 
