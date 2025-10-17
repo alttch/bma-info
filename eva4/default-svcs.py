@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
+#!/opt/python-venvs/eva-util/bin/python
 
 import yaml
 import jsonschema
 import subprocess
+import os
+
+EAPIGEN = os.path.expanduser("~/src/eva-util/sbin/eapigen")
 
 SCHEMA = {
     'type': 'array',
@@ -181,11 +184,11 @@ or using the bus CLI client:
                               file=sfh)
                     api = svc.get('api')
                     if api:
-                        api_path = f'/opt/eva4-enterprise/{api}' if enterprise \
-                                else f'/opt/eva4/{api}'
-                        print('/opt/eva4/sbin/eapigen', gnam, api_path)
+                        api_path = os.path.expanduser(f'~/src/eva4-enterprise/{api}') if enterprise \
+                                else os.path.expanduser(f'~/src/eva4/{api}')
+                        print(EAPIGEN, gnam, api_path)
                         p = subprocess.Popen(
-                            ['/opt/eva4/sbin/eapigen', gnam, api_path],
+                            [EAPIGEN, gnam, api_path],
                             stdout=subprocess.PIPE)
                         stdout, _ = p.communicate()
                         if p.returncode != 0:

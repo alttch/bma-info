@@ -7,7 +7,7 @@
 .. py:module:: evaics.client.bus
 
 
-.. py:class:: Client(path: str = '/opt/eva4/var/bus.ipc', name: str | None = None, timeout: float = 120)
+.. py:class:: Client(path: str = '/opt/eva4/var/bus.ipc', name: str = None, timeout: float = 120)
    :module: evaics.client.bus
 
    BUS/RT client for EVA ICS (EAPI)
@@ -26,7 +26,7 @@
       Blank method
       
    
-   .. py:method:: Client.bus_call(method: str, params: dict | None = None, target='eva.core')
+   .. py:method:: Client.bus_call(method: str, params: dict = None, target='eva.core')
       :module: evaics.client.bus
    
       Call BUS/RT EAPI method

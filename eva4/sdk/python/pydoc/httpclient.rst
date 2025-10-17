@@ -7,7 +7,7 @@
 .. py:module:: evaics.client.http
 
 
-.. py:class:: Client(url: str = 'http://localhost:7727', user: str | None = None, password: str | None = None, key: str | None = None, timeout: float = 120)
+.. py:class:: Client(url: str = 'http://localhost:7727', user: str = None, password: str = None, key: str = None, timeout: float = 120)
    :module: evaics.client.http
 
    HTTP client for EVA ICS (HMI HTTP API)
@@ -36,7 +36,7 @@
       method may be called manually but is not mandatory to use
       
    
-   .. py:method:: Client.bus_call(method: str, params: dict | None = None, target='eva.core')
+   .. py:method:: Client.bus_call(method: str, params: dict = None, target='eva.core')
       :module: evaics.client.http
    
       Call BUS/RT EAPI method
@@ -54,7 +54,7 @@
       :returns: API response payload
       
    
-   .. py:method:: Client.call(method: str, params: dict | None = None)
+   .. py:method:: Client.call(method: str, params: dict = None)
       :module: evaics.client.http
    
       Call server API method

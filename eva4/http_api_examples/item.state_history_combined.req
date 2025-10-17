@@ -14,6 +14,6 @@ host: localhost:7727
       "sensor:env/hum"
     ],
     "k": "secretkey",
-    "t_start": 1652387700
+    "t_start": 1652387700.0
   }
 }

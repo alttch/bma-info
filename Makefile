@@ -63,9 +63,9 @@ prepare:
 	cd busrt && make prepare
 
 prepare-venv:
-	python3 -m venv ./venv
+	python3.12 -m venv ./venv
 	./venv/bin/pip install -r req.txt
-	./venv/bin/pip install sphinx-rtd-theme==1.0.0
+	./venv/bin/pip install sphinx-rtd-theme==1.0.0 setuptools msgpack
 
 #pub: html upload
 

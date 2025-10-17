@@ -11,6 +11,6 @@ host: localhost:7727
     "i": "sensor:s0",
     "k": "secretkey",
     "limit_min": 100,
-    "t": 1625079600
+    "t": 1625079600.0
   }
 }

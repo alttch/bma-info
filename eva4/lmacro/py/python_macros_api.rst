@@ -444,7 +444,7 @@ variable value, None (or default) if variable doesn't exist
 sleep - sleep(seconds)
 ----------------------
 
-Delay execution for a given number of seconds.  The argument may be a floating point number for subsecond precision.
+Delay execution for a given number of seconds.  The argument may be a floating-point number for subsecond precision.
 
 .. code-block:: python
 

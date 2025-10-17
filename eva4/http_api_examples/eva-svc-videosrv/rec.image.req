@@ -10,6 +10,6 @@ host: localhost:7727
   "params": {
     "i": "sensor:s0",
     "k": "secretkey",
-    "t": 1625079600
+    "t": 1625079600.0
   }
 }

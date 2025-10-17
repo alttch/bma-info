@@ -201,7 +201,7 @@
       
       
    
-   .. py:method:: Service.call(method: str, params: dict | None = None, target='eva.core')
+   .. py:method:: Service.call(method: str, params: dict = None, target='eva.core')
       :module: evaics.sdk
    
       Call BUS/RT EAPI method
