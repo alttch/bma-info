@@ -32,6 +32,33 @@ What is included
    If using containers in untrusted networks, it is highly recommended to
    remove the open bus TCP port.
 
+Quick start
+-----------
+
+The following commands start a container named **eva4** and deploy basic
+services:
+
+* :doc:`../svc/eva-aaa-acl`
+* :doc:`../svc/eva-aaa-localauth`
+* :doc:`../svc/eva-filemgr`
+* :doc:`../svc/eva-hmi`
+
+The deployment also creates administrator ACL `admin` and user `admin` with
+password `admin`.
+
+.. code:: shell
+
+   docker run --name eva4 -p 7727:7727 -it bmauto/eva-ics4
+   docker exec -i eva4 eva cloud deploy https://pub.bma.ai/eva4/docker/deploy/standard.yml
+
+To enter :ref:`eva4_eva-shell`:
+
+.. code:: shell
+
+   docker exec -it eva4 eva
+
+To open HMI/vendored applications, point your browser to `http://127.0.0.1:7727`
+
 Volumes
 -------
 
