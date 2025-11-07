@@ -27,6 +27,16 @@ Tested and fully compatible
 By default, an universal (static-linked) EVA ICS distribution package is
 installed. See :ref:`eva4_native` for more info.
 
+Docker images
+-------------
+
+See: :doc:`./containers/containers`
+
+Kubernetes
+-----------
+
+See: :doc:`./containers/k8s`
+
 Preparing the system
 ====================
 
