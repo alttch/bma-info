@@ -34,14 +34,17 @@ Installation:
 
    npm install --save @eva-ics/webengine-react
 
-`Example WebEngine React HMI
-<https://github.com/eva-ics/eva-webengine-react-hmi1>`_ (can be used as a
-template):
+Examples:
+
+* `Example WebEngine React HMI <https://github.com/eva-ics/eva-webengine-react-hmi1>`_
+
+* `Minimal WebEngine React HMI <https://github.com/eva-ics/eva-webengine-react-hmi-template>`_
+  (can be used as a template):
 
 .. code:: shell
 
-   git clone https://github.com/eva-ics/eva-webengine-react-hmi1
-   cd eva-webengine-react-hmi1
+   git clone https://github.com/eva-ics/eva-webengine-react-hmi-template
+   cd eva-webengine-react-hmi-template
    // modify public/config.json
    npm install
    vite
