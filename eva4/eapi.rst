@@ -401,12 +401,18 @@ Authentication
 
 Services authenticate users via RPC calls with the following methods:
 
-* auth.user(login, password, timeout, xopts)
+* auth.user(login, password, timeout, xopts, externally_verified)
 
 * auth.key(key, timeout, xopts)
 
-Where `xopts` is an optional map with extra options, e.g. 2FA code, CAPTCHA
-etc.
+Where:
+
+* `xopts` is an optional map with extra options, e.g. 2FA code, CAPTCHA etc.
+
+* `externally_verified` (DANGEROUS) when set to true, the authentication
+  service does not check the user password (it can be an empty string or any
+  random value) or demand additional (e.g. 2FA) verification. The service
+  checks only that the user account user exists.
 
 The methods may accept an additional parameter "source" which can be used to
 provide additional information about the authentication source, e.g. IP

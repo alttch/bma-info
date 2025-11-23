@@ -163,6 +163,14 @@ Limitations:
 * :doc:`svc/eva4-svc-repl-legacy` does not use FIPS-complaint cryptographic
   methods.
 
+Notes:
+
+* Certain modules use AWS-LC cryptographic library which is also
+  `FIPS-140-certified
+  <https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4631>_`.
+  FIPS mode in AWC-LC is enabled automatically when OS-native EVA ICS binaries
+  are used.
+
 Enhanced memory protection
 ==========================
 
