@@ -81,7 +81,7 @@ Execute the standard command to install the node license key:
 .. code:: shell
 
     /opt/eva4/sbin/eva-registry-cli set eva/config/ee/license \
-       --type json < eva-ics-ee-NAME.json
+       --type json - < eva-ics-ee-NAME.json
 
 If the key content is in the clipboard, execute
 
