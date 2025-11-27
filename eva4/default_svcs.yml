@@ -135,6 +135,14 @@
   txt: Allows to use text-to-speech functions via the local bus
   tpl: svc-tpl-tts.yml
   api: svc/svc-tts/eapi.yml
+- nam: eva.aaa.ldap
+  grp: aaa
+  exe: venv/bin/eva4-svc-aaa-ldap
+  des: LDAP authentication service
+  ins: py:eva4-aaa-ldap
+  txt: LDAP basic authentication service
+  tpl: svc-tpl-aaa-ldap.yml
+  api: svc/aaa-ldap/eapi.yml
 - nam: eva.detector.N
   grp: ai
   exe: venv/bin/eva4-svc-yolo-detector

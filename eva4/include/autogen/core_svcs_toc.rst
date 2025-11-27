@@ -22,6 +22,7 @@
     svc/eva-db-influx
     svc/eva-svc-expiration
     svc/eva-svc-filewriter
+    svc/eva4-svc-aaa-ldap
     svc/eva4-svc-repl-legacy
     svc/eva-aaa-localauth
     svc/eva-controller-lm

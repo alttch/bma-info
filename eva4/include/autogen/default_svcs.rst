@@ -19,6 +19,10 @@ Authentication, Authorization and Accounting
      - :doc:`eva.aaa.accounting<svc/eva-aaa-accounting>`
      - svc/eva-aaa-accounting
      - requires :doc:`enterprise`
+   * - :doc:`LDAP authentication service<svc/eva4-svc-aaa-ldap>`
+     - :doc:`eva.aaa.ldap<svc/eva4-svc-aaa-ldap>`
+     - venv/bin/eva4-svc-aaa-ldap
+     - requires `eva4-aaa-ldap <https://pypi.org/project/eva4-aaa-ldap/>`_ Python module
    * - :doc:`Local user/key authentication service<svc/eva-aaa-localauth>`
      - :doc:`eva.aaa.localauth<svc/eva-aaa-localauth>`
      - svc/eva-aaa-localauth

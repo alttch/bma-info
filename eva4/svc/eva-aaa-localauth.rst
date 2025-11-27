@@ -104,6 +104,10 @@ auth.user
      - map<String/Any>
      - Extra options map (e.g. otp=code for two-factor auth)
      - no
+   * - **externally_verified**
+     - bool
+     - DANGEROUS: Skip password verification, assume it is already done by an external agent
+     - no
 
 .. _eva4_eva.aaa.localauth__key.deploy:
 
