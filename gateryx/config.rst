@@ -21,6 +21,13 @@ After the server is installed, it is important to change the following:
 * **/etc/gateryx/config.toml** - change *auth/tokens/domain* to the domain of
   the application group.
 
+* **/etc/gateryx/config.toml** - obtain and replace the certificate and key
+  files in *tls* section of the HTTPS listener. As there is only one
+  certificate used for the whole application group, it should either cover all
+  hosted application subdomains or be a wildcard (both kinds can be obtained
+  e.g. from `LetsEncrypt <https://letsencrypt.org/>`_ or an internal company
+  certificate can be used).
+
 * **/etc/gateryx/app.d/system.toml** - change *hosts* to the desired system
   application host name.
 
@@ -102,3 +109,20 @@ installed on the same machine.
 In case if the client is used on a different machine, it is important to copy
 *admin.pem* key file from the server and ensure the *client.toml* file points
 to it.
+
+Configuring 3rd party apps for OIDC
+===================================
+
+Third-party applications can be configured to use Gateryx as an OIDC provider
+with the following URLs exposed:
+
+* *https://gate.domain/.well-known/openid-configuration* - OIDC configuration URL
+
+* *https://gate.domain/.well-known/jwks.json* - public keys URL
+
+* *https://gate.domain/.well-known/public.pem* - public key URL in PEM format
+
+Where *gate.domain* is the host name of the system application configured.
+
+The current token can be obtained by the third party application either from
+*gateryx_auth_token* cookie or *X-JWT-Assertion* HTTP header.
