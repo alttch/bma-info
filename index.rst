@@ -26,6 +26,7 @@ educational purposes without any restrictions.
     sim/index
     roboplc/index
     psrt/index
+    gateryx/index
     busrt/index
     box/index
     common/index
