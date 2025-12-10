@@ -19,6 +19,9 @@ socketpair communication provides ultra-low latency without exposing
 shared-memory attack surfaces. And because Gateryx unifies IDP and ingress,
 deployment is dramatically simpler than traditional multi-component stacks.
 
+.. image:: images/schema.png
+  :width: 650
+
 Customers can choose between built-in authenticating providers and external
 (Microsoft Active Directory, Authentik, OpenLDAP etc). 
 
