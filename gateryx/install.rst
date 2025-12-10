@@ -22,6 +22,16 @@ downloaded either directly or via the apt repository:
    sudo apt-get install gateryx-server
    # for admin client only: gateryx-client
 
+After installation, :doc:`configuration<./config>` files are located in
+**/etc/gateryx/**.
+
+The server package automatically enabled *gateryx* systemd service, but it
+must be manually started for the first time, after the configuration is set up:
+
+.. code:: bash
+
+   sudo systemctl start gateryx
+
 Supported distributions:
 
 - Ubuntu 22.04 LTS (Jammy Jellyfish) and later
@@ -51,3 +61,21 @@ To install the client only, do not clone the entire repository; instead, run:
 .. code:: bash
 
    cargo install gateryx
+
+Running in Docker/Kubernetes
+============================
+
+The official iamges are available on Docker Hub:
+
+* https://hub.docker.com/r/bmauto/gateryx - x86_64
+* https://hub.docker.com/r/bmauto/gateryx-arm64 - ARM64
+
+To use in production it is recommended to mount the following volumes:
+
+* **/etc/gateryx** - configuration files
+
+* **/var/gateryx/log** - log files (if enabled and the default path is not changed in the config)
+
+Custom authentication UI, system UI and plain web root can be mounted to
+*/var/gateryx/www* (if enabled and the default path is not changed in the
+configs).
