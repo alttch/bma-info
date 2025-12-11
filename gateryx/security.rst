@@ -58,7 +58,7 @@ future releases.
 
    If an external IDP is used, it is strongly recommended to revoke all issued
    tokens for a user after a password change or account suspension. Use
-   `gateryx revoke-tokens` command.
+   `gateryx user invalidate` command.
 
 Server administration
 =====================
