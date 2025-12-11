@@ -54,7 +54,10 @@ Clone the repository, then run the following commands:
    git clone https://github.com/eva-ics/gateryx
    cd gateryx
    just auth-web system-web
-   just build-x86_64-unknown-linux-gnu # for aarch64 use build-aarch64-unknown-linux-gnu
+   cargo build --release
+
+The built binaries will be located in `target/release`. The auth and system web
+applications will be in `auth/dist` and `system/dist` respectively.
 
 To install the client only, do not clone the entire repository; instead, run:
 
