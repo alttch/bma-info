@@ -40,6 +40,10 @@ if an external IDP is used for password authentication.
 It is strongly recommended to use the passkeys only and avoid or even disable
 the password authentication for users after the passkeys have been enrolled.
 
+.. note::
+
+   Passkeys work for standard layouts (APP.domain) only.
+
 External IDPs
 =============
 
