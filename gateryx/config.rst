@@ -144,3 +144,8 @@ Where *gate.domain* is the host name of the system application configured.
 
 The current token can be obtained by the third party application either from
 *gateryx_auth_token* cookie or *X-JWT-Assertion* HTTP header.
+
+If an application wants to logout the user, it can erase the mentioned cookie. This
+works either for a single application if a custom domain is used or for all
+application group of the domain. For the last case, the `domain=.yourdomain`
+must be used when the cookie is erased.

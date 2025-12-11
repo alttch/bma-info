@@ -64,6 +64,13 @@ future releases.
    tokens for a user after a password change or account suspension. Use
    `gateryx user invalidate` command.
 
+Authorization
+=============
+
+Gateryx is designed to be authentication-provider only. The web applications
+(or IDPs if used) must manually identify all users' groups, permissions and
+roles via the user names in the issued JWT tokens.
+
 Server administration
 =====================
 
