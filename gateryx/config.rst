@@ -3,15 +3,17 @@ Configuration
 
 .. contents::
 
-Web applications
-================
+Setup layout
+============
 
 Gateryx is designed to serve a group of web applications. For basic
 configuration it is important to have all web applications hosted as
 **APP.domain** where *APP* is the name of the application and *domain* is the
 domain of the group. The applications may have aliases.
 
-Different layouts are possible but may require additional complicated setups.
+Different layouts are possible but may require additional complicated setups
+and certain functionality is not available in such cases (e.g. Passkey
+authentication).
 
 Initial setup
 =============
