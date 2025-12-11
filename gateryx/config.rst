@@ -67,6 +67,10 @@ Example:
 .. literalinclude:: ./configs/app.d/example.toml
    :language: toml
 
+An application can also include specific WebSocket options in `websocket`
+section. The parameters are identical to the ones in the main configuration
+file.
+
 System application
 ------------------
 
