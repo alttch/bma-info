@@ -55,6 +55,18 @@ The main server configuration file is located by default at */etc/gateryx/config
 .. literalinclude::  ./configs/config.toml.default
    :language: toml
 
+It is possible to validate the configuration file with:
+
+.. code-block:: bash
+
+    gateryx-server --check
+
+After the configuration file is modified, the Gateryx server can be started with:
+
+.. code-block:: bash
+
+    systemctl start gateryx
+
 Web Applications
 ----------------
 
