@@ -149,3 +149,7 @@ If an application wants to logout the user, it can erase the mentioned cookie. T
 works either for a single application if a custom domain is used or for all
 application group of the domain. For the last case, the `domain=.yourdomain`
 must be used when the cookie is erased.
+
+If a third-party application can fully trust the Gateryx server (e.g. using IP
+filtering or having no external access), it can use `X-Gateryx-User` HTTP
+header which contains the username of the authenticated user.
