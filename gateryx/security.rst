@@ -14,9 +14,9 @@ All port listeners must be configured to use TLS only. The plain HTTP must be
 used only by *plain* built-in application for redirection to HTTPS and certain
 system purposes.
 
-Despite Gateryx currently does not enforce clients to use TLS 1.3 only, it is
-highly recommended to ensure that only this version is used by the clients. The
-older TLS versions are considered less secure.
+Despite Gateryx currently does not enforce clients to use TLS 1.3 only by
+default, in certain environments it is recommended to disable TLS 1.2 in the
+main server configuration file (`tls/protocols` section of listeners).
 
 SNI
 ===
