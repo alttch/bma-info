@@ -46,7 +46,7 @@ Key benefits
 * Instant Deployment. Replace multiple tools (IdP, auth service, ingress, API
   gateway) with one product, one config, one rollout.
 
-* Lightweight. Rapid fast, tiny memory footprint, designed to run in embedded
+* Lightweight. Blazing fast, tiny memory footprint, designed to run in embedded
   environments and resource-restricted virtual appliances.
 
 .. toctree::
