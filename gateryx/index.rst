@@ -49,6 +49,8 @@ Key benefits
 * Lightweight. Blazing fast, tiny memory footprint, designed to run in embedded
   environments and resource-restricted virtual appliances.
 
+GitHub repository: https://github.com/eva-ics/gateryx
+
 .. toctree::
     :caption: Gateryx documentation
     :maxdepth: 1

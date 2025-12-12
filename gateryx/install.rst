@@ -13,8 +13,8 @@ System requirements
 Installing from pre-built packages
 ==================================
 
-For Debian/Ubuntu and other deb-based distributions, .deb packages can be used,
-downloaded either directly or via the apt repository:
+For Debian/Ubuntu and other deb-based distributions, .deb packages can be used
+via the apt repository:
 
 .. code:: bash
 
