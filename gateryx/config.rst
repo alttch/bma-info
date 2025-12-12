@@ -98,7 +98,7 @@ tasks.
 Plain application
 -----------------
 
-A plain application is a web application which does several important tasks:
+The plain application is a web application which does several important tasks:
 
 * Serves static files from *.well-known* folder which must be located in the
   configured web root (*remote* parameter).
