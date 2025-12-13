@@ -1,0 +1,4 @@
+all: prepare
+
+prepare:
+  cp ~/src/roboplc-manager/make-deb/etc/roboplc/manager.toml-dist ./configs/manager.toml

@@ -1,0 +1,43 @@
+[general]
+verbose = false
+# enable to use the internal grep in case if journalctl is built without it
+#journal_internal_grep = true
+# specify if the manager is unable to auto-detect the block device
+#blk_dev = "sda"
+# license file for RoboPLC Pro
+#license_file = "/etc/roboplc/roboplc.key"
+
+# requires RoboPLC Pro
+#readonly_drive = true
+
+[http]
+bind = "0.0.0.0:7700"
+# set if a front-end server is used
+#real_ip_header = "X-Real-IP"
+
+[aaa]
+management_key = "roboplc"
+
+## OpenID JWT token flow configuration
+# Allows to use external authenticators on front-end servers
+# (e.g. Gateryx, Traefik+Authentik, other reverse proxies with OIDC support)
+#[aaa.oidc]
+
+# path or URL to JWKs (JSON Web Key Set), supports single and multiple keys in
+# one file, required
+#key = "/etc/roboplc/oidc.jwk"
+# JWT assertion HTTP header name
+#header = "X-JWT-Assertion"
+# JWT field to use as username
+#sub_field = "sub"
+# refresh JWKs every N seconds (default: 3600)
+#refresh = 3600
+# retry interval in seconds if JWKs fetch fails (default: 10)
+#retry = 10
+# remove existing JWKs on fetch failure after seconds (default: 600, 0 - do not remove)
+#failed_after = 86400
+# list of the users to permit access
+#valid_users = [ "plcadmin" ]
+
+[ui]
+confirm_actions = true
