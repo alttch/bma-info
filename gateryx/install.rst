@@ -68,7 +68,7 @@ To install the client only, do not clone the entire repository; instead, run:
 Running in Docker/Kubernetes
 ============================
 
-The official iamges are available on Docker Hub:
+The official images are available on Docker Hub:
 
 * https://hub.docker.com/r/bmauto/gateryx - x86_64
 * https://hub.docker.com/r/bmauto/gateryx-arm64 - ARM64
