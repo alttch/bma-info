@@ -70,8 +70,7 @@ Running in Docker/Kubernetes
 
 The official images are available on Docker Hub:
 
-* https://hub.docker.com/r/bmauto/gateryx - x86_64
-* https://hub.docker.com/r/bmauto/gateryx-arm64 - ARM64
+* https://hub.docker.com/r/bmauto/gateryx - x86_64 and aarch64 multi-arch image
 
 To use in production it is recommended to mount the following volumes:
 
