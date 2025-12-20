@@ -1,7 +1,7 @@
 Programming logic
 *****************
 
-EVA ICS Rust SDK has got integration with `Logic line
+:doc:`EVA ICS Rust SDK <./index>` has got integration with `Logic line
 <https://docs.rs/logicline>`_, a rule-chain logic processing engine for Rust.
 
 Combining `Logic line` and `EVA ICS SDK` allows to get a powerful automation
