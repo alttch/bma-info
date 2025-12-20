@@ -12,11 +12,12 @@ Keeping data in the node registry
 Rust SDK has got built-in instruments to work the with the :doc:`registry
 <../../registry>`.
 
-To connect to the registry, use "init_registry" method of the initial payload:
+To connect to the registry, use "registry" method of the SDK (the bus MUST be
+already initialized):
 
 .. code:: rust
 
-    let registry = initial.init_registry(&rpc);
+   let registry = eapi_bus::registry();
 
 Service registry methods automatically operate under a key path
 *eva/svc_data/<SVC_ID>* and it is not necessary to set key prefixes.
