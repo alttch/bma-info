@@ -11,7 +11,7 @@ Deployment
 ==========
 
 To let a logic processing service be fully integrated into EVA ICS, it must
-have `.llc.` (stands for Logic Line Controller) in its name, e.g. `eva.ll.c1`.
+have `.llc.` (stands for Logic Line Controller) in its name, e.g. `eva.llc.1`.
 
 This lets the service to be automatically discovered by another applications,
 including :doc:`../../va/opcentre`.
