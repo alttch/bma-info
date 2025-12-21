@@ -9,6 +9,7 @@ Rust SDK
     hmi_x_call_example
     state
     ll
+    lmp
     data
     API reference (commons) <https://docs.rs/eva-common/latest/eva_common/>
     API reference (SDK) <https://docs.rs/eva-sdk/latest/eva_sdk/>
