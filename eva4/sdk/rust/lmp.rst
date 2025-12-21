@@ -22,7 +22,7 @@ Define a processor and register lmacro handlers:
         "lmacro:some/name".parse().unwrap(),
         closure_or_function
    );
-   let lmp = lmp.build();
+   let lmp = lmp_builder.build();
 
 Then use the processor to handle lmacro calls in EAPI handler:
 
