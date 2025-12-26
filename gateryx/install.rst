@@ -78,6 +78,11 @@ To use in production it is recommended to mount the following volumes:
 
 * **/var/gateryx/log** - log files (if enabled and the default path is not changed in the config)
 
+.. warning::
+
+   The keys supplied with the image are provided for demo purposes only and
+   MUST be regenerated before production use.
+
 Custom authentication UI, system UI and plain web root can be mounted to
 */var/gateryx/www* (if enabled and the default path is not changed in the
 configs).
