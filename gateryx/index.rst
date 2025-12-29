@@ -25,9 +25,6 @@ deployment is dramatically simpler than traditional multi-component stacks.
 Customers can choose between built-in authenticating providers and external
 (Microsoft Active Directory, Authentik, OpenLDAP etc). 
 
-Key benefits
-============
-
 * Zero-Trust API Gateway. Enforce identity at the edge with ES256 JWT
   validation before traffic reaches web services.
 
@@ -54,6 +51,7 @@ GitHub repository: https://github.com/eva-ics/gateryx
 .. toctree::
     :caption: Gateryx documentation
     :maxdepth: 1
+    :titlesonly:
 
     install
     config

@@ -71,6 +71,12 @@ Gateryx is designed to be authentication-provider only. The web applications
 (or IDPs if used) must manually identify all users' groups, permissions and
 roles via the user names in the issued JWT tokens.
 
+.. warning::
+
+   In case if an external IDP is used, it is still required to execute `gateryx
+   user delete` after an account removal to revoke all issued tokens for the
+   user and delete passkeys if enrolled.
+
 Server administration
 =====================
 
