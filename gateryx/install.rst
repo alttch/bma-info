@@ -74,7 +74,8 @@ The official images are available on Docker Hub:
 
 To use in production it is recommended to mount the following volumes:
 
-* **/etc/gateryx** - configuration files
+* **/etc/gateryx** - configuration files (can be empty, the default configs and keys will
+  be generated on first run)
 
 * **/var/gateryx/log** - log files (if enabled and the default path is not changed in the config)
 

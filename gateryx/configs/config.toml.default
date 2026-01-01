@@ -58,13 +58,19 @@ breakin_protection = { max_records = "10k", window = "10m", ip_score = 1, user_s
 # * check_login_present - require the selected authenticator to confirm that the user exists (default: true)
 passkeys = { max_auth_challenges = "1k", max_reg_challenges = 10, timeout = 60 }
 
-# key_file: PKCS#8 private key in PEM format, eg. openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:prime256v1 -out tokens.pem
+# key_file: PKCS#8 private key in PEM format, eg. openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:prime256v1 -out tokens.pem. Auto-generated if not present
 # expire: token expiration time since the token was issued
+# max_bearer_expire: maximum allowed expiration time for per-app tokens
 # domain: token validation for subdomains of the specified domain, also used as rp_id for passkeys
-tokens = { key_file = "tokens.pem", expire = "7d", domain = "domain.local" }
+# cookie: name of the cookie to store the token (gateryx_auth_<cookie>), default is "token"
+tokens = { key_file = "tokens.pem", expire = "7d", domain = "domain.local", cookie = "token" }
 
 # authentication form web
 www_root = "/var/gateryx/www/auth"
+
+# The following user agents will always get 401 Unauthorized response with
+# Basic authentication challenge, unless text/html is requested
+#reply_401_to_user_agents = ["git/*", "curl/*", "Wget/*"]
 
 [[listener]]
 bind = "0.0.0.0:80"
@@ -79,6 +85,8 @@ max_workers = "5k"
 tls = { cert = "selfsigned.crt", key = "selfsigned.pem", protocols = ["tls1.2", "tls1.3"] }
 # allows HTTP/2
 protocol = "http2"
+# allowed hosts/networks (ip addresses only), allowed all by default
+#allow = ["127.0.0.1/32"]
 
 [server]
 http_log =  "/var/gateryx/log/access.log"
@@ -96,16 +104,33 @@ user = "gateryx"
 #max_message_size = "40m"
 #max_frame_size = "40m"
 
-# only SQLite is supported currently, PostgreSQL suport is coming very soon
+# SQLite / PostgreSQL
 [db]
 uri = "sqlite:///var/gateryx/db/gateryx.db"
+#uri = "postgres://gateryx:xxx@192.168.1.1/gateryx"
 pool_size = 10
 timeout = 5
 
+# Override default HTTP header names
+#[headers]
+#jwt_assertion = "X-JWT-Assertion" # JWT assertion header
+#user = "X-Gateryx-User" # Current authenticated user
+#real_ip = "X-Real-IP" # Real client IP address
+#authorization = "X-Gateryx-Authorization" # Additional authorization header
+#via = "X-Via" # Via header (returned to client)
+
 [admin]
-# key_file: PKCS#8 private key in PEM format, eg. openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:prime256v1 -out admin.pem
+# key_file: PKCS#8 private key in PEM format, eg. openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:prime256v1 -out admin.pem. Auto-generated if not present
 key_file = "admin.pem"
-# allowed hosts/networks (ip addresses only)
+# allowed hosts/networks (ip addresses only), no admin access by default
 allow = ["127.0.0.1/32"]
 # max time difference in seconds between server and client for admin requests
 #max_time_diff = "5m"
+
+# Web applications can be defined directly in the main configuration file or in
+# "app.d" directory as separate files with ".toml" extension
+#[[app]]
+#url = "gateryx://system"
+#hosts = [ "gate.domain.local" ]
+#remote = "/var/gateryx/www/system"
+

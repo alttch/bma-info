@@ -46,9 +46,32 @@ interface, which allows users to:
 .. figure:: ss/sysui.png
     :width: 465px
 
+* Issue app token - issue a bearer JWT token for a selected application.
+
 * Change password - works only if the authenticator is set to `db` (internal
   database).
 
 * Add a passkey - available only for the application group of the same domain.
 
+* Invalidate - invalidate all issued tokens for the user (WARNING: issued
+  application tokens are also invalidated).
+
 * Logout - terminates the session and removes the token from the browser.
+
+Using application tokens
+========================
+
+An issued application token can be sent in the following ways:
+
+* `Authorization: Bearer <token>` HTTP header.
+
+* `Authorization: Basic <base64-encodeded-username:token>` HTTP header. The
+  username part can be any string and is ignored.
+
+In case if the target app requires own autnorization header, an alternative
+header name can be specified (default: `X-Gateryx-Authorization`).
+
+.. note::
+
+   Certain clients (e.g. `git`) do not send authorization headers if the user
+   name is empty. Consider using any non-empty string.
