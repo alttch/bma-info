@@ -6,8 +6,9 @@ Gateryx - Web Application Firewall
   :class: no-scaled-link
   :align: right
 
-Gateryx is a Web Application Firewall (WAF) solution which delivers a fully
-integrated, high-security web gateway by combining a next-generation reverse
+`Gateryx <https://www.bohemia-automation.com/software/gateryx/>`_ is a Web
+Application Firewall (WAF) solution which delivers a fully integrated,
+high-security web gateway by combining a next-generation reverse
 proxy and a modern identity provider into a single, streamlined product. Built
 on fast, battle-tested elliptic-curve cryptography (P-256), it provides
 passwordless Passkey authentication, ES256-signed JWT and OIDC tokens, and
