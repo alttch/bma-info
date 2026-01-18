@@ -1,6 +1,8 @@
 Security
 ********
 
+.. contents::
+
 General cryptography
 ====================
 

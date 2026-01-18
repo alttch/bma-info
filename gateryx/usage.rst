@@ -1,6 +1,8 @@
 Usage
 *****
 
+.. contents::
+
 Authentication
 ==============
 
