@@ -49,7 +49,7 @@ password `admin`.
 .. code:: shell
 
    docker run --name eva4 -p 7727:7727 -it bmauto/eva-ics4
-   docker exec -i eva4 eva cloud deploy https://pub.bma.ai/eva4/docker/deploy/standard.yml
+   docker exec -i eva4 eva -T30 cloud deploy https://pub.bma.ai/eva4/docker/deploy/standard.yml
 
 To enter :ref:`eva4_eva-shell`:
 
