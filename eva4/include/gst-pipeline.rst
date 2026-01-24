@@ -10,3 +10,5 @@ The service is useful for various scenarios:
 * Transcoding video streams to different formats or resolutions.
 
 * Extracting or modifying certain parts of images (cropping/transforming/etc).
+
+.. include:: ../include/gst.rst
