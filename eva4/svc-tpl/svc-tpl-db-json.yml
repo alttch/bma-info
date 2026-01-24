@@ -1,26 +1,22 @@
-# Event-to-SQL database service
-command: svc/eva-db-sql
-workers: 1
+# Event-to-JsonDB service
+command: svc/eva-db-json
 bus:
   path: var/bus.ipc
 config:
-  # database URI (supported: sqlite, postgres)
-  db: sqlite:///tmp/eva_history.db
-  # db: postgres://USER:PASSWORD@HOST/DB
-  # TS extension (supported: timescale), required for fills
-  #ts_extension: timescale
+  # database URI
+  db: postgres://USER:PASSWORD@HOST/DB
   # event buffer time-to-live, seconds
   buf_ttl_sec: null
   # periodically submit all item states
   interval: null
   # do not submit remote disconnected items (useful for zfrepl or similar)
-  skip_disconnected: false
   # ignore real-time events
+  skip_disconnected: false
   ignore_events: false
-  # false - perform smart cleaning (slower) or simple
-  simple_cleaning: false
   # keep records (seconds)
   keep: 604800
+  # automatically cleanup obsolete OIDs (can be slow)
+  #cleanup_oids: true
   # event queue size
   queue_size: 8192
   # panic on critical errors in X seconds after happened (0 - panic immediately)
@@ -31,4 +27,8 @@ config:
   oids:
     - "#"
   oids_exclude: []
+  # enable EVA ICS PostgreSQL extension support (experimental)
+  #eva_pg: true
+  # by default null values (status) are written into the database
+  oids_exclude_null: []
 user: nobody

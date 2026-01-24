@@ -739,8 +739,8 @@ item.state_log
      - f64/String
      - Beginning timestamp (default: last 24 hours)
      - no
-   * - **t_end/String**
-     - f64
+   * - **t_end**
+     - f64/String
      - Ending timestamp (default: now)
      - no
    * - **limit**

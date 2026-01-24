@@ -1,0 +1,137 @@
+Updating EVA ICS to 4.2.0
+*************************
+
+.. contents::
+
+EVA ICS 4.2.0 comes with significant code refactoring and improvements which
+increase the stability and security of the platform. This release also
+introduces new features to enhance the user experience and expand the
+capabilities of EVA ICS.
+
+.. note::
+
+   If updating from 4.1.0, updating of the Enterprise license keys is not
+   required. Otherwise see :doc:`../update/4.1.0`.
+
+Important changes and new features
+==================================
+
+* JSON databases support (PostgreSQl only for now), see :doc:`../svc/eva-db-json`.
+
+* :doc:`../svc/eva-controller-netmon`.
+
+* EAPI bus can be accessed via websockets (see :ref:`eva4_config_bus`).
+
+* Ubuntu 20.04 LTS support has been dropped, consider migrating to Ubuntu 22.04+
+  LTS or Debian 12+ before updating.
+
+* :doc:`Docker containers <../containers/containers>` have been updated to use
+  Ubuntu 22.04 LTS as the base image. The image is now provided as multiarch
+  for both x86_64 and aarch64 (ARM64) architectures.
+
+* MySQL support has been dropped for the core inventory,
+  :doc:`../svc/eva-db-sql` and :doc:`../svc/eva-hmi` sessions database,
+  consider migrating to PostgreSQL (or SQLite) before updating. The migration
+  of the inventory can be performed via export/deploy (see :doc:`../iac`). The
+  migration of HMI sessions is usually not required, as the users need to
+  re-login only.
+
+* Starting from 4.2.0, the distributed binaries come in two variants: x86_64
+  GLIBC-dynamically-linked and aarch64 GLIBC-dynamically-linked (for ARM64
+  systems). This simplifies the deployment and increases the stability and security
+  of the platform, as the system libraries can be updated independently. This
+  also makes the provided binaries smaller in size, bringing as well slightly
+  smaller memory footprint during runtime.
+
+* Important: certain heavy services (e.g. :doc:`../svc/eva-hmi`,
+  :doc:`../svc/eva-repl`) may have startup times increased due to dynamically
+  loaded libraries. **Consider increasing `timeout/startup` on low-powered
+  machines**. The runtime speed is not affected.
+
+* Important: the memory monitoring has been changed: for now only core/service
+  heap memory is monitored, the child processes are ignored (as the default
+  services barely spawn any). Also, fixed the problem when multiple threads of
+  the same service reported their heap memory usage multiple times. Consider
+  lowering `mem_warn` if used. The default memory warning has been also
+  increased to 192 MB a service.
+
+* Lots of improvements in :doc:`../svc/eva-svc-alarms` and
+  :doc:`../svc/eva-kioskman`.
+
+* For developers: :doc:`../sdk/rust/index` libraries have been updated to
+  0.4.x, making the development experience better and more simplified. However,
+  EVA ICS 4.2.x is still ABI-compatible with 4.1.x and older versions, so no
+  mandatory upgrade/recompilation of the existing production code is required.
+
+Update instructions
+===================
+
+.. warning::
+
+    The EVA ICS 4.1.0 build 2025121801 is the only supported upgrade path to
+    EVA ICS 4.2.0. Please make sure you are running this build before
+    upgrading. The update to 4.2.0 also must be performed locally on each node,
+    cloud update is not supported.
+
+Preparing
+---------
+
+.. note::
+
+   This section should be omitted if the system is already running EVA ICS
+   4.1.0 build 2025121801.
+
+To update the system to the mandatory intermediate version, run the following
+command:
+
+.. code:: bash
+
+    EVA_VERSION=4.1.0 EVA_BUILD=2025121801 eva update
+    # or
+    #EVA_VERSION=4.1.0 EVA_BUILD=2025121801 /opt/eva4/bin/eva-cloud-manager node update
+
+The intermediate version is available until 2027-01-01, if updating after,
+contact the product vendor or your support representative.
+
+If TRAP controller service is used, install the following extra packages:
+
+.. code:: bash
+
+    apt-get update && apt-get install -y --no-install-recommends libbsd-dev libsnmp-dev
+
+Updating
+--------
+
+.. note::
+
+   It is recommended to make full system backup before updating to 4.2.0,
+   however as the data formats have not been changed in any way, rolling back
+   to 4.1.x is possible at any time if required without data migration
+   (requires installing 4.1.x and moving `/opt/eva4/runtime` folder back).
+
+x86_64
+~~~~~~
+
+On each node execute:
+
+.. code:: bash
+
+    EVA_ARCH_SFX=x86_64 eva update
+    # or
+    #EVA_ARCH_SFX=x86_64 /opt/eva4/bin/eva-cloud-manager node update
+
+The further updates can be performed via standard ways (no extra env variables,
+remotely, via cloud update etc).
+
+aarch64 (ARM64)
+~~~~~~~~~~~~~~~
+
+.. code:: bash
+
+    EVA_ARCH_SFX=aarch64 eva update
+    # or
+    #EVA_ARCH_SFX=aarch64 /opt/eva4/bin/eva-cloud-manager node update
+
+The further updates of 4.2.0+ can be performed via standard ways (no extra env
+variables, remotely, via cloud update etc).
+

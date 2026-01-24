@@ -22,6 +22,7 @@
     svc/eva-db-influx
     svc/eva-svc-expiration
     svc/eva-svc-filewriter
+    svc/eva-db-json
     svc/eva4-svc-aaa-ldap
     svc/eva4-svc-repl-legacy
     svc/eva-aaa-localauth
@@ -30,6 +31,7 @@
     svc/eva-svc-mirror
     svc/eva-controller-modbus
     svc/eva-svc-modbus-slave
+    svc/eva-controller-netmon
     svc/eva-controller-opcua
     svc/eva-aaa-otp
     svc/eva4-svc-yolo-detector

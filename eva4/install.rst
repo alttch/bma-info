@@ -13,9 +13,8 @@ The following operating systems are supported out-of-the-box:
 Recommended for production setups
 ---------------------------------
 
-* `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
-* `Debian GNU/Linux 11+ <https://www.debian.org>`_
-* `Alpine Linux 13.3+ <https://alpinelinux.org>`_
+* `Ubuntu Linux 22.04+ <https://ubuntu.com>`_
+* `Debian GNU/Linux 12+ <https://www.debian.org>`_
 
 Tested and fully compatible
 ---------------------------
@@ -23,9 +22,7 @@ Tested and fully compatible
 * `Raspbian Linux <https://www.raspberrypi.org>`_
 * `RedHat Enterprise Linux 8 <https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/>`_
 * `Fedora Linux <https://getfedora.org>`_
-
-By default, an universal (static-linked) EVA ICS distribution package is
-installed. See :ref:`eva4_native` for more info.
+* `Alpine Linux 13.3+ <https://alpinelinux.org>`_ (requires Glibc compatibility layer)
 
 Docker images
 -------------

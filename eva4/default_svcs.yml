@@ -279,6 +279,12 @@
   api: svc/db-timescale/eapi.yml
   xtr: |
     .. include:: ../include/timescale_svc_xtra.rst
+- nam: eva.db.jsonN
+  grp: db
+  exe: svc/eva-db-json
+  des: JSON databases state history
+  tpl: svc-tpl-db-json.yml
+  api: svc/db-json/eapi.yml
 - nam: eva.svc.expN
   grp: auto
   exe: svc/eva-svc-expiration
@@ -515,6 +521,12 @@
   tpl: svc-tpl-rtmon.yml
   txt: |
       See also :doc:`../realtime`.
+- nam: eva.controller.netmon
+  grp: system
+  exe: svc/eva-controller-netmon
+  des: Network monitor
+  api: svc/controller-netmon/eapi.yml
+  tpl: svc-tpl-controller-netmon.yml
 - nam: eva.generator.default
   grp: sim
   exe: svc/eva-svc-generator

@@ -249,6 +249,7 @@ kiosk.get_config
           "password": "secret"
       },
       "auto_login": true,
+      "auto_login_delay": null,
       "ip": "172.16.54.129/32",
       "name": "k1"
   }
@@ -314,6 +315,7 @@ kiosk.list
               "password": "secret"
           },
           "auto_login": true,
+          "auto_login_delay": null,
           "current_url": "http://eva/ui/",
           "ip": "172.16.54.129/32",
           "name": "k1",
@@ -327,6 +329,7 @@ kiosk.list
               "acls": ["operator"]
           },
           "auto_login": false,
+          "auto_login_delay": null,
           "current_url": null,
           "ip": "127.0.0.1/32",
           "name": "mws1",
