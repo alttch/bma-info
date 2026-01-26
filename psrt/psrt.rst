@@ -162,8 +162,8 @@ Enterprise version
 The following operating systems are recommended for production setups and
 supported out-of-the-box:
 
-* `Ubuntu Linux 20.04+ <https://ubuntu.com>`_
-* `Debian GNU/Linux 11+ <https://www.debian.org>`_
+* `Ubuntu Linux 22.04+ <https://ubuntu.com>`_
+* `Debian GNU/Linux 12+ <https://www.debian.org>`_
 
 Download packages from either https://pub.bma.ai/psrt-enterprise/ or the apt
 repository:

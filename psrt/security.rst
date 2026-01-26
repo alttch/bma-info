@@ -21,7 +21,7 @@ Native packages
 Supported distributions
 -----------------------
 
-* `Ubuntu 20.04 LTS <https://releases.ubuntu.com/focal/>`_
+* `Ubuntu 22.04 LTS <https://releases.ubuntu.com/jammy/>`_
 
 OpenSSL versions
 ----------------
