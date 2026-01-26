@@ -65,8 +65,8 @@ PSRT server can have FIPS-140 mode activated with the following:
 
 * Enable FIPS-140 mode in the operating system
 
-    * Ubuntu Linux 20.04 LTS:
-      https://ubuntu.com/security/certifications/docs/fips-enablement
+    * Ubuntu Linux 22.04 LTS:
+      https://documentation.ubuntu.com/security/compliance/fips/fips-overview/
 
     * Other distributions: refer to OS/distribution technical documentation for
       more info
@@ -84,3 +84,8 @@ PSRT server can have FIPS-140 mode activated with the following:
 
 * Note that if FIPS-140 can not be enabled but the option is set, the server
   will not go online.
+
+* Certain modules use AWS-LC cryptographic library which is also
+  `FIPS-140-certified
+  <https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4631>_`.
+  FIPS mode in AWC-LC is enabled automatically during compilation.

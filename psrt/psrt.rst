@@ -30,30 +30,34 @@ downloaded either directly or via the apt repository:
     curl https://pub.bma.ai/apt/setup | sudo sh
     sudo apt-get install psrt
 
-The apt repository contains packages compatible with Ubuntu 20.04 LTS which
-require OpenSSL 1.1. To enable OpenSSL 1.1 support on newer Ubuntu versions,
-install the following:
-
-.. code:: shell
-
-   wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
-   sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
-
 .. _psrt_compile:
 
 Building from source
 --------------------
 
 * Install `Rust <https://www.rust-lang.org/tools/install>`_
+
+* Install cross-rs and just:
+
+.. code:: shell
+
+    cargo install cross --git https://github.com/cross-rs/cross
+    cargo install just
+
+* Build the cross-compilation Docker images (assuming Docker or compatible is
+  installed):
+
+.. code:: shell
+
+   just docker-cross
+
 * Build the server and cli:
 
 .. code:: shell
 
     git clone https://github.com/alttch/psrt/
     cd psrt
-    cargo build --features server,cli --release
-    # for openssl v3
-    cargo build --features server,cli,openssl3 --release
+    cross build --release --target x86_64-unknown-linux-gnu
 
 .. _psrt_config:
 
