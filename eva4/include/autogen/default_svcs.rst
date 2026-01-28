@@ -91,6 +91,10 @@ Databases and data storages
      - :doc:`eva.svc.fwriterN<svc/eva-svc-filewriter>`
      - svc/eva-svc-filewriter
      - 
+   * - :doc:`JSON databases state history<svc/eva-db-json>`
+     - :doc:`eva.db.jsonN<svc/eva-db-json>`
+     - svc/eva-db-json
+     - 
    * - :doc:`SQL databases state history<svc/eva-db-sql>`
      - :doc:`eva.db.sN<svc/eva-db-sql>`
      - svc/eva-db-sql
@@ -229,6 +233,10 @@ System services
    * - :doc:`Mirror service<svc/eva-svc-mirror>`
      - :doc:`eva.svc.mirror<svc/eva-svc-mirror>`
      - svc/eva-svc-mirror
+     - 
+   * - :doc:`Network monitor<svc/eva-controller-netmon>`
+     - :doc:`eva.controller.netmon<svc/eva-controller-netmon>`
+     - svc/eva-controller-netmon
      - 
    * - :doc:`Real-time monitor<svc/eva-rtmon>`
      - :doc:`eva.svc.rtmon<svc/eva-rtmon>`

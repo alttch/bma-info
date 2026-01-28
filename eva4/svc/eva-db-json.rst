@@ -1,24 +1,21 @@
-TimescaleDB databases state history
-***********************************
+JSON databases state history
+****************************
 
 .. contents::
-
-.. include:: ../include/timescale_svc.rst
-
 
 Setup
 =====
 
-Use the template *EVA_DIR/share/svc-tpl/svc-tpl-db-timescale.yml*:
+Use the template *EVA_DIR/share/svc-tpl/svc-tpl-db-json.yml*:
 
-.. literalinclude:: ../svc-tpl/svc-tpl-db-timescale.yml
+.. literalinclude:: ../svc-tpl/svc-tpl-db-json.yml
    :language: yaml
 
 Create the service using :ref:`eva4_eva-shell`:
 
 .. code:: shell
 
-    eva svc create eva.db.timescale1 /opt/eva4/share/svc-tpl/svc-tpl-db-timescale.yml
+    eva svc create eva.db.json1 /opt/eva4/share/svc-tpl/svc-tpl-db-json.yml
 
 or using the bus CLI client:
 
@@ -36,7 +33,7 @@ EAPI methods
 
 See :doc:`../eapi` for the common information about the bus, types, errors and RPC calls.
 
-.. _eva4_eva.db.timescale__state_history:
+.. _eva4_eva.db.json__state_history:
 
 state_history
 -------------
@@ -70,25 +67,17 @@ state_history
      - f64
      - Ending timestamp (default: now)
      - no
-   * - **fill**
-     - String
-     - Fill (nS/T/H/D/W e.g. 10T for 10-minute)
-     - no
-   * - **precision**
-     - u32
-     - Round values to digits after commma
-     - no
    * - **limit**
      - u32
      - Limit records to
      - no
-   * - **xopts**
-     - Map<String, String>
-     - Extra: vfn=fn for value grouping: mean/sum (d: mean), fill_null=none|zero|nan|previous, rp=TABLE for custom rp_TABLE
-     - no
    * - **compact**
      - bool
      - Pack data in arrays according to type
+     - no
+   * - **xopts**
+     - Map<String, String>
+     - Extra: path=JSON path, e.g. $.value.temp[0]
      - no
 
 
@@ -105,98 +94,22 @@ state_history
       {
           "status": 1,
           "t": 1652059865.045223,
-          "value": 15
+          "value": "something"
       },
       {
           "status": 1,
           "t": 1652059870.0452943,
-          "value": 15
+          "value": {"key": "value"}
       },
       {
           "status": 1,
           "t": 1652059875.0443518,
-          "value": 15
+          "value": [1, 2, 3]
       }
   ]
   
 
-.. _eva4_eva.db.timescale__state_history_combined:
-
-state_history_combined
-----------------------
-
-.. list-table::
-   :header-rows: 0
-
-   * - Description
-     - *Gets item state history combined (value only)*
-   * - Parameters
-     - required
-   * - Returns
-     - State history combined payload
-
-.. list-table:: Parameters
-   :align: left
-
-   * - Name
-     - Type
-     - Description
-     - Required
-   * - **i**
-     - String/Vec<String>
-     - Item OID/OIDs
-     - **yes**
-   * - **t_start**
-     - f64
-     - Beginning timestamp (default: last 24 hours)
-     - no
-   * - **t_end**
-     - f64
-     - Ending timestamp (default: now)
-     - no
-   * - **fill**
-     - String
-     - Fill (nS/T/H/D/W e.g. 10T for 10-minute, requires ts_extension)
-     - **yes**
-   * - **precision**
-     - u32
-     - Round values to digits after commma
-     - no
-   * - **xopts**
-     - Map<String, String>
-     - Extra: vfn=fn for value grouping: mean/sum (d: mean), fill_null=none|zero|nan|previous, rp=TABLE for custom rp_TABLE
-     - no
-
-
-*Return payload example:*
-
-.. code:: json
-
-  {
-      "data": {
-          "sensor:env/temp": [
-              20.0,
-              25.0,
-              22.0,
-              18.0,
-          ],
-          "sensor:env/hum": [
-              40.0,
-              45.0,
-              35.2,
-              34.0,
-          ]
-      },
-      "t": [
-          1745859600.0,
-          1745863200.0,
-          1745866800.0,
-          1745870400.0,
-      ]
-  }
-  
-
-.. _eva4_eva.db.timescale__state_log:
+.. _eva4_eva.db.json__state_log:
 
 state_log
 ---------
@@ -234,10 +147,6 @@ state_log
      - u32
      - Limit records to
      - no
-   * - **xopts**
-     - Map<String, String>
-     - Extra: offset=N for query offset, rp=TABLE for custom rp_TABLE
-     - no
 
 
 *Return payload example:*
@@ -255,18 +164,18 @@ state_log
           "oid": "sensor:tests/temp",
           "status": 1,
           "t": 1652060180.046056,
-          "value": 15
+          "value": "something"
       },
       {
           "oid": "sensor:tests/temp",
           "status": 1,
           "t": 1652060185.0454304,
-          "value": 15
+          "value": {"key": "value"}
       }
   ]
   
 
-.. _eva4_eva.db.timescale__state_push:
+.. _eva4_eva.db.json__state_push:
 
 state_push
 ----------
@@ -280,6 +189,3 @@ state_push
      - *none*
    * - Returns
      - *nothing*
-
-.. include:: ../include/timescale_svc_xtra.rst
-

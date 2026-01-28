@@ -8,7 +8,7 @@ config:
   auth_svc: eva.aaa.localauth
   # kiosk bus
   broker:
-    path: 0.0.0.0:7791
+    path: 0.0.0.0:7791 # (ws://IP:PORT for websockets)
     buf_size: 8192 # bus buffer size
     buf_ttl: 10 # microseconds
     timeout: 5 # override the default timeout

@@ -13,7 +13,9 @@ Docker, as well as with `Kubernetes <https://kubernetes.io>`_.
 What is included
 ----------------
 
-* the container images are based on Ubuntu 20.04 LTS
+* the container images are based on Ubuntu 22.04 LTS
+
+* the image is suitable for both x86_64 and aarch64 (ARM64) architectures
 
 * the images do not contain any services pre-deployed
 

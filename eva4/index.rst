@@ -44,6 +44,7 @@ control systems.
     :titlesonly:
 
     What is new (CHANGELOG) <changelog>
+    update/4.2.0
     update/4.1.0
     quickstart
     sysdoc
