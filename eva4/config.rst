@@ -87,7 +87,7 @@ configurations and their states:
 .. code:: shell
 
    # export inventory from the old database
-   eva item export --full -o inventory.yml
+   eva item export --full -o inventory.yml "#"
    # edit core configuration and switch the database
    eva edit config/core
    # restart the node to apply the new configuration
