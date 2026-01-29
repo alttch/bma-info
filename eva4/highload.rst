@@ -54,7 +54,7 @@ Both :ref:`eva4_config_core` and service configurations have got a parameter
 child subprocesses) starts consuming more memory than the parameter value, the
 core/service launchers start output warning messages into logs.
 
-The default value of *mem_warn* parameter is 128 MiB (134 217 728 bytes),
+The default value of *mem_warn* parameter is 192 MiB (201 326 592 bytes),
 multiplied by the number of workers set.
 
 Crash tests
