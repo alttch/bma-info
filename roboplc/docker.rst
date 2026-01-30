@@ -38,7 +38,7 @@ The command also creates `Dockerfile`:
 
 .. code:: dockerfile
 
-    FROM bmauto/roboplc-x86_64:latest
+    FROM bmauto/roboplc:latest
     COPY ./target/x86_64-unknown-linux-gnu/release/project1 /var/roboplc/program/current
 
 Building Docker image
