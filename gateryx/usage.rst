@@ -60,6 +60,18 @@ interface, which allows users to:
 
 * Logout - terminates the session and removes the token from the browser.
 
+Service users
+=============
+
+The command
+
+.. code:: bash
+
+    gateryx user create -r USERNAME
+
+creates a service user. Service users can not use web applications directly
+however can have application tokens issued.
+
 Using application tokens
 ========================
 
@@ -77,3 +89,13 @@ header name can be specified (default: `X-Gateryx-Authorization`).
 
    Certain clients (e.g. `git`) do not send authorization headers if the user
    name is empty. Consider using any non-empty string.
+
+The command
+
+.. code:: bash
+
+   gareryx user issue-app-token -u USERNAME -a APP -x DAYS
+
+Allows admin to issue application token for a service or regular user. The
+token can be issued for `any` days, despite the limits are configured for
+regular users.
