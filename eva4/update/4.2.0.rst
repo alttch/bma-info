@@ -16,7 +16,7 @@ capabilities of EVA ICS.
 Important changes and new features
 ==================================
 
-* JSON databases support (PostgreSQl only for now), see :doc:`../svc/eva-db-json`.
+* JSON databases support (PostgreSQL only for now), see :doc:`../svc/eva-db-json`.
 
 * :doc:`../svc/eva-controller-netmon`.
 
