@@ -32,3 +32,10 @@ educational purposes without any restrictions.
     common/index
     legacy
     trademarks
+
+AI Agents Integration
+=====================
+
+`Bohemia Automation InfoSys <https://deepwiki.com/alttch/bma-info>`_ and SDK
+libraries ara available for integration with AI agents via `DeepWiki MCP
+<https://docs.devin.ai/work-with-devin/deepwiki-mcp>`_.
