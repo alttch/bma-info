@@ -23,6 +23,7 @@ interface LoginProps {
   // CAPTCHA verification schemes
   prelogin_hook?: () => Promise<unknown>;
   state_announce?: (app_state: HMIAppState) => void; // application state hook
+  use_gateryx_api?: boolean; // if true, use Gateryx API for logout and certain other operations
 }
 
 enum LoginFailedAction {

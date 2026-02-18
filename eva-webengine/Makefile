@@ -3,8 +3,8 @@ all:
 
 prepare:
 	npm i
-	sed 's|import|// @ts-ignore\nimport|g' /opt/eva-webengine/src/lib.ts > lib.ts
+	sed 's|import|// @ts-ignore\nimport|g' ~/src/eva-webengine/src/lib.ts > lib.ts
 	tsc
 	node parse.js lib.js | \
-		CONFIG=webengine.yml /opt/eva4/sbin/fwdocs > include/jsdoc_webengine.rst
+		CONFIG=webengine.yml /Users/gigabito/src/eva-util/v4/fwdocs/target/release/fwdocs > include/jsdoc_webengine.rst
 	rm -f lib.js lib.ts
