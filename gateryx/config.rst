@@ -153,3 +153,12 @@ must be used when the cookie is erased.
 If a third-party application can fully trust the Gateryx server (e.g. using IP
 filtering or having no external access), it can use `X-Gateryx-User` HTTP
 header which contains the username of the authenticated user.
+
+Configuring 3rd party apps for Gateryx API
+==========================================
+
+Third-party applications can be configured to use the exposed Gateryx API
+(`./gateryx/rpc`) having `gateryx_api: true` in the application configuration.
+
+As the API can directly manipulate sensitive authentication data, it is
+strongly recommended to enable API for trusted applications only.
