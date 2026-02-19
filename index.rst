@@ -39,3 +39,7 @@ AI Agents Integration
 `Bohemia Automation InfoSys <https://deepwiki.com/alttch/bma-info>`_ and SDK
 libraries ara available for integration with AI agents via `DeepWiki MCP
 <https://docs.devin.ai/work-with-devin/deepwiki-mcp>`_.
+
+Warning: AI agents/AI indexers can make mistakes, supervision is strongly
+recommended. For any controversial questions, refer to the official
+documentation as the primary source.
