@@ -304,6 +304,10 @@ Artificial Intelligence
      - Suggested name
      - Executable
      - Deployed
+   * - :doc:`MCP (Model Control Protocol) service<svc/eva-mcp>`
+     - :doc:`eva.mcp.N<svc/eva-mcp>`
+     - svc/eva-mcp
+     - 
    * - :doc:`Object detector for YOLO models<svc/eva4-svc-yolo-detector>`
      - :doc:`eva.detector.N<svc/eva4-svc-yolo-detector>`
      - venv/bin/eva4-svc-yolo-detector

@@ -168,6 +168,15 @@
   txt: "Executor controller service for Python macros. See :doc:`../lmacro/py/python_macros`."
   tpl: svc-tpl-controller-py.yml
   api: svc/controller-py/eapi.yml
+- nam: eva.mcp.N
+  grp: ai
+  exe: svc/eva-mcp
+  des: MCP (Model Control Protocol) service
+  txt:
+  tpl: svc-tpl-mcp.yml
+  api: svc/eva-mcp/eapi.yml
+  txt: |
+    .. include:: ../include/eva_mcp.rst
 - nam: eva.controller.virtN
   grp: sim
   exe: svc/eva-controller-virtual
