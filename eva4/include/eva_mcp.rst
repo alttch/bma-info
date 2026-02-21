@@ -65,3 +65,9 @@ The conversation (or rules, agent files) should contain a phrase like
     you are connected to the system .....
 
 This tells the agent to immediately check the MCP servers provided.
+
+Troubleshooting
+===============
+
+Certain agents may require restarting if MCP service has been resatred or
+connection has been lost.
