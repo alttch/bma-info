@@ -29,7 +29,7 @@ control systems.
 
 * Built-in API and servers for web SCADA applications.
 
-* Can be integrated into modern AI agents via provided :doc:`MCP service
+* Can be integrated with modern AI agents via provided :doc:`MCP service
   <svc/eva-mcp>`.
 
 * Real-time event :doc:`replication<svc/eva-repl>` and interaction between

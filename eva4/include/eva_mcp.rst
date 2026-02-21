@@ -69,5 +69,13 @@ This tells the agent to immediately check the MCP servers provided.
 Troubleshooting
 ===============
 
-Certain agents may require restarting if MCP service has been resatred or
-connection has been lost.
+.. note::
+
+    Certain agents may require restarting if MCP service has been restarted or
+    connection has been lost.
+
+MCP is still experimental technology and issues may occur. Known issues
+reported:
+
+* Cursor GUI agent does not see MCP tools. Use Cursor CLI version instead until
+  the issue is resolved.
