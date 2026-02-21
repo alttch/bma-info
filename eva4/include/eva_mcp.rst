@@ -55,6 +55,8 @@ Example for `Cursor <https://cursor.com>`_ agent (`~/.cursor/mcp.json`):
 
 (add required authentication headers for WAF if applicable).
 
+It is also highly recommended to connect `DeepWiki MCP <https://docs.devin.ai/work-with-devin/deepwiki-mcp>`_ as well.
+
 Recommended initial prompt
 ==========================
 
