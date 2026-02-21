@@ -17,7 +17,7 @@ Safety and security
 .. warning::
 
    AI agents can perform unpredictable actions, on production plants it is
-   strongly advised to allow very minimal set of services/methods allowed to be
+   strongly advised to set a very minimal set of services/methods allowed to be
    called. Full human supervision is always recommended.
 
 The service has no authentication and can provide full access to the platform
