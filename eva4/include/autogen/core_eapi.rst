@@ -864,6 +864,10 @@ item.list
      - String
      - filter items by node (use .local as an alias for the local one)
      - no
+   * - **regex**
+     - String
+     - filter items by OID with regular expression
+     - no
    * - **include**
      - Vec<String>
      - List of additional masks to include
@@ -927,6 +931,10 @@ item.state
    * - **i**
      - Vec<String>/String
      - Item OID(s) or OID mask(s)
+     - no
+   * - **regex**
+     - String
+     - filter items by OID with regular expression
      - no
    * - **include**
      - Vec<String>

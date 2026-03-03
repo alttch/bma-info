@@ -1156,6 +1156,10 @@ item.state
      - Vec<String>/String
      - Item OID(s) or masks
      - no
+   * - **regex**
+     - String
+     - Filter by regex (applies after mask filtering)
+     - no
    * - **full**
      - bool
      - Full state (enabled + meta)
