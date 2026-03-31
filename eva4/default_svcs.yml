@@ -222,7 +222,7 @@
   des: InfluxDB state history
   txt: |
     Allows to store item states history in `InfluxDB
-    <https://www.influxdata.com>`_, v1 and v2 protocols are supported.
+    <https://www.influxdata.com>`_, v1, v2 and v3 protocols are supported.
 
     The service provides unified database EAPI.
 
