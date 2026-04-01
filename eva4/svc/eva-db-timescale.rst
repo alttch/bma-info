@@ -82,6 +82,10 @@ state_history
      - u32
      - Limit records to
      - no
+   * - **prop**
+     - String
+     - Property: status or value (default: both)
+     - no
    * - **xopts**
      - Map<String, String>
      - Extra: vfn=fn for value grouping: mean/sum (d: mean), fill_null=none|zero|nan|previous, rp=TABLE for custom rp_TABLE
@@ -277,9 +281,40 @@ state_push
    * - Description
      - *push item states into db, (payload: single item state or list). skips existing states*
    * - Parameters
-     - *none*
+     - required
    * - Returns
      - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **oid**
+     - String
+     - Item OID (alias: i)
+     - **yes**
+   * - **status**
+     - i16
+     - Item status (alias: s)
+     - **yes**
+   * - **value**
+     - Any
+     - Item value, numeric only (alias: v)
+     - no
+   * - **t**
+     - f64
+     - Timestamp, seconds since epoch (required, no default; key must be 't', not 'set_time')
+     - **yes**
+
+
+*Return payload example:*
+
+.. code:: json
+
+  {"oid": "sensor:tests/temp", "status": 1, "value": 15.0, "t": 1652060175.044}
 
 .. include:: ../include/timescale_svc_xtra.rst
 
