@@ -76,7 +76,8 @@ environment variable:
     sudo -s
     curl https://pub.bma.ai/eva4/install | env PYTHON=/path/to/python sh /dev/stdin -a --hmi
 
-Additional special options for Python venv:
+Additional special options for Python venv (must be also specified in
+environment variables):
 
 * **PYTHON_USE_SYSTEM_PIP=1** - use system pip by default
 * **PYTHON_SYSTEM_SITE_PACKAGES=1** - use system site-packages by default
