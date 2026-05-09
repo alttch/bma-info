@@ -52,6 +52,53 @@ EAPI methods
 
 See :doc:`../eapi` for the common information about the bus, types, errors and RPC calls.
 
+.. _eva4_eva.db.s__state_announce:
+
+state_announce
+--------------
+
+.. list-table::
+   :header-rows: 0
+
+   * - Description
+     - *Replays state log rows as remote archive state bus publishes (same query as state_log). Note: always sent as remote-archive states.*
+   * - Parameters
+     - required
+   * - Returns
+     - *nothing*
+
+.. list-table:: Parameters
+   :align: left
+
+   * - Name
+     - Type
+     - Description
+     - Required
+   * - **i**
+     - String
+     - Item OID, supports ending masks (e.g. sensor:group/#)
+     - **yes**
+   * - **t_start**
+     - f64
+     - Beginning timestamp (default: last 24 hours) (alias: s)
+     - no
+   * - **t_end**
+     - f64
+     - Ending timestamp (default: now) (alias: e)
+     - no
+   * - **limit**
+     - u32
+     - Limit records to (alias: n)
+     - no
+   * - **xopts**
+     - Map<String, String>
+     - Extra: offset=N for query offset (alias: o)
+     - no
+   * - **publish_for**
+     - String/Vec<String>
+     - Omit for broadcast; one bus client id or a list (alias: for)
+     - no
+
 .. _eva4_eva.db.s__state_history:
 
 state_history

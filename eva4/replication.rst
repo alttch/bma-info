@@ -1,4 +1,4 @@
-Node replication
+Data replication
 ****************
 
 EVA ICS allows to replicate node items using :doc:`replication
@@ -419,3 +419,51 @@ In this scenario:
 
    If the bridge service is deployed with *eva.controller.* prefix, the items
    from the protected node are created automatically on the regular one.
+
+Replication between local services
+==================================
+
+In certain cases it may be required to replicate items between local services,
+e.g. to fill newly installed database or re-send data from the database to
+other services, e.g. to node replication.
+
+Example:
+
+consider there is a database service "eva.db.default" deployed and we need to
+replicated data with newly installed eva.db.d2
+
+.. code:: shell
+
+   eva svc call eva.db.default state_announce "i=sensor:#" \
+       t_start=START_DATE_OR_TIMESTAMP for=eva.db.d2
+
+The newly installed service gets bus events and fills its database.
+
+Notes:
+
+* All database services supplied with EVA ICS have "state_announce" method
+  starting from v4.2.0 build 2025051201.
+
+* "for" parameter is mandatory, but may contain a list of service IDs, comma
+  separated.
+
+* Do not overload the bus, for large amounts of data, split time interval into
+  chunks using t_start/t_end parameters.
+
+* Depending on the database, the service may not accept wildcards ("#") or
+  accept them in limited way ("sensor:#").
+
+* The target service must accept events (for databases, "ignore_events" must
+  be set to *false* during data replication).
+
+* It is possible to announce states as "local" (parameter kind=loc) or
+  "remote-archive" (kind=rar, default). The database services accept "rar", for
+  the replication services "loc" must be used.
+
+* The state events are sent with IEID=0,0 (phantom) so the data should not be
+  considered as "current state" in the default circumstances.
+
+* As "loc" can be still considered by certain services, which do not rely on
+  IEID, as "current local state" and additional event processing logic may be
+  applied, use it with caution and test in digital twins before applying in
+  production.
