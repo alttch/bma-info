@@ -30,8 +30,8 @@ Create a new project:
 .. note::
 
    `eva-lsl` creates a new project with :ref:`FIPS-140<eva4_security_fips>`
-   disabled. If the service is going to be used in FIPS-140 environment, remove
-   "openssl-no-fips" feature from *eva-common* dependency in *Cargo.toml*.
+   disabled. If the service is going to be used in FIPS-140 environment, add
+   "fips" feature from *eva-common* dependency in *Cargo.toml*.
 
 The command will automatically create a new project with the service template
 and add required dependencies. Alternatively, a new project can be created with
