@@ -45,7 +45,7 @@ state_announce
    :header-rows: 0
 
    * - Description
-     - *Replays state log rows as remote archive state bus publishes (same query as state_log). Note: always sent as remote-archive states.*
+     - *Replays state log rows as state bus publishes (same query as state_log). Note: kind chooses ST/LOC (loc) or ST/RAR (rar); default rar.*
    * - Parameters
      - required
    * - Returns
@@ -78,10 +78,14 @@ state_announce
      - Map<String, String>
      - Extra: offset=N for query offset, rp=TABLE for custom rp_TABLE (alias: o)
      - no
+   * - **kind**
+     - String
+     - loc | rar (default: rar): publish under local or remote-archive state topic prefix
+     - no
    * - **publish_for**
      - String/Vec<String>
-     - Omit for broadcast; one bus client id or a list (alias: for)
-     - no
+     - Required; bus client id(s); empty list sends nothing (alias: for)
+     - **yes**
 
 .. _eva4_eva.db.timescale__state_history:
 
