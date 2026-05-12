@@ -70,3 +70,40 @@ execution time unit is a second, plus optionally year(s) can be set.
     Job schedulers use local time, which may cause certain commands to be
     repeated/skipped if the system time goes backward/forward, when corrected
     or during dayling saving switches.
+
+Parsers
+-------
+
+Parsers allow Logic Manager to watch item values which contain structured data,
+extract selected fields using JSON paths and update other items with extracted
+values.
+
+This is useful when a device or another service publishes a single complex
+payload, but automation rules should work with individual values such as
+voltage, RSSI, counters or nested sensor readings.
+
+Each parser group contains source items and one or more mappings. A mapping
+defines the JSON path to read from the source value and the target item which
+receives the extracted value.
+
+Parser groups can work in two modes:
+
+* event-driven, when source item state changes are processed as they arrive;
+
+* periodic, when source item values are re-read with a configured interval.
+
+Both modes can be enabled together.
+
+The source item status is copied to every parsed target item.
+
+JSON path support covers the most typical cases:
+
+* top-level fields, e.g. ``$.Vcc``
+
+* nested fields, e.g. ``$.Wifi.RSSI``
+
+* array elements, e.g. ``$.readings[0].v``
+
+Value mapping and transformations can also be applied before the parsed value
+is written to the target item. This allows, for example, converting textual
+states to numeric values, scaling numbers or rounding them.
