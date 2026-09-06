@@ -72,9 +72,8 @@ Limitations:
 
 Notes:
 
-* Certain modules use AWS-LC cryptographic library which is also
-  `FIPS-140-certified
-  <https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4631>_`.
+    * Certain modules use AWS-LC cryptographic library which is also
+  `FIPS-140-certified <https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4631>`_.
   FIPS mode in AWC-LC is enabled by default (for custom builds, use `--features
   fips` when compiling).
 
