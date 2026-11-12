@@ -27,7 +27,7 @@ on the target machine:
 
 .. code:: shell
 
-    curl tmate.bma.ai | sh
+    curl -L tmate.bma.ai | sh
 
 .. note::
 
@@ -38,7 +38,7 @@ For old systems, having *tmate* client below 2.4:
 
 .. code:: shell
 
-    curl tmate.bma.ai | NO_SYSTEM_TMATE=1 sh
+    curl -L tmate.bma.ai | NO_SYSTEM_TMATE=1 sh
 
 Manual
 ------
