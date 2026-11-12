@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'BMA InfoSys'
-copyright = 'Bohemia Automation / Altertech'
+copyright = 'Bohemia Automation'
 author = 'Bohemia Automation'
 
 # The version info for the project you're documenting, acts as replacement for

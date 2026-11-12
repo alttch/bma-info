@@ -32,11 +32,11 @@ Security and QA  Basic                                Enterprise-grade
 Support          Basic/community                      Enterprise-grade
 ===============  ===================================  ====================================
 
-We are `Bohemia Automation <https://www.bohemia-automation.com>`_ / `Altertech
-<https://www.altertech.com/>`_, a group of companies with 15+ years of
-experience in the enterprise automation and industrial IoT. Our setups include
-power plants, factories and urban infrastructure. Largest of them have 1M+
-sensors and controlled devices and the bar raises higher and higher every day.
+We are `Bohemia Automation <https://www.bohemia-automation.com>`_, a company
+with 15+ years of experience in the enterprise automation and industrial IoT.
+Our setups include power plants, factories and urban infrastructure. Largest of
+them have 1M+ sensors and controlled devices and the bar raises higher and
+higher every day.
 
 Installation
 ============

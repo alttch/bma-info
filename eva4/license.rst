@@ -8,8 +8,8 @@ Minor modules may contain the code, developed or included under different
 non-compatible Open Source licenses. In this case, specific module license may
 vary. Refer to the Module Info for more details.
 
-Copyright Bohemia Automation (https://www.bohemia-automation.com), Altertech
-Group (https://www.altertech.com) and other contributors.
+Copyright Bohemia Automation (https://www.bohemia-automation.com) and other
+contributors.
 
 :Version: 2.0
 :Date: January 2004
