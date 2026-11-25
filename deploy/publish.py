@@ -11,7 +11,7 @@ commit = subprocess.check_output(["git", "rev-parse", "HEAD"],text=True).strip()
 assert len(commit) == 40 and all(c in "0123456789abcdef" for c in commit)
 assert (root/"pagefind/pagefind.js").is_file() and (root/"search.html").is_file()
 config = os.environ.get("BMA_RCLONE_CONFIG", str(Path.home()/".config/bma-info-rclone.conf"))
-command = ["rclone", "--config", config]
+command = ["rclone", "--config", config, "--s3-no-head"]
 destination = f"docs:sites-static/info.bma.ai/releases/{commit}"
 files = [p for p in root.rglob("*") if p.is_file()]
 # Copy only. Previous releases and unrelated site prefixes are never deleted.
