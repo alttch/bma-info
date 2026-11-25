@@ -1,0 +1,10 @@
+{
+  "name": "bma-info-search",
+  "private": true,
+  "scripts": {
+    "index-search": "pagefind --site _build/local-search --root-selector '[role=main]' --exclude-selectors '.headerlink,.wy-breadcrumbs,.rst-footer-buttons,footer'"
+  },
+  "devDependencies": {
+    "pagefind": "1.6.0"
+  }
+}

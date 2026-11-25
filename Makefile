@@ -241,3 +241,14 @@ pydocs:
 
 open:
 	xdg-open _build/html/index.html
+
+# Isolated preview: no changes to the normal HTML/ReadTheDocs target.
+.PHONY: html-search
+html-search:
+	BMA_LOCAL_SEARCH=1 $(SPHINXBUILD) -b html -d $(BUILDDIR)/local-search-doctrees $(SPHINXOPTS) . $(BUILDDIR)/local-search
+	npm run index-search
+
+# Publish committed content: RCI performs a fresh checkout, build and R2 upload.
+.PHONY: pub
+pub:
+	rci job run info.bma.ai --follow

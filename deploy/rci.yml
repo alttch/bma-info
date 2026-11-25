@@ -1,0 +1,16 @@
+git:
+  url: https://github.com/alttch/bma-info
+  branch: actual
+commands:
+  build: |
+    uv venv --python 3.11 --allow-existing .venv-search
+    uv pip install --python .venv-search/bin/python -r requirements-search.txt
+    npm ci --no-audit --no-fund
+    make html-search SPHINXBUILD=./.venv-search/bin/sphinx-build SPHINXOPTS="-j auto"
+  test: |
+    test -s _build/local-search/index.html
+    test -s _build/local-search/search.html
+    test -s _build/local-search/pagefind/pagefind.js
+  release: python3 deploy/publish.py
+timeout: 1800
+enabled: true

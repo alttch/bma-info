@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% set title = _('Search') %}
+{% block extrahead %}
+{{ super() }}
+<link href="{{ pathto('pagefind/pagefind-ui.css', 1) }}" rel="stylesheet">
+
+<style>
+#bma-search { --pagefind-ui-primary: #2980b9; --pagefind-ui-font: inherit; --pagefind-ui-scale: .9; }
+#bma-search mark { background: #ffe484; color: #222; }
+#bma-search .pagefind-ui__result-excerpt { font-size: 14px; }
+</style>
+{% endblock %}
+{% block body %}
+<h1>Search Results</h1>
+<div id="bma-search"></div>
+<noscript>Enable JavaScript to search this documentation.</noscript>
+<script type="module">
+const root = document.querySelector("#bma-search");
+const input = document.createElement("input");
+input.type = "search";
+input.placeholder = "Search documentation";
+input.setAttribute("aria-label", "Search documentation");
+input.style.cssText = "width:100%;padding:12px;margin-bottom:20px";
+const summary = document.createElement("p");
+summary.setAttribute("role", "status");
+const results = document.createElement("div");
+root.append(input, summary, results);
+const engine = import(new URL("{{ pathto('pagefind/pagefind.js', 1) }}", location.href).href);
+let sequence = 0, timer;
+async function search() {
+    const current = ++sequence;
+    const term = input.value.trim();
+    const url = new URL(location.href);
+    url.searchParams.set("q", term);
+    history.replaceState(null, "", url);
+    results.replaceChildren();
+    if (!term) { summary.textContent = "Enter a search term."; return; }
+    summary.textContent = "Searching...";
+    try {
+        const pagefind = await engine;
+        const query = term.includes('"') ? term : term.split(/\s+/).map(word => '"' + word + '"').join(" ");
+        const found = await pagefind.search(query);
+        const loaded = await Promise.all(found.results.slice(0, 30).map(r => r.data()));
+        if (current !== sequence) return;
+        summary.textContent = found.results.length
+            ? found.results.length + " page(s) matching " + term
+            : "No results for " + term;
+        for (const data of loaded) {
+            const item = document.createElement("section");
+            item.style.cssText = "border-bottom:1px solid #eee;padding:18px 0";
+            const link = document.createElement("a");
+            link.href = data.url;
+            const section = data.url.split("/").filter(Boolean)[0];
+            const labels = {eva4:"EVA ICS v4",eva3:"EVA ICS v3","eva-mlkit":"EVA ICS Machine Learning kit",roboplc:"RoboPLC",busrt:"BUS/RT",psrt:"PSRT"};
+            link.textContent = (labels[section] ? "[" + labels[section] + "] " : "") + data.meta.title;
+            const excerpt = document.createElement("p");
+            excerpt.style.cssText = "font-size:14px;margin:10px 0 0";
+            // Pagefind's escaped excerpt contains only its generated mark tags.
+            const escaped = document.createElement("div");
+            escaped.innerHTML = data.excerpt;
+            const clean = document.createDocumentFragment();
+            function copy(node, into) {
+                for (const child of node.childNodes) {
+                    if (child.nodeType === 3) into.append(document.createTextNode(child.textContent));
+                    else if (child.nodeName === "MARK") {
+                        const mark = document.createElement("mark");
+                        mark.textContent = child.textContent;
+                        into.append(mark);
+                    } else copy(child, into);
+                }
+            }
+            copy(escaped, clean);
+            excerpt.append(clean);
+            item.append(link, excerpt);
+            results.append(item);
+        }
+        if (found.results.length > 30) {
+            const note = document.createElement("p");
+            note.textContent = "Showing the first 30 pages. Refine your query for more specific results.";
+            results.append(note);
+        }
+    } catch (error) {
+        if (current === sequence) summary.textContent = "Search could not be loaded. Please reload and try again.";
+        console.error(error);
+    }
+}
+input.addEventListener("input", () => { ++sequence; clearTimeout(timer); timer=setTimeout(search, 150); });
+input.value = new URLSearchParams(location.search).get("q") || "";
+search();
+</script>
+{% endblock %}

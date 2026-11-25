@@ -1,2 +1,6 @@
 _build
 venv
+
+node_modules/
+
+.venv-search/

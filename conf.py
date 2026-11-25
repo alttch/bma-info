@@ -343,3 +343,8 @@ rst_epilog = """
 # def setup(app):
     # app.add_js_file("https://st.bma.ai/a.js")
 
+
+# Optional standalone Pagefind preview; the normal RTD build is unchanged.
+if os.environ.get("BMA_LOCAL_SEARCH") == "1":
+    templates_path.insert(0, "_templates/pagefind")
+    exclude_patterns.extend(["node_modules", ".venv-search", "SEARCH.md", "deploy"])
