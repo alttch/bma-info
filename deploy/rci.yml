@@ -6,7 +6,8 @@ commands:
     uv venv --python 3.11 --allow-existing .venv-search
     uv pip install --python .venv-search/bin/python -r requirements-search.txt
     npm ci --no-audit --no-fund
-    make html-search SPHINXBUILD=./.venv-search/bin/sphinx-build SPHINXOPTS="-j auto"
+    python3 deploy/clean-build.py
+    make html-search SPHINXBUILD=./.venv-search/bin/sphinx-build SPHINXOPTS="-j 8"
   test: |
     test -s _build/local-search/index.html
     test -s _build/local-search/search.html
