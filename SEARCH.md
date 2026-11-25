@@ -45,7 +45,7 @@ RCI checks out GitHub, builds Sphinx + Pagefind, uploads into
 its content, then updates `info.bma.ai/active.json` last. Old releases remain.
 R2 S3 credentials are read from a protected RCI-side rclone config and never stored in Git.
 Worker source is `deploy/worker.js`; infrastructure is managed by BA Terraform.
-Old `/en/latest/` and `/en/stable/` links redirect to the equivalent root path.
+Old `/en/actual/`, `/en/latest/` and `/en/stable/` links redirect to the equivalent root path.
 
 RCI currently has rclone 1.60.1: use `--s3-no-head` to avoid its incompatible
 post-upload HEAD request on R2 (501). Uploads are still independently verified

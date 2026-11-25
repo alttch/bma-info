@@ -4,8 +4,8 @@ export default {
       return new Response("Method Not Allowed", {status:405,headers:{Allow:"GET, HEAD"}});
     const url = new URL(request.url);
     // Preserve incoming RTD links, queries and browser-side anchors.
-    if (/^\/en\/(latest|stable)(\/|$)/.test(url.pathname)) {
-      url.pathname = url.pathname.replace(/^\/en\/(latest|stable)(\/|$)/, "/");
+    if (/^\/en\/(latest|stable|actual)(\/|$)/.test(url.pathname)) {
+      url.pathname = url.pathname.replace(/^\/en\/(latest|stable|actual)(\/|$)/, "/");
       return Response.redirect(url.href, 301);
     }
     let path;
