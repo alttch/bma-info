@@ -42,7 +42,7 @@ Existing cookie-consent JS can still call ipapi.co; this is unrelated to search.
 `actual` first; uncommitted local changes are intentionally not published.
 RCI checks out GitHub, builds Sphinx + Pagefind, uploads into
 `sites-static/info.bma.ai/releases/<commit>/`, downloads every object to verify
-its SHA-256, then updates `info.bma.ai/active.json` last. Old releases remain.
-Credentials are read from a protected RCI-side file and never stored in Git.
+its content, then updates `info.bma.ai/active.json` last. Old releases remain.
+R2 S3 credentials are read from a protected RCI-side rclone config and never stored in Git.
 Worker source is `deploy/worker.js`; infrastructure is managed by BA Terraform.
 Old `/en/latest/` and `/en/stable/` links redirect to the equivalent root path.
